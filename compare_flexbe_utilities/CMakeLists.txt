@@ -15,7 +15,10 @@ find_package(std_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(tf2_ros REQUIRED)
+find_package(pcl_msgs REQUIRED)
+find_package(pcl_conversions REQUIRED)
 find_package(PCL REQUIRED)
+find_package(gpd_ros REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
@@ -24,7 +27,15 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/CartesianMoveToPose.srv"
   "srv/MoveToNamedPose.srv"
   "srv/MoveToPose.srv"
-  DEPENDENCIES geometry_msgs
+  "srv/VoxelGridFilter.srv"
+  "srv/PlaneSegmentation.srv"
+  "srv/EuclideanClustering.srv"
+  DEPENDENCIES
+    sensor_msgs
+    pcl_msgs
+    geometry_msgs
+    std_msgs
+    gpd_ros
 )
 
 # Create executable
