@@ -63,10 +63,37 @@ ament_target_dependencies(move_to_pose_service
   moveit_msgs
 )
 
+add_executable(voxel_grid_filter_service src/voxel_grid_filter_service.cpp)
+ament_target_dependencies(voxel_grid_filter_service
+  rclcpp
+  sensor_msgs
+  pcl_conversions
+)
+
+add_executable(plane_segmentation_service src/plane_segmentation_service)
+ament_target_dependencies(plane_segmentation_service
+  rclcpp
+  pcl_conversions
+  pcl_msgs
+)
+
+add_executable(euclidean_clustering_service src/euclidean_clustering_service)
+ament_target_dependencies(euclidean_clustering_service
+  rclcpp
+  sensor_msgs
+  geometry_msgs
+  pcl_conversions
+  pcl_msgs
+  gpd_ros
+)
+
 install(TARGETS 
   cartesian_move_to_pose_service
   move_to_named_pose_service
   move_to_pose_service
+  voxel_grid_filter_service
+  plane_segmentation_service
+  euclidean_clustering_service
   DESTINATION lib/${PROJECT_NAME})
 
 # Link generated service headers
@@ -74,6 +101,9 @@ rosidl_get_typesupport_target(cpp_typesupport_target ${PROJECT_NAME} "rosidl_typ
 target_link_libraries(cartesian_move_to_pose_service ${cpp_typesupport_target})
 target_link_libraries(move_to_named_pose_service ${cpp_typesupport_target})
 target_link_libraries(move_to_pose_service ${cpp_typesupport_target})
+target_link_libraries(voxel_grid_filter_service ${cpp_typesupport_target})
+target_link_libraries(plane_segmentation_service ${cpp_typesupport_target})
+target_link_libraries(euclidean_clustering_service ${cpp_typesupport_target})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
