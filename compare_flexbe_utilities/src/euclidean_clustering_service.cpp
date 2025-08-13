@@ -10,7 +10,8 @@
 #include <pcl/common/centroid.h>
 
 #include <pcl_msgs/msg/point_indices.hpp>
-#include <gpd_ros/msg/cloud_indexed.hpp>
+#include "gpd_ros/msg/cloud_indexed.hpp"
+#include "gpd_ros/msg/cloud_sources.hpp"
 
 #include "compare_flexbe_utilities/srv/euclidean_clustering.hpp"
 
@@ -30,6 +31,7 @@ public:
 
 private:
   rclcpp::Service<EuclideanClustering>::SharedPtr service_;
+  std::vector<pcl_msgs::msg::PointIndices> last_clusters_;
 
   static inline bool hasFiniteXYZ(const pcl::PointXYZ& p)
   {
@@ -46,14 +48,14 @@ private:
 
     if (cloud->empty()) {
       RCLCPP_WARN(get_logger(), "Input cloud is empty.");
-      res->clusters_sorted.cloud_sources.cloud = req->input;   // pass-through
-      res->clusters_sorted.indices_array.clear();
+      res->target_cluster.cloud_sources.cloud = req->input;   // pass-through
+      res->target_cluster.indices.clear();
       res->cluster_count = 0;
       return;
     }
 
     // Build KD-Tree
-    auto tree = boost::make_shared<pcl::search::KdTree<pcl::PointXYZ>>();
+    auto tree = std::make_shared<pcl::search::KdTree<pcl::PointXYZ>>();
     tree->setInputCloud(cloud);
 
     // Euclidean cluster extraction
@@ -68,8 +70,8 @@ private:
 
     if (cluster_indices.empty()) {
       RCLCPP_INFO(get_logger(), "No clusters found.");
-      res->clusters_sorted.cloud_sources.cloud = req->input;
-      res->clusters_sorted.indices_array.clear();
+      res->target_cluster.cloud_sources.cloud = req->input;
+      res->target_cluster.indices.clear();
       res->cluster_count = 0;
       return;
     }
@@ -109,8 +111,8 @@ private:
 
     if (clusters.empty()) {
       RCLCPP_INFO(get_logger(), "Clusters all invalid after centroid check.");
-      res->clusters_sorted.cloud_sources.cloud = req->input;
-      res->clusters_sorted.indices_array.clear();
+      res->target_cluster.cloud_sources.cloud = req->input;
+      res->target_cluster.indices.clear();
       res->cluster_count = 0;
       return;
     }
@@ -120,25 +122,37 @@ private:
                 return a.dist2 < b.dist2;  // nearest first
               });
 
+    // hold onto the full list of clusters - later add in a response field to return these indices for obstacle generation in planning scene
+    last_clusters_.clear();
+    last_clusters_.reserve(clusters.size());
+    for (const auto& c : clusters) {
+      pcl_msgs::msg::PointIndices pi;
+      pi.header = req->input.header;
+      pi.indices = c.indices.indices;
+      last_clusters_.push_back(std::move(pi));
+    }
+
     // Build CloudIndexed response
     gpd_ros::msg::CloudIndexed cloud_indexed;
     cloud_indexed.cloud_sources.cloud = req->input;  // full-res, de-planed cloud
 
-    // Optional: fill view_points (camera origin) if you want (GPD can use it)
-    // geometry_msgs::msg::Point view;
-    // view.x = cp.x; view.y = cp.y; view.z = cp.z;
-    // cloud_indexed.cloud_sources.view_points.push_back(view);
+    // fill view_points (camera origin)
+    geometry_msgs::msg::Point view;
+    view.x = cp.x; view.y = cp.y; view.z = cp.z;
+    cloud_indexed.cloud_sources.view_points.push_back(view);
 
-    cloud_indexed.indices_array.reserve(clusters.size());
-    for (const auto& c : clusters) {
-      pcl_msgs::msg::PointIndices out_idx;
-      out_idx.header = req->input.header;
-      out_idx.indices = c.indices.indices;
-      cloud_indexed.indices_array.push_back(std::move(out_idx));
+    // Use only the nearest cluster so CloudIndexed stays meaningful for GPD
+    const auto& nearest = clusters.front().indices.indices;
+    cloud_indexed.indices.clear();
+    cloud_indexed.indices.reserve(nearest.size());
+    for (int idx : nearest) {
+      std_msgs::msg::Int64 v;
+      v.data = idx;
+      cloud_indexed.indices.push_back(v);
     }
 
-    res->clusters_sorted = std::move(cloud_indexed);
-    res->cluster_count = static_cast<int32_t>(res->clusters_sorted.indices_array.size());
+    res->target_cluster = std::move(cloud_indexed);
+    res->cluster_count = static_cast<int32_t>(res->target_cluster.indices.size());
 
     RCLCPP_INFO(get_logger(), "Found %d clusters (nearest → furthest).",
                 res->cluster_count);
