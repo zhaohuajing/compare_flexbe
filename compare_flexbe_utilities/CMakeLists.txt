@@ -14,13 +14,15 @@ find_package(moveit_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
+find_package(tf2_sensor_msgs REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 find_package(pcl_msgs REQUIRED)
 find_package(pcl_conversions REQUIRED)
 find_package(PCL REQUIRED)
 find_package(gpd_ros REQUIRED)
 find_package(builtin_interfaces REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
 
 # Generate service
 rosidl_generate_interfaces(${PROJECT_NAME}
@@ -30,12 +32,17 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/VoxelGridFilter.srv"
   "srv/PlaneSegmentation.srv"
   "srv/EuclideanClustering.srv"
+  "srv/GetPointCloud.srv"
   DEPENDENCIES
     sensor_msgs
     pcl_msgs
     geometry_msgs
     std_msgs
     gpd_ros
+)
+
+include_directories(
+  ${PCL_INCLUDE_DIRS}
 )
 
 # Create executable
@@ -69,15 +76,17 @@ ament_target_dependencies(voxel_grid_filter_service
   sensor_msgs
   pcl_conversions
 )
+target_link_libraries(voxel_grid_filter_service ${PCL_LIBRARIES})
 
-add_executable(plane_segmentation_service src/plane_segmentation_service)
+add_executable(plane_segmentation_service src/plane_segmentation_service.cpp)
 ament_target_dependencies(plane_segmentation_service
   rclcpp
   pcl_conversions
   pcl_msgs
 )
+target_link_libraries(plane_segmentation_service ${PCL_LIBRARIES})
 
-add_executable(euclidean_clustering_service src/euclidean_clustering_service)
+add_executable(euclidean_clustering_service src/euclidean_clustering_service.cpp)
 ament_target_dependencies(euclidean_clustering_service
   rclcpp
   sensor_msgs
@@ -85,6 +94,17 @@ ament_target_dependencies(euclidean_clustering_service
   pcl_conversions
   pcl_msgs
   gpd_ros
+)
+target_link_libraries(euclidean_clustering_service ${PCL_LIBRARIES})
+
+add_executable(get_pointcloud_service src/get_pointcloud_service.cpp)
+ament_target_dependencies(get_pointcloud_service
+  rclcpp
+  sensor_msgs
+  geometry_msgs
+  tf2_ros
+  tf2_sensor_msgs
+  tf2_geometry_msgs
 )
 
 install(TARGETS 
@@ -94,6 +114,7 @@ install(TARGETS
   voxel_grid_filter_service
   plane_segmentation_service
   euclidean_clustering_service
+  get_pointcloud_service
   DESTINATION lib/${PROJECT_NAME})
 
 # Link generated service headers
@@ -104,6 +125,7 @@ target_link_libraries(move_to_pose_service ${cpp_typesupport_target})
 target_link_libraries(voxel_grid_filter_service ${cpp_typesupport_target})
 target_link_libraries(plane_segmentation_service ${cpp_typesupport_target})
 target_link_libraries(euclidean_clustering_service ${cpp_typesupport_target})
+target_link_libraries(get_pointcloud_service ${cpp_typesupport_target})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
