@@ -132,16 +132,16 @@ private:
       last_clusters_.push_back(std::move(pi));
     }
 
-    // Build CloudIndexed response
+    // build CloudIndexed response
     gpd_ros::msg::CloudIndexed cloud_indexed;
     cloud_indexed.cloud_sources.cloud = req->input;  // full-res, de-planed cloud
 
-    // fill view_points (camera origin)
+    // fill view_points (pose of camera at pointcloud capture)
     geometry_msgs::msg::Point view;
     view.x = cp.x; view.y = cp.y; view.z = cp.z;
     cloud_indexed.cloud_sources.view_points.push_back(view);
 
-    // Use only the nearest cluster so CloudIndexed stays meaningful for GPD
+    // use only nearest cluster for GPD - TODO: two outputs (target and obstacles)
     const auto& nearest = clusters.front().indices.indices;
     cloud_indexed.indices.clear();
     cloud_indexed.indices.reserve(nearest.size());
