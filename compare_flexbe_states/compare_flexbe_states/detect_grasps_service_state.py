@@ -20,7 +20,10 @@ from rclpy.duration import Duration
 
 from flexbe_core import EventState, Logger
 
-from gpd_ros.srv import detect_grasps  # GPD service definition
+from gpd_ros.srv import DetectGrasps
+from gpd_ros.msg import CloudIndexed, CloudSources
+from std_msgs.msg import Int64
+from geometry_msgs.msg import Point
 
 class DetectGraspsServiceState(EventState):
     """
@@ -39,7 +42,7 @@ class DetectGraspsServiceState(EventState):
         # Declare outcomes, input_keys, and output_keys by calling the super constructor with the corresponding arguments.
 
         super().__init__(outcomes=['done', 'failed'],
-                            input_keys=['cloud_indexed'],
+                            input_keys=['cloud', 'camera_source', 'view_points', 'indices'],
                             output_keys=['grasp_configs'])
 
         self._service_timeout = service_timeout
@@ -70,9 +73,30 @@ class DetectGraspsServiceState(EventState):
         # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.
         # It is primarily used to start actions which are associated with this state.
 
+        # helper: ensure that inputs are std_msgs/msg/Int64[]
+        def as_int64_array(seq):
+            return [v if isinstance(v, Int64) else Int64(data=int(v)) for v in seq]
+
+        # helper: ensure that inputs are geometry_msgs/msg/Point[]
+        def as_points(seq):
+            return [p if isinstance(p, Point) else Point(x=float(p[0]), y=float(p[1]), z=float(p[2])) for p in seq]
+
+        # construct cloud_sources
+        cloud_sources = CloudSources()
+        cloud_sources.cloud = userdata.cloud
+        cloud_sources.camera_source = as_int64_array(userdata.camera_source)
+        cloud_sources.view_points = as_points(userdata.view_points)
+
+        # construct cloud_indexed
+        cloud_indexed = CloudIndexed()
+        cloud_indexed.cloud_sources = cloud_sources
+        cloud_indexed.indices = userdata.indices
+
+        # construct request
+        request = DetectGrasps.Request()
+        request.cloud_indexed = cloud_indexed
+
         try:
-            request = detect_grasps.Request()
-            request.cloud_indexed = userdata.cloud_indexed
             self._future = self._client.call_async(request)
             Logger.loginfo("Sent request to /detect_grasps service.")
         except Exception as e:
@@ -91,7 +115,7 @@ class DetectGraspsServiceState(EventState):
         #   because if anything failed, the behavior would not even be started.
 
         # create the service client, andensure that the service server is initialized
-        self._client = type(self).create_client(detect_grasps, '/detect_grasps')
+        self._client = type(self).create_client(DetectGrasps, '/detect_grasps')
         if not self._client.wait_for_service(timeout_sec=self._service_timeout):
             Logger.logerr("Service [/detect_grasps] not available after waiting.")
             return 'failed'
