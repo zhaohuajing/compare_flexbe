@@ -36,46 +36,22 @@ class DetectGraspsServiceState(EventState):
     """
 
     def __init__(self, service_timeout=5.0):
-        super().__init__(
-            outcomes=['done', 'failed'],
-            input_keys=['cloud_indexed'],
-            output_keys=['grasp_configs']
-        )
+        # Declare outcomes, input_keys, and output_keys by calling the super constructor with the corresponding arguments.
+
+        super().__init__(outcomes=['done', 'failed'],
+                            input_keys=['cloud_indexed'],
+                            output_keys=['grasp_configs'])
+
         self._service_timeout = service_timeout
         self._client = None
-        self._request_sent = False
         self._future = None
-
-    def on_start(self):
-        if not hasattr(DetectGraspsServiceState, '_node'):
-            raise RuntimeError("FlexBE state does not have an attached ROS2 node!")
-        
-        self._node = DetectGraspsServiceState._node
-        self._client = self._node.create_client(detect_grasps, '/detect_grasps')
-
-        if not self._client.wait_for_service(timeout_sec=self._service_timeout):
-            Logger.logerr("Service [/detect_grasps] not available after waiting.")
-            self._client = None
-
-    def on_enter(self, userdata):
-        self._request_sent = False
-        self._future = None
-
-        if self._client is None:
-            Logger.logerr("Service client was not created.")
-            return
-
-        try:
-            request = detect_grasps.Request()
-            request.cloud_indexed = userdata.cloud_indexed
-            self._future = self._client.call_async(request)
-            self._request_sent = True
-            Logger.loginfo("Sent request to /detect_grasps service.")
-        except Exception as e:
-            Logger.logerr(f"Failed to send request: {str(e)}")
 
     def execute(self, userdata):
-        if not self._request_sent or self._future is None:
+        # Execute this method periodically while the state is active.
+        # Main purpose is to check state conditions and trigger a corresponding outcome.
+        # If no outcome is returned, the state will stay active.
+
+        if self._future is None:
             return 'failed'
 
         if self._future.done():
@@ -90,10 +66,41 @@ class DetectGraspsServiceState(EventState):
 
         return None  # still waiting
 
-    def on_exit(self, userdata):
-        Logger.loginfo("Exiting DetectGraspsServiceState.")
+    def on_enter(self, userdata):
+        # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.
+        # It is primarily used to start actions which are associated with this state.
+
+        try:
+            request = detect_grasps.Request()
+            request.cloud_indexed = userdata.cloud_indexed
+            self._future = self._client.call_async(request)
+            Logger.loginfo("Sent request to /detect_grasps service.")
+        except Exception as e:
+            Logger.logerr(f"Failed to send request: {str(e)}")
+
+    def on_exit(self):
+        # Call this method when an outcome is returned and another state gets active.
+        # It can be used to stop possibly running processes started by on_enter.
+
+        # No-op: template hook
+        pass
+
+    def on_start(self):
+        # Call this method when the behavior is instantiated on board.
+        # If possible, it is generally better to initialize used resources in the constructor
+        #   because if anything failed, the behavior would not even be started.
+
+        # create the service client, andensure that the service server is initialized
+        self._client = type(self).create_client(detect_grasps, '/detect_grasps')
+        if not self._client.wait_for_service(timeout_sec=self._service_timeout):
+            Logger.logerr("Service [/detect_grasps] not available after waiting.")
+            return 'failed'
 
     def on_stop(self):
+        # Call this method whenever the behavior stops execution, also if it is cancelled.
+        # Use this event to clean up things like claimed resources.
+
+        # make sure the client is destroyed when the behavior ends so it can restart cleanly
         if self._client:
             try:
                 self._client.destroy()
