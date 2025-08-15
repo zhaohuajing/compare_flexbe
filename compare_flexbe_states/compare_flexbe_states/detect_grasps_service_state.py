@@ -31,7 +31,10 @@ class DetectGraspsServiceState(EventState):
 
     -- service_timeout    float       Timeout for service call in seconds (default: 5.0)
 
-    ># cloud_indexed      gpd_ros/CloudIndexed      The input to the service
+    ># cloud              sensor_msgs/PointCloud2   Point Cloud of scene (full/unfiltered cloud is best)
+    ># camera_source      std_msgs/Int64[]          For each point in the cloud, the index of the camera that acquired the point
+    ># view_points        geometry_msgs/Point[]     A list of camera positions at which the point cloud was acquired
+    ># indices            std_msgs/Int64[]          The indices into the point cloud at which to sample grasp candidates
     <# grasp_configs      gpd_ros/GraspConfigList   The output from the service
 
     <= done               Service call succeeded
@@ -90,7 +93,7 @@ class DetectGraspsServiceState(EventState):
         # construct cloud_indexed
         cloud_indexed = CloudIndexed()
         cloud_indexed.cloud_sources = cloud_sources
-        cloud_indexed.indices = userdata.indices
+        cloud_indexed.indices = as_int64_array(userdata.indices)
 
         # construct request
         request = DetectGrasps.Request()
