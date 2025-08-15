@@ -99,6 +99,7 @@ class DetectGraspsServiceState(EventState):
         request = DetectGrasps.Request()
         request.cloud_indexed = cloud_indexed
 
+        # send request
         try:
             self._future = self._client.call_async(request)
             Logger.loginfo("Sent request to /detect_grasps service.")
