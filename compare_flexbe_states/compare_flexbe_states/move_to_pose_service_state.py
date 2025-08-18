@@ -84,21 +84,6 @@ class MoveToPoseServiceState(EventState):
         # send request
         try:
             self._future = self._client.call_async(request)
-            Logger.loginfo(f"Sent request to {self._service_name} service.")
-        except Exception as e:
-            Logger.logerr(f"Failed to send request: {str(e)}")
-    
-    def on_enter(self, userdata):
-        # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.
-        # It is primarily used to start actions which are associated with this state.
-        
-        # construct request
-        request = SrvType.Request()
-        request.waypoints = userdata.waypoints
-
-        # send request
-        try:
-            self._future = self._client.call_async(request)
             Logger.loginfo(f"[{type(self).__name__}] Sent request to {self._service_name} service.")
         except Exception as e:
             Logger.logerr(f"[{type(self).__name__}] Failed to send request: {str(e)}")
