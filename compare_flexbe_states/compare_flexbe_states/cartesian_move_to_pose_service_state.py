@@ -58,9 +58,11 @@ class CartesianMoveToPoseServiceState(EventState):
             try:
                 result = self._future.result()
                 if result.success:
-                    return 'done'
+                    Logger.loginfo("[MoveToPoseServiceState] Successfully moved to pose.")
+                    return 'success'
                 else:
-                    return 'failed'
+                    Logger.logwarn("[MoveToPoseServiceState] Motion execution failed.")
+                    return 'failure'
             except Exception as e:
                 Logger.logerr(f"Service call failed: {str(e)}")
                 return 'failed'
