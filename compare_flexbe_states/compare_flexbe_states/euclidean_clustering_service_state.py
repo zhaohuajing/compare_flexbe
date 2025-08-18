@@ -39,20 +39,18 @@ class EuclideanClusteringServiceState(EventState):
     <= failed
     """
 
-    SERVICE_NAME = '/euclidean_clustering'
-
-    def __init__(self, service_timeout=5.0, cluster_tolerance=0.02, min_cluster_size=100, max_cluster_size=25000):
+    def __init__(self, service_timeout=5.0, service_name='/euclidean_clustering', cluster_tolerance=0.02, min_cluster_size=100, max_cluster_size=25000):
         super().__init__(outcomes=['done', 'failed'],
                             input_keys=['cloud_in', 'camera_pose'],
                             output_keys=['clusters_cloud_indexed', 'cluster_count']
         )
-        self._service_timeout = service_timeout
         self._params = dict(
             cluster_tolerance=float(cluster_tolerance),
             min_cluster_size=int(min_cluster_size),
             max_cluster_size=int(max_cluster_size)
         )
-        self._service_name = type(self).SERVICE_NAME
+        self._service_timeout = service_timeout
+        self._service_name = service_name
         self._client = None
         self._future = None
 
