@@ -56,14 +56,14 @@ class MoveToPoseServiceState(EventState):
             try:
                 result = self._future.result()
                 if result.success:
-                    Logger.loginfo("[MoveToPoseServiceState] Successfully moved to pose.")
+                    Logger.loginfo(f"[{type(self).__name__}] Successfully moved to pose.")
                     return 'success'
                 else:
-                    Logger.logwarn("[MoveToPoseServiceState] Motion execution failed.")
+                    Logger.logwarn(f"[{type(self).__name__}] Motion execution failed.")
                     return 'failure'
             except Exception as e:
-                Logger.logerr(f"[MoveToPoseServiceState] Service call failed: {str(e)}")
-                return 'failure'
+                Logger.logerr(f"[{type(self).__name__}] Service call failed: {str(e)}")
+                return 'failed'
 
         return None  # keep waiting
     
@@ -74,7 +74,7 @@ class MoveToPoseServiceState(EventState):
         # check for correct data
         grasp_poses = userdata.grasp_poses
         if not isinstance(grasp_poses, list) or len(grasp_poses) == 0 or not isinstance(grasp_poses[-1], Pose):
-            Logger.logerr("[MoveToPoseServiceState] Invalid or missing 'grasp_poses' in userdata.")
+            Logger.logerr(f"[{type(self).__name__}] Invalid or missing data type in userdata.")
             return
 
         # construct request
@@ -99,9 +99,9 @@ class MoveToPoseServiceState(EventState):
         # send request
         try:
             self._future = self._client.call_async(request)
-            Logger.loginfo(f"Sent request to {self._service_name} service.")
+            Logger.loginfo(f"[{type(self).__name__}] Sent request to {self._service_name} service.")
         except Exception as e:
-            Logger.logerr(f"Failed to send request: {str(e)}")
+            Logger.logerr(f"[{type(self).__name__}] Failed to send request: {str(e)}")
     
     def on_exit(self):
         # Call this method when an outcome is returned and another state gets active.
@@ -118,7 +118,7 @@ class MoveToPoseServiceState(EventState):
         # create the service client, andensure that the service server is initialized
         self._client = type(self).create_client(SrvType, self._service_name)
         if not self._client.wait_for_service(timeout_sec=self._service_timeout):
-            Logger.logerr(f"Service {self._service_name} not available after waiting.")
+            Logger.logerr(f"[{type(self).__name__}] Service {self._service_name} not available after waiting.")
             return 'failed'
 
     def on_stop(self):
