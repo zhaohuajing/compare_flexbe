@@ -58,13 +58,13 @@ class CartesianMoveToPoseServiceState(EventState):
             try:
                 result = self._future.result()
                 if result.success:
-                    Logger.loginfo("[MoveToPoseServiceState] Successfully moved to pose.")
+                    Logger.loginfo(f"[{type(self).__name__}] Successfully moved to pose.")
                     return 'success'
                 else:
-                    Logger.logwarn("[MoveToPoseServiceState] Motion execution failed.")
+                    Logger.logwarn(f"[{type(self).__name__}] Motion execution failed.")
                     return 'failure'
             except Exception as e:
-                Logger.logerr(f"Service call failed: {str(e)}")
+                Logger.logerr(f"[{type(self).__name__}] Service call failed: {str(e)}")
                 return 'failed'
 
         return None  # still waiting
@@ -72,17 +72,23 @@ class CartesianMoveToPoseServiceState(EventState):
     def on_enter(self, userdata):
         # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.
         # It is primarily used to start actions which are associated with this state.
+
+        # check for correct data
+        waypoints = userdata.waypoints
+        if not isinstance(waypoints, list) or len(waypoints) == 0 or not isinstance(waypoints[-1], Pose):
+            Logger.logerr(f"[{type(self).__name__}] Invalid or missing data type in userdata.")
+            return
         
         # construct request
         request = SrvType.Request()
-        request.waypoints = userdata.waypoints
+        request.waypoints = waypoints
 
         # send request
         try:
             self._future = self._client.call_async(request)
-            Logger.loginfo(f"Sent request to {self._service_name} service.")
+            Logger.loginfo(f"[{type(self).__name__}] Sent request to {self._service_name} service.")
         except Exception as e:
-            Logger.logerr(f"Failed to send request: {str(e)}")
+            Logger.logerr(f"[{type(self).__name__}] Failed to send request: {str(e)}")
 
     def on_exit(self):
         # Call this method when an outcome is returned and another state gets active.
@@ -99,7 +105,7 @@ class CartesianMoveToPoseServiceState(EventState):
         # create the service client, andensure that the service server is initialized
         self._client = type(self).create_client(SrvType, self._service_name)
         if not self._client.wait_for_service(timeout_sec=self._service_timeout):
-            Logger.logerr(f"Service {self._service_name} not available after waiting.")
+            Logger.logerr(f"[{type(self).__name__}] Service {self._service_name} not available after waiting.")
             return 'failed'
 
     def on_stop(self):
