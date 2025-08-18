@@ -68,12 +68,14 @@ class PlaneSegmentationServiceState(EventState):
         if self._future.done():
             try:
                 result = self._future.result()
-                if result.success:
-                    return 'done'
-                else:
-                    return 'failed'
+                userdata.cloud_without_plane = result.cloud_without_plane
+                userdata.plane_indices = result.plane_indices
+                userdata.plane_coefficients = result.plane_coefficients
+                userdata.plane_inlier_count = result.plane_inlier_count
+                Logger.loginfo(f"[{type(self).__name__}] Received filtered cloud.")
+                return 'done'
             except Exception as e:
-                Logger.logerr(f"Service call failed: {str(e)}")
+                Logger.logerr(f"[{type(self).__name__}] Service call failed: {str(e)}")
                 return 'failed'
 
         return None  # still waiting
@@ -93,9 +95,9 @@ class PlaneSegmentationServiceState(EventState):
         # send request
         try:
             self._future = self._client.call_async(request)
-            Logger.loginfo(f"Sent request to {self._service_name} service.")
+            Logger.loginfo(f"[{type(self).__name__}] Sent request to {self._service_name} service.")
         except Exception as e:
-            Logger.logerr(f"Failed to send request: {str(e)}")
+            Logger.logerr(f"[{type(self).__name__}] Failed to send request: {str(e)}")
 
     def on_exit(self, userdata):
         # Call this method when an outcome is returned and another state gets active.
