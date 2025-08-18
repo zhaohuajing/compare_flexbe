@@ -62,7 +62,7 @@ class MoveToNamedPoseServiceState(EventState):
                     Logger.logwarn(f"[{type(self).__name__}] Motion execution failed.")
                     return 'failure'
             except Exception as e:
-                Logger.logerr(f"Service call failed: {str(e)}")
+                Logger.logerr(f"[{type(self).__name__}] Service call failed: {str(e)}")
                 return 'failed'
 
         return None  # still waiting
