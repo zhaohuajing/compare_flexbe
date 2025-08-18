@@ -36,9 +36,8 @@ class MoveToNamedPoseServiceState(EventState):
     SERVICE_NAME = '/move_to_named_pose'
 
     def __init__(self, timeout_sec=5.0):
-        super().__init__(
-            outcomes=['success', 'failure'],
-            input_keys=['target_pose_name']
+        super().__init__(outcomes=['success', 'failure'],
+                            input_keys=['target_pose_name']
         )
         self._timeout_sec = timeout_sec
         self._service_name = type(self).SERVICE_NAME
@@ -71,6 +70,12 @@ class MoveToNamedPoseServiceState(EventState):
     def on_enter(self, userdata):
         # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.
         # It is primarily used to start actions which are associated with this state.
+
+        # check for correct data
+        target_names = userdata.target_names
+        if not isinstance(target_names, list) or len(target_names) == 0 or not isinstance(target_names[-1], str):
+            Logger.logerr("[MoveToNamedPoseState] Invalid or missing 'target_names' in userdata.")
+            return
         
         # construct request
         target_name = userdata.target_pose_name
