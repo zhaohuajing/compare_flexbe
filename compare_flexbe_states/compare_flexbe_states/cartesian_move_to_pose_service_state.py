@@ -34,15 +34,12 @@ class CartesianMoveToPoseServiceState(EventState):
     <= success                     Path was planned and executed successfully
     <= failure                     Service failed or did not complete successfully
     """
-
-    SERVICE_NAME = '/plan_cartesian_path'
-
-    def __init__(self, service_timeout=5.0):
+    def __init__(self, service_timeout=5.0, service_name='/plan_cartesian_path'):
         super().__init__(outcomes=['success', 'failure'],
                             input_keys=['waypoints']
         )
         self.service_timeout = service_timeout
-        self._service_name = type(self).SERVICE_NAME
+        self._service_name = service_name
         self._client = None
         self._future = None
 
