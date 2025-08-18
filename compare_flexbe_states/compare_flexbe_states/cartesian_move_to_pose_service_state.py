@@ -35,81 +35,75 @@ class CartesianMoveToPoseServiceState(EventState):
     <= failure                     Service failed or did not complete successfully
     """
 
-    def __init__(self, timeout_sec=5.0):
-        super().__init__(
-            outcomes=['success', 'failure'],
-            input_keys=['waypoints']
+    def __init__(self, service_timeout=5.0):
+        super().__init__(outcomes=['success', 'failure'],
+                            input_keys=['waypoints']
         )
-        self._timeout_sec = timeout_sec
+        self.service_timeout = service_timeout
         self._client = None
         self._future = None
-        self._request_sent = False
-        self._result_received = False
-        self._result = None
-
-    def on_start(self):
-        if not hasattr(CartesianMoveToPoseServiceState, '_node'):
-            raise RuntimeError("This state requires a FlexBE-attached ROS 2 node.")
-
-        self._node = CartesianMoveToPoseServiceState._node
-        self._client = self._node.create_client(CartesianMoveToPose, 'plan_cartesian_path')
-
-        if not self._client.wait_for_service(timeout_sec=self._timeout_sec):
-            Logger.logerr("[CartesianMoveToPoseServiceState] Service 'plan_cartesian_path' not available.")
-            self._client = None
-
-    def on_enter(self, userdata):
-        self._result_received = False
-        self._request_sent = False
-        self._result = None
-        self._future = None
-
-        if self._client is None:
-            Logger.logerr("[CartesianMoveToPoseServiceState] No valid service client available.")
-            return
-
-        try:
-            waypoints = userdata.waypoints
-            if not isinstance(waypoints, list) or not all(isinstance(p, Pose) for p in waypoints):
-                Logger.logerr("[CartesianMoveToPoseServiceState] Invalid or missing 'waypoints' in userdata.")
-                return
-
-            request = CartesianMoveToPose.Request()
-            request.waypoints = waypoints
-
-            self._future = self._client.call_async(request)
-            self._request_sent = True
-            Logger.loginfo("[CartesianMoveToPoseServiceState] Sent Cartesian move request with "
-                           f"{len(waypoints)} waypoints.")
-
-        except Exception as e:
-            Logger.logerr(f"[CartesianMoveToPoseServiceState] Exception while sending service request: {str(e)}")
 
     def execute(self, userdata):
-        if not self._request_sent or self._future is None:
-            return 'failure'
+        # Execute this method periodically while the state is active.
+        # Main purpose is to check state conditions and trigger a corresponding outcome.
+        # If no outcome is returned, the state will stay active.
+
+        if self._future is None:
+            return 'failed'
 
         if self._future.done():
             try:
                 result = self._future.result()
-                self._result_received = True
-
                 if result.success:
-                    Logger.loginfo(f"[CartesianMoveToPoseServiceState] Cartesian path executed successfully "
-                                   f"({result.percentage_planned:.2f}% planned).")
-                    return 'success'
+                    return 'done'
                 else:
-                    Logger.logwarn("[CartesianMoveToPoseServiceState] Cartesian path planning failed.")
-                    return 'failure'
-
+                    return 'failed'
             except Exception as e:
-                Logger.logerr(f"[CartesianMoveToPoseServiceState] Service call failed: {str(e)}")
-                return 'failure'
+                Logger.logerr(f"Service call failed: {str(e)}")
+                return 'failed'
 
-        return None  # Wait again
+        return None  # still waiting
+    
+    def on_enter(self, userdata):
+        # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.
+        # It is primarily used to start actions which are associated with this state.
+        
+        # construct request
+        request = CartesianMoveToPose.Request()
+        request.waypoints = userdata.waypoints
 
-    def on_exit(self, userdata):
-        Logger.loginfo("[CartesianMoveToPoseServiceState] Exiting state.")
+        # send request
+        try:
+            self._future = self._client.call_async(request)
+            Logger.loginfo("Sent request to /plan_cartesian_path service.")
+        except Exception as e:
+            Logger.logerr(f"Failed to send request: {str(e)}")
+
+    def on_exit(self):
+        # Call this method when an outcome is returned and another state gets active.
+        # It can be used to stop possibly running processes started by on_enter.
+
+        # No-op: template hook
+        pass
+
+    def on_start(self):
+        # Call this method when the behavior is instantiated on board.
+        # If possible, it is generally better to initialize used resources in the constructor
+        #   because if anything failed, the behavior would not even be started.
+
+        # create the service client, andensure that the service server is initialized
+        self._client = type(self).create_client(CartesianMoveToPose, '/plan_cartesian_path')
+        if not self._client.wait_for_service(timeout_sec=self._service_timeout):
+            Logger.logerr("Service [/plan_cartesian_path] not available after waiting.")
+            return 'failed'
 
     def on_stop(self):
-        Logger.loginfo("[CartesianMoveToPoseServiceState] Behavior stopped.")
+        # Call this method whenever the behavior stops execution, also if it is cancelled.
+        # Use this event to clean up things like claimed resources.
+
+        # make sure the client is destroyed when the behavior ends so it can restart cleanly
+        if self._client:
+            try:
+                self._client.destroy()
+            except Exception:
+                pass
