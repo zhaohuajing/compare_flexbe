@@ -41,7 +41,6 @@ class PlaneSegmentationServiceState(EventState):
     <= done
     <= failed
     """
-
     def __init__(self, service_timeout=5.0, service_name='/plane_segmentation', use_voxel=True, leaf_size=0.01, distance_threshold=0.01, max_iterations=1000):
         super().__init__(outcomes=['done', 'failed'],
                             input_keys=['cloud_in'],
