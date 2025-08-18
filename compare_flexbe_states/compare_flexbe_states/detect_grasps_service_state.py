@@ -20,7 +20,7 @@ from rclpy.duration import Duration
 
 from flexbe_core import EventState, Logger
 
-from gpd_ros.srv import DetectGrasps
+from gpd_ros.srv import DetectGrasps as SrvType
 from gpd_ros.msg import CloudIndexed, CloudSources
 from std_msgs.msg import Int64
 from geometry_msgs.msg import Point
@@ -40,6 +40,8 @@ class DetectGraspsServiceState(EventState):
     <= done               Service call succeeded
     <= failed             Service call failed or timed out
     """
+
+    SERVICE_NAME = '/detect_grasps'
 
     def __init__(self, service_timeout=5.0):
         # Declare outcomes, input_keys, and output_keys by calling the super constructor with the corresponding arguments.
@@ -96,13 +98,13 @@ class DetectGraspsServiceState(EventState):
         cloud_indexed.indices = as_int64_array(userdata.indices)
 
         # construct request
-        request = DetectGrasps.Request()
+        request = SrvType.Request()
         request.cloud_indexed = cloud_indexed
 
         # send request
         try:
             self._future = self._client.call_async(request)
-            Logger.loginfo("Sent request to /detect_grasps service.")
+            Logger.loginfo(f"Sent request to {self._service_name} service.")
         except Exception as e:
             Logger.logerr(f"Failed to send request: {str(e)}")
 
@@ -119,9 +121,9 @@ class DetectGraspsServiceState(EventState):
         #   because if anything failed, the behavior would not even be started.
 
         # create the service client, andensure that the service server is initialized
-        self._client = type(self).create_client(DetectGrasps, '/detect_grasps')
+        self._client = type(self).create_client(SrvType, self._service_name)
         if not self._client.wait_for_service(timeout_sec=self._service_timeout):
-            Logger.logerr("Service [/detect_grasps] not available after waiting.")
+            Logger.logerr(f"Service {self._service_name} not available after waiting.")
             return 'failed'
 
     def on_stop(self):

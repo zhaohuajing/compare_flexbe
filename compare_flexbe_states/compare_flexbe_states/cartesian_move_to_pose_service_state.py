@@ -19,7 +19,7 @@ from rclpy.duration import Duration
 
 from flexbe_core import EventState, Logger
 
-from robot_common_manip.srv import CartesianMoveToPose
+from robot_common_manip.srv import CartesianMoveToPose as SrvType
 from geometry_msgs.msg import Pose
 
 
@@ -35,11 +35,14 @@ class CartesianMoveToPoseServiceState(EventState):
     <= failure                     Service failed or did not complete successfully
     """
 
+    SERVICE_NAME = '/plan_cartesian_path'
+
     def __init__(self, service_timeout=5.0):
         super().__init__(outcomes=['success', 'failure'],
                             input_keys=['waypoints']
         )
         self.service_timeout = service_timeout
+        self._service_name = type(self).SERVICE_NAME
         self._client = None
         self._future = None
 
@@ -69,13 +72,13 @@ class CartesianMoveToPoseServiceState(EventState):
         # It is primarily used to start actions which are associated with this state.
         
         # construct request
-        request = CartesianMoveToPose.Request()
+        request = SrvType.Request()
         request.waypoints = userdata.waypoints
 
         # send request
         try:
             self._future = self._client.call_async(request)
-            Logger.loginfo("Sent request to /plan_cartesian_path service.")
+            Logger.loginfo(f"Sent request to {self._service_name} service.")
         except Exception as e:
             Logger.logerr(f"Failed to send request: {str(e)}")
 
@@ -92,9 +95,9 @@ class CartesianMoveToPoseServiceState(EventState):
         #   because if anything failed, the behavior would not even be started.
 
         # create the service client, andensure that the service server is initialized
-        self._client = type(self).create_client(CartesianMoveToPose, '/plan_cartesian_path')
+        self._client = type(self).create_client(SrvType, self._service_name)
         if not self._client.wait_for_service(timeout_sec=self._service_timeout):
-            Logger.logerr("Service [/plan_cartesian_path] not available after waiting.")
+            Logger.logerr(f"Service {self._service_name} not available after waiting.")
             return 'failed'
 
     def on_stop(self):
