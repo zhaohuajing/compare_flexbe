@@ -38,11 +38,10 @@ class EuclideanClusteringServiceState(EventState):
     <= done
     <= failed
     """
-
     def __init__(self, service_timeout=5.0, service_name='/euclidean_clustering', cluster_tolerance=0.02, min_cluster_size=100, max_cluster_size=25000):
         super().__init__(outcomes=['done', 'failed'],
                             input_keys=['cloud_in', 'camera_pose'],
-                            output_keys=['clusters_cloud_indexed', 'cluster_count']
+                            output_keys=['target_cluster_index', 'obstacle_clusters_index' 'cluster_count']
         )
         self._params = dict(
             cluster_tolerance=float(cluster_tolerance),
@@ -65,10 +64,11 @@ class EuclideanClusteringServiceState(EventState):
         if self._future.done():
             try:
                 result = self._future.result()
-                if result.success:
-                    return 'done'
-                else:
-                    return 'failed'
+                userdata.target_cluster = result.target_cluster
+                userdata.obstacle_clusters = result.obstacle_clusters
+                userdata.cluster_count = result.cluster_count
+                Logger.loginfo(f"[{type(self).__name__}] Received result with {len(result.cluster_count)} clusters.")
+                return 'done'
             except Exception as e:
                 Logger.logerr(f"Service call failed: {str(e)}")
                 return 'failed'
@@ -90,9 +90,9 @@ class EuclideanClusteringServiceState(EventState):
         # send request
         try:
             self._future = self._client.call_async(request)
-            Logger.loginfo(f"Sent request to {self._service_name} service.")
+            Logger.loginfo(f"[{type(self).__name__}] Sent request to {self._service_name} service.")
         except Exception as e:
-            Logger.logerr(f"Failed to send request: {str(e)}")
+            Logger.logerr(f"[{type(self).__name__}] Failed to send request: {str(e)}")
 
     def on_exit(self, userdata):
         # Call this method when an outcome is returned and another state gets active.
@@ -109,7 +109,7 @@ class EuclideanClusteringServiceState(EventState):
         # create the service client, andensure that the service server is initialized
         self._client = type(self).create_client(SrvType, self._service_name)
         if not self._client.wait_for_service(timeout_sec=self._service_timeout):
-            Logger.logerr(f"Service {self._service_name} not available after waiting.")
+            Logger.logerr(f"[{type(self).__name__}] Service {self._service_name} not available after waiting.")
             return 'failed'
 
     def on_stop(self):
