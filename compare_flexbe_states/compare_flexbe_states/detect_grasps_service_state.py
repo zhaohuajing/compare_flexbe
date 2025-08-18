@@ -43,13 +43,14 @@ class DetectGraspsServiceState(EventState):
 
     SERVICE_NAME = '/detect_grasps'
 
-    def __init__(self, service_timeout=5.0):
+    def __init__(self, service_timeout=5.0, service_name='/detect_grasps'):
         # Declare outcomes, input_keys, and output_keys by calling the super constructor with the corresponding arguments.
 
         super().__init__(outcomes=['done', 'failed'],
                             input_keys=['cloud', 'camera_source', 'view_points', 'indices'],
-                            output_keys=['grasp_configs'])
-
+                            output_keys=['grasp_configs']
+        )
+        self._service_name = service_name
         self._service_timeout = service_timeout
         self._client = None
         self._future = None
@@ -66,10 +67,10 @@ class DetectGraspsServiceState(EventState):
             try:
                 result = self._future.result()
                 userdata.grasp_configs = result.grasp_configs
-                Logger.loginfo(f"Received grasp configs with {len(result.grasp_configs.grasps)} grasps.")
+                Logger.loginfo(f"[{type(self).__name__}] Received grasp configs with {len(result.grasp_configs.grasps)} grasps.")
                 return 'done'
             except Exception as e:
-                Logger.logerr(f"Service call failed: {str(e)}")
+                Logger.logerr(f"[{type(self).__name__}] Service call failed: {str(e)}")
                 return 'failed'
 
         return None  # still waiting
@@ -104,9 +105,9 @@ class DetectGraspsServiceState(EventState):
         # send request
         try:
             self._future = self._client.call_async(request)
-            Logger.loginfo(f"Sent request to {self._service_name} service.")
+            Logger.loginfo(f"[{type(self).__name__}] Sent request to {self._service_name} service.")
         except Exception as e:
-            Logger.logerr(f"Failed to send request: {str(e)}")
+            Logger.logerr(f"[{type(self).__name__}] Failed to send request: {str(e)}")
 
     def on_exit(self):
         # Call this method when an outcome is returned and another state gets active.
@@ -123,7 +124,7 @@ class DetectGraspsServiceState(EventState):
         # create the service client, andensure that the service server is initialized
         self._client = type(self).create_client(SrvType, self._service_name)
         if not self._client.wait_for_service(timeout_sec=self._service_timeout):
-            Logger.logerr(f"Service {self._service_name} not available after waiting.")
+            Logger.logerr(f"[{type(self).__name__}] Service {self._service_name} not available after waiting.")
             return 'failed'
 
     def on_stop(self):
