@@ -56,10 +56,10 @@ class MoveToNamedPoseServiceState(EventState):
             try:
                 result = self._future.result()
                 if result.success:
-                    Logger.loginfo("[MoveToPoseServiceState] Successfully moved to pose.")
+                    Logger.loginfo(f"[{type(self).__name__}] Successfully moved to pose.")
                     return 'success'
                 else:
-                    Logger.logwarn("[MoveToPoseServiceState] Motion execution failed.")
+                    Logger.logwarn(f"[{type(self).__name__}] Motion execution failed.")
                     return 'failure'
             except Exception as e:
                 Logger.logerr(f"Service call failed: {str(e)}")
@@ -74,7 +74,7 @@ class MoveToNamedPoseServiceState(EventState):
         # check for correct data
         target_names = userdata.target_names
         if not isinstance(target_names, list) or len(target_names) == 0 or not isinstance(target_names[-1], str):
-            Logger.logerr("[MoveToNamedPoseState] Invalid or missing 'target_names' in userdata.")
+            Logger.logerr(f"[{type(self).__name__}] Invalid or missing data type in userdata.")
             return
         
         # construct request
