@@ -85,9 +85,9 @@ class MoveToNamedPoseServiceState(EventState):
         # send request
         try:
             self._future = self._client.call_async(request)
-            Logger.loginfo(f"Sent request to {self._service_name} service.")
+            Logger.loginfo(f"[{type(self).__name__}] Sent request to {self._service_name} service.")
         except Exception as e:
-            Logger.logerr(f"Failed to send request: {str(e)}")
+            Logger.logerr(f"[{type(self).__name__}] Failed to send request: {str(e)}")
 
     def on_exit(self):
         # Call this method when an outcome is returned and another state gets active.
@@ -104,7 +104,7 @@ class MoveToNamedPoseServiceState(EventState):
         # create the service client, andensure that the service server is initialized
         self._client = type(self).create_client(SrvType, self._service_name)
         if not self._client.wait_for_service(timeout_sec=self._service_timeout):
-            Logger.logerr(f"Service {self._service_name} not available after waiting.")
+            Logger.logerr(f"[{type(self).__name__}] Service {self._service_name} not available after waiting.")
             return 'failed'
 
     def on_stop(self):
