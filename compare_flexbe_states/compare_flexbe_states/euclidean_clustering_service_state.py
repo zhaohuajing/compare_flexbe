@@ -4,7 +4,7 @@ import rclpy
 from flexbe_core import EventState, Logger
 
 # Adjust to your actual package name:
-from compare_flexbe_utilities.srv import EuclideanClustering  # request: input, camera_pose, cluster_tolerance, min/max size
+from compare_flexbe_utilities.srv import EuclideanClustering as SrvType # request: input, camera_pose, cluster_tolerance, min/max size
 
 class EuclideanClusteringServiceState(EventState):
     """
@@ -24,80 +24,87 @@ class EuclideanClusteringServiceState(EventState):
     <= done
     <= failed
     """
-    def __init__(self,
-                 service_timeout=5.0,
-                 service_name='/euclidean_clustering',
-                 cluster_tolerance=0.02,
-                 min_cluster_size=100,
-                 max_cluster_size=25000):
-        super().__init__(
-            outcomes=['done', 'failed'],
-            input_keys=['cloud_in', 'camera_pose'],
-            output_keys=['clusters_cloud_indexed', 'cluster_count']
+
+    SERVICE_NAME = '/euclidean_clustering'
+
+    def __init__(self, service_timeout=5.0, cluster_tolerance=0.02, min_cluster_size=100, max_cluster_size=25000):
+        super().__init__(outcomes=['done', 'failed'],
+                            input_keys=['cloud_in', 'camera_pose'],
+                            output_keys=['clusters_cloud_indexed', 'cluster_count']
         )
         self._service_timeout = service_timeout
-        self._service_name = service_name
         self._params = dict(
             cluster_tolerance=float(cluster_tolerance),
             min_cluster_size=int(min_cluster_size),
             max_cluster_size=int(max_cluster_size)
         )
+        self._service_name = type(self).SERVICE_NAME
         self._client = None
         self._future = None
-        self._request_sent = False
-
-    def on_start(self):
-        if not hasattr(EuclideanClusteringServiceState, '_node'):
-            raise RuntimeError("FlexBE state does not have an attached ROS2 node!")
-        self._node = EuclideanClusteringServiceState._node
-
-        self._client = self._node.create_client(EuclideanClustering, self._service_name)
-        if not self._client.wait_for_service(timeout_sec=self._service_timeout):
-            Logger.logerr(f"Service [{self._service_name}] not available after waiting.")
-            self._client = None
-
-    def on_enter(self, userdata):
-        self._request_sent = False
-        self._future = None
-
-        if self._client is None:
-            Logger.logerr("Service client was not created.")
-            return
-
-        try:
-            req = EuclideanClustering.Request()
-            req.input = userdata.cloud_in
-            req.camera_pose = userdata.camera_pose
-            req.cluster_tolerance = float(self._params['cluster_tolerance'])
-            req.min_cluster_size = int(self._params['min_cluster_size'])
-            req.max_cluster_size = int(self._params['max_cluster_size'])
-
-            self._future = self._client.call_async(req)
-            self._request_sent = True
-            Logger.loginfo(f"Sent request to {self._service_name}.")
-        except Exception as e:
-            Logger.logerr(f"Failed to send request: {str(e)}")
 
     def execute(self, userdata):
-        if not self._request_sent or self._future is None:
+        # Execute this method periodically while the state is active.
+        # Main purpose is to check state conditions and trigger a corresponding outcome.
+        # If no outcome is returned, the state will stay active.
+
+        if self._future is None:
             return 'failed'
 
         if self._future.done():
             try:
-                resp = self._future.result()
-                userdata.clusters_cloud_indexed = resp.clusters_sorted
-                userdata.cluster_count = resp.cluster_count
-                Logger.loginfo(f"EuclideanClustering: found {resp.cluster_count} clusters (near→far).")
-                return 'done'
+                result = self._future.result()
+                if result.success:
+                    return 'done'
+                else:
+                    return 'failed'
             except Exception as e:
                 Logger.logerr(f"Service call failed: {str(e)}")
                 return 'failed'
-        return None
+
+        return None  # still waiting
+    
+    def on_enter(self, userdata):
+        # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.
+        # It is primarily used to start actions which are associated with this state.
+        
+        # construct request
+        request = SrvType.Request()
+        request.input = userdata.cloud_in
+        request.camera_pose = userdata.camera_pose
+        request.cluster_tolerance = float(self._params['cluster_tolerance'])
+        request.min_cluster_size = int(self._params['min_cluster_size'])
+        request.max_cluster_size = int(self._params['max_cluster_size'])
+
+        # send request
+        try:
+            self._future = self._client.call_async(request)
+            Logger.loginfo(f"Sent request to {self._service_name} service.")
+        except Exception as e:
+            Logger.logerr(f"Failed to send request: {str(e)}")
 
     def on_exit(self, userdata):
-        Logger.loginfo("Exiting EuclideanClusteringServiceState.")
+        # Call this method when an outcome is returned and another state gets active.
+        # It can be used to stop possibly running processes started by on_enter.
+
+        # No-op: template hook
+        pass
+
+    def on_start(self):
+        # Call this method when the behavior is instantiated on board.
+        # If possible, it is generally better to initialize used resources in the constructor
+        #   because if anything failed, the behavior would not even be started.
+
+        # create the service client, andensure that the service server is initialized
+        self._client = type(self).create_client(SrvType, self._service_name)
+        if not self._client.wait_for_service(timeout_sec=self._service_timeout):
+            Logger.logerr(f"Service {self._service_name} not available after waiting.")
+            return 'failed'
 
     def on_stop(self):
+        # Call this method whenever the behavior stops execution, also if it is cancelled.
+        # Use this event to clean up things like claimed resources.
+
+        # make sure the client is destroyed when the behavior ends so it can restart cleanly
         if self._client:
             try:
                 self._client.destroy()
