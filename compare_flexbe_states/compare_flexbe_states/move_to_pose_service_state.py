@@ -19,7 +19,7 @@ from rclpy.duration import Duration
 
 from flexbe_core import EventState, Logger
 from geometry_msgs.msg import Pose
-from robot_common_manip.srv import MoveToPose
+from robot_common_manip.srv import MoveToPose as SrvType
 
 
 class MoveToPoseServiceState(EventState):
@@ -34,56 +34,23 @@ class MoveToPoseServiceState(EventState):
     <= failure                        Service call failed or pose was invalid
     """
 
+    SERVICE_NAME = '/move_to_pose'
+
     def __init__(self, timeout_sec=5.0):
-        super().__init__(
-            outcomes=['success', 'failure'],
-            input_keys=['grasp_poses']
+        super().__init__(outcomes=['success', 'failure'],
+                            input_keys=['grasp_poses']
         )
         self._timeout_sec = timeout_sec
         self._client = None
         self._future = None
-        self._request_sent = False
-
-    def on_start(self):
-        if not hasattr(MoveToPoseServiceState, '_node'):
-            raise RuntimeError("This state requires a FlexBE-attached ROS 2 node.")
-
-        self._node = MoveToPoseServiceState._node
-        self._client = self._node.create_client(MoveToPose, 'move_to_pose')
-
-        if not self._client.wait_for_service(timeout_sec=self._timeout_sec):
-            Logger.logerr("[MoveToPoseServiceState] Service 'move_to_pose' not available.")
-            self._client = None
-
-    def on_enter(self, userdata):
-        self._future = None
-        self._request_sent = False
-
-        if self._client is None:
-            Logger.logerr("[MoveToPoseServiceState] No valid service client.")
-            return
-
-        grasp_poses = userdata.grasp_poses
-
-        if not isinstance(grasp_poses, list) or len(grasp_poses) == 0 or not isinstance(grasp_poses[-1], Pose):
-            Logger.logerr("[MoveToPoseServiceState] Invalid or missing 'grasp_poses' in userdata.")
-            return
-
-        target_pose = grasp_poses[-1]
-        Logger.loginfo("[MoveToPoseServiceState] Sending motion request to final pose in grasp_poses.")
-
-        try:
-            request = MoveToPose.Request()
-            request.target_pose = target_pose
-
-            self._future = self._client.call_async(request)
-            self._request_sent = True
-        except Exception as e:
-            Logger.logerr(f"[MoveToPoseServiceState] Failed to send request: {str(e)}")
 
     def execute(self, userdata):
-        if not self._request_sent or self._future is None:
-            return 'failure'
+        # Execute this method periodically while the state is active.
+        # Main purpose is to check state conditions and trigger a corresponding outcome.
+        # If no outcome is returned, the state will stay active.
+
+        if self._future is None:
+            return 'failed'
 
         if self._future.done():
             try:
@@ -99,9 +66,68 @@ class MoveToPoseServiceState(EventState):
                 return 'failure'
 
         return None  # keep waiting
+    
+    def on_enter(self, userdata):
+        # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.
+        # It is primarily used to start actions which are associated with this state.
 
-    def on_exit(self, userdata):
-        Logger.loginfo("[MoveToPoseServiceState] Exiting state.")
+        # check for correct data
+        grasp_poses = userdata.grasp_poses
+        if not isinstance(grasp_poses, list) or len(grasp_poses) == 0 or not isinstance(grasp_poses[-1], Pose):
+            Logger.logerr("[MoveToPoseServiceState] Invalid or missing 'grasp_poses' in userdata.")
+            return
+
+        # construct request
+        request = SrvType.Request()
+        request.target_pose = grasp_poses
+
+        # send request
+        try:
+            self._future = self._client.call_async(request)
+            Logger.loginfo(f"Sent request to {self._service_name} service.")
+        except Exception as e:
+            Logger.logerr(f"Failed to send request: {str(e)}")
+    
+    def on_enter(self, userdata):
+        # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.
+        # It is primarily used to start actions which are associated with this state.
+        
+        # construct request
+        request = SrvType.Request()
+        request.waypoints = userdata.waypoints
+
+        # send request
+        try:
+            self._future = self._client.call_async(request)
+            Logger.loginfo(f"Sent request to {self._service_name} service.")
+        except Exception as e:
+            Logger.logerr(f"Failed to send request: {str(e)}")
+    
+    def on_exit(self):
+        # Call this method when an outcome is returned and another state gets active.
+        # It can be used to stop possibly running processes started by on_enter.
+
+        # No-op: template hook
+        pass
+
+    def on_start(self):
+        # Call this method when the behavior is instantiated on board.
+        # If possible, it is generally better to initialize used resources in the constructor
+        #   because if anything failed, the behavior would not even be started.
+
+        # create the service client, andensure that the service server is initialized
+        self._client = type(self).create_client(SrvType, self._service_name)
+        if not self._client.wait_for_service(timeout_sec=self._service_timeout):
+            Logger.logerr(f"Service {self._service_name} not available after waiting.")
+            return 'failed'
 
     def on_stop(self):
-        Logger.loginfo("[MoveToPoseServiceState] Behavior stopped.")
+        # Call this method whenever the behavior stops execution, also if it is cancelled.
+        # Use this event to clean up things like claimed resources.
+
+        # make sure the client is destroyed when the behavior ends so it can restart cleanly
+        if self._client:
+            try:
+                self._client.destroy()
+            except Exception:
+                pass
