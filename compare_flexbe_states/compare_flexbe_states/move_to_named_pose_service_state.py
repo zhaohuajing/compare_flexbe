@@ -18,7 +18,7 @@ import rclpy
 from rclpy.duration import Duration
 
 from flexbe_core import EventState, Logger
-from robot_common_manip.srv import MoveToNamedPose
+from robot_common_manip.srv import MoveToNamedPose as SrvType
 
 
 class MoveToNamedPoseServiceState(EventState):
@@ -33,69 +33,80 @@ class MoveToNamedPoseServiceState(EventState):
     <= failure                        Service call failed or robot did not move
     """
 
+    SERVICE_NAME = '/move_to_named_pose'
+
     def __init__(self, timeout_sec=5.0):
         super().__init__(
             outcomes=['success', 'failure'],
             input_keys=['target_pose_name']
         )
         self._timeout_sec = timeout_sec
+        self._service_name = type(self).SERVICE_NAME
         self._client = None
         self._future = None
-        self._request_sent = False
-
-    def on_start(self):
-        if not hasattr(MoveToNamedPoseServiceState, '_node'):
-            raise RuntimeError("This state requires a FlexBE-attached ROS 2 node.")
-
-        self._node = MoveToNamedPoseServiceState._node
-        self._client = self._node.create_client(MoveToNamedPose, 'move_to_named_pose')
-
-        if not self._client.wait_for_service(timeout_sec=self._timeout_sec):
-            Logger.logerr("[MoveToNamedPoseServiceState] Service 'move_to_named_pose' not available.")
-            self._client = None
-
-    def on_enter(self, userdata):
-        self._request_sent = False
-        self._future = None
-
-        if self._client is None:
-            Logger.logerr("[MoveToNamedPoseServiceState] No valid service client available.")
-            return
-
-        try:
-            target_name = userdata.target_pose_name
-            request = MoveToNamedPose.Request()
-            request.target_name = target_name
-
-            self._future = self._client.call_async(request)
-            self._request_sent = True
-            Logger.loginfo(f"[MoveToNamedPoseServiceState] Sent request to move to named pose: '{target_name}'")
-
-        except Exception as e:
-            Logger.logerr(f"[MoveToNamedPoseServiceState] Exception while sending request: {str(e)}")
 
     def execute(self, userdata):
-        if not self._request_sent or self._future is None:
-            return 'failure'
+        # Execute this method periodically while the state is active.
+        # Main purpose is to check state conditions and trigger a corresponding outcome.
+        # If no outcome is returned, the state will stay active.
+
+        if self._future is None:
+            return 'failed'
 
         if self._future.done():
             try:
                 result = self._future.result()
                 if result.success:
-                    Logger.loginfo(f"[MoveToNamedPoseServiceState] Successfully moved to '{userdata.target_pose_name}'.")
-                    return 'success'
+                    return 'done'
                 else:
-                    Logger.logwarn(f"[MoveToNamedPoseServiceState] Failed to move to '{userdata.target_pose_name}'.")
-                    return 'failure'
-
+                    return 'failed'
             except Exception as e:
-                Logger.logerr(f"[MoveToNamedPoseServiceState] Service call failed: {str(e)}")
-                return 'failure'
+                Logger.logerr(f"Service call failed: {str(e)}")
+                return 'failed'
 
-        return None  # Keep waiting
+        return None  # still waiting
+    
+    def on_enter(self, userdata):
+        # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.
+        # It is primarily used to start actions which are associated with this state.
+        
+        # construct request
+        target_name = userdata.target_pose_name
+        request = SrvType.Request()
+        request.target_name = target_name
 
-    def on_exit(self, userdata):
-        Logger.loginfo("[MoveToNamedPoseServiceState] Exiting state.")
+        # send request
+        try:
+            self._future = self._client.call_async(request)
+            Logger.loginfo(f"Sent request to {self._service_name} service.")
+        except Exception as e:
+            Logger.logerr(f"Failed to send request: {str(e)}")
+
+    def on_exit(self):
+        # Call this method when an outcome is returned and another state gets active.
+        # It can be used to stop possibly running processes started by on_enter.
+
+        # No-op: template hook
+        pass
+
+    def on_start(self):
+        # Call this method when the behavior is instantiated on board.
+        # If possible, it is generally better to initialize used resources in the constructor
+        #   because if anything failed, the behavior would not even be started.
+
+        # create the service client, andensure that the service server is initialized
+        self._client = type(self).create_client(SrvType, self._service_name)
+        if not self._client.wait_for_service(timeout_sec=self._service_timeout):
+            Logger.logerr(f"Service {self._service_name} not available after waiting.")
+            return 'failed'
 
     def on_stop(self):
-        Logger.loginfo("[MoveToNamedPoseServiceState] Behavior stopped.")
+        # Call this method whenever the behavior stops execution, also if it is cancelled.
+        # Use this event to clean up things like claimed resources.
+
+        # make sure the client is destroyed when the behavior ends so it can restart cleanly
+        if self._client:
+            try:
+                self._client.destroy()
+            except Exception:
+                pass
