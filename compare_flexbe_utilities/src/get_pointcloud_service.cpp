@@ -174,7 +174,7 @@ private:
 int main(int argc, char **argv)
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<GetPointCloudServiceNode>());
+  auto node = std::make_shared<GetPointCloudServiceNode>();
   rclcpp::executors::MultiThreadedExecutor exec;
   exec.add_node(node);
   exec.spin();
