@@ -11,6 +11,11 @@
 #include <tf2_sensor_msgs/tf2_sensor_msgs.hpp>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 
+#include <iostream>
+#include <pcl/io/pcd_io.h>
+#include <pcl/point_types.h>
+#include <pcl_conversions/pcl_conversions.h>
+
 #include "compare_flexbe_utilities/srv/get_point_cloud.hpp"
 
 using namespace std::chrono_literals;
@@ -81,7 +86,7 @@ private:
     while (rclcpp::ok()) {
       if (fut.wait_for(10ms) == std::future_status::ready) break;
       if ((this->now() - start).seconds() > timeout_sec) break;
-      rclcpp::spin_some(shared_from_this());
+      rclcpp::sleep_for(std::chrono::milliseconds(10));
     }
 
     if (!received_cloud) {
@@ -146,6 +151,21 @@ private:
     res->success = true;
     res->message = "OK";
 
+    // pcl::PCLPointCloud2 pcl_pc2;
+    // pcl_conversions::toPCL(cloud_in_target, pcl_pc2);
+    // std::string path = "/home/csrobot/Desktop/test_pcd.pcd";
+    // int ret = pcl::io::savePCDFileBinary(path, pcl_pc2);
+    // // std::filesystem::path path = "/home/csrobot/Desktop/test_pcd.pcd";
+    // // int ret = pcl::io::savePCDFileBinary(path.string(), pcl_pc2);
+
+    pcl::PointCloud<pcl::PointXYZ> cloud_xyz;
+    pcl::fromROSMsg(cloud_in_target, cloud_xyz);
+
+    std::string path = "/home/csrobot/Desktop/test_pcd.pcd";
+    int ret = pcl::io::savePCDFileBinary(path, cloud_xyz);
+
+    RCLCPP_INFO(get_logger(), "Saved cloud to test_cloud.pcd.");
+
     RCLCPP_INFO(get_logger(), "Returned cloud in [%s] and camera pose.",
                 target_frame.c_str());
   }
@@ -155,6 +175,9 @@ int main(int argc, char **argv)
 {
   rclcpp::init(argc, argv);
   rclcpp::spin(std::make_shared<GetPointCloudServiceNode>());
+  rclcpp::executors::MultiThreadedExecutor exec;
+  exec.add_node(node);
+  exec.spin();
   rclcpp::shutdown();
   return 0;
 }
