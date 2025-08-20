@@ -105,6 +105,7 @@ ament_target_dependencies(get_pointcloud_service
   tf2_ros
   tf2_sensor_msgs
   tf2_geometry_msgs
+  pcl_conversions
 )
 
 install(TARGETS 
