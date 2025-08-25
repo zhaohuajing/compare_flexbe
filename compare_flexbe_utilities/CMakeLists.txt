@@ -19,6 +19,7 @@ find_package(tf2_ros REQUIRED)
 find_package(tf2_sensor_msgs REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(pcl_msgs REQUIRED)
+find_package(pcl_ros REQUIRED)
 find_package(pcl_conversions REQUIRED)
 find_package(PCL REQUIRED)
 find_package(gpd_ros REQUIRED)
@@ -97,16 +98,25 @@ ament_target_dependencies(euclidean_clustering_service
 )
 target_link_libraries(euclidean_clustering_service ${PCL_LIBRARIES})
 
-add_executable(get_pointcloud_service src/get_pointcloud_service.cpp)
-ament_target_dependencies(get_pointcloud_service
+# add_executable(get_pointcloud_service src/get_pointcloud_service.cpp)
+# ament_target_dependencies(get_pointcloud_service
+#   rclcpp
+#   sensor_msgs
+#   geometry_msgs
+#   tf2_ros
+#   tf2_sensor_msgs
+#   tf2_geometry_msgs
+#   pcl_ros
+#   pcl_conversions
+# )
+# target_link_libraries(get_pointcloud_service ${PCL_LIBRARIES})
+
+add_executable(get_point_cloud_service src/get_point_cloud_service.cpp)
+ament_target_dependencies(get_point_cloud_service
   rclcpp
   sensor_msgs
-  geometry_msgs
-  tf2_ros
-  tf2_sensor_msgs
-  tf2_geometry_msgs
-  pcl_conversions
 )
+target_link_libraries(get_point_cloud_service ${PCL_LIBRARIES})
 
 install(TARGETS 
   cartesian_move_to_pose_service
@@ -115,7 +125,8 @@ install(TARGETS
   voxel_grid_filter_service
   plane_segmentation_service
   euclidean_clustering_service
-  get_pointcloud_service
+  # get_pointcloud_service
+  get_point_cloud_service
   DESTINATION lib/${PROJECT_NAME})
 
 # Link generated service headers
@@ -126,7 +137,8 @@ target_link_libraries(move_to_pose_service ${cpp_typesupport_target})
 target_link_libraries(voxel_grid_filter_service ${cpp_typesupport_target})
 target_link_libraries(plane_segmentation_service ${cpp_typesupport_target})
 target_link_libraries(euclidean_clustering_service ${cpp_typesupport_target})
-target_link_libraries(get_pointcloud_service ${cpp_typesupport_target})
+# target_link_libraries(get_pointcloud_service ${cpp_typesupport_target})
+target_link_libraries(get_point_cloud_service ${cpp_typesupport_target})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -140,4 +152,6 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+
+ament_export_dependencies(rosidl_default_runtime)
 ament_package()
