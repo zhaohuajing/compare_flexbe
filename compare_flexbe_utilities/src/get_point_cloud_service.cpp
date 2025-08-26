@@ -12,6 +12,7 @@
 #include <tf2_ros/buffer.h>
 #include <tf2/time.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+#include <tf2_sensor_msgs/tf2_sensor_msgs.hpp>
 
 #include "compare_flexbe_utilities/srv/get_point_cloud.hpp"
 
@@ -64,18 +65,41 @@ private:
     // wait_for_message on specified topic 
     const bool ok = rclcpp::wait_for_message<sensor_msgs::msg::PointCloud2>(cloud, sub, context, timeout);
 
+    // Validate frame id
+    if (cloud.header.frame_id.empty()) {
+      res->success = false;
+      res->message = "Incoming cloud has empty frame_id";
+      RCLCPP_ERROR(this->get_logger(), "Cloud frame_id is empty");
+      return;
+    }
+
     // Store the cloud Header frame_id for response
     res->cloud_frame = cloud.header.frame_id;
+    RCLCPP_INFO(this->get_logger(), "Got cloud in frame '%s', stamp %u.%u",
+            cloud.header.frame_id.c_str(),
+            cloud.header.stamp.sec, cloud.header.stamp.nanosec);
 
     // lookup Transform from camera_frame to target_frame
     geometry_msgs::msg::TransformStamped tf_cam_in_target;
     try {
       tf_cam_in_target = tf_buffer_.lookupTransform(
-        req->target_frame, cloud.header.frame_id,
-        cloud.header.stamp, tf2::durationFromSec(req->timeout_sec));
+        req->target_frame,                  // target
+        cloud.header.frame_id,              // source
+        cloud.header.stamp,                 // time cloud arrives
+        tf2::durationFromSec(req->timeout_sec));
     } catch (tf2::TransformException & ex) {
       res->success = false;
       res->message = std::string("Transform error: ") + ex.what();
+      return;
+    }
+
+    // Transform the cloud
+    sensor_msgs::msg::PointCloud2 cloud_out_msg;
+    try {
+      tf2::doTransform(cloud, cloud_out_msg, tf_cam_in_target);
+    } catch (const std::exception &e) {
+      res->success = false;
+      res->message = std::string("Cloud transform failed: ") + e.what();
       return;
     }
 
@@ -83,23 +107,11 @@ private:
     pcl::PointCloud<pcl::PointXYZRGB> pcl_in;
     pcl::fromROSMsg(cloud, pcl_in);
 
-    pcl::PointCloud<pcl::PointXYZRGB> pcl_out;
-    if (!pcl_ros::transformPointCloud(req->target_frame, pcl_in, pcl_out, tf_buffer_)) {
-      res->success = false;
-      res->message = "Failed to transform pointcloud to target frame: " + req->target_frame;
-      return;
-    }
-
     // Save pointcloud to a pcd file
     std::string path = "/home/csrobot/Desktop/test_pcd.pcd";
     int ret = pcl::io::savePCDFileBinary(path, pcl_in);
+    (void)ret;          // silence unused variable warning
     RCLCPP_INFO(get_logger(), "Saved cloud to test_cloud.pcd.");
-
-    sensor_msgs::msg::PointCloud2 cloud_out_msg;
-    pcl::toROSMsg(pcl_out, cloud_out_msg);
-    cloud_out_msg.header.stamp = cloud.header.stamp;
-    cloud_out_msg.header.frame_id = req->target_frame;
-    res->cloud_out = cloud_out_msg;
 
     // --- Camera pose in target_frame (from the same transform) ---
     geometry_msgs::msg::PoseStamped pose;
