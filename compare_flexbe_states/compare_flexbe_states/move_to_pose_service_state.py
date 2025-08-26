@@ -21,7 +21,6 @@ from flexbe_core import EventState, Logger
 from geometry_msgs.msg import Pose
 from robot_common_manip.srv import MoveToPose as SrvType
 
-
 class MoveToPoseServiceState(EventState):
     """
     Calls a service to move the robot to a specific pose using the he setPoseTarget, plan and execute C++ functions wrapped into a service server.

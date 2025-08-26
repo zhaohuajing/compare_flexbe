@@ -17,7 +17,6 @@
 import rclpy
 from flexbe_core import EventState, Logger
 
-# Adjust to your actual package name:
 from compare_flexbe_utilities.srv import GetPointCloud as SrvType # request: input, camera_pose, cluster_tolerance, min/max size
 
 class GetPointCloudServiceState(EventState):

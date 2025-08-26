@@ -17,7 +17,6 @@
 import rclpy
 from flexbe_core import EventState, Logger
 
-# Adjust to your actual package name:
 from compare_flexbe_utilities.srv import PlaneSegmentation as SrvType # request: input, use_voxel, leaf_size, distance_threshold, max_iterations
 
 class PlaneSegmentationServiceState(EventState):

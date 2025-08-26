@@ -20,7 +20,6 @@ from rclpy.duration import Duration
 from flexbe_core import EventState, Logger
 from robot_common_manip.srv import MoveToNamedPose as SrvType
 
-
 class MoveToNamedPoseServiceState(EventState):
     """
     Calls a service to move the robot to a named pose using the setNamedTarget, plan and execute C++ functions wrapped into a service server.
