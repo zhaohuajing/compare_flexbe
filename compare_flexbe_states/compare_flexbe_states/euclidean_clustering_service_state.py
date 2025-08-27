@@ -23,16 +23,16 @@ class EuclideanClusteringServiceState(EventState):
     """
     Calls /euclidean_clustering to extract clusters from a (de-planed) cloud, sorted nearest→furthest to camera.
 
-    -- service_timeout     float   Timeout for service discovery (sec, default: 5.0)
-    -- service_name        str     Service name (default: '/euclidean_clustering')
-    -- cluster_tolerance   float   Cluster tolerance (m), e.g., 0.02
-    -- min_cluster_size    int     Minimum cluster size, e.g., 100
-    -- max_cluster_size    int     Maximum cluster size, e.g., 25000
+    -- service_timeout     float    Timeout for service discovery (sec, default: 5.0)
+    -- service_name        str      Service name (default: '/euclidean_clustering')
+    -- cluster_tolerance   float    Cluster tolerance (m), e.g., 0.02
+    -- min_cluster_size    int      Minimum cluster size, e.g., 100
+    -- max_cluster_size    int      Maximum cluster size, e.g., 25000
 
-    ># cloud_in                   sensor_msgs/PointCloud2   (ideally output of PlaneSegmentation)
-    ># camera_pose                geometry_msgs/PoseStamped
-    <# clusters_cloud_indexed     gpd_ros/CloudIndexed
-    <# cluster_count              int
+    ># cloud_in                     sensor_msgs/PointCloud2             input pointcloud
+    ># camera_pose                  geometry_msgs/PoseStamped           pose of camera that captured cloud
+    <# target_cluster_indices       pcl_msgs/PointIndices               target cluster
+    <# obstacle_cluster_indices     pcl_msgs/PointIndices[]             list of obstacle clusters
 
     <= done
     <= failed
@@ -40,7 +40,7 @@ class EuclideanClusteringServiceState(EventState):
     def __init__(self, service_timeout=5.0, service_name='/euclidean_clustering', cluster_tolerance=0.02, min_cluster_size=100, max_cluster_size=25000):
         super().__init__(outcomes=['done', 'failed'],
                             input_keys=['cloud_in', 'camera_pose'],
-                            output_keys=['target_cluster_index', 'obstacle_clusters_index' 'cluster_count']
+                            output_keys=['target_cluster_indices', 'obstacle_cluster_indices']
         )
         self._params = dict(
             cluster_tolerance=float(cluster_tolerance),
@@ -63,10 +63,9 @@ class EuclideanClusteringServiceState(EventState):
         if self._future.done():
             try:
                 result = self._future.result()
-                userdata.target_cluster = result.target_cluster
-                userdata.obstacle_clusters = result.obstacle_clusters
-                userdata.cluster_count = result.cluster_count
-                Logger.loginfo(f"[{type(self).__name__}] Received result with {len(result.cluster_count)} clusters.")
+                userdata.target_cluster_indices = result.target_cluster_indices
+                userdata.obstacle_cluster_indices = result.obstacle_cluster_indices
+                # Logger.loginfo(f"[{type(self).__name__}] Received result with {len(result.cluster_count)} clusters.")
                 return 'done'
             except Exception as e:
                 Logger.logerr(f"Service call failed: {str(e)}")
