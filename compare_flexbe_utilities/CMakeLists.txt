@@ -34,6 +34,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/PlaneSegmentation.srv"
   "srv/EuclideanClustering.srv"
   "srv/GetPointCloud.srv"
+  "srv/FilterByIndices.srv"
   DEPENDENCIES
     sensor_msgs
     pcl_msgs
@@ -111,6 +112,19 @@ ament_target_dependencies(get_point_cloud_service
 )
 target_link_libraries(get_point_cloud_service ${PCL_LIBRARIES})
 
+add_executable(filter_by_indices_service src/filter_by_indices_service.cpp)
+ament_target_dependencies(filter_by_indices_service
+  rclcpp
+  sensor_msgs
+  geometry_msgs
+  tf2_ros
+  tf2_sensor_msgs
+  tf2_geometry_msgs
+  pcl_ros
+  pcl_conversions
+)
+target_link_libraries(filter_by_indices_service ${PCL_LIBRARIES})
+
 install(TARGETS 
   cartesian_move_to_pose_service
   move_to_named_pose_service
@@ -119,6 +133,7 @@ install(TARGETS
   plane_segmentation_service
   euclidean_clustering_service
   get_point_cloud_service
+  filter_by_indices_service
   DESTINATION lib/${PROJECT_NAME})
 
 # Link generated service headers
@@ -130,6 +145,7 @@ target_link_libraries(voxel_grid_filter_service ${cpp_typesupport_target})
 target_link_libraries(plane_segmentation_service ${cpp_typesupport_target})
 target_link_libraries(euclidean_clustering_service ${cpp_typesupport_target})
 target_link_libraries(get_point_cloud_service ${cpp_typesupport_target})
+target_link_libraries(filter_by_indices_service ${cpp_typesupport_target})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
