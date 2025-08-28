@@ -1,7 +1,24 @@
 #!/usr/bin/env python3
 
+#!/usr/bin/env python3
+
+# Copyright 2023 Christopher Newport University
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 import rclpy
 from flexbe_core import EventState, Logger
+from flexbe_core.proxy import ProxyServiceCaller
 
 # Adjust to your actual package name:
 from compare_flexbe_utilities.srv import VoxelGridFilter as SrvType  # request: input, response: filtered
@@ -30,25 +47,31 @@ class VoxelGridServiceState(EventState):
         self._client = None
         self._future = None
 
+        # Create proxy service caller to handle rclpy node
+        self._srv = ProxyServiceCaller({self._service_name: SrvType})
+
+        # result storage
+        self._res = None
+        self._had_error = False
+
     def execute(self, userdata):
         # Execute this method periodically while the state is active.
         # Main purpose is to check state conditions and trigger a corresponding outcome.
         # If no outcome is returned, the state will stay active.
 
-        if self._future is None:
+         # Check for error or no response
+        if self._had_error or self._res is None:
             return 'failed'
 
-        if self._future.finished():
-            try:
-                result = self._future.result()
-                userdata.cloud_filtered = result.filtered
-                Logger.loginfo(f"[{type(self).__name__}] Received filtered cloud.")
-                return 'finished'
-            except Exception as e:
-                Logger.logerr(f"[{type(self).__name__}] Service call failed: {str(e)}")
-                return 'failed'
+        # Write userdata
+        try:
+            userdata.cloud_filtered = self._res.filtered
+        except Exception as e:
+            Logger.logerr(f"[{type(self).__name__}] Failed to write userdata: {e}")
+            return 'failed'
         
-        return None # keep waiting
+        # Return outcome finished
+        return 'finished'
 
     def on_enter(self, userdata):
         # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.
@@ -58,12 +81,24 @@ class VoxelGridServiceState(EventState):
         request = SrvType.Request()
         request.input = userdata.cloud_in
 
+        # reset state
+        self._res = None
+        self._had_error = False
+
+        # wait for availability (once per entry)
+        if not self._srv.is_available(self._service_name):
+            Logger.logerr(f"[{type(self).__name__}] Service '{self._service_name}' not available after {self._service_timeout}s.")
+            self._had_error = True
+            return
+
         # send request
         try:
-            self._future = self._client.call_async(request)
-            Logger.loginfo(f"[{type(self).__name__}] Sent request to {self._service_name} service.")
+            self._res = self._srv.call(self._service_name, request)
+            Logger.loginfo(f"[{type(self).__name__}] Called service '{self._service_name}'.")
         except Exception as e:
-            Logger.logerr(f"[{type(self).__name__}] Failed to send request: {str(e)}")
+            Logger.logerr(f"[{type(self).__name__}] Service call failed: {e}")
+            self._res = None
+            self._had_error = True
 
     def on_exit(self, userdata):
         # Call this method when an outcome is returned and another state gets active.
@@ -77,19 +112,12 @@ class VoxelGridServiceState(EventState):
         # If possible, it is generally better to initialize used resources in the constructor
         #   because if anything failed, the behavior would not even be started.
 
-        # create the service client, andensure that the service server is initialized
-        self._client = type(self).create_client(SrvType, self._service_name)
-        if not self._client.wait_for_service(timeout_sec=self._service_timeout):
-            Logger.logerr(f"Service {self._service_name} not available after waiting.")
-            return 'failed'
+        # No-op: template hook
+        pass
 
     def on_stop(self):
         # Call this method whenever the behavior stops execution, also if it is cancelled.
         # Use this event to clean up things like claimed resources.
 
-        # make sure the client is destroyed when the behavior ends so it can restart cleanly
-        if self._client:
-            try:
-                self._client.destroy()
-            except Exception:
-                pass
+        # No-op: template hook
+        pass
