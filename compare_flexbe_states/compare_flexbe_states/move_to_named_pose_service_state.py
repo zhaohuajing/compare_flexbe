@@ -26,22 +26,21 @@ class MoveToNamedPoseServiceState(EventState):
     """
     Calls a service to move the robot to a named pose using the setNamedTarget, plan and execute C++ functions wrapped into a service server.
 
-    -- timeout_sec        float       Timeout for waiting for service (default: 5.0)
+    -- timeout_sec        float         Timeout for waiting for service (default: 5.0)
+    -- service_name       str           Service name (default: '/move_to_named_pose')
 
-    ># target_pose_name   str         The name of the target pose to move to
+    ># target_pose_name   str           The name of the target pose to move to
 
-    <= finished                        Service call succeeded and robot moved
-    <= failure                        Service call failed or robot did not move
+    <= finished                         Service call succeeded and robot moved
+    <= failure                          Service call failed or robot did not move
     """
 
-    SERVICE_NAME = '/move_to_named_pose'
-
-    def __init__(self, timeout_sec=5.0):
+    def __init__(self, timeout_sec=5.0, service_name='/move_to_named_pose'):
         super().__init__(outcomes=['finished', 'failure'],
                             input_keys=['target_pose_name']
         )
         self._timeout_sec = timeout_sec
-        self._service_name = type(self).SERVICE_NAME
+        self._service_name = service_name
         self._client = None
         self._future = None
 
