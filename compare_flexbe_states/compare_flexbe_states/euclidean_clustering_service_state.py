@@ -16,6 +16,7 @@
 
 import rclpy
 from flexbe_core import EventState, Logger
+from flexbe_core.proxy import ProxyServiceCaller
 
 from compare_flexbe_utilities.srv import EuclideanClustering as SrvType
 
@@ -52,6 +53,7 @@ class EuclideanClusteringServiceState(EventState):
         self._client = None
         self._future = None
 
+        # Create proxy service caller to handle rclpy node
         self._srv = ProxyServiceCaller({self._service_name: SrvType})
 
     def execute(self, userdata):
