@@ -77,9 +77,9 @@ class GetPointCloudServiceState(EventState):
         
         # construct request
         request = SrvType.Request()
-        request.input = self._camera_topic
-        request.input = self._target_frame
-        request.input = self._service_timeout
+        request.camera_topic = self._camera_topic
+        request.target_frame = self._target_frame
+        request.timeout_sec = self._service_timeout
 
         # wait for availability (once per entry)
         if not self._srv.is_available(self._service_name, timeout=self._service_timeout):
