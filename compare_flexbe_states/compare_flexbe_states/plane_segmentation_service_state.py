@@ -37,11 +37,11 @@ class PlaneSegmentationServiceState(EventState):
     <# plane_coefficients         float[4]      [a,b,c,d]
     <# plane_inlier_count         int
 
-    <= done
+    <= finished
     <= failed
     """
     def __init__(self, service_timeout=5.0, service_name='/plane_segmentation', use_voxel=True, leaf_size=0.01, distance_threshold=0.01, max_iterations=1000):
-        super().__init__(outcomes=['done', 'failed'],
+        super().__init__(outcomes=['finished', 'failed'],
                             input_keys=['cloud_in'],
                             output_keys=['cloud_without_plane', 'plane_indices', 'plane_coefficients', 'plane_inlier_count']
         )
@@ -64,7 +64,7 @@ class PlaneSegmentationServiceState(EventState):
         if self._future is None:
             return 'failed'
 
-        if self._future.done():
+        if self._future.finished():
             try:
                 result = self._future.result()
                 userdata.cloud_without_plane = result.cloud_without_plane
@@ -72,7 +72,7 @@ class PlaneSegmentationServiceState(EventState):
                 userdata.plane_coefficients = result.plane_coefficients
                 userdata.plane_inlier_count = result.plane_inlier_count
                 Logger.loginfo(f"[{type(self).__name__}] Received filtered cloud.")
-                return 'done'
+                return 'finished'
             except Exception as e:
                 Logger.logerr(f"[{type(self).__name__}] Service call failed: {str(e)}")
                 return 'failed'

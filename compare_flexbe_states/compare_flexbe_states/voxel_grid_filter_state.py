@@ -16,12 +16,12 @@ class VoxelGridServiceState(EventState):
     ># cloud_in          sensor_msgs/PointCloud2
     <# cloud_filtered    sensor_msgs/PointCloud2
 
-    <= done
+    <= finished
     <= failed
     """
     def __init__(self, service_timeout=5.0, service_name='/voxel_grid_filter'):
         super().__init__(
-            outcomes=['done', 'failed'],
+            outcomes=['finished', 'failed'],
             input_keys=['cloud_in'],
             output_keys=['cloud_filtered']
         )
@@ -38,12 +38,12 @@ class VoxelGridServiceState(EventState):
         if self._future is None:
             return 'failed'
 
-        if self._future.done():
+        if self._future.finished():
             try:
                 result = self._future.result()
                 userdata.cloud_filtered = result.filtered
                 Logger.loginfo(f"[{type(self).__name__}] Received filtered cloud.")
-                return 'done'
+                return 'finished'
             except Exception as e:
                 Logger.logerr(f"[{type(self).__name__}] Service call failed: {str(e)}")
                 return 'failed'
