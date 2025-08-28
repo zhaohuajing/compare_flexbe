@@ -31,11 +31,11 @@ class FilterByIndicesServiceState(EventState):
     <# target_indices           pcl_msgs/PointIndices           indices of target object cluster
     ># cloud_out                sensor_msgs/PointCloud2         point cloud of only target object
 
-    <= done
+    <= finished
     <= failed
     """
     def __init__(self, service_timeout=5.0, service_name='/filter_by_indices'):
-        super().__init__(outcomes=['done', 'failed'],
+        super().__init__(outcomes=['finished', 'failed'],
                             input_keys=['cloud_in', 'target_indices'],
                             output_keys=['cloud_out']
         )
@@ -43,6 +43,10 @@ class FilterByIndicesServiceState(EventState):
         self._service_name = service_name
         self._client = None
         self._future = None
+
+        # result storage
+        self._res = None
+        self._had_error = False
 
         # Create proxy service caller to handle rclpy node
         self._srv = ProxyServiceCaller({self._service_name: SrvType})
@@ -52,20 +56,18 @@ class FilterByIndicesServiceState(EventState):
         # Main purpose is to check state conditions and trigger a corresponding outcome.
         # If no outcome is returned, the state will stay active.
 
-        if self._future is None:
+        # Check for error or no response
+        if self._had_error or self._res is None:
             return 'failed'
 
-        if self._future.done():
-            try:
-                result = self._future.result()
-                userdata.cloud_out = result.filtered_cloud
-                Logger.loginfo(f"[{type(self).__name__}] Received filtered cloud.")
-                return 'done'
-            except Exception as e:
-                Logger.logerr(f"Service call failed: {str(e)}")
-                return 'failed'
+        try:
+            userdata.cloud_out = self._res.filtered_cloud
+            Logger.loginfo(f"[{type(self).__name__}] Received filtered cloud.")
+        except Exception as e:
+            Logger.logerr(f"[{type(self).__name__}] Service call failed: {str(e)}")
+            return 'failed'
 
-        return None  # still waiting
+        return 'finished'
     
     def on_enter(self, userdata):
         # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.

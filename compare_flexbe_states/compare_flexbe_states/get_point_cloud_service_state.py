@@ -31,11 +31,11 @@ class GetPointCloudServiceState(EventState):
     <# camera_pose                geometry_msgs/PoseStamped     pose of camera_frame in target_frame
     <# cloud_frame                string                       original message frame_id
 
-    <= done
+    <= finished
     <= failed
     """
     def __init__(self, service_timeout=5.0, service_name='/get_point_cloud', camera_topic='/rgbd_camera/points', target_frame='/base_link'):
-        super().__init__(outcomes=['done', 'failed'],
+        super().__init__(outcomes=['finished', 'failed'],
                             output_keys=['cloud_out', 'camera_pose', 'cloud_frame']
         )
         self._camera_topic = camera_topic
@@ -48,28 +48,30 @@ class GetPointCloudServiceState(EventState):
         # Create proxy service caller to handle rclpy node
         self._srv = ProxyServiceCaller({self._service_name: SrvType})
 
+        # result storage
+        self._res = None
+        self._had_error = False
+
     def execute(self, userdata):
         # Execute this method periodically while the state is active.
         # Main purpose is to check state conditions and trigger a corresponding outcome.
         # If no outcome is returned, the state will stay active.
 
-        if self._future is None:
+        # Check for error or no response
+        if self._had_error or self._res is None:
             return 'failed'
 
-        if self._future.done():
-            try:
-                result = self._future.result()
-                userdata.cloud_out = result.cloud_out
-                userdata.camera_pose = result.camera_pose
-                userdata.cloud_frame = result.cloud_frame
-                Logger.loginfo(f"[{type(self).__name__}] Received result with {result.success}.")
-                Logger.loginfo(f"[{type(self).__name__}] Received message: {result.message}.")
-                return 'done'
-            except Exception as e:
-                Logger.logerr(f"Service call failed: {str(e)}")
-                return 'failed'
+        try:
+            userdata.cloud_out = self._res.cloud_out
+            userdata.camera_pose = self._res.camera_pose
+            userdata.cloud_frame = self._res.cloud_frame
+            Logger.loginfo(f"[{type(self).__name__}] Received result with {self._res.success}.")
+            Logger.loginfo(f"[{type(self).__name__}] Received message: {self._res.message}.")
+        except Exception as e:
+            Logger.logerr(f"[{type(self).__name__}] Service call failed: {str(e)}")
+            return 'failed'
 
-        return None  # still waiting
+        return 'finished'
     
     def on_enter(self, userdata):
         # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.

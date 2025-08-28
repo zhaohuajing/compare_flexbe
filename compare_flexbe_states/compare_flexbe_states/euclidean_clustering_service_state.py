@@ -35,11 +35,11 @@ class EuclideanClusteringServiceState(EventState):
     <# target_cluster_indices       pcl_msgs/PointIndices               target cluster
     <# obstacle_cluster_indices     pcl_msgs/PointIndices[]             list of obstacle clusters
 
-    <= done
+    <= finished
     <= failed
     """
     def __init__(self, service_timeout=5.0, service_name='/euclidean_clustering', cluster_tolerance=0.02, min_cluster_size=100, max_cluster_size=25000):
-        super().__init__(outcomes=['done', 'failed'],
+        super().__init__(outcomes=['finished', 'failed'],
                             input_keys=['cloud_in', 'camera_pose'],
                             output_keys=['target_cluster_indices', 'obstacle_cluster_indices']
         )
@@ -56,26 +56,27 @@ class EuclideanClusteringServiceState(EventState):
         # Create proxy service caller to handle rclpy node
         self._srv = ProxyServiceCaller({self._service_name: SrvType})
 
+        # result storage
+        self._res = None
+        self._had_error = False
+
     def execute(self, userdata):
         # Execute this method periodically while the state is active.
         # Main purpose is to check state conditions and trigger a corresponding outcome.
         # If no outcome is returned, the state will stay active.
 
-        if self._future is None:
+        # Check for error or no response
+        if self._had_error or self._res is None:
             return 'failed'
 
-        if self._future.done():
-            try:
-                result = self._future.result()
-                userdata.target_cluster_indices = result.target_cluster_indices
-                userdata.obstacle_cluster_indices = result.obstacle_cluster_indices
-                # Logger.loginfo(f"[{type(self).__name__}] Received result with {len(result.cluster_count)} clusters.")
-                return 'done'
-            except Exception as e:
-                Logger.logerr(f"Service call failed: {str(e)}")
-                return 'failed'
+        try:
+            userdata.target_cluster_indices   = self._res.target_cluster_indices
+            userdata.obstacle_cluster_indices = self._res.obstacle_cluster_indices
+        except Exception as e:
+            Logger.logerr(f"[{type(self).__name__}] Failed to write userdata: {e}")
+            return 'failed'
 
-        return None  # still waiting
+        return 'finished'
     
     def on_enter(self, userdata):
         # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.
@@ -89,6 +90,10 @@ class EuclideanClusteringServiceState(EventState):
         request.min_cluster_size = int(self._params['min_cluster_size'])
         request.max_cluster_size = int(self._params['max_cluster_size'])
 
+        # reset state
+        self._res = None
+        self._had_error = False
+
         # wait for availability (once per entry)
         if not self._srv.is_available(self._service_name):
             Logger.logerr(f"[{type(self).__name__}] Service '{self._service_name}' not available after {self._service_timeout}s.")
@@ -101,6 +106,8 @@ class EuclideanClusteringServiceState(EventState):
             Logger.loginfo(f"[{type(self).__name__}] Called service '{self._service_name}'.")
         except Exception as e:
             Logger.logerr(f"[{type(self).__name__}] Service call failed: {e}")
+            self._res = None
+            self._had_error = True
 
     def on_exit(self, userdata):
         # Call this method when an outcome is returned and another state gets active.
