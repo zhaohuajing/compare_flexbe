@@ -69,6 +69,7 @@ class EuclideanClusteringServiceState(EventState):
         if self._had_error or self._res is None:
             return 'failed'
 
+        # Write userdata
         try:
             userdata.target_cluster_indices   = self._res.target_cluster_indices
             userdata.obstacle_cluster_indices = self._res.obstacle_cluster_indices
@@ -76,6 +77,7 @@ class EuclideanClusteringServiceState(EventState):
             Logger.logerr(f"[{type(self).__name__}] Failed to write userdata: {e}")
             return 'failed'
 
+        # Return outcome finished
         return 'finished'
     
     def on_enter(self, userdata):
