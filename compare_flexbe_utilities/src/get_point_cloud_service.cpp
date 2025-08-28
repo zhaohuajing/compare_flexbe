@@ -103,6 +103,9 @@ private:
       return;
     }
 
+    // Store transformed cloud as response
+    res->cloud_out = cloud_out_msg;
+
     // Convert PointCloud2 to PCL PointCloud to transform and optionally save pcd file
     pcl::PointCloud<pcl::PointXYZRGB> pcl_in;
     pcl::fromROSMsg(cloud, pcl_in);
