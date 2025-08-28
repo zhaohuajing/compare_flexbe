@@ -27,12 +27,13 @@ class CartesianMoveToPoseServiceState(EventState):
     """
     Calls a ROS 2 service to move the robot in Cartesian space using waypoints using the computeCartesianPath and execute C++ function wrapped into a service server.
 
-    -- timeout_sec     float       Timeout for waiting for service (default: 5.0)
+    -- timeout_sec     float        Timeout for waiting for service (default: 5.0)
+    -- service_name    str          Service name (default: '/plan_cartesian_path')
 
-    ># waypoints       list        A list of geometry_msgs/Pose to move through
+    ># waypoints       list         A list of geometry_msgs/Pose to move through
 
     <= finished                     Path was planned and executed finishedfully
-    <= failure                     Service failed or did not complete finishedfully
+    <= failure                      Service failed or did not complete finishedfully
     """
     def __init__(self, service_timeout=5.0, service_name='/plan_cartesian_path'):
         super().__init__(outcomes=['finished', 'failure'],
