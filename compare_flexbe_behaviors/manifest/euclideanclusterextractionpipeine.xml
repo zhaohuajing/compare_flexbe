@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<behavior name="EuclideanClusterExtractionPipeine">
+
+    <executable package_path="compare_flexbe_behaviors.euclideanclusterextractionpipeine_sm" class="EuclideanClusterExtractionPipeineSM" />
+    <tagstring></tagstring>
+    <author>Brian Flynn</author>
+    <date>Wed Aug 27 2025</date>
+    <description>
+        A perception pipeline which employs several basic filters such as plane
+        segmentation and cluster extraction in order to cluster pickable objects from a
+        scene and choose a target for grasping
+    </description>
+
+
+    <!-- Contained Behaviors -->
+
+    <!-- Available Parameters -->
+
+</behavior>
