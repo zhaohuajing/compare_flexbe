@@ -16,6 +16,7 @@
 
 import rclpy
 from flexbe_core import EventState, Logger
+from flexbe_core.proxy import ProxyServiceCaller
 
 from compare_flexbe_utilities.srv import FilterByIndices as SrvType
 
@@ -42,6 +43,9 @@ class FilterByIndicesServiceState(EventState):
         self._service_name = service_name
         self._client = None
         self._future = None
+
+        # Create proxy service caller to handle rclpy node
+        self._srv = ProxyServiceCaller({self._service_name: SrvType})
 
     def execute(self, userdata):
         # Execute this method periodically while the state is active.
@@ -72,12 +76,18 @@ class FilterByIndicesServiceState(EventState):
         request.input_cloud = userdata.cloud_in
         request.target_indices = userdata.target_indices
 
+        # wait for availability (once per entry)
+        if not self._srv.is_available(self._service_name, timeout=self._service_timeout):
+            Logger.logerr(f"[{type(self).__name__}] Service '{self._service_name}' not available after {self._service_timeout}s.")
+            self._had_error = True
+            return
+
         # send request
         try:
-            self._future = self._client.call_async(request)
-            Logger.loginfo(f"[{type(self).__name__}] Sent request to {self._service_name} service.")
+            self._res = self._srv.call(self._service_name, request)
+            Logger.loginfo(f"[{type(self).__name__}] Called service '{self._service_name}'.")
         except Exception as e:
-            Logger.logerr(f"[{type(self).__name__}] Failed to send request: {str(e)}")
+            Logger.logerr(f"[{type(self).__name__}] Service call failed: {e}")
 
     def on_exit(self, userdata):
         # Call this method when an outcome is returned and another state gets active.
@@ -91,19 +101,12 @@ class FilterByIndicesServiceState(EventState):
         # If possible, it is generally better to initialize used resources in the constructor
         #   because if anything failed, the behavior would not even be started.
 
-        # create the service client, andensure that the service server is initialized
-        self._client = type(self).create_client(SrvType, self._service_name)
-        if not self._client.wait_for_service(timeout_sec=self._service_timeout):
-            Logger.logerr(f"[{type(self).__name__}] Service {self._service_name} not available after waiting.")
-            return 'failed'
+        # No-op: template hook
+        pass
 
     def on_stop(self):
         # Call this method whenever the behavior stops execution, also if it is cancelled.
         # Use this event to clean up things like claimed resources.
 
-        # make sure the client is destroyed when the behavior ends so it can restart cleanly
-        if self._client:
-            try:
-                self._client.destroy()
-            except Exception:
-                pass
+        # No-op: template hook
+        pass
