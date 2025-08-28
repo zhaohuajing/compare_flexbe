@@ -18,10 +18,10 @@ import rclpy
 from rclpy.duration import Duration
 
 from flexbe_core import EventState, Logger
+from flexbe_core.proxy import ProxyServiceCaller
 
 from robot_common_manip.srv import CartesianMoveToPose as SrvType
 from geometry_msgs.msg import Pose
-
 
 class CartesianMoveToPoseServiceState(EventState):
     """
@@ -31,11 +31,11 @@ class CartesianMoveToPoseServiceState(EventState):
 
     ># waypoints       list        A list of geometry_msgs/Pose to move through
 
-    <= success                     Path was planned and executed successfully
-    <= failure                     Service failed or did not complete successfully
+    <= finished                     Path was planned and executed finishedfully
+    <= failure                     Service failed or did not complete finishedfully
     """
     def __init__(self, service_timeout=5.0, service_name='/plan_cartesian_path'):
-        super().__init__(outcomes=['success', 'failure'],
+        super().__init__(outcomes=['finished', 'failure'],
                             input_keys=['waypoints']
         )
         self.service_timeout = service_timeout
@@ -43,28 +43,26 @@ class CartesianMoveToPoseServiceState(EventState):
         self._client = None
         self._future = None
 
+        # Create proxy service caller to handle rclpy node
+        self._srv = ProxyServiceCaller({self._service_name: SrvType})
+
+        # result storage
+        self._res = None
+        self._had_error = False
+
     def execute(self, userdata):
         # Execute this method periodically while the state is active.
         # Main purpose is to check state conditions and trigger a corresponding outcome.
         # If no outcome is returned, the state will stay active.
 
-        if self._future is None:
+        # Check for error or no response
+        if self._had_error or self._res is None:
             return 'failed'
 
-        if self._future.done():
-            try:
-                result = self._future.result()
-                if result.success:
-                    Logger.loginfo(f"[{type(self).__name__}] Successfully moved to pose.")
-                    return 'success'
-                else:
-                    Logger.logwarn(f"[{type(self).__name__}] Motion execution failed.")
-                    return 'failure'
-            except Exception as e:
-                Logger.logerr(f"[{type(self).__name__}] Service call failed: {str(e)}")
-                return 'failed'
-
-        return None  # still waiting
+        # No output userdata to write
+        
+        # Return outcome finished
+        return 'finished'
     
     def on_enter(self, userdata):
         # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.
@@ -80,14 +78,26 @@ class CartesianMoveToPoseServiceState(EventState):
         request = SrvType.Request()
         request.waypoints = waypoints
 
+        # reset state
+        self._res = None
+        self._had_error = False
+
+        # wait for availability (once per entry)
+        if not self._srv.is_available(self._service_name):
+            Logger.logerr(f"[{type(self).__name__}] Service '{self._service_name}' not available after {self._service_timeout}s.")
+            self._had_error = True
+            return
+
         # send request
         try:
-            self._future = self._client.call_async(request)
-            Logger.loginfo(f"[{type(self).__name__}] Sent request to {self._service_name} service.")
+            self._res = self._srv.call(self._service_name, request)
+            Logger.loginfo(f"[{type(self).__name__}] Called service '{self._service_name}'.")
         except Exception as e:
-            Logger.logerr(f"[{type(self).__name__}] Failed to send request: {str(e)}")
+            Logger.logerr(f"[{type(self).__name__}] Service call failed: {e}")
+            self._res = None
+            self._had_error = True
 
-    def on_exit(self):
+    def on_exit(self, userdata):
         # Call this method when an outcome is returned and another state gets active.
         # It can be used to stop possibly running processes started by on_enter.
 
@@ -99,19 +109,12 @@ class CartesianMoveToPoseServiceState(EventState):
         # If possible, it is generally better to initialize used resources in the constructor
         #   because if anything failed, the behavior would not even be started.
 
-        # create the service client, andensure that the service server is initialized
-        self._client = type(self).create_client(SrvType, self._service_name)
-        if not self._client.wait_for_service(timeout_sec=self._service_timeout):
-            Logger.logerr(f"[{type(self).__name__}] Service {self._service_name} not available after waiting.")
-            return 'failed'
+        # No-op: template hook
+        pass
 
     def on_stop(self):
         # Call this method whenever the behavior stops execution, also if it is cancelled.
         # Use this event to clean up things like claimed resources.
 
-        # make sure the client is destroyed when the behavior ends so it can restart cleanly
-        if self._client:
-            try:
-                self._client.destroy()
-            except Exception:
-                pass
+        # No-op: template hook
+        pass
