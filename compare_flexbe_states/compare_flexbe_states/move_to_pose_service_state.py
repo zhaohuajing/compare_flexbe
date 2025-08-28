@@ -27,15 +27,16 @@ class MoveToPoseServiceState(EventState):
     """
     Calls a service to move the robot to a specific pose using the he setPoseTarget, plan and execute C++ functions wrapped into a service server.
 
-    -- timeout_sec       float       Timeout for waiting for service (default: 5.0)
+    -- timeout_sec       float          Timeout for waiting for service (default: 5.0)
+    -- service_name      str            Service name (default: '/move_to_pose')
 
-    ># grasp_poses       list        A list of geometry_msgs/Pose messages to choose from (uses the last one)
+    ># grasp_poses       list           A list of geometry_msgs/Pose messages to choose from (uses the last one)
 
-    <= finished                        Service call succeeded
-    <= failure                        Service call failed or pose was invalid
+    <= finished                         Service call succeeded
+    <= failure                          Service call failed or pose was invalid
     """
 
-    def __init__(self, timeout_sec=5.0, service_name='/plan_cartesian_path'):
+    def __init__(self, timeout_sec=5.0, service_name='/move_to_pose'):
         super().__init__(outcomes=['finished', 'failure'],
                             input_keys=['grasp_poses']
         )
