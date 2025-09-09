@@ -1,0 +1,13 @@
+{
+  "package_name": "compare_flexbe_utilities",
+  "non_idl_tuples": [
+    "/home/csrobot/flexbe_ws/src/compare_flexbe_utilities:srv/CartesianMoveToPose.srv",
+    "/home/csrobot/flexbe_ws/src/compare_flexbe_utilities:srv/MoveToNamedPose.srv",
+    "/home/csrobot/flexbe_ws/src/compare_flexbe_utilities:srv/MoveToPose.srv",
+    "/home/csrobot/flexbe_ws/src/compare_flexbe_utilities:srv/VoxelGridFilter.srv",
+    "/home/csrobot/flexbe_ws/src/compare_flexbe_utilities:srv/PlaneSegmentation.srv",
+    "/home/csrobot/flexbe_ws/src/compare_flexbe_utilities:srv/EuclideanClustering.srv",
+    "/home/csrobot/flexbe_ws/src/compare_flexbe_utilities:srv/GetPointCloud.srv",
+    "/home/csrobot/flexbe_ws/src/compare_flexbe_utilities:srv/FilterByIndices.srv"
+  ]
+}

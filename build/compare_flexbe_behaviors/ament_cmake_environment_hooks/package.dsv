@@ -1,0 +1,4 @@
+source;share/compare_flexbe_behaviors/local_setup.bash
+source;share/compare_flexbe_behaviors/local_setup.dsv
+source;share/compare_flexbe_behaviors/local_setup.sh
+source;share/compare_flexbe_behaviors/local_setup.zsh

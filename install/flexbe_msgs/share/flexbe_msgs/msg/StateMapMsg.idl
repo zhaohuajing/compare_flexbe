@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from flexbe_msgs/msg/StateMapMsg.msg
+// generated code does not contain a copyright notice
+
+
+module flexbe_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Mapping between numeric ids and state path in given behavior")
+    struct StateMapMsg {
+      @verbatim (language="comment", text=
+        "Behavior ID assigned in ContainerStructure.msg")
+      int32 behavior_id;
+
+      @verbatim (language="comment", text=
+        "Ordered lists of corresponding state id hash code and state path")
+      sequence<int32> state_ids;
+
+      sequence<string> state_paths;
+    };
+  };
+};

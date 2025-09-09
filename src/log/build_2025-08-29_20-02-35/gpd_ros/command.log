@@ -1,0 +1,2 @@
+Invoking command in '/home/csrobot/flexbe_ws/src/build/gpd_ros': /usr/bin/cmake /home/csrobot/flexbe_ws/src/gpd2_ros -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/src/install/gpd_ros
+Invoked command in '/home/csrobot/flexbe_ws/src/build/gpd_ros' returned '1': /usr/bin/cmake /home/csrobot/flexbe_ws/src/gpd2_ros -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/src/install/gpd_ros

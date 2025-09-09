@@ -1,0 +1,6 @@
+source;share/flexbe_mirror/hook/pythonpath.ps1
+source;share/flexbe_mirror/hook/pythonpath.dsv
+source;share/flexbe_mirror/hook/pythonpath.sh
+source;share/flexbe_mirror/hook/ament_prefix_path.ps1
+source;share/flexbe_mirror/hook/ament_prefix_path.dsv
+source;share/flexbe_mirror/hook/ament_prefix_path.sh

@@ -1,0 +1,33 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.12 (/home/csrobot/ros2_humble/install/ament_cmake/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/csrobot/flexbe_ws/build/compare_flexbe
+-- Install configuration: ""
+-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe/share/ament_index/resource_index/package_run_dependencies/compare_flexbe
+-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe/share/ament_index/resource_index/parent_prefix_path/compare_flexbe
+-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe/share/compare_flexbe/environment/ament_prefix_path.sh
+-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe/share/compare_flexbe/environment/ament_prefix_path.dsv
+-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe/share/compare_flexbe/environment/path.sh
+-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe/share/compare_flexbe/environment/path.dsv
+-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe/share/compare_flexbe/local_setup.bash
+-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe/share/compare_flexbe/local_setup.sh
+-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe/share/compare_flexbe/local_setup.zsh
+-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe/share/compare_flexbe/local_setup.dsv
+-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe/share/compare_flexbe/package.dsv
+-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe/share/ament_index/resource_index/packages/compare_flexbe
+-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe/share/compare_flexbe/cmake/compare_flexbeConfig.cmake
+-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe/share/compare_flexbe/cmake/compare_flexbeConfig-version.cmake
+-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe/share/compare_flexbe/package.xml

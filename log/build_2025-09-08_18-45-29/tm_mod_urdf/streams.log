@@ -1,0 +1,44 @@
+[1.756s] Invoking command in '/home/csrobot/flexbe_ws/src/tmr_ros2/tm_mod_urdf': PYTHONPATH=/home/csrobot/flexbe_ws/build/tm_mod_urdf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/tm_mod_urdf build --build-base /home/csrobot/flexbe_ws/build/tm_mod_urdf/build install --record /home/csrobot/flexbe_ws/build/tm_mod_urdf/install.log --single-version-externally-managed install_data
+[3.004s] running egg_info
+[3.004s] creating ../../../build/tm_mod_urdf/tm_mod_urdf.egg-info
+[3.004s] writing ../../../build/tm_mod_urdf/tm_mod_urdf.egg-info/PKG-INFO
+[3.004s] writing dependency_links to ../../../build/tm_mod_urdf/tm_mod_urdf.egg-info/dependency_links.txt
+[3.004s] writing entry points to ../../../build/tm_mod_urdf/tm_mod_urdf.egg-info/entry_points.txt
+[3.004s] writing requirements to ../../../build/tm_mod_urdf/tm_mod_urdf.egg-info/requires.txt
+[3.004s] writing top-level names to ../../../build/tm_mod_urdf/tm_mod_urdf.egg-info/top_level.txt
+[3.004s] writing manifest file '../../../build/tm_mod_urdf/tm_mod_urdf.egg-info/SOURCES.txt'
+[3.004s] reading manifest file '../../../build/tm_mod_urdf/tm_mod_urdf.egg-info/SOURCES.txt'
+[3.004s] writing manifest file '../../../build/tm_mod_urdf/tm_mod_urdf.egg-info/SOURCES.txt'
+[3.004s] running build
+[3.004s] running build_py
+[3.004s] creating /home/csrobot/flexbe_ws/build/tm_mod_urdf/build
+[3.004s] creating /home/csrobot/flexbe_ws/build/tm_mod_urdf/build/lib
+[3.004s] creating /home/csrobot/flexbe_ws/build/tm_mod_urdf/build/lib/tm_mod_urdf
+[3.007s] copying tm_mod_urdf/_modify_urdf.py -> /home/csrobot/flexbe_ws/build/tm_mod_urdf/build/lib/tm_mod_urdf
+[3.007s] copying tm_mod_urdf/modify_xacro.py -> /home/csrobot/flexbe_ws/build/tm_mod_urdf/build/lib/tm_mod_urdf
+[3.007s] copying tm_mod_urdf/__init__.py -> /home/csrobot/flexbe_ws/build/tm_mod_urdf/build/lib/tm_mod_urdf
+[3.010s] copying tm_mod_urdf/modify_urdf.py -> /home/csrobot/flexbe_ws/build/tm_mod_urdf/build/lib/tm_mod_urdf
+[3.010s] running install
+[3.010s] running install_lib
+[3.010s] creating /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.10/site-packages/tm_mod_urdf
+[3.010s] copying /home/csrobot/flexbe_ws/build/tm_mod_urdf/build/lib/tm_mod_urdf/_modify_urdf.py -> /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.10/site-packages/tm_mod_urdf
+[3.010s] copying /home/csrobot/flexbe_ws/build/tm_mod_urdf/build/lib/tm_mod_urdf/modify_xacro.py -> /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.10/site-packages/tm_mod_urdf
+[3.010s] copying /home/csrobot/flexbe_ws/build/tm_mod_urdf/build/lib/tm_mod_urdf/__init__.py -> /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.10/site-packages/tm_mod_urdf
+[3.010s] copying /home/csrobot/flexbe_ws/build/tm_mod_urdf/build/lib/tm_mod_urdf/modify_urdf.py -> /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.10/site-packages/tm_mod_urdf
+[3.010s] byte-compiling /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.10/site-packages/tm_mod_urdf/_modify_urdf.py to _modify_urdf.cpython-310.pyc
+[3.010s] byte-compiling /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.10/site-packages/tm_mod_urdf/modify_xacro.py to modify_xacro.cpython-310.pyc
+[3.010s] byte-compiling /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.10/site-packages/tm_mod_urdf/__init__.py to __init__.cpython-310.pyc
+[3.010s] byte-compiling /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.10/site-packages/tm_mod_urdf/modify_urdf.py to modify_urdf.cpython-310.pyc
+[3.010s] running install_data
+[3.010s] creating /home/csrobot/flexbe_ws/install/tm_mod_urdf/share/ament_index
+[3.010s] creating /home/csrobot/flexbe_ws/install/tm_mod_urdf/share/ament_index/resource_index
+[3.010s] creating /home/csrobot/flexbe_ws/install/tm_mod_urdf/share/ament_index/resource_index/packages
+[3.010s] copying resource/tm_mod_urdf -> /home/csrobot/flexbe_ws/install/tm_mod_urdf/share/ament_index/resource_index/packages
+[3.010s] copying package.xml -> /home/csrobot/flexbe_ws/install/tm_mod_urdf/share/tm_mod_urdf
+[3.010s] running install_egg_info
+[3.010s] Copying ../../../build/tm_mod_urdf/tm_mod_urdf.egg-info to /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.10/site-packages/tm_mod_urdf-1.1.2-py3.10.egg-info
+[3.010s] running install_scripts
+[3.011s] Installing modify_urdf script to /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/tm_mod_urdf
+[3.011s] Installing modify_xacro script to /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/tm_mod_urdf
+[3.011s] writing list of installed files to '/home/csrobot/flexbe_ws/build/tm_mod_urdf/install.log'
+[3.018s] Invoked command in '/home/csrobot/flexbe_ws/src/tmr_ros2/tm_mod_urdf' returned '0': PYTHONPATH=/home/csrobot/flexbe_ws/build/tm_mod_urdf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/tm_mod_urdf build --build-base /home/csrobot/flexbe_ws/build/tm_mod_urdf/build install --record /home/csrobot/flexbe_ws/build/tm_mod_urdf/install.log --single-version-externally-managed install_data

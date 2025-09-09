@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: flexbe-webui
+Version: 4.0.3
+Summary: FlexBE WebUI - Operator Control Station interface to onboard Flexible Behavior Engine.
+Home-page: https://github.com/flexbe/flexbe_webui
+Author: CNU Robotics
+Author-email: robotics@cnu.edu
+Maintainer: David Conner
+Maintainer-email: robotics@cnu.edu
+License: Apache 2.0
+Keywords: ros2,flexbe,ocs
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: Apache 2.0
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+License-File: LICENSE
+
+UNKNOWN
+

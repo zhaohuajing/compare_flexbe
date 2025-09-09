@@ -1,0 +1,96 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.12 (/home/csrobot/ros2_humble/install/ament_cmake/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found ament_cmake_pytest: 1.3.12 (/home/csrobot/ros2_humble/install/ament_cmake_pytest/share/ament_cmake_pytest/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/csrobot/flexbe_ws/build/flexbe_testing
+Built target ament_cmake_python_copy_flexbe_testing
+Built target ament_cmake_python_copy_flexbe_testing_setup
+running egg_info
+creating flexbe_testing.egg-info
+writing flexbe_testing.egg-info/PKG-INFO
+writing dependency_links to flexbe_testing.egg-info/dependency_links.txt
+writing top-level names to flexbe_testing.egg-info/top_level.txt
+writing manifest file 'flexbe_testing.egg-info/SOURCES.txt'
+reading manifest file 'flexbe_testing.egg-info/SOURCES.txt'
+writing manifest file 'flexbe_testing.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_flexbe_testing_egg
+-- Install configuration: ""
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/flexbe_testing/testing_node
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/launch
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/launch/flexbe_testing.launch.py
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/launch/selftest_test.launch.py
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/flexbe_colcon_test.py
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/test_add.test
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/import_only.test
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/behavior.test
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/sub_received.test
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/test_add_bagfile.test
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/sub_unavailable.test
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/testdata.bag
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/pythonpath.sh
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/pythonpath.dsv
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing-4.0.1-py3.10.egg-info
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing-4.0.1-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing-4.0.1-py3.10.egg-info/top_level.txt
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing-4.0.1-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing-4.0.1-py3.10.egg-info/PKG-INFO
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test_context.py
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/__init__.py
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/py_tester.py
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/data_provider.py
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/.gitignore
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/logger.py
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test_interface.py
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/tester.py
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/test_add_state.py
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/selftest_behavior_sm.py
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/selftest_behavior.xml
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/__init__.py
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/test_sub_state.py
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/import_only_state.py
+Listing '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing'...
+Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/__init__.py'...
+Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/data_provider.py'...
+Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/logger.py'...
+Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/py_tester.py'...
+Listing '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test'...
+Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/__init__.py'...
+Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/import_only_state.py'...
+Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/selftest_behavior_sm.py'...
+Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/test_add_state.py'...
+Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/test_sub_state.py'...
+Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test_context.py'...
+Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test_interface.py'...
+Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/tester.py'...
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/ament_index/resource_index/package_run_dependencies/flexbe_testing
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/ament_index/resource_index/parent_prefix_path/flexbe_testing
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/ament_prefix_path.sh
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/ament_prefix_path.dsv
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/path.sh
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/path.dsv
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/local_setup.bash
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/local_setup.sh
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/local_setup.zsh
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/local_setup.dsv
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/package.dsv
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/ament_index/resource_index/packages/flexbe_testing
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/cmake/flexbe_testingConfig.cmake
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/cmake/flexbe_testingConfig-version.cmake
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/package.xml

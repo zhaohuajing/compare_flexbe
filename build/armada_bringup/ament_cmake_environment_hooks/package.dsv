@@ -1,0 +1,4 @@
+source;share/armada_bringup/local_setup.bash
+source;share/armada_bringup/local_setup.dsv
+source;share/armada_bringup/local_setup.sh
+source;share/armada_bringup/local_setup.zsh

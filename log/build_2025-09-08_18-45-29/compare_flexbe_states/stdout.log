@@ -1,0 +1,71 @@
+running egg_info
+creating ../../../build/compare_flexbe_states/compare_flexbe_states.egg-info
+writing ../../../build/compare_flexbe_states/compare_flexbe_states.egg-info/PKG-INFO
+writing dependency_links to ../../../build/compare_flexbe_states/compare_flexbe_states.egg-info/dependency_links.txt
+writing entry points to ../../../build/compare_flexbe_states/compare_flexbe_states.egg-info/entry_points.txt
+writing requirements to ../../../build/compare_flexbe_states/compare_flexbe_states.egg-info/requires.txt
+writing top-level names to ../../../build/compare_flexbe_states/compare_flexbe_states.egg-info/top_level.txt
+writing manifest file '../../../build/compare_flexbe_states/compare_flexbe_states.egg-info/SOURCES.txt'
+reading manifest file '../../../build/compare_flexbe_states/compare_flexbe_states.egg-info/SOURCES.txt'
+writing manifest file '../../../build/compare_flexbe_states/compare_flexbe_states.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/csrobot/flexbe_ws/build/compare_flexbe_states/build
+creating /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib
+creating /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states
+copying compare_flexbe_states/get_point_cloud_service_state.py -> /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states
+copying compare_flexbe_states/publish_point_cloud_state.py -> /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states
+copying compare_flexbe_states/voxel_grid_filter_state.py -> /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states
+copying compare_flexbe_states/detect_grasps_service_state.py -> /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states
+copying compare_flexbe_states/move_to_named_pose_service_state.py -> /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states
+copying compare_flexbe_states/move_to_pose_service_state.py -> /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states
+copying compare_flexbe_states/filter_by_indices_service_state.py -> /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states
+copying compare_flexbe_states/__init__.py -> /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states
+copying compare_flexbe_states/plane_segmentation_service_state.py -> /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states
+copying compare_flexbe_states/cartesian_move_to_pose_service_state.py -> /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states
+copying compare_flexbe_states/gripper_command_action_state.py -> /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states
+copying compare_flexbe_states/euclidean_clustering_service_state.py -> /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states
+running install
+running install_lib
+creating /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states
+copying /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states/get_point_cloud_service_state.py -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states
+copying /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states/publish_point_cloud_state.py -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states
+copying /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states/voxel_grid_filter_state.py -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states
+copying /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states/detect_grasps_service_state.py -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states
+copying /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states/move_to_named_pose_service_state.py -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states
+copying /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states/move_to_pose_service_state.py -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states
+copying /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states/filter_by_indices_service_state.py -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states
+copying /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states/__init__.py -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states
+copying /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states/plane_segmentation_service_state.py -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states
+copying /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states/cartesian_move_to_pose_service_state.py -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states
+copying /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states/gripper_command_action_state.py -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states
+copying /home/csrobot/flexbe_ws/build/compare_flexbe_states/build/lib/compare_flexbe_states/euclidean_clustering_service_state.py -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states
+byte-compiling /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states/get_point_cloud_service_state.py to get_point_cloud_service_state.cpython-310.pyc
+byte-compiling /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states/publish_point_cloud_state.py to publish_point_cloud_state.cpython-310.pyc
+byte-compiling /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states/voxel_grid_filter_state.py to voxel_grid_filter_state.cpython-310.pyc
+byte-compiling /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states/detect_grasps_service_state.py to detect_grasps_service_state.cpython-310.pyc
+byte-compiling /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states/move_to_named_pose_service_state.py to move_to_named_pose_service_state.cpython-310.pyc
+byte-compiling /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states/move_to_pose_service_state.py to move_to_pose_service_state.cpython-310.pyc
+byte-compiling /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states/filter_by_indices_service_state.py to filter_by_indices_service_state.cpython-310.pyc
+byte-compiling /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states/plane_segmentation_service_state.py to plane_segmentation_service_state.cpython-310.pyc
+byte-compiling /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states/cartesian_move_to_pose_service_state.py to cartesian_move_to_pose_service_state.cpython-310.pyc
+byte-compiling /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states/gripper_command_action_state.py to gripper_command_action_state.cpython-310.pyc
+byte-compiling /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states/euclidean_clustering_service_state.py to euclidean_clustering_service_state.cpython-310.pyc
+running install_data
+creating /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/ament_index
+creating /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/ament_index/resource_index
+creating /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/ament_index/resource_index/packages
+copying resource/compare_flexbe_states -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/ament_index/resource_index/packages
+copying package.xml -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/compare_flexbe_states
+creating /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/compare_flexbe_states/tests
+copying tests/example_state.test -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/compare_flexbe_states/tests
+copying tests/example_action_state.test -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/compare_flexbe_states/tests
+creating /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/compare_flexbe_states/launch
+copying tests/run_tests.launch.py -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/compare_flexbe_states/launch
+running install_egg_info
+Copying ../../../build/compare_flexbe_states/compare_flexbe_states.egg-info to /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.10/site-packages/compare_flexbe_states-0.0.1-py3.10.egg-info
+running install_scripts
+Installing example_action_state script to /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/compare_flexbe_states
+Installing example_state script to /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/compare_flexbe_states
+writing list of installed files to '/home/csrobot/flexbe_ws/build/compare_flexbe_states/install.log'

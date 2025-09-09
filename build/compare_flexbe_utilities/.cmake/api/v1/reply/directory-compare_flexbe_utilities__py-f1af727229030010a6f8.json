@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "compare_flexbe_utilities__py",
+		"source" : "/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/compare_flexbe_utilities__py"
+	}
+}

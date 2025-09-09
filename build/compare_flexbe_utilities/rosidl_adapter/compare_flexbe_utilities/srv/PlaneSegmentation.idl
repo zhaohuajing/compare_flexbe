@@ -1,0 +1,42 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from compare_flexbe_utilities/srv/PlaneSegmentation.srv
+// generated code does not contain a copyright notice
+
+#include "pcl_msgs/msg/PointIndices.idl"
+#include "sensor_msgs/msg/PointCloud2.idl"
+
+module compare_flexbe_utilities {
+  module srv {
+    struct PlaneSegmentation_Request {
+      sensor_msgs::msg::PointCloud2 input;
+
+      @verbatim (language="comment", text=
+        "run RANSAC on a downsampled copy for speed")
+      boolean use_voxel;
+
+      @verbatim (language="comment", text=
+        "voxel size")
+      float leaf_size;
+
+      @verbatim (language="comment", text=
+        "RANSAC distance for plane detection on filtered cloud")
+      float distance_threshold;
+
+      @verbatim (language="comment", text=
+        "RANSAC iterations")
+      int32 max_iterations;
+    };
+    typedef float float__4[4];
+    struct PlaneSegmentation_Response {
+      sensor_msgs::msg::PointCloud2 without_plane;
+
+      pcl_msgs::msg::PointIndices plane_indices;
+
+      @verbatim (language="comment", text=
+        "[a, b, c, d] of ax + by + cz + d = 0")
+      float__4 plane_coefficients;
+
+      int32 inlier_count;
+    };
+  };
+};

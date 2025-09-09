@@ -1,0 +1,196 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-2ec8fa187bd182b245bf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "demo",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "demo_ask_item::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo_ask_item-435350147d344fecf676.json",
+					"name" : "demo_ask_item",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "demo_ask_sta::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo_ask_sta-775c37ad21cfe7e61727.json",
+					"name" : "demo_ask_sta",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "demo_connect_tm::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo_connect_tm-904b1d9f8513a69b9c71.json",
+					"name" : "demo_connect_tm",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "demo_get_feedback::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo_get_feedback-f1d0e9d3d32854e7ab30.json",
+					"name" : "demo_get_feedback",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "demo_get_sct_response::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo_get_sct_response-0497c3f0fab1e4ff45fc.json",
+					"name" : "demo_get_sct_response",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "demo_get_sta_response::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo_get_sta_response-078713f0b93ab6cae450.json",
+					"name" : "demo_get_sta_response",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "demo_get_svr_response::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo_get_svr_response-db30b77c4237ece93d68.json",
+					"name" : "demo_get_svr_response",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "demo_get_torque_feedback::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo_get_torque_feedback-7d2b1b550b86d40f74ae.json",
+					"name" : "demo_get_torque_feedback",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "demo_leave_listen_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo_leave_listen_node-d93b5fc5fd28f6a68f68.json",
+					"name" : "demo_leave_listen_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "demo_send_script::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo_send_script-8df90020ad08c1a6df31.json",
+					"name" : "demo_send_script",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "demo_set_event::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo_set_event-7b451b0b8c71ce5c3375.json",
+					"name" : "demo_set_event",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "demo_set_io::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo_set_io-f7fac7275ff324399f56.json",
+					"name" : "demo_set_io",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "demo_set_positions::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo_set_positions-0823fb9a0d79d5c0931c.json",
+					"name" : "demo_set_positions",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "demo_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo_uninstall-d3fdf0d84b904a7e915e.json",
+					"name" : "demo_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "demo_write_item::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo_write_item-2b341ff63b4703f03098.json",
+					"name" : "demo_write_item",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-27a84a344eef11df7015.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/csrobot/flexbe_ws/build/demo",
+		"source" : "/home/csrobot/flexbe_ws/src/tmr_ros2/demo"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

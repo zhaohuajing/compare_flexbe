@@ -1,0 +1,37 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from compare_flexbe_utilities/srv/GetPointCloud.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseStamped.idl"
+#include "sensor_msgs/msg/PointCloud2.idl"
+
+module compare_flexbe_utilities {
+  module srv {
+    @verbatim (language="comment", text=
+      "Request")
+    struct GetPointCloud_Request {
+      string camera_topic;
+
+      string target_frame;
+
+      float timeout_sec;
+    };
+    @verbatim (language="comment", text=
+      "Response")
+    struct GetPointCloud_Response {
+      sensor_msgs::msg::PointCloud2 cloud_out;
+
+      @verbatim (language="comment", text=
+        "pose of camera_frame in target_frame")
+      geometry_msgs::msg::PoseStamped camera_pose;
+
+      @verbatim (language="comment", text=
+        "original message frame_id")
+      string cloud_frame;
+
+      boolean success;
+
+      string message;
+    };
+  };
+};

@@ -1,0 +1,3 @@
+
+bool success
+float32 percentage_planned

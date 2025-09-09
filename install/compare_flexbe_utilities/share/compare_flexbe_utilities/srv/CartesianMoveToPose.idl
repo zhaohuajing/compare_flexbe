@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from compare_flexbe_utilities/srv/CartesianMoveToPose.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+
+module compare_flexbe_utilities {
+  module srv {
+    struct CartesianMoveToPose_Request {
+      sequence<geometry_msgs::msg::Pose> waypoints;
+    };
+    struct CartesianMoveToPose_Response {
+      boolean success;
+
+      float percentage_planned;
+    };
+  };
+};

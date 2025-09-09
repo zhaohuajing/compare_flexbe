@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from flexbe_msgs/msg/Container.msg
+// generated code does not contain a copyright notice
+
+
+module flexbe_msgs {
+  module msg {
+    struct Container {
+      @verbatim (language="comment", text=
+        "Unique 23-bit identifier for state")
+      int32 state_id;
+
+      @verbatim (language="comment", text=
+        "String path from top-level state machine")
+      string path;
+
+      sequence<string> children;
+
+      sequence<string> outcomes;
+
+      sequence<string> transitions;
+
+      @verbatim (language="comment", text=
+        "0=State, StateMachine, PriorityContainer,ConcurrencyContainer")
+      int8 type;
+
+      sequence<int8> autonomy;
+    };
+  };
+};

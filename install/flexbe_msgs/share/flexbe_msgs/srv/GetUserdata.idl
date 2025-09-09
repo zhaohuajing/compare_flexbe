@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from flexbe_msgs/srv/GetUserdata.srv
+// generated code does not contain a copyright notice
+
+#include "flexbe_msgs/msg/UserdataInfo.idl"
+
+module flexbe_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "specify key to filter userdata, leave empty to get all userdata")
+    struct GetUserdata_Request {
+      string userdata_key;
+    };
+    struct GetUserdata_Response {
+      boolean success;
+
+      string message;
+
+      sequence<flexbe_msgs::msg::UserdataInfo> userdata;
+    };
+  };
+};

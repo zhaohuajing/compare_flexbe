@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "flexbe_msgs__py",
+		"source" : "/home/csrobot/flexbe_ws/build/flexbe_msgs/flexbe_msgs__py"
+	}
+}

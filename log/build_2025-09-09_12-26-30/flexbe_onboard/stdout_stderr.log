@@ -1,0 +1,20 @@
+running egg_info
+writing ../../../build/flexbe_onboard/flexbe_onboard.egg-info/PKG-INFO
+writing dependency_links to ../../../build/flexbe_onboard/flexbe_onboard.egg-info/dependency_links.txt
+writing entry points to ../../../build/flexbe_onboard/flexbe_onboard.egg-info/entry_points.txt
+writing requirements to ../../../build/flexbe_onboard/flexbe_onboard.egg-info/requires.txt
+writing top-level names to ../../../build/flexbe_onboard/flexbe_onboard.egg-info/top_level.txt
+reading manifest file '../../../build/flexbe_onboard/flexbe_onboard.egg-info/SOURCES.txt'
+writing manifest file '../../../build/flexbe_onboard/flexbe_onboard.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/csrobot/flexbe_ws/install/flexbe_onboard/lib/python3.10/site-packages/flexbe_onboard-4.0.1-py3.10.egg-info' (and everything under it)
+Copying ../../../build/flexbe_onboard/flexbe_onboard.egg-info to /home/csrobot/flexbe_ws/install/flexbe_onboard/lib/python3.10/site-packages/flexbe_onboard-4.0.1-py3.10.egg-info
+running install_scripts
+Installing flexbe_onboard script to /home/csrobot/flexbe_ws/install/flexbe_onboard/lib/flexbe_onboard
+Installing start_behavior script to /home/csrobot/flexbe_ws/install/flexbe_onboard/lib/flexbe_onboard
+writing list of installed files to '/home/csrobot/flexbe_ws/build/flexbe_onboard/install.log'

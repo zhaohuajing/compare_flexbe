@@ -1,0 +1,11 @@
+colcon build --symlink-install --cmake-args -DBUILD_TESTING=OFF --packages-skip compare_flexbe_utilities
+
+cd src/flexbe_webui
+pip install -e
+
+cd ~/flexbe_ws/src/flexbe_behavior_engine/flexbe_core
+pip install -e .
+
+cd ~/flexbe_ws/src/flexbe_behavior_engine/flexbe_states
+pip install -e .
+

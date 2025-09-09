@@ -1,0 +1,31 @@
+// generated from rosidl_generator_cpp/resource/idl__type_support.hpp.em
+// with input from flexbe_msgs:msg/BehaviorModification.idl
+// generated code does not contain a copyright notice
+
+#ifndef FLEXBE_MSGS__MSG__DETAIL__BEHAVIOR_MODIFICATION__TYPE_SUPPORT_HPP_
+#define FLEXBE_MSGS__MSG__DETAIL__BEHAVIOR_MODIFICATION__TYPE_SUPPORT_HPP_
+
+#include "rosidl_typesupport_interface/macros.h"
+
+#include "flexbe_msgs/msg/rosidl_generator_cpp__visibility_control.hpp"
+
+#include "rosidl_typesupport_cpp/message_type_support.hpp"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+// Forward declare the get type support functions for this type.
+ROSIDL_GENERATOR_CPP_PUBLIC_flexbe_msgs
+const rosidl_message_type_support_t *
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+  rosidl_typesupport_cpp,
+  flexbe_msgs,
+  msg,
+  BehaviorModification
+)();
+#ifdef __cplusplus
+}
+#endif
+
+#endif  // FLEXBE_MSGS__MSG__DETAIL__BEHAVIOR_MODIFICATION__TYPE_SUPPORT_HPP_

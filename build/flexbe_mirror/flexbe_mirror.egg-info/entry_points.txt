@@ -1,0 +1,3 @@
+[console_scripts]
+behavior_mirror_sm = flexbe_mirror.behavior_mirror_sm:main
+

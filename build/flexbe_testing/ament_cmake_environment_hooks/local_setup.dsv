@@ -1,0 +1,3 @@
+source;share/flexbe_testing/environment/ament_prefix_path.sh
+source;share/flexbe_testing/environment/path.sh
+source;share/flexbe_testing/environment/pythonpath.sh

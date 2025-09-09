@@ -1,0 +1,4 @@
+source;share/flexbe_turtlesim_demo_flexbe_behaviors/local_setup.bash
+source;share/flexbe_turtlesim_demo_flexbe_behaviors/local_setup.dsv
+source;share/flexbe_turtlesim_demo_flexbe_behaviors/local_setup.sh
+source;share/flexbe_turtlesim_demo_flexbe_behaviors/local_setup.zsh

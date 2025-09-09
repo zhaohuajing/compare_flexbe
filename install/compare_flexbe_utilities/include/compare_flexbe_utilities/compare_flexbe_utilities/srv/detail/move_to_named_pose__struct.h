@@ -1,0 +1,63 @@
+// generated from rosidl_generator_c/resource/idl__struct.h.em
+// with input from compare_flexbe_utilities:srv/MoveToNamedPose.idl
+// generated code does not contain a copyright notice
+
+#ifndef COMPARE_FLEXBE_UTILITIES__SRV__DETAIL__MOVE_TO_NAMED_POSE__STRUCT_H_
+#define COMPARE_FLEXBE_UTILITIES__SRV__DETAIL__MOVE_TO_NAMED_POSE__STRUCT_H_
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'target_name'
+#include "rosidl_runtime_c/string.h"
+
+/// Struct defined in srv/MoveToNamedPose in the package compare_flexbe_utilities.
+typedef struct compare_flexbe_utilities__srv__MoveToNamedPose_Request
+{
+  rosidl_runtime_c__String target_name;
+} compare_flexbe_utilities__srv__MoveToNamedPose_Request;
+
+// Struct for a sequence of compare_flexbe_utilities__srv__MoveToNamedPose_Request.
+typedef struct compare_flexbe_utilities__srv__MoveToNamedPose_Request__Sequence
+{
+  compare_flexbe_utilities__srv__MoveToNamedPose_Request * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} compare_flexbe_utilities__srv__MoveToNamedPose_Request__Sequence;
+
+
+// Constants defined in the message
+
+/// Struct defined in srv/MoveToNamedPose in the package compare_flexbe_utilities.
+typedef struct compare_flexbe_utilities__srv__MoveToNamedPose_Response
+{
+  bool success;
+} compare_flexbe_utilities__srv__MoveToNamedPose_Response;
+
+// Struct for a sequence of compare_flexbe_utilities__srv__MoveToNamedPose_Response.
+typedef struct compare_flexbe_utilities__srv__MoveToNamedPose_Response__Sequence
+{
+  compare_flexbe_utilities__srv__MoveToNamedPose_Response * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} compare_flexbe_utilities__srv__MoveToNamedPose_Response__Sequence;
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif  // COMPARE_FLEXBE_UTILITIES__SRV__DETAIL__MOVE_TO_NAMED_POSE__STRUCT_H_

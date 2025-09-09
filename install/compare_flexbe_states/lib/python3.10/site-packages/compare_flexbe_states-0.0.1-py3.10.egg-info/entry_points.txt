@@ -1,0 +1,4 @@
+[console_scripts]
+example_action_state = compare_flexbe_states.example_action_state
+example_state = compare_flexbe_states.example_state
+

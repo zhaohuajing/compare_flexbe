@@ -1,0 +1,17 @@
+sudo apt install \
+  ros-humble-flexbe-behavior-engine \
+  ros-humble-flexbe-msgs \
+  ros-humble-flexbe-testing \
+  ros-humble-flexbe-widget \
+  ros-humble-rviz2 \
+  ros-humble-moveit \
+  ros-humble-moveit-ros-planning \
+  ros-humble-gz-sim \
+  ros-humble-gz-ros2-control \
+  ros-humble-ros-ign-gazebo \
+  ros-humble-joint-state-publisher \
+  ros-humble-xacro \
+  ros-humble-tf2-ros \
+  ros-humble-gazebo-ros \
+  ros-humble-robot-state-publisher
+

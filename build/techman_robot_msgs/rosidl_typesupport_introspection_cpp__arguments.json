@@ -1,0 +1,19 @@
+{
+  "package_name": "techman_robot_msgs",
+  "output_dir": "/home/csrobot/flexbe_ws/build/techman_robot_msgs/rosidl_typesupport_introspection_cpp/techman_robot_msgs",
+  "template_dir": "/home/csrobot/ros2_humble/install/rosidl_typesupport_introspection_cpp/share/rosidl_typesupport_introspection_cpp/resource",
+  "idl_tuples": [
+    "/home/csrobot/flexbe_ws/build/techman_robot_msgs/rosidl_adapter/techman_robot_msgs:srv/TechmanRobotCommand.idl"
+  ],
+  "target_dependencies": [
+    "/home/csrobot/ros2_humble/install/rosidl_typesupport_introspection_cpp/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp",
+    "/home/csrobot/ros2_humble/install/rosidl_typesupport_introspection_cpp/local/lib/python3.10/dist-packages/rosidl_typesupport_introspection_cpp/__init__.py",
+    "/home/csrobot/ros2_humble/install/rosidl_typesupport_introspection_cpp/share/rosidl_typesupport_introspection_cpp/resource/idl__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/home/csrobot/ros2_humble/install/rosidl_typesupport_introspection_cpp/share/rosidl_typesupport_introspection_cpp/resource/idl__type_support.cpp.em",
+    "/home/csrobot/ros2_humble/install/rosidl_typesupport_introspection_cpp/share/rosidl_typesupport_introspection_cpp/resource/msg__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/home/csrobot/ros2_humble/install/rosidl_typesupport_introspection_cpp/share/rosidl_typesupport_introspection_cpp/resource/msg__type_support.cpp.em",
+    "/home/csrobot/ros2_humble/install/rosidl_typesupport_introspection_cpp/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/home/csrobot/ros2_humble/install/rosidl_typesupport_introspection_cpp/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em",
+    "/home/csrobot/flexbe_ws/build/techman_robot_msgs/rosidl_adapter/techman_robot_msgs/srv/TechmanRobotCommand.idl"
+  ]
+}

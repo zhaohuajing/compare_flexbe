@@ -1,0 +1,62 @@
+Built target ament_cmake_python_copy_flexbe_testing
+Built target ament_cmake_python_copy_flexbe_testing_setup
+running egg_info
+writing flexbe_testing.egg-info/PKG-INFO
+writing dependency_links to flexbe_testing.egg-info/dependency_links.txt
+writing top-level names to flexbe_testing.egg-info/top_level.txt
+reading manifest file 'flexbe_testing.egg-info/SOURCES.txt'
+writing manifest file 'flexbe_testing.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_flexbe_testing_egg
+-- Install configuration: ""
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/flexbe_testing/testing_node
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/launch
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/launch/flexbe_testing.launch.py
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/launch/selftest_test.launch.py
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/flexbe_colcon_test.py
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/test_add.test
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/import_only.test
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/behavior.test
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/sub_received.test
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/test_add_bagfile.test
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/sub_unavailable.test
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/testdata.bag
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/pythonpath.sh
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/pythonpath.dsv
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing-4.0.1-py3.10.egg-info
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing-4.0.1-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing-4.0.1-py3.10.egg-info/top_level.txt
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing-4.0.1-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing-4.0.1-py3.10.egg-info/PKG-INFO
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test_context.py
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/__init__.py
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/py_tester.py
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/data_provider.py
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/.gitignore
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/logger.py
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test_interface.py
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/tester.py
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/test_add_state.py
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/selftest_behavior_sm.py
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/selftest_behavior.xml
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/__init__.py
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/test_sub_state.py
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test/import_only_state.py
+Listing '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing'...
+Listing '/home/csrobot/flexbe_ws/install/flexbe_testing/local/lib/python3.10/dist-packages/flexbe_testing/test'...
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/ament_index/resource_index/package_run_dependencies/flexbe_testing
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/ament_index/resource_index/parent_prefix_path/flexbe_testing
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/path.dsv
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/local_setup.bash
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/local_setup.sh
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/local_setup.zsh
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/local_setup.dsv
+-- Installing: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/package.dsv
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/ament_index/resource_index/packages/flexbe_testing
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/cmake/flexbe_testingConfig.cmake
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/cmake/flexbe_testingConfig-version.cmake
+-- Up-to-date: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/package.xml

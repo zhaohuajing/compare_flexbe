@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from flexbe_msgs/msg/ContainerStructure.msg
+// generated code does not contain a copyright notice
+
+#include "flexbe_msgs/msg/Container.idl"
+
+module flexbe_msgs {
+  module msg {
+    struct ContainerStructure {
+      @verbatim (language="comment", text=
+        "id (checksum) of particular behavior encoding")
+      int32 behavior_id;
+
+      sequence<flexbe_msgs::msg::Container> containers;
+    };
+  };
+};

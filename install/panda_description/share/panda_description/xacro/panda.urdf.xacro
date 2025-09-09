@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
+
+  <!-- macro args -->
+  <xacro:arg name="ns" default="" />
+  <xacro:arg name="prefix" default="" />
+  <xacro:arg name="trans_hw_iface" default="hardware_interface/PositionJointInterface" />
+
+  <!-- include files -->
+  <xacro:include filename="$(find panda_description)/xacro/macro.gazebo.xacro" />
+  <xacro:include filename="$(find panda_description)/xacro/macro.gazebo_sensor.xacro" />
+  <xacro:include filename="$(find panda_description)/xacro/macro.ros2_control.xacro" />
+  <xacro:include filename="$(find panda_description)/xacro/macro.transmission.xacro" />
+
+  <!-- panda -->
+  <xacro:include filename="$(find panda_description)/xacro/macro.panda.urdf.xacro" />
+
+  <!-- panda gazebo components -->
+  <xacro:panda_gazebo ns="$(arg ns)" prefix="$(arg prefix)" />
+  <xacro:panda_gazebo_sensor ns="$(arg ns)" prefix="$(arg prefix)" />
+  <xacro:panda_transmission prefix="$(arg prefix)" hw_iface="$(arg trans_hw_iface)" />
+  <xacro:panda_ros2_control ns="$(arg ns)" prefix="$(arg prefix)" />
+
+  <!-- Arm -->
+  <xacro:panda ns="$(arg ns)" prefix="$(arg prefix)" parent="mounting_block" />
+
+  <!-- Create a very heavy, inert base to be used as a mounting point for the arm-->
+  <link name="mounting_block">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.5 0.5" />
+      </geometry>
+      <material name="gray">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.5 0.5" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="500.0"/> <!-- very heavy block -->
+      <inertia ixx="10.0" iyy="10.0" izz="10.0" ixy="0.0" ixz="0.0" iyz="0.0"/>
+    </inertial>
+  </link>
+
+</robot>

@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-c3caa5f15d14e09377fa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "flexbe_widget",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_flexbe_widget_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_flexbe_widget_egg-a8d754ecf8fd2d6e4b21.json",
+					"name" : "ament_cmake_python_build_flexbe_widget_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_flexbe_widget::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_flexbe_widget-d394d0afb732200aae3c.json",
+					"name" : "ament_cmake_python_copy_flexbe_widget",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_flexbe_widget_setup::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_flexbe_widget_setup-d71832da0b93c0d2ef4b.json",
+					"name" : "ament_cmake_python_copy_flexbe_widget_setup",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "flexbe_widget_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-flexbe_widget_uninstall-8f88c369b67f3789c8ff.json",
+					"name" : "flexbe_widget_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-6d1edf44fce4677c8e77.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/csrobot/flexbe_ws/build/flexbe_widget",
+		"source" : "/home/csrobot/flexbe_ws/src/flexbe_behavior_engine/flexbe_widget"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

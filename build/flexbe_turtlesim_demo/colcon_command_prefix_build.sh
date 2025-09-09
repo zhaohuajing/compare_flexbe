@@ -1,0 +1,13 @@
+# generated from colcon_core/shell/template/command_prefix.sh.em
+. "/home/csrobot/flexbe_ws/install/flexbe_msgs/share/flexbe_msgs/package.sh"
+. "/home/csrobot/flexbe_ws/install/flexbe_core/share/flexbe_core/package.sh"
+. "/home/csrobot/flexbe_ws/install/flexbe_input/share/flexbe_input/package.sh"
+. "/home/csrobot/flexbe_ws/install/flexbe_mirror/share/flexbe_mirror/package.sh"
+. "/home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/package.sh"
+. "/home/csrobot/flexbe_ws/install/flexbe_webui/share/flexbe_webui/package.sh"
+. "/home/csrobot/flexbe_ws/install/flexbe_states/share/flexbe_states/package.sh"
+. "/home/csrobot/flexbe_ws/install/flexbe_onboard/share/flexbe_onboard/package.sh"
+. "/home/csrobot/flexbe_ws/install/flexbe_widget/share/flexbe_widget/package.sh"
+. "/home/csrobot/flexbe_ws/install/flexbe_behavior_engine/share/flexbe_behavior_engine/package.sh"
+. "/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_states/share/flexbe_turtlesim_demo_flexbe_states/package.sh"
+. "/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_behaviors/share/flexbe_turtlesim_demo_flexbe_behaviors/package.sh"

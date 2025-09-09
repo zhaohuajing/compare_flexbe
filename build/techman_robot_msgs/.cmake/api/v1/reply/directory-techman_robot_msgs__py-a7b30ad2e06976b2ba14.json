@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "techman_robot_msgs__py",
+		"source" : "/home/csrobot/flexbe_ws/build/techman_robot_msgs/techman_robot_msgs__py"
+	}
+}

@@ -1,0 +1,3 @@
+# Request
+sensor_msgs/PointCloud2 input_cloud
+pcl_msgs/PointIndices target_indices

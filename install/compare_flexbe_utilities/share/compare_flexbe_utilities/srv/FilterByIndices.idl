@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from compare_flexbe_utilities/srv/FilterByIndices.srv
+// generated code does not contain a copyright notice
+
+#include "pcl_msgs/msg/PointIndices.idl"
+#include "sensor_msgs/msg/PointCloud2.idl"
+
+module compare_flexbe_utilities {
+  module srv {
+    @verbatim (language="comment", text=
+      "Request")
+    struct FilterByIndices_Request {
+      sensor_msgs::msg::PointCloud2 input_cloud;
+
+      pcl_msgs::msg::PointIndices target_indices;
+    };
+    @verbatim (language="comment", text=
+      "Response")
+    struct FilterByIndices_Response {
+      sensor_msgs::msg::PointCloud2 filtered_cloud;
+    };
+  };
+};

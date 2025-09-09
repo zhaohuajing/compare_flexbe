@@ -1,0 +1,8 @@
+/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/CartesianMoveToPose.idl
+/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/MoveToNamedPose.idl
+/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/MoveToPose.idl
+/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/VoxelGridFilter.idl
+/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/PlaneSegmentation.idl
+/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/EuclideanClustering.idl
+/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/GetPointCloud.idl
+/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/FilterByIndices.idl
