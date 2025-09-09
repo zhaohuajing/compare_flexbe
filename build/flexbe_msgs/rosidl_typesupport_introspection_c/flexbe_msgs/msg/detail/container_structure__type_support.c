@@ -98,6 +98,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__msg__Conta
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -115,6 +116,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__msg__Conta
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
+    false,  // is key
     true,  // is array
     0,  // array size
     false,  // is upper bound
@@ -134,6 +136,7 @@ static const rosidl_typesupport_introspection_c__MessageMembers flexbe_msgs__msg
   "ContainerStructure",  // message name
   2,  // number of fields
   sizeof(flexbe_msgs__msg__ContainerStructure),
+  false,  // has_any_key_member_
   flexbe_msgs__msg__ContainerStructure__rosidl_typesupport_introspection_c__ContainerStructure_message_member_array,  // message members
   flexbe_msgs__msg__ContainerStructure__rosidl_typesupport_introspection_c__ContainerStructure_init_function,  // function to initialize message memory (memory has to be allocated)
   flexbe_msgs__msg__ContainerStructure__rosidl_typesupport_introspection_c__ContainerStructure_fini_function  // function to terminate message instance (will not free memory)
@@ -145,6 +148,9 @@ static rosidl_message_type_support_t flexbe_msgs__msg__ContainerStructure__rosid
   0,
   &flexbe_msgs__msg__ContainerStructure__rosidl_typesupport_introspection_c__ContainerStructure_message_members,
   get_message_typesupport_handle_function,
+  &flexbe_msgs__msg__ContainerStructure__get_type_hash,
+  &flexbe_msgs__msg__ContainerStructure__get_type_description,
+  &flexbe_msgs__msg__ContainerStructure__get_type_description_sources,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_flexbe_msgs

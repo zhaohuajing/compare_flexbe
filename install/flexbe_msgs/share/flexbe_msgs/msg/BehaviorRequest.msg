@@ -1,7 +1,1 @@
-string behavior_name
-
-uint8 autonomy_level
-string[] arg_keys
-string[] arg_values
-
-Container[] structure
+/home/csrobot/flexbe_ws/src/flexbe_behavior_engine/flexbe_msgs/msg/BehaviorRequest.msg

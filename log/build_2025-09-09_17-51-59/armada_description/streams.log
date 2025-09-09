@@ -1,0 +1,58 @@
+[0.014s] Invoking command in '/home/csrobot/flexbe_ws/build/armada_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/csrobot/flexbe_ws/src/armada_ros2/armada_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/install/armada_description
+[0.728s] -- The C compiler identification is GNU 13.3.0
+[0.728s] -- The CXX compiler identification is GNU 13.3.0
+[0.728s] -- Detecting C compiler ABI info
+[0.728s] -- Detecting C compiler ABI info - done
+[0.728s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.728s] -- Detecting C compile features
+[0.728s] -- Detecting C compile features - done
+[0.728s] -- Detecting CXX compiler ABI info
+[0.728s] -- Detecting CXX compiler ABI info - done
+[0.728s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.728s] -- Detecting CXX compile features
+[0.728s] -- Detecting CXX compile features - done
+[0.728s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.728s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.728s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.729s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.786s] -- Added test 'lint_cmake' to check CMake code style
+[0.789s] -- Added test 'xmllint' to check XML markup files
+[0.794s] -- Configuring done (0.8s)
+[0.797s] -- Generating done (0.0s)
+[0.799s] -- Build files have been written to: /home/csrobot/flexbe_ws/build/armada_description
+[0.809s] Invoked command in '/home/csrobot/flexbe_ws/build/armada_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/csrobot/flexbe_ws/src/armada_ros2/armada_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/install/armada_description
+[0.811s] Invoking command in '/home/csrobot/flexbe_ws/build/armada_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/armada_description -- -j8 -l8
+[0.989s] Invoked command in '/home/csrobot/flexbe_ws/build/armada_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/armada_description -- -j8 -l8
+[0.993s] Invoking command in '/home/csrobot/flexbe_ws/build/armada_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/csrobot/flexbe_ws/build/armada_description
+[1.149s] -- Install configuration: ""
+[1.149s] -- Execute custom install script
+[1.149s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/panda/xacro/macro.panda.urdf.xacro
+[1.154s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/panda/xacro/macro.ros2_control.xacro
+[1.154s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/panda/xacro/macro.transmission.xacro
+[1.154s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/panda/xacro/panda.urdf.xacro
+[1.154s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/panda/xacro/panda_pedestal_workstation.urdf.xacro
+[1.154s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/panda/xacro/panda_simple_pedestal.urdf.xacro
+[1.154s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/tm5-700/xacro/macro.materials.xacro
+[1.155s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/tm5-700/xacro/macro.ros2_control.xacro
+[1.155s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/tm5-700/xacro/macro.tm5-700-nominal.urdf.xacro
+[1.155s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/tm5-700/xacro/macro.transmission.xacro
+[1.155s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/tm5-700/xacro/tm5-700.urdf.xacro
+[1.155s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/tm5-700/xacro/tm5-700_simple_pedestal.urdf.xacro
+[1.155s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/workstation/xacro/macro.pedestal_workstation.urdf.xacro
+[1.156s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/workstation/xacro/macro.simple_pedestal.urdf.xacro
+[1.156s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/ament_index/resource_index/package_run_dependencies/armada_description
+[1.156s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/ament_index/resource_index/parent_prefix_path/armada_description
+[1.156s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/environment/ament_prefix_path.sh
+[1.156s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/environment/ament_prefix_path.dsv
+[1.156s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/environment/path.sh
+[1.156s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/environment/path.dsv
+[1.156s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/local_setup.bash
+[1.158s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/local_setup.sh
+[1.164s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/local_setup.zsh
+[1.178s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/local_setup.dsv
+[1.188s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/package.dsv
+[1.195s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/ament_index/resource_index/packages/armada_description
+[1.202s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/cmake/armada_descriptionConfig.cmake
+[1.210s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/cmake/armada_descriptionConfig-version.cmake
+[1.217s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_description/share/armada_description/package.xml
+[1.382s] Invoked command in '/home/csrobot/flexbe_ws/build/armada_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/csrobot/flexbe_ws/build/armada_description

@@ -97,6 +97,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__Be
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -114,6 +115,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__Be
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -131,6 +133,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__Be
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     true,  // is array
     0,  // array size
     false,  // is upper bound
@@ -150,6 +153,7 @@ static const rosidl_typesupport_introspection_c__MessageMembers flexbe_msgs__act
   "BehaviorInput_Goal",  // message name
   3,  // number of fields
   sizeof(flexbe_msgs__action__BehaviorInput_Goal),
+  false,  // has_any_key_member_
   flexbe_msgs__action__BehaviorInput_Goal__rosidl_typesupport_introspection_c__BehaviorInput_Goal_message_member_array,  // message members
   flexbe_msgs__action__BehaviorInput_Goal__rosidl_typesupport_introspection_c__BehaviorInput_Goal_init_function,  // function to initialize message memory (memory has to be allocated)
   flexbe_msgs__action__BehaviorInput_Goal__rosidl_typesupport_introspection_c__BehaviorInput_Goal_fini_function  // function to terminate message instance (will not free memory)
@@ -161,6 +165,9 @@ static rosidl_message_type_support_t flexbe_msgs__action__BehaviorInput_Goal__ro
   0,
   &flexbe_msgs__action__BehaviorInput_Goal__rosidl_typesupport_introspection_c__BehaviorInput_Goal_message_members,
   get_message_typesupport_handle_function,
+  &flexbe_msgs__action__BehaviorInput_Goal__get_type_hash,
+  &flexbe_msgs__action__BehaviorInput_Goal__get_type_description,
+  &flexbe_msgs__action__BehaviorInput_Goal__get_type_description_sources,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_flexbe_msgs
@@ -224,6 +231,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__Be
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -241,6 +249,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__Be
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -260,6 +269,7 @@ static const rosidl_typesupport_introspection_c__MessageMembers flexbe_msgs__act
   "BehaviorInput_Result",  // message name
   2,  // number of fields
   sizeof(flexbe_msgs__action__BehaviorInput_Result),
+  false,  // has_any_key_member_
   flexbe_msgs__action__BehaviorInput_Result__rosidl_typesupport_introspection_c__BehaviorInput_Result_message_member_array,  // message members
   flexbe_msgs__action__BehaviorInput_Result__rosidl_typesupport_introspection_c__BehaviorInput_Result_init_function,  // function to initialize message memory (memory has to be allocated)
   flexbe_msgs__action__BehaviorInput_Result__rosidl_typesupport_introspection_c__BehaviorInput_Result_fini_function  // function to terminate message instance (will not free memory)
@@ -271,6 +281,9 @@ static rosidl_message_type_support_t flexbe_msgs__action__BehaviorInput_Result__
   0,
   &flexbe_msgs__action__BehaviorInput_Result__rosidl_typesupport_introspection_c__BehaviorInput_Result_message_members,
   get_message_typesupport_handle_function,
+  &flexbe_msgs__action__BehaviorInput_Result__get_type_hash,
+  &flexbe_msgs__action__BehaviorInput_Result__get_type_description,
+  &flexbe_msgs__action__BehaviorInput_Result__get_type_description_sources,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_flexbe_msgs
@@ -329,6 +342,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__Be
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -348,6 +362,7 @@ static const rosidl_typesupport_introspection_c__MessageMembers flexbe_msgs__act
   "BehaviorInput_Feedback",  // message name
   1,  // number of fields
   sizeof(flexbe_msgs__action__BehaviorInput_Feedback),
+  false,  // has_any_key_member_
   flexbe_msgs__action__BehaviorInput_Feedback__rosidl_typesupport_introspection_c__BehaviorInput_Feedback_message_member_array,  // message members
   flexbe_msgs__action__BehaviorInput_Feedback__rosidl_typesupport_introspection_c__BehaviorInput_Feedback_init_function,  // function to initialize message memory (memory has to be allocated)
   flexbe_msgs__action__BehaviorInput_Feedback__rosidl_typesupport_introspection_c__BehaviorInput_Feedback_fini_function  // function to terminate message instance (will not free memory)
@@ -359,6 +374,9 @@ static rosidl_message_type_support_t flexbe_msgs__action__BehaviorInput_Feedback
   0,
   &flexbe_msgs__action__BehaviorInput_Feedback__rosidl_typesupport_introspection_c__BehaviorInput_Feedback_message_members,
   get_message_typesupport_handle_function,
+  &flexbe_msgs__action__BehaviorInput_Feedback__get_type_hash,
+  &flexbe_msgs__action__BehaviorInput_Feedback__get_type_description,
+  &flexbe_msgs__action__BehaviorInput_Feedback__get_type_description_sources,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_flexbe_msgs
@@ -428,6 +446,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__Be
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -445,6 +464,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__Be
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -464,6 +484,7 @@ static const rosidl_typesupport_introspection_c__MessageMembers flexbe_msgs__act
   "BehaviorInput_SendGoal_Request",  // message name
   2,  // number of fields
   sizeof(flexbe_msgs__action__BehaviorInput_SendGoal_Request),
+  false,  // has_any_key_member_
   flexbe_msgs__action__BehaviorInput_SendGoal_Request__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Request_message_member_array,  // message members
   flexbe_msgs__action__BehaviorInput_SendGoal_Request__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Request_init_function,  // function to initialize message memory (memory has to be allocated)
   flexbe_msgs__action__BehaviorInput_SendGoal_Request__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Request_fini_function  // function to terminate message instance (will not free memory)
@@ -475,6 +496,9 @@ static rosidl_message_type_support_t flexbe_msgs__action__BehaviorInput_SendGoal
   0,
   &flexbe_msgs__action__BehaviorInput_SendGoal_Request__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Request_message_members,
   get_message_typesupport_handle_function,
+  &flexbe_msgs__action__BehaviorInput_SendGoal_Request__get_type_hash,
+  &flexbe_msgs__action__BehaviorInput_SendGoal_Request__get_type_description,
+  &flexbe_msgs__action__BehaviorInput_SendGoal_Request__get_type_description_sources,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_flexbe_msgs
@@ -543,6 +567,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__Be
     rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -560,6 +585,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__Be
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -579,6 +605,7 @@ static const rosidl_typesupport_introspection_c__MessageMembers flexbe_msgs__act
   "BehaviorInput_SendGoal_Response",  // message name
   2,  // number of fields
   sizeof(flexbe_msgs__action__BehaviorInput_SendGoal_Response),
+  false,  // has_any_key_member_
   flexbe_msgs__action__BehaviorInput_SendGoal_Response__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Response_message_member_array,  // message members
   flexbe_msgs__action__BehaviorInput_SendGoal_Response__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Response_init_function,  // function to initialize message memory (memory has to be allocated)
   flexbe_msgs__action__BehaviorInput_SendGoal_Response__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Response_fini_function  // function to terminate message instance (will not free memory)
@@ -590,6 +617,9 @@ static rosidl_message_type_support_t flexbe_msgs__action__BehaviorInput_SendGoal
   0,
   &flexbe_msgs__action__BehaviorInput_SendGoal_Response__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Response_message_members,
   get_message_typesupport_handle_function,
+  &flexbe_msgs__action__BehaviorInput_SendGoal_Response__get_type_hash,
+  &flexbe_msgs__action__BehaviorInput_SendGoal_Response__get_type_description,
+  &flexbe_msgs__action__BehaviorInput_SendGoal_Response__get_type_description_sources,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_flexbe_msgs
@@ -602,6 +632,265 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
       rosidl_typesupport_introspection_c__identifier;
   }
   return &flexbe_msgs__action__BehaviorInput_SendGoal_Response__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Response_message_type_support_handle;
+}
+#ifdef __cplusplus
+}
+#endif
+
+// already included above
+// #include <stddef.h>
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_input__rosidl_typesupport_introspection_c.h"
+// already included above
+// #include "flexbe_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h"
+// already included above
+// #include "rosidl_typesupport_introspection_c/field_types.h"
+// already included above
+// #include "rosidl_typesupport_introspection_c/identifier.h"
+// already included above
+// #include "rosidl_typesupport_introspection_c/message_introspection.h"
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_input__functions.h"
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_input__struct.h"
+
+
+// Include directives for member types
+// Member `info`
+#include "service_msgs/msg/service_event_info.h"
+// Member `info`
+#include "service_msgs/msg/detail/service_event_info__rosidl_typesupport_introspection_c.h"
+// Member `request`
+// Member `response`
+// already included above
+// #include "flexbe_msgs/action/behavior_input.h"
+// Member `request`
+// Member `response`
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_input__rosidl_typesupport_introspection_c.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+void flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_init_function(
+  void * message_memory, enum rosidl_runtime_c__message_initialization _init)
+{
+  // TODO(karsten1987): initializers are not yet implemented for typesupport c
+  // see https://github.com/ros2/ros2/issues/397
+  (void) _init;
+  flexbe_msgs__action__BehaviorInput_SendGoal_Event__init(message_memory);
+}
+
+void flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_fini_function(void * message_memory)
+{
+  flexbe_msgs__action__BehaviorInput_SendGoal_Event__fini(message_memory);
+}
+
+size_t flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__size_function__BehaviorInput_SendGoal_Event__request(
+  const void * untyped_member)
+{
+  const flexbe_msgs__action__BehaviorInput_SendGoal_Request__Sequence * member =
+    (const flexbe_msgs__action__BehaviorInput_SendGoal_Request__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__get_const_function__BehaviorInput_SendGoal_Event__request(
+  const void * untyped_member, size_t index)
+{
+  const flexbe_msgs__action__BehaviorInput_SendGoal_Request__Sequence * member =
+    (const flexbe_msgs__action__BehaviorInput_SendGoal_Request__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__get_function__BehaviorInput_SendGoal_Event__request(
+  void * untyped_member, size_t index)
+{
+  flexbe_msgs__action__BehaviorInput_SendGoal_Request__Sequence * member =
+    (flexbe_msgs__action__BehaviorInput_SendGoal_Request__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__fetch_function__BehaviorInput_SendGoal_Event__request(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const flexbe_msgs__action__BehaviorInput_SendGoal_Request * item =
+    ((const flexbe_msgs__action__BehaviorInput_SendGoal_Request *)
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__get_const_function__BehaviorInput_SendGoal_Event__request(untyped_member, index));
+  flexbe_msgs__action__BehaviorInput_SendGoal_Request * value =
+    (flexbe_msgs__action__BehaviorInput_SendGoal_Request *)(untyped_value);
+  *value = *item;
+}
+
+void flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__assign_function__BehaviorInput_SendGoal_Event__request(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  flexbe_msgs__action__BehaviorInput_SendGoal_Request * item =
+    ((flexbe_msgs__action__BehaviorInput_SendGoal_Request *)
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__get_function__BehaviorInput_SendGoal_Event__request(untyped_member, index));
+  const flexbe_msgs__action__BehaviorInput_SendGoal_Request * value =
+    (const flexbe_msgs__action__BehaviorInput_SendGoal_Request *)(untyped_value);
+  *item = *value;
+}
+
+bool flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__resize_function__BehaviorInput_SendGoal_Event__request(
+  void * untyped_member, size_t size)
+{
+  flexbe_msgs__action__BehaviorInput_SendGoal_Request__Sequence * member =
+    (flexbe_msgs__action__BehaviorInput_SendGoal_Request__Sequence *)(untyped_member);
+  flexbe_msgs__action__BehaviorInput_SendGoal_Request__Sequence__fini(member);
+  return flexbe_msgs__action__BehaviorInput_SendGoal_Request__Sequence__init(member, size);
+}
+
+size_t flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__size_function__BehaviorInput_SendGoal_Event__response(
+  const void * untyped_member)
+{
+  const flexbe_msgs__action__BehaviorInput_SendGoal_Response__Sequence * member =
+    (const flexbe_msgs__action__BehaviorInput_SendGoal_Response__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__get_const_function__BehaviorInput_SendGoal_Event__response(
+  const void * untyped_member, size_t index)
+{
+  const flexbe_msgs__action__BehaviorInput_SendGoal_Response__Sequence * member =
+    (const flexbe_msgs__action__BehaviorInput_SendGoal_Response__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__get_function__BehaviorInput_SendGoal_Event__response(
+  void * untyped_member, size_t index)
+{
+  flexbe_msgs__action__BehaviorInput_SendGoal_Response__Sequence * member =
+    (flexbe_msgs__action__BehaviorInput_SendGoal_Response__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__fetch_function__BehaviorInput_SendGoal_Event__response(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const flexbe_msgs__action__BehaviorInput_SendGoal_Response * item =
+    ((const flexbe_msgs__action__BehaviorInput_SendGoal_Response *)
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__get_const_function__BehaviorInput_SendGoal_Event__response(untyped_member, index));
+  flexbe_msgs__action__BehaviorInput_SendGoal_Response * value =
+    (flexbe_msgs__action__BehaviorInput_SendGoal_Response *)(untyped_value);
+  *value = *item;
+}
+
+void flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__assign_function__BehaviorInput_SendGoal_Event__response(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  flexbe_msgs__action__BehaviorInput_SendGoal_Response * item =
+    ((flexbe_msgs__action__BehaviorInput_SendGoal_Response *)
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__get_function__BehaviorInput_SendGoal_Event__response(untyped_member, index));
+  const flexbe_msgs__action__BehaviorInput_SendGoal_Response * value =
+    (const flexbe_msgs__action__BehaviorInput_SendGoal_Response *)(untyped_value);
+  *item = *value;
+}
+
+bool flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__resize_function__BehaviorInput_SendGoal_Event__response(
+  void * untyped_member, size_t size)
+{
+  flexbe_msgs__action__BehaviorInput_SendGoal_Response__Sequence * member =
+    (flexbe_msgs__action__BehaviorInput_SendGoal_Response__Sequence *)(untyped_member);
+  flexbe_msgs__action__BehaviorInput_SendGoal_Response__Sequence__fini(member);
+  return flexbe_msgs__action__BehaviorInput_SendGoal_Response__Sequence__init(member, size);
+}
+
+static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_message_member_array[3] = {
+  {
+    "info",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(flexbe_msgs__action__BehaviorInput_SendGoal_Event, info),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "request",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is key
+    true,  // is array
+    1,  // array size
+    true,  // is upper bound
+    offsetof(flexbe_msgs__action__BehaviorInput_SendGoal_Event, request),  // bytes offset in struct
+    NULL,  // default value
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__size_function__BehaviorInput_SendGoal_Event__request,  // size() function pointer
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__get_const_function__BehaviorInput_SendGoal_Event__request,  // get_const(index) function pointer
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__get_function__BehaviorInput_SendGoal_Event__request,  // get(index) function pointer
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__fetch_function__BehaviorInput_SendGoal_Event__request,  // fetch(index, &value) function pointer
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__assign_function__BehaviorInput_SendGoal_Event__request,  // assign(index, value) function pointer
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__resize_function__BehaviorInput_SendGoal_Event__request  // resize(index) function pointer
+  },
+  {
+    "response",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is key
+    true,  // is array
+    1,  // array size
+    true,  // is upper bound
+    offsetof(flexbe_msgs__action__BehaviorInput_SendGoal_Event, response),  // bytes offset in struct
+    NULL,  // default value
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__size_function__BehaviorInput_SendGoal_Event__response,  // size() function pointer
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__get_const_function__BehaviorInput_SendGoal_Event__response,  // get_const(index) function pointer
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__get_function__BehaviorInput_SendGoal_Event__response,  // get(index) function pointer
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__fetch_function__BehaviorInput_SendGoal_Event__response,  // fetch(index, &value) function pointer
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__assign_function__BehaviorInput_SendGoal_Event__response,  // assign(index, value) function pointer
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__resize_function__BehaviorInput_SendGoal_Event__response  // resize(index) function pointer
+  }
+};
+
+static const rosidl_typesupport_introspection_c__MessageMembers flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_message_members = {
+  "flexbe_msgs__action",  // message namespace
+  "BehaviorInput_SendGoal_Event",  // message name
+  3,  // number of fields
+  sizeof(flexbe_msgs__action__BehaviorInput_SendGoal_Event),
+  false,  // has_any_key_member_
+  flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_message_member_array,  // message members
+  flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_init_function,  // function to initialize message memory (memory has to be allocated)
+  flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_fini_function  // function to terminate message instance (will not free memory)
+};
+
+// this is not const since it must be initialized on first access
+// since C does not allow non-integral compile-time constants
+static rosidl_message_type_support_t flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_message_type_support_handle = {
+  0,
+  &flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_message_members,
+  get_message_typesupport_handle_function,
+  &flexbe_msgs__action__BehaviorInput_SendGoal_Event__get_type_hash,
+  &flexbe_msgs__action__BehaviorInput_SendGoal_Event__get_type_description,
+  &flexbe_msgs__action__BehaviorInput_SendGoal_Event__get_type_description_sources,
+};
+
+ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_flexbe_msgs
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_SendGoal_Event)() {
+  flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_message_member_array[0].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, service_msgs, msg, ServiceEventInfo)();
+  flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_message_member_array[1].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_SendGoal_Request)();
+  flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_message_member_array[2].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_SendGoal_Response)();
+  if (!flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_message_type_support_handle.typesupport_identifier) {
+    flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_message_type_support_handle.typesupport_identifier =
+      rosidl_typesupport_introspection_c__identifier;
+  }
+  return &flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_message_type_support_handle;
 }
 #ifdef __cplusplus
 }
@@ -620,29 +909,53 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 static rosidl_typesupport_introspection_c__ServiceMembers flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_service_members = {
   "flexbe_msgs__action",  // service namespace
   "BehaviorInput_SendGoal",  // service name
-  // these two fields are initialized below on the first access
+  // the following fields are initialized below on first access
   NULL,  // request message
   // flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Request_message_type_support_handle,
-  NULL  // response message
+  NULL,  // response message
+  // flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Response_message_type_support_handle
+  NULL  // event_message
   // flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Response_message_type_support_handle
 };
+
 
 static rosidl_service_type_support_t flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_service_type_support_handle = {
   0,
   &flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_service_members,
   get_service_typesupport_handle_function,
+  &flexbe_msgs__action__BehaviorInput_SendGoal_Request__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Request_message_type_support_handle,
+  &flexbe_msgs__action__BehaviorInput_SendGoal_Response__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Response_message_type_support_handle,
+  &flexbe_msgs__action__BehaviorInput_SendGoal_Event__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_Event_message_type_support_handle,
+  ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_CREATE_EVENT_MESSAGE_SYMBOL_NAME(
+    rosidl_typesupport_c,
+    flexbe_msgs,
+    action,
+    BehaviorInput_SendGoal
+  ),
+  ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_DESTROY_EVENT_MESSAGE_SYMBOL_NAME(
+    rosidl_typesupport_c,
+    flexbe_msgs,
+    action,
+    BehaviorInput_SendGoal
+  ),
+  &flexbe_msgs__action__BehaviorInput_SendGoal__get_type_hash,
+  &flexbe_msgs__action__BehaviorInput_SendGoal__get_type_description,
+  &flexbe_msgs__action__BehaviorInput_SendGoal__get_type_description_sources,
 };
 
-// Forward declaration of request/response type support functions
+// Forward declaration of message type support functions for service members
 const rosidl_message_type_support_t *
-ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_SendGoal_Request)();
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_SendGoal_Request)(void);
 
 const rosidl_message_type_support_t *
-ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_SendGoal_Response)();
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_SendGoal_Response)(void);
+
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_SendGoal_Event)(void);
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_flexbe_msgs
 const rosidl_service_type_support_t *
-ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_SendGoal)() {
+ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_SendGoal)(void) {
   if (!flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_service_type_support_handle.typesupport_identifier) {
     flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_service_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
@@ -659,6 +972,11 @@ ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_introspecti
     service_members->response_members_ =
       (const rosidl_typesupport_introspection_c__MessageMembers *)
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_SendGoal_Response)()->data;
+  }
+  if (!service_members->event_members_) {
+    service_members->event_members_ =
+      (const rosidl_typesupport_introspection_c__MessageMembers *)
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_SendGoal_Event)()->data;
   }
 
   return &flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_SendGoal_service_type_support_handle;
@@ -715,6 +1033,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__Be
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -734,6 +1053,7 @@ static const rosidl_typesupport_introspection_c__MessageMembers flexbe_msgs__act
   "BehaviorInput_GetResult_Request",  // message name
   1,  // number of fields
   sizeof(flexbe_msgs__action__BehaviorInput_GetResult_Request),
+  false,  // has_any_key_member_
   flexbe_msgs__action__BehaviorInput_GetResult_Request__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Request_message_member_array,  // message members
   flexbe_msgs__action__BehaviorInput_GetResult_Request__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Request_init_function,  // function to initialize message memory (memory has to be allocated)
   flexbe_msgs__action__BehaviorInput_GetResult_Request__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Request_fini_function  // function to terminate message instance (will not free memory)
@@ -745,6 +1065,9 @@ static rosidl_message_type_support_t flexbe_msgs__action__BehaviorInput_GetResul
   0,
   &flexbe_msgs__action__BehaviorInput_GetResult_Request__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Request_message_members,
   get_message_typesupport_handle_function,
+  &flexbe_msgs__action__BehaviorInput_GetResult_Request__get_type_hash,
+  &flexbe_msgs__action__BehaviorInput_GetResult_Request__get_type_description,
+  &flexbe_msgs__action__BehaviorInput_GetResult_Request__get_type_description_sources,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_flexbe_msgs
@@ -813,6 +1136,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__Be
     rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -830,6 +1154,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__Be
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -849,6 +1174,7 @@ static const rosidl_typesupport_introspection_c__MessageMembers flexbe_msgs__act
   "BehaviorInput_GetResult_Response",  // message name
   2,  // number of fields
   sizeof(flexbe_msgs__action__BehaviorInput_GetResult_Response),
+  false,  // has_any_key_member_
   flexbe_msgs__action__BehaviorInput_GetResult_Response__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Response_message_member_array,  // message members
   flexbe_msgs__action__BehaviorInput_GetResult_Response__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Response_init_function,  // function to initialize message memory (memory has to be allocated)
   flexbe_msgs__action__BehaviorInput_GetResult_Response__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Response_fini_function  // function to terminate message instance (will not free memory)
@@ -860,6 +1186,9 @@ static rosidl_message_type_support_t flexbe_msgs__action__BehaviorInput_GetResul
   0,
   &flexbe_msgs__action__BehaviorInput_GetResult_Response__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Response_message_members,
   get_message_typesupport_handle_function,
+  &flexbe_msgs__action__BehaviorInput_GetResult_Response__get_type_hash,
+  &flexbe_msgs__action__BehaviorInput_GetResult_Response__get_type_description,
+  &flexbe_msgs__action__BehaviorInput_GetResult_Response__get_type_description_sources,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_flexbe_msgs
@@ -872,6 +1201,267 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
       rosidl_typesupport_introspection_c__identifier;
   }
   return &flexbe_msgs__action__BehaviorInput_GetResult_Response__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Response_message_type_support_handle;
+}
+#ifdef __cplusplus
+}
+#endif
+
+// already included above
+// #include <stddef.h>
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_input__rosidl_typesupport_introspection_c.h"
+// already included above
+// #include "flexbe_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h"
+// already included above
+// #include "rosidl_typesupport_introspection_c/field_types.h"
+// already included above
+// #include "rosidl_typesupport_introspection_c/identifier.h"
+// already included above
+// #include "rosidl_typesupport_introspection_c/message_introspection.h"
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_input__functions.h"
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_input__struct.h"
+
+
+// Include directives for member types
+// Member `info`
+// already included above
+// #include "service_msgs/msg/service_event_info.h"
+// Member `info`
+// already included above
+// #include "service_msgs/msg/detail/service_event_info__rosidl_typesupport_introspection_c.h"
+// Member `request`
+// Member `response`
+// already included above
+// #include "flexbe_msgs/action/behavior_input.h"
+// Member `request`
+// Member `response`
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_input__rosidl_typesupport_introspection_c.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+void flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_init_function(
+  void * message_memory, enum rosidl_runtime_c__message_initialization _init)
+{
+  // TODO(karsten1987): initializers are not yet implemented for typesupport c
+  // see https://github.com/ros2/ros2/issues/397
+  (void) _init;
+  flexbe_msgs__action__BehaviorInput_GetResult_Event__init(message_memory);
+}
+
+void flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_fini_function(void * message_memory)
+{
+  flexbe_msgs__action__BehaviorInput_GetResult_Event__fini(message_memory);
+}
+
+size_t flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__size_function__BehaviorInput_GetResult_Event__request(
+  const void * untyped_member)
+{
+  const flexbe_msgs__action__BehaviorInput_GetResult_Request__Sequence * member =
+    (const flexbe_msgs__action__BehaviorInput_GetResult_Request__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__get_const_function__BehaviorInput_GetResult_Event__request(
+  const void * untyped_member, size_t index)
+{
+  const flexbe_msgs__action__BehaviorInput_GetResult_Request__Sequence * member =
+    (const flexbe_msgs__action__BehaviorInput_GetResult_Request__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__get_function__BehaviorInput_GetResult_Event__request(
+  void * untyped_member, size_t index)
+{
+  flexbe_msgs__action__BehaviorInput_GetResult_Request__Sequence * member =
+    (flexbe_msgs__action__BehaviorInput_GetResult_Request__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__fetch_function__BehaviorInput_GetResult_Event__request(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const flexbe_msgs__action__BehaviorInput_GetResult_Request * item =
+    ((const flexbe_msgs__action__BehaviorInput_GetResult_Request *)
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__get_const_function__BehaviorInput_GetResult_Event__request(untyped_member, index));
+  flexbe_msgs__action__BehaviorInput_GetResult_Request * value =
+    (flexbe_msgs__action__BehaviorInput_GetResult_Request *)(untyped_value);
+  *value = *item;
+}
+
+void flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__assign_function__BehaviorInput_GetResult_Event__request(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  flexbe_msgs__action__BehaviorInput_GetResult_Request * item =
+    ((flexbe_msgs__action__BehaviorInput_GetResult_Request *)
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__get_function__BehaviorInput_GetResult_Event__request(untyped_member, index));
+  const flexbe_msgs__action__BehaviorInput_GetResult_Request * value =
+    (const flexbe_msgs__action__BehaviorInput_GetResult_Request *)(untyped_value);
+  *item = *value;
+}
+
+bool flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__resize_function__BehaviorInput_GetResult_Event__request(
+  void * untyped_member, size_t size)
+{
+  flexbe_msgs__action__BehaviorInput_GetResult_Request__Sequence * member =
+    (flexbe_msgs__action__BehaviorInput_GetResult_Request__Sequence *)(untyped_member);
+  flexbe_msgs__action__BehaviorInput_GetResult_Request__Sequence__fini(member);
+  return flexbe_msgs__action__BehaviorInput_GetResult_Request__Sequence__init(member, size);
+}
+
+size_t flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__size_function__BehaviorInput_GetResult_Event__response(
+  const void * untyped_member)
+{
+  const flexbe_msgs__action__BehaviorInput_GetResult_Response__Sequence * member =
+    (const flexbe_msgs__action__BehaviorInput_GetResult_Response__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__get_const_function__BehaviorInput_GetResult_Event__response(
+  const void * untyped_member, size_t index)
+{
+  const flexbe_msgs__action__BehaviorInput_GetResult_Response__Sequence * member =
+    (const flexbe_msgs__action__BehaviorInput_GetResult_Response__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__get_function__BehaviorInput_GetResult_Event__response(
+  void * untyped_member, size_t index)
+{
+  flexbe_msgs__action__BehaviorInput_GetResult_Response__Sequence * member =
+    (flexbe_msgs__action__BehaviorInput_GetResult_Response__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__fetch_function__BehaviorInput_GetResult_Event__response(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const flexbe_msgs__action__BehaviorInput_GetResult_Response * item =
+    ((const flexbe_msgs__action__BehaviorInput_GetResult_Response *)
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__get_const_function__BehaviorInput_GetResult_Event__response(untyped_member, index));
+  flexbe_msgs__action__BehaviorInput_GetResult_Response * value =
+    (flexbe_msgs__action__BehaviorInput_GetResult_Response *)(untyped_value);
+  *value = *item;
+}
+
+void flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__assign_function__BehaviorInput_GetResult_Event__response(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  flexbe_msgs__action__BehaviorInput_GetResult_Response * item =
+    ((flexbe_msgs__action__BehaviorInput_GetResult_Response *)
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__get_function__BehaviorInput_GetResult_Event__response(untyped_member, index));
+  const flexbe_msgs__action__BehaviorInput_GetResult_Response * value =
+    (const flexbe_msgs__action__BehaviorInput_GetResult_Response *)(untyped_value);
+  *item = *value;
+}
+
+bool flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__resize_function__BehaviorInput_GetResult_Event__response(
+  void * untyped_member, size_t size)
+{
+  flexbe_msgs__action__BehaviorInput_GetResult_Response__Sequence * member =
+    (flexbe_msgs__action__BehaviorInput_GetResult_Response__Sequence *)(untyped_member);
+  flexbe_msgs__action__BehaviorInput_GetResult_Response__Sequence__fini(member);
+  return flexbe_msgs__action__BehaviorInput_GetResult_Response__Sequence__init(member, size);
+}
+
+static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_message_member_array[3] = {
+  {
+    "info",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(flexbe_msgs__action__BehaviorInput_GetResult_Event, info),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "request",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is key
+    true,  // is array
+    1,  // array size
+    true,  // is upper bound
+    offsetof(flexbe_msgs__action__BehaviorInput_GetResult_Event, request),  // bytes offset in struct
+    NULL,  // default value
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__size_function__BehaviorInput_GetResult_Event__request,  // size() function pointer
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__get_const_function__BehaviorInput_GetResult_Event__request,  // get_const(index) function pointer
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__get_function__BehaviorInput_GetResult_Event__request,  // get(index) function pointer
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__fetch_function__BehaviorInput_GetResult_Event__request,  // fetch(index, &value) function pointer
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__assign_function__BehaviorInput_GetResult_Event__request,  // assign(index, value) function pointer
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__resize_function__BehaviorInput_GetResult_Event__request  // resize(index) function pointer
+  },
+  {
+    "response",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is key
+    true,  // is array
+    1,  // array size
+    true,  // is upper bound
+    offsetof(flexbe_msgs__action__BehaviorInput_GetResult_Event, response),  // bytes offset in struct
+    NULL,  // default value
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__size_function__BehaviorInput_GetResult_Event__response,  // size() function pointer
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__get_const_function__BehaviorInput_GetResult_Event__response,  // get_const(index) function pointer
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__get_function__BehaviorInput_GetResult_Event__response,  // get(index) function pointer
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__fetch_function__BehaviorInput_GetResult_Event__response,  // fetch(index, &value) function pointer
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__assign_function__BehaviorInput_GetResult_Event__response,  // assign(index, value) function pointer
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__resize_function__BehaviorInput_GetResult_Event__response  // resize(index) function pointer
+  }
+};
+
+static const rosidl_typesupport_introspection_c__MessageMembers flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_message_members = {
+  "flexbe_msgs__action",  // message namespace
+  "BehaviorInput_GetResult_Event",  // message name
+  3,  // number of fields
+  sizeof(flexbe_msgs__action__BehaviorInput_GetResult_Event),
+  false,  // has_any_key_member_
+  flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_message_member_array,  // message members
+  flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_init_function,  // function to initialize message memory (memory has to be allocated)
+  flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_fini_function  // function to terminate message instance (will not free memory)
+};
+
+// this is not const since it must be initialized on first access
+// since C does not allow non-integral compile-time constants
+static rosidl_message_type_support_t flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_message_type_support_handle = {
+  0,
+  &flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_message_members,
+  get_message_typesupport_handle_function,
+  &flexbe_msgs__action__BehaviorInput_GetResult_Event__get_type_hash,
+  &flexbe_msgs__action__BehaviorInput_GetResult_Event__get_type_description,
+  &flexbe_msgs__action__BehaviorInput_GetResult_Event__get_type_description_sources,
+};
+
+ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_flexbe_msgs
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_GetResult_Event)() {
+  flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_message_member_array[0].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, service_msgs, msg, ServiceEventInfo)();
+  flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_message_member_array[1].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_GetResult_Request)();
+  flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_message_member_array[2].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_GetResult_Response)();
+  if (!flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_message_type_support_handle.typesupport_identifier) {
+    flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_message_type_support_handle.typesupport_identifier =
+      rosidl_typesupport_introspection_c__identifier;
+  }
+  return &flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_message_type_support_handle;
 }
 #ifdef __cplusplus
 }
@@ -892,29 +1482,53 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 static rosidl_typesupport_introspection_c__ServiceMembers flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_service_members = {
   "flexbe_msgs__action",  // service namespace
   "BehaviorInput_GetResult",  // service name
-  // these two fields are initialized below on the first access
+  // the following fields are initialized below on first access
   NULL,  // request message
   // flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Request_message_type_support_handle,
-  NULL  // response message
+  NULL,  // response message
+  // flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Response_message_type_support_handle
+  NULL  // event_message
   // flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Response_message_type_support_handle
 };
+
 
 static rosidl_service_type_support_t flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_service_type_support_handle = {
   0,
   &flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_service_members,
   get_service_typesupport_handle_function,
+  &flexbe_msgs__action__BehaviorInput_GetResult_Request__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Request_message_type_support_handle,
+  &flexbe_msgs__action__BehaviorInput_GetResult_Response__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Response_message_type_support_handle,
+  &flexbe_msgs__action__BehaviorInput_GetResult_Event__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_Event_message_type_support_handle,
+  ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_CREATE_EVENT_MESSAGE_SYMBOL_NAME(
+    rosidl_typesupport_c,
+    flexbe_msgs,
+    action,
+    BehaviorInput_GetResult
+  ),
+  ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_DESTROY_EVENT_MESSAGE_SYMBOL_NAME(
+    rosidl_typesupport_c,
+    flexbe_msgs,
+    action,
+    BehaviorInput_GetResult
+  ),
+  &flexbe_msgs__action__BehaviorInput_GetResult__get_type_hash,
+  &flexbe_msgs__action__BehaviorInput_GetResult__get_type_description,
+  &flexbe_msgs__action__BehaviorInput_GetResult__get_type_description_sources,
 };
 
-// Forward declaration of request/response type support functions
+// Forward declaration of message type support functions for service members
 const rosidl_message_type_support_t *
-ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_GetResult_Request)();
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_GetResult_Request)(void);
 
 const rosidl_message_type_support_t *
-ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_GetResult_Response)();
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_GetResult_Response)(void);
+
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_GetResult_Event)(void);
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_flexbe_msgs
 const rosidl_service_type_support_t *
-ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_GetResult)() {
+ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_GetResult)(void) {
   if (!flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_service_type_support_handle.typesupport_identifier) {
     flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_service_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
@@ -931,6 +1545,11 @@ ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_introspecti
     service_members->response_members_ =
       (const rosidl_typesupport_introspection_c__MessageMembers *)
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_GetResult_Response)()->data;
+  }
+  if (!service_members->event_members_) {
+    service_members->event_members_ =
+      (const rosidl_typesupport_introspection_c__MessageMembers *)
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, flexbe_msgs, action, BehaviorInput_GetResult_Event)()->data;
   }
 
   return &flexbe_msgs__action__detail__behavior_input__rosidl_typesupport_introspection_c__BehaviorInput_GetResult_service_type_support_handle;
@@ -993,6 +1612,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__Be
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -1010,6 +1630,7 @@ static rosidl_typesupport_introspection_c__MessageMember flexbe_msgs__action__Be
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -1029,6 +1650,7 @@ static const rosidl_typesupport_introspection_c__MessageMembers flexbe_msgs__act
   "BehaviorInput_FeedbackMessage",  // message name
   2,  // number of fields
   sizeof(flexbe_msgs__action__BehaviorInput_FeedbackMessage),
+  false,  // has_any_key_member_
   flexbe_msgs__action__BehaviorInput_FeedbackMessage__rosidl_typesupport_introspection_c__BehaviorInput_FeedbackMessage_message_member_array,  // message members
   flexbe_msgs__action__BehaviorInput_FeedbackMessage__rosidl_typesupport_introspection_c__BehaviorInput_FeedbackMessage_init_function,  // function to initialize message memory (memory has to be allocated)
   flexbe_msgs__action__BehaviorInput_FeedbackMessage__rosidl_typesupport_introspection_c__BehaviorInput_FeedbackMessage_fini_function  // function to terminate message instance (will not free memory)
@@ -1040,6 +1662,9 @@ static rosidl_message_type_support_t flexbe_msgs__action__BehaviorInput_Feedback
   0,
   &flexbe_msgs__action__BehaviorInput_FeedbackMessage__rosidl_typesupport_introspection_c__BehaviorInput_FeedbackMessage_message_members,
   get_message_typesupport_handle_function,
+  &flexbe_msgs__action__BehaviorInput_FeedbackMessage__get_type_hash,
+  &flexbe_msgs__action__BehaviorInput_FeedbackMessage__get_type_description,
+  &flexbe_msgs__action__BehaviorInput_FeedbackMessage__get_type_description_sources,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_flexbe_msgs

@@ -2,6 +2,9 @@
 // with input from techman_robot_msgs:srv/TechmanRobotCommand.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "techman_robot_msgs/srv/techman_robot_command.h"
+
+
 #ifndef TECHMAN_ROBOT_MSGS__SRV__DETAIL__TECHMAN_ROBOT_COMMAND__STRUCT_H_
 #define TECHMAN_ROBOT_MSGS__SRV__DETAIL__TECHMAN_ROBOT_COMMAND__STRUCT_H_
 
@@ -39,7 +42,6 @@ typedef struct techman_robot_msgs__srv__TechmanRobotCommand_Request__Sequence
   size_t capacity;
 } techman_robot_msgs__srv__TechmanRobotCommand_Request__Sequence;
 
-
 // Constants defined in the message
 
 /// Struct defined in srv/TechmanRobotCommand in the package techman_robot_msgs.
@@ -57,6 +59,42 @@ typedef struct techman_robot_msgs__srv__TechmanRobotCommand_Response__Sequence
   /// The number of allocated items in data
   size_t capacity;
 } techman_robot_msgs__srv__TechmanRobotCommand_Response__Sequence;
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'info'
+#include "service_msgs/msg/detail/service_event_info__struct.h"
+
+// constants for array fields with an upper bound
+// request
+enum
+{
+  techman_robot_msgs__srv__TechmanRobotCommand_Event__request__MAX_SIZE = 1
+};
+// response
+enum
+{
+  techman_robot_msgs__srv__TechmanRobotCommand_Event__response__MAX_SIZE = 1
+};
+
+/// Struct defined in srv/TechmanRobotCommand in the package techman_robot_msgs.
+typedef struct techman_robot_msgs__srv__TechmanRobotCommand_Event
+{
+  service_msgs__msg__ServiceEventInfo info;
+  techman_robot_msgs__srv__TechmanRobotCommand_Request__Sequence request;
+  techman_robot_msgs__srv__TechmanRobotCommand_Response__Sequence response;
+} techman_robot_msgs__srv__TechmanRobotCommand_Event;
+
+// Struct for a sequence of techman_robot_msgs__srv__TechmanRobotCommand_Event.
+typedef struct techman_robot_msgs__srv__TechmanRobotCommand_Event__Sequence
+{
+  techman_robot_msgs__srv__TechmanRobotCommand_Event * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} techman_robot_msgs__srv__TechmanRobotCommand_Event__Sequence;
 
 #ifdef __cplusplus
 }

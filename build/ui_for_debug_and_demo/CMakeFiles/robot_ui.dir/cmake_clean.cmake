@@ -12,6 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.o.d"
   "robot_ui"
   "robot_ui.pdb"
+  "robot_ui_autogen/mocs_compilation.cpp"
+  "robot_ui_autogen/timestamp"
   "ui_tm_ros_driver_windows.h"
 )
 

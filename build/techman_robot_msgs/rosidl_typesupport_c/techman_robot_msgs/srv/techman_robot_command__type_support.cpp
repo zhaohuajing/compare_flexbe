@@ -6,6 +6,7 @@
 #include "rosidl_runtime_c/message_type_support_struct.h"
 #include "techman_robot_msgs/srv/detail/techman_robot_command__struct.h"
 #include "techman_robot_msgs/srv/detail/techman_robot_command__type_support.h"
+#include "techman_robot_msgs/srv/detail/techman_robot_command__functions.h"
 #include "rosidl_typesupport_c/identifier.h"
 #include "rosidl_typesupport_c/message_type_support_dispatch.h"
 #include "rosidl_typesupport_c/type_support_map.h"
@@ -72,6 +73,9 @@ static const rosidl_message_type_support_t TechmanRobotCommand_Request_message_t
   rosidl_typesupport_c__typesupport_identifier,
   reinterpret_cast<const type_support_map_t *>(&_TechmanRobotCommand_Request_message_typesupport_map),
   rosidl_typesupport_c__get_message_typesupport_handle_function,
+  &techman_robot_msgs__srv__TechmanRobotCommand_Request__get_type_hash,
+  &techman_robot_msgs__srv__TechmanRobotCommand_Request__get_type_description,
+  &techman_robot_msgs__srv__TechmanRobotCommand_Request__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_c
@@ -102,6 +106,8 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_c, techman_
 // #include "techman_robot_msgs/srv/detail/techman_robot_command__struct.h"
 // already included above
 // #include "techman_robot_msgs/srv/detail/techman_robot_command__type_support.h"
+// already included above
+// #include "techman_robot_msgs/srv/detail/techman_robot_command__functions.h"
 // already included above
 // #include "rosidl_typesupport_c/identifier.h"
 // already included above
@@ -173,6 +179,9 @@ static const rosidl_message_type_support_t TechmanRobotCommand_Response_message_
   rosidl_typesupport_c__typesupport_identifier,
   reinterpret_cast<const type_support_map_t *>(&_TechmanRobotCommand_Response_message_typesupport_map),
   rosidl_typesupport_c__get_message_typesupport_handle_function,
+  &techman_robot_msgs__srv__TechmanRobotCommand_Response__get_type_hash,
+  &techman_robot_msgs__srv__TechmanRobotCommand_Response__get_type_description,
+  &techman_robot_msgs__srv__TechmanRobotCommand_Response__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_c
@@ -197,14 +206,22 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_c, techman_
 
 // already included above
 // #include "cstddef"
-#include "rosidl_runtime_c/service_type_support_struct.h"
+// already included above
+// #include "rosidl_runtime_c/message_type_support_struct.h"
+// already included above
+// #include "techman_robot_msgs/srv/detail/techman_robot_command__struct.h"
 // already included above
 // #include "techman_robot_msgs/srv/detail/techman_robot_command__type_support.h"
 // already included above
+// #include "techman_robot_msgs/srv/detail/techman_robot_command__functions.h"
+// already included above
 // #include "rosidl_typesupport_c/identifier.h"
-#include "rosidl_typesupport_c/service_type_support_dispatch.h"
+// already included above
+// #include "rosidl_typesupport_c/message_type_support_dispatch.h"
 // already included above
 // #include "rosidl_typesupport_c/type_support_map.h"
+// already included above
+// #include "rosidl_typesupport_c/visibility_control.h"
 // already included above
 // #include "rosidl_typesupport_interface/macros.h"
 
@@ -217,6 +234,105 @@ namespace srv
 namespace rosidl_typesupport_c
 {
 
+typedef struct _TechmanRobotCommand_Event_type_support_ids_t
+{
+  const char * typesupport_identifier[2];
+} _TechmanRobotCommand_Event_type_support_ids_t;
+
+static const _TechmanRobotCommand_Event_type_support_ids_t _TechmanRobotCommand_Event_message_typesupport_ids = {
+  {
+    "rosidl_typesupport_fastrtps_c",  // ::rosidl_typesupport_fastrtps_c::typesupport_identifier,
+    "rosidl_typesupport_introspection_c",  // ::rosidl_typesupport_introspection_c::typesupport_identifier,
+  }
+};
+
+typedef struct _TechmanRobotCommand_Event_type_support_symbol_names_t
+{
+  const char * symbol_name[2];
+} _TechmanRobotCommand_Event_type_support_symbol_names_t;
+
+#define STRINGIFY_(s) #s
+#define STRINGIFY(s) STRINGIFY_(s)
+
+static const _TechmanRobotCommand_Event_type_support_symbol_names_t _TechmanRobotCommand_Event_message_typesupport_symbol_names = {
+  {
+    STRINGIFY(ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, techman_robot_msgs, srv, TechmanRobotCommand_Event)),
+    STRINGIFY(ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, techman_robot_msgs, srv, TechmanRobotCommand_Event)),
+  }
+};
+
+typedef struct _TechmanRobotCommand_Event_type_support_data_t
+{
+  void * data[2];
+} _TechmanRobotCommand_Event_type_support_data_t;
+
+static _TechmanRobotCommand_Event_type_support_data_t _TechmanRobotCommand_Event_message_typesupport_data = {
+  {
+    0,  // will store the shared library later
+    0,  // will store the shared library later
+  }
+};
+
+static const type_support_map_t _TechmanRobotCommand_Event_message_typesupport_map = {
+  2,
+  "techman_robot_msgs",
+  &_TechmanRobotCommand_Event_message_typesupport_ids.typesupport_identifier[0],
+  &_TechmanRobotCommand_Event_message_typesupport_symbol_names.symbol_name[0],
+  &_TechmanRobotCommand_Event_message_typesupport_data.data[0],
+};
+
+static const rosidl_message_type_support_t TechmanRobotCommand_Event_message_type_support_handle = {
+  rosidl_typesupport_c__typesupport_identifier,
+  reinterpret_cast<const type_support_map_t *>(&_TechmanRobotCommand_Event_message_typesupport_map),
+  rosidl_typesupport_c__get_message_typesupport_handle_function,
+  &techman_robot_msgs__srv__TechmanRobotCommand_Event__get_type_hash,
+  &techman_robot_msgs__srv__TechmanRobotCommand_Event__get_type_description,
+  &techman_robot_msgs__srv__TechmanRobotCommand_Event__get_type_description_sources,
+};
+
+}  // namespace rosidl_typesupport_c
+
+}  // namespace srv
+
+}  // namespace techman_robot_msgs
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_c, techman_robot_msgs, srv, TechmanRobotCommand_Event)() {
+  return &::techman_robot_msgs::srv::rosidl_typesupport_c::TechmanRobotCommand_Event_message_type_support_handle;
+}
+
+#ifdef __cplusplus
+}
+#endif
+
+// already included above
+// #include "cstddef"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+// already included above
+// #include "techman_robot_msgs/srv/detail/techman_robot_command__type_support.h"
+// already included above
+// #include "rosidl_typesupport_c/identifier.h"
+#include "rosidl_typesupport_c/service_type_support_dispatch.h"
+// already included above
+// #include "rosidl_typesupport_c/type_support_map.h"
+// already included above
+// #include "rosidl_typesupport_interface/macros.h"
+#include "service_msgs/msg/service_event_info.h"
+#include "builtin_interfaces/msg/time.h"
+
+namespace techman_robot_msgs
+{
+
+namespace srv
+{
+
+namespace rosidl_typesupport_c
+{
 typedef struct _TechmanRobotCommand_type_support_ids_t
 {
   const char * typesupport_identifier[2];
@@ -268,6 +384,24 @@ static const rosidl_service_type_support_t TechmanRobotCommand_service_type_supp
   rosidl_typesupport_c__typesupport_identifier,
   reinterpret_cast<const type_support_map_t *>(&_TechmanRobotCommand_service_typesupport_map),
   rosidl_typesupport_c__get_service_typesupport_handle_function,
+  &TechmanRobotCommand_Request_message_type_support_handle,
+  &TechmanRobotCommand_Response_message_type_support_handle,
+  &TechmanRobotCommand_Event_message_type_support_handle,
+  ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_CREATE_EVENT_MESSAGE_SYMBOL_NAME(
+    rosidl_typesupport_c,
+    techman_robot_msgs,
+    srv,
+    TechmanRobotCommand
+  ),
+  ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_DESTROY_EVENT_MESSAGE_SYMBOL_NAME(
+    rosidl_typesupport_c,
+    techman_robot_msgs,
+    srv,
+    TechmanRobotCommand
+  ),
+  &techman_robot_msgs__srv__TechmanRobotCommand__get_type_hash,
+  &techman_robot_msgs__srv__TechmanRobotCommand__get_type_description,
+  &techman_robot_msgs__srv__TechmanRobotCommand__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_c

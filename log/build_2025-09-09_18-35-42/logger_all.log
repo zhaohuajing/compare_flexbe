@@ -1,0 +1,718 @@
+[0.168s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'flexbe_webui']
+[0.168s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['flexbe_webui'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7756ede07650>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7756ede06ff0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7756ede06ff0>>, mixin_verb=('build',))
+[0.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.202s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.202s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/csrobot/flexbe_ws'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2) by extension 'ignore'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2) by extension 'ignore_ament_install'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2) by extensions ['colcon_pkg']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2) by extension 'colcon_pkg'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2) by extensions ['colcon_meta']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2) by extension 'colcon_meta'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2) by extensions ['ros']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2) by extension 'ros'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2) by extensions ['cmake', 'python']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2) by extension 'cmake'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2) by extension 'python'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2) by extensions ['python_setup_py']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2) by extension 'python_setup_py'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_bringup) by extension 'ignore'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_bringup) by extension 'ignore_ament_install'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_bringup) by extensions ['colcon_pkg']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_bringup) by extension 'colcon_pkg'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_bringup) by extensions ['colcon_meta']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_bringup) by extension 'colcon_meta'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_bringup) by extensions ['ros']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_bringup) by extension 'ros'
+[0.231s] DEBUG:colcon.colcon_core.package_identification:Package 'src/armada_ros2/armada_bringup' with type 'ros.ament_cmake' and name 'armada_bringup'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_description) by extensions ['ignore', 'ignore_ament_install']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_description) by extension 'ignore'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_description) by extension 'ignore_ament_install'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_description) by extensions ['colcon_pkg']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_description) by extension 'colcon_pkg'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_description) by extensions ['colcon_meta']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_description) by extension 'colcon_meta'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_description) by extensions ['ros']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_description) by extension 'ros'
+[0.232s] DEBUG:colcon.colcon_core.package_identification:Package 'src/armada_ros2/armada_description' with type 'ros.ament_cmake' and name 'armada_description'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_gazebo) by extension 'ignore'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_gazebo) by extension 'ignore_ament_install'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_gazebo) by extensions ['colcon_pkg']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_gazebo) by extension 'colcon_pkg'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_gazebo) by extensions ['colcon_meta']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_gazebo) by extension 'colcon_meta'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_gazebo) by extensions ['ros']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/armada_ros2/armada_gazebo) by extension 'ros'
+[0.233s] DEBUG:colcon.colcon_core.package_identification:Package 'src/armada_ros2/armada_gazebo' with type 'ros.ament_cmake' and name 'armada_gazebo'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe) by extensions ['ignore', 'ignore_ament_install']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe) by extension 'ignore'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe) by extension 'ignore_ament_install'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe) by extensions ['colcon_pkg']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe) by extension 'colcon_pkg'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe) by extensions ['colcon_meta']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe) by extension 'colcon_meta'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe) by extensions ['ros']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe) by extension 'ros'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe) by extensions ['cmake', 'python']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe) by extension 'cmake'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe) by extension 'python'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe) by extensions ['python_setup_py']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe) by extension 'python_setup_py'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe) by extensions ['ignore', 'ignore_ament_install']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe) by extension 'ignore'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe) by extension 'ignore_ament_install'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe) by extensions ['colcon_pkg']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe) by extension 'colcon_pkg'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe) by extensions ['colcon_meta']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe) by extension 'colcon_meta'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe) by extensions ['ros']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe) by extension 'ros'
+[0.234s] DEBUG:colcon.colcon_core.package_identification:Package 'src/compare_flexbe/compare_flexbe' with type 'ros.ament_cmake' and name 'compare_flexbe'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_behaviors) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_behaviors) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_behaviors) by extension 'ignore_ament_install'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_behaviors) by extensions ['colcon_pkg']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_behaviors) by extension 'colcon_pkg'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_behaviors) by extensions ['colcon_meta']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_behaviors) by extension 'colcon_meta'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_behaviors) by extensions ['ros']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_behaviors) by extension 'ros'
+[0.235s] DEBUG:colcon.colcon_core.package_identification:Package 'src/compare_flexbe/compare_flexbe_behaviors' with type 'ros.ament_cmake' and name 'compare_flexbe_behaviors'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_states) by extensions ['ignore', 'ignore_ament_install']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_states) by extension 'ignore'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_states) by extension 'ignore_ament_install'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_states) by extensions ['colcon_pkg']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_states) by extension 'colcon_pkg'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_states) by extensions ['colcon_meta']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_states) by extension 'colcon_meta'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_states) by extensions ['ros']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/compare_flexbe_states) by extension 'ros'
+[0.236s] DEBUG:colcon.colcon_core.package_identification:Package 'src/compare_flexbe/compare_flexbe_states' with type 'ros.ament_python' and name 'compare_flexbe_states'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/example_flexbe_states) by extensions ['ignore', 'ignore_ament_install']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/example_flexbe_states) by extension 'ignore'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/example_flexbe_states) by extension 'ignore_ament_install'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/example_flexbe_states) by extensions ['colcon_pkg']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/example_flexbe_states) by extension 'colcon_pkg'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/example_flexbe_states) by extensions ['colcon_meta']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/example_flexbe_states) by extension 'colcon_meta'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/example_flexbe_states) by extensions ['ros']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe/example_flexbe_states) by extension 'ros'
+[0.236s] DEBUG:colcon.colcon_core.package_identification:Package 'src/compare_flexbe/example_flexbe_states' with type 'ros.ament_python' and name 'example_flexbe_states'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe_utilities) by extensions ['ignore', 'ignore_ament_install']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe_utilities) by extension 'ignore'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe_utilities) by extension 'ignore_ament_install'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe_utilities) by extensions ['colcon_pkg']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe_utilities) by extension 'colcon_pkg'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe_utilities) by extensions ['colcon_meta']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe_utilities) by extension 'colcon_meta'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe_utilities) by extensions ['ros']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/compare_flexbe_utilities) by extension 'ros'
+[0.238s] DEBUG:colcon.colcon_core.package_identification:Package 'src/compare_flexbe_utilities' with type 'ros.ament_cmake' and name 'compare_flexbe_utilities'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine) by extensions ['ignore', 'ignore_ament_install']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine) by extension 'ignore'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine) by extension 'ignore_ament_install'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine) by extensions ['colcon_pkg']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine) by extension 'colcon_pkg'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine) by extensions ['colcon_meta']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine) by extension 'colcon_meta'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine) by extensions ['ros']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine) by extension 'ros'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine) by extensions ['cmake', 'python']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine) by extension 'cmake'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine) by extension 'python'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine) by extensions ['python_setup_py']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine) by extension 'python_setup_py'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_behavior_engine) by extensions ['ignore', 'ignore_ament_install']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_behavior_engine) by extension 'ignore'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_behavior_engine) by extension 'ignore_ament_install'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_behavior_engine) by extensions ['colcon_pkg']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_behavior_engine) by extension 'colcon_pkg'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_behavior_engine) by extensions ['colcon_meta']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_behavior_engine) by extension 'colcon_meta'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_behavior_engine) by extensions ['ros']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_behavior_engine) by extension 'ros'
+[0.239s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flexbe_behavior_engine/flexbe_behavior_engine' with type 'ros.ament_cmake' and name 'flexbe_behavior_engine'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_core) by extensions ['ignore', 'ignore_ament_install']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_core) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_core) by extension 'ignore_ament_install'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_core) by extensions ['colcon_pkg']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_core) by extension 'colcon_pkg'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_core) by extensions ['colcon_meta']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_core) by extension 'colcon_meta'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_core) by extensions ['ros']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_core) by extension 'ros'
+[0.240s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flexbe_behavior_engine/flexbe_core' with type 'ros.ament_python' and name 'flexbe_core'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_input) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_input) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_input) by extension 'ignore_ament_install'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_input) by extensions ['colcon_pkg']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_input) by extension 'colcon_pkg'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_input) by extensions ['colcon_meta']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_input) by extension 'colcon_meta'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_input) by extensions ['ros']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_input) by extension 'ros'
+[0.241s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flexbe_behavior_engine/flexbe_input' with type 'ros.ament_python' and name 'flexbe_input'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_mirror) by extensions ['ignore', 'ignore_ament_install']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_mirror) by extension 'ignore'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_mirror) by extension 'ignore_ament_install'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_mirror) by extensions ['colcon_pkg']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_mirror) by extension 'colcon_pkg'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_mirror) by extensions ['colcon_meta']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_mirror) by extension 'colcon_meta'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_mirror) by extensions ['ros']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_mirror) by extension 'ros'
+[0.242s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flexbe_behavior_engine/flexbe_mirror' with type 'ros.ament_python' and name 'flexbe_mirror'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_msgs) by extension 'ignore'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_msgs) by extension 'ignore_ament_install'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_msgs) by extensions ['colcon_pkg']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_msgs) by extension 'colcon_pkg'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_msgs) by extensions ['colcon_meta']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_msgs) by extension 'colcon_meta'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_msgs) by extensions ['ros']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_msgs) by extension 'ros'
+[0.243s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flexbe_behavior_engine/flexbe_msgs' with type 'ros.ament_cmake' and name 'flexbe_msgs'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_onboard) by extensions ['ignore', 'ignore_ament_install']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_onboard) by extension 'ignore'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_onboard) by extension 'ignore_ament_install'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_onboard) by extensions ['colcon_pkg']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_onboard) by extension 'colcon_pkg'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_onboard) by extensions ['colcon_meta']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_onboard) by extension 'colcon_meta'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_onboard) by extensions ['ros']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_onboard) by extension 'ros'
+[0.244s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flexbe_behavior_engine/flexbe_onboard' with type 'ros.ament_python' and name 'flexbe_onboard'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_states) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_states) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_states) by extension 'ignore_ament_install'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_states) by extensions ['colcon_pkg']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_states) by extension 'colcon_pkg'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_states) by extensions ['colcon_meta']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_states) by extension 'colcon_meta'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_states) by extensions ['ros']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_states) by extension 'ros'
+[0.245s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flexbe_behavior_engine/flexbe_states' with type 'ros.ament_python' and name 'flexbe_states'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_testing) by extensions ['ignore', 'ignore_ament_install']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_testing) by extension 'ignore'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_testing) by extension 'ignore_ament_install'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_testing) by extensions ['colcon_pkg']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_testing) by extension 'colcon_pkg'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_testing) by extensions ['colcon_meta']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_testing) by extension 'colcon_meta'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_testing) by extensions ['ros']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_testing) by extension 'ros'
+[0.246s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flexbe_behavior_engine/flexbe_testing' with type 'ros.ament_cmake' and name 'flexbe_testing'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_widget) by extensions ['ignore', 'ignore_ament_install']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_widget) by extension 'ignore'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_widget) by extension 'ignore_ament_install'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_widget) by extensions ['colcon_pkg']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_widget) by extension 'colcon_pkg'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_widget) by extensions ['colcon_meta']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_widget) by extension 'colcon_meta'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_widget) by extensions ['ros']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_behavior_engine/flexbe_widget) by extension 'ros'
+[0.247s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flexbe_behavior_engine/flexbe_widget' with type 'ros.ament_cmake' and name 'flexbe_widget'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo) by extension 'ignore_ament_install'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo) by extensions ['colcon_pkg']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo) by extension 'colcon_pkg'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo) by extensions ['colcon_meta']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo) by extension 'colcon_meta'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo) by extensions ['ros']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo) by extension 'ros'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo) by extensions ['cmake', 'python']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo) by extension 'cmake'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo) by extension 'python'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo) by extensions ['python_setup_py']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo) by extension 'python_setup_py'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/docs) by extension 'ignore'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/docs) by extension 'ignore_ament_install'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/docs) by extensions ['colcon_pkg']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/docs) by extension 'colcon_pkg'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/docs) by extensions ['colcon_meta']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/docs) by extension 'colcon_meta'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/docs) by extensions ['ros']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/docs) by extension 'ros'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/docs) by extensions ['cmake', 'python']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/docs) by extension 'cmake'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/docs) by extension 'python'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/docs) by extensions ['python_setup_py']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/docs) by extension 'python_setup_py'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo) by extensions ['ignore', 'ignore_ament_install']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo) by extension 'ignore'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo) by extension 'ignore_ament_install'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo) by extensions ['colcon_pkg']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo) by extension 'colcon_pkg'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo) by extensions ['colcon_meta']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo) by extension 'colcon_meta'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo) by extensions ['ros']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo) by extension 'ros'
+[0.249s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flexbe_turtlesim_demo/flexbe_turtlesim_demo' with type 'ros.ament_cmake' and name 'flexbe_turtlesim_demo'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_behaviors) by extensions ['ignore', 'ignore_ament_install']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_behaviors) by extension 'ignore'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_behaviors) by extension 'ignore_ament_install'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_behaviors) by extensions ['colcon_pkg']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_behaviors) by extension 'colcon_pkg'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_behaviors) by extensions ['colcon_meta']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_behaviors) by extension 'colcon_meta'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_behaviors) by extensions ['ros']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_behaviors) by extension 'ros'
+[0.249s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_behaviors' with type 'ros.ament_cmake' and name 'flexbe_turtlesim_demo_flexbe_behaviors'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_states) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_states) by extension 'ignore'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_states) by extension 'ignore_ament_install'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_states) by extensions ['colcon_pkg']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_states) by extension 'colcon_pkg'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_states) by extensions ['colcon_meta']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_states) by extension 'colcon_meta'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_states) by extensions ['ros']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_states) by extension 'ros'
+[0.250s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_states' with type 'ros.ament_python' and name 'flexbe_turtlesim_demo_flexbe_states'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/img) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/img) by extension 'ignore'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/img) by extension 'ignore_ament_install'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/img) by extensions ['colcon_pkg']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/img) by extension 'colcon_pkg'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/img) by extensions ['colcon_meta']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/img) by extension 'colcon_meta'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/img) by extensions ['ros']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/img) by extension 'ros'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/img) by extensions ['cmake', 'python']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/img) by extension 'cmake'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/img) by extension 'python'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/img) by extensions ['python_setup_py']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_turtlesim_demo/img) by extension 'python_setup_py'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_webui) by extensions ['ignore', 'ignore_ament_install']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_webui) by extension 'ignore'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_webui) by extension 'ignore_ament_install'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_webui) by extensions ['colcon_pkg']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_webui) by extension 'colcon_pkg'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_webui) by extensions ['colcon_meta']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_webui) by extension 'colcon_meta'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_webui) by extensions ['ros']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/flexbe_webui) by extension 'ros'
+[0.252s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flexbe_webui' with type 'ros.ament_python' and name 'flexbe_webui'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2) by extension 'ignore'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2) by extension 'ignore_ament_install'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2) by extensions ['colcon_pkg']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2) by extension 'colcon_pkg'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2) by extensions ['colcon_meta']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2) by extension 'colcon_meta'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2) by extensions ['ros']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2) by extension 'ros'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2) by extensions ['cmake', 'python']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2) by extension 'cmake'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2) by extension 'python'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2) by extensions ['python_setup_py']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2) by extension 'python_setup_py'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_description) by extensions ['ignore', 'ignore_ament_install']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_description) by extension 'ignore'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_description) by extension 'ignore_ament_install'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_description) by extensions ['colcon_pkg']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_description) by extension 'colcon_pkg'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_description) by extensions ['colcon_meta']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_description) by extension 'colcon_meta'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_description) by extensions ['ros']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_description) by extension 'ros'
+[0.253s] DEBUG:colcon.colcon_core.package_identification:Package 'src/panda_ros2/panda_description' with type 'ros.ament_cmake' and name 'panda_description'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_gazebo) by extension 'ignore'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_gazebo) by extension 'ignore_ament_install'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_gazebo) by extensions ['colcon_pkg']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_gazebo) by extension 'colcon_pkg'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_gazebo) by extensions ['colcon_meta']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_gazebo) by extension 'colcon_meta'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_gazebo) by extensions ['ros']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_gazebo) by extension 'ros'
+[0.254s] DEBUG:colcon.colcon_core.package_identification:Package 'src/panda_ros2/panda_gazebo' with type 'ros.ament_cmake' and name 'panda_gazebo'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_moveit_config) by extension 'ignore'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_moveit_config) by extension 'ignore_ament_install'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_moveit_config) by extensions ['colcon_pkg']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_moveit_config) by extension 'colcon_pkg'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_moveit_config) by extensions ['colcon_meta']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_moveit_config) by extension 'colcon_meta'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_moveit_config) by extensions ['ros']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/panda_ros2/panda_moveit_config) by extension 'ros'
+[0.255s] DEBUG:colcon.colcon_core.package_identification:Package 'src/panda_ros2/panda_moveit_config' with type 'ros.ament_cmake' and name 'panda_moveit_config'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2) by extension 'ignore_ament_install'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2) by extensions ['colcon_pkg']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2) by extension 'colcon_pkg'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2) by extensions ['colcon_meta']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2) by extension 'colcon_meta'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2) by extensions ['ros']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2) by extension 'ros'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2) by extensions ['cmake', 'python']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2) by extension 'cmake'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2) by extension 'python'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2) by extensions ['python_setup_py']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2) by extension 'python_setup_py'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/custom_package) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/custom_package) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/custom_package) by extension 'ignore_ament_install'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/custom_package) by extensions ['colcon_pkg']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/custom_package) by extension 'colcon_pkg'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/custom_package) by extensions ['colcon_meta']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/custom_package) by extension 'colcon_meta'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/custom_package) by extensions ['ros']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/custom_package) by extension 'ros'
+[0.256s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/custom_package' with type 'ros.ament_cmake' and name 'custom_package'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/demo) by extensions ['ignore', 'ignore_ament_install']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/demo) by extension 'ignore'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/demo) by extension 'ignore_ament_install'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/demo) by extensions ['colcon_pkg']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/demo) by extension 'colcon_pkg'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/demo) by extensions ['colcon_meta']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/demo) by extension 'colcon_meta'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/demo) by extensions ['ros']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/demo) by extension 'ros'
+[0.257s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/demo' with type 'ros.ament_cmake' and name 'demo'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/figures) by extensions ['ignore', 'ignore_ament_install']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/figures) by extension 'ignore'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/figures) by extension 'ignore_ament_install'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/figures) by extensions ['colcon_pkg']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/figures) by extension 'colcon_pkg'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/figures) by extensions ['colcon_meta']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/figures) by extension 'colcon_meta'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/figures) by extensions ['ros']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/figures) by extension 'ros'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/figures) by extensions ['cmake', 'python']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/figures) by extension 'cmake'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/figures) by extension 'python'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/figures) by extensions ['python_setup_py']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/figures) by extension 'python_setup_py'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_get_status) by extensions ['ignore', 'ignore_ament_install']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_get_status) by extension 'ignore'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_get_status) by extension 'ignore_ament_install'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_get_status) by extensions ['colcon_pkg']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_get_status) by extension 'colcon_pkg'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_get_status) by extensions ['colcon_meta']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_get_status) by extension 'colcon_meta'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_get_status) by extensions ['ros']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_get_status) by extension 'ros'
+[0.258s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/techman_robot_get_status' with type 'ros.ament_python' and name 'tm_get_status'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_msgs) by extension 'ignore'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_msgs) by extension 'ignore_ament_install'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_msgs) by extensions ['colcon_pkg']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_msgs) by extension 'colcon_pkg'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_msgs) by extensions ['colcon_meta']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_msgs) by extension 'colcon_meta'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_msgs) by extensions ['ros']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/techman_robot_msgs) by extension 'ros'
+[0.259s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/techman_robot_msgs' with type 'ros.ament_cmake' and name 'techman_robot_msgs'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_description) by extensions ['ignore', 'ignore_ament_install']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_description) by extension 'ignore'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_description) by extension 'ignore_ament_install'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_description) by extensions ['colcon_pkg']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_description) by extension 'colcon_pkg'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_description) by extensions ['colcon_meta']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_description) by extension 'colcon_meta'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_description) by extensions ['ros']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_description) by extension 'ros'
+[0.259s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/tm_description' with type 'ros.ament_cmake' and name 'tm_description'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_driver) by extension 'ignore'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_driver) by extension 'ignore_ament_install'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_driver) by extensions ['colcon_pkg']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_driver) by extension 'colcon_pkg'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_driver) by extensions ['colcon_meta']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_driver) by extension 'colcon_meta'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_driver) by extensions ['ros']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_driver) by extension 'ros'
+[0.260s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/tm_driver' with type 'ros.ament_cmake' and name 'tm_driver'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_mod_urdf) by extensions ['ignore', 'ignore_ament_install']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_mod_urdf) by extension 'ignore'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_mod_urdf) by extension 'ignore_ament_install'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_mod_urdf) by extensions ['colcon_pkg']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_mod_urdf) by extension 'colcon_pkg'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_mod_urdf) by extensions ['colcon_meta']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_mod_urdf) by extension 'colcon_meta'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_mod_urdf) by extensions ['ros']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_mod_urdf) by extension 'ros'
+[0.261s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/tm_mod_urdf' with type 'ros.ament_python' and name 'tm_mod_urdf'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit) by extensions ['ignore', 'ignore_ament_install']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit) by extension 'ignore'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit) by extension 'ignore_ament_install'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit) by extensions ['colcon_pkg']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit) by extension 'colcon_pkg'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit) by extensions ['colcon_meta']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit) by extension 'colcon_meta'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit) by extensions ['ros']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit) by extension 'ros'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit) by extensions ['cmake', 'python']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit) by extension 'cmake'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit) by extension 'python'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit) by extensions ['python_setup_py']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit) by extension 'python_setup_py'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12_moveit_config) by extension 'ignore'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12_moveit_config) by extension 'ignore_ament_install'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12_moveit_config) by extensions ['colcon_pkg']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12_moveit_config) by extension 'colcon_pkg'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12_moveit_config) by extensions ['colcon_meta']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12_moveit_config) by extension 'colcon_meta'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12_moveit_config) by extensions ['ros']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12_moveit_config) by extension 'ros'
+[0.262s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/tm_moveit/tm12_moveit_config' with type 'ros.ament_cmake' and name 'tm12_moveit_config'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12x_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12x_moveit_config) by extension 'ignore'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12x_moveit_config) by extension 'ignore_ament_install'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12x_moveit_config) by extensions ['colcon_pkg']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12x_moveit_config) by extension 'colcon_pkg'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12x_moveit_config) by extensions ['colcon_meta']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12x_moveit_config) by extension 'colcon_meta'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12x_moveit_config) by extensions ['ros']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm12x_moveit_config) by extension 'ros'
+[0.263s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/tm_moveit/tm12x_moveit_config' with type 'ros.ament_cmake' and name 'tm12x_moveit_config'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14_moveit_config) by extension 'ignore'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14_moveit_config) by extension 'ignore_ament_install'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14_moveit_config) by extensions ['colcon_pkg']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14_moveit_config) by extension 'colcon_pkg'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14_moveit_config) by extensions ['colcon_meta']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14_moveit_config) by extension 'colcon_meta'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14_moveit_config) by extensions ['ros']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14_moveit_config) by extension 'ros'
+[0.264s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/tm_moveit/tm14_moveit_config' with type 'ros.ament_cmake' and name 'tm14_moveit_config'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14x_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14x_moveit_config) by extension 'ignore'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14x_moveit_config) by extension 'ignore_ament_install'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14x_moveit_config) by extensions ['colcon_pkg']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14x_moveit_config) by extension 'colcon_pkg'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14x_moveit_config) by extensions ['colcon_meta']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14x_moveit_config) by extension 'colcon_meta'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14x_moveit_config) by extensions ['ros']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm14x_moveit_config) by extension 'ros'
+[0.265s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/tm_moveit/tm14x_moveit_config' with type 'ros.ament_cmake' and name 'tm14x_moveit_config'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-700_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-700_moveit_config) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-700_moveit_config) by extension 'ignore_ament_install'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-700_moveit_config) by extensions ['colcon_pkg']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-700_moveit_config) by extension 'colcon_pkg'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-700_moveit_config) by extensions ['colcon_meta']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-700_moveit_config) by extension 'colcon_meta'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-700_moveit_config) by extensions ['ros']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-700_moveit_config) by extension 'ros'
+[0.266s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/tm_moveit/tm5-700_moveit_config' with type 'ros.ament_cmake' and name 'tm5-700_moveit_config'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-900_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-900_moveit_config) by extension 'ignore'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-900_moveit_config) by extension 'ignore_ament_install'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-900_moveit_config) by extensions ['colcon_pkg']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-900_moveit_config) by extension 'colcon_pkg'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-900_moveit_config) by extensions ['colcon_meta']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-900_moveit_config) by extension 'colcon_meta'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-900_moveit_config) by extensions ['ros']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5-900_moveit_config) by extension 'ros'
+[0.267s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/tm_moveit/tm5-900_moveit_config' with type 'ros.ament_cmake' and name 'tm5-900_moveit_config'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-700_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-700_moveit_config) by extension 'ignore'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-700_moveit_config) by extension 'ignore_ament_install'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-700_moveit_config) by extensions ['colcon_pkg']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-700_moveit_config) by extension 'colcon_pkg'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-700_moveit_config) by extensions ['colcon_meta']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-700_moveit_config) by extension 'colcon_meta'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-700_moveit_config) by extensions ['ros']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-700_moveit_config) by extension 'ros'
+[0.268s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/tm_moveit/tm5x-700_moveit_config' with type 'ros.ament_cmake' and name 'tm5x-700_moveit_config'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-900_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-900_moveit_config) by extension 'ignore'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-900_moveit_config) by extension 'ignore_ament_install'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-900_moveit_config) by extensions ['colcon_pkg']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-900_moveit_config) by extension 'colcon_pkg'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-900_moveit_config) by extensions ['colcon_meta']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-900_moveit_config) by extension 'colcon_meta'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-900_moveit_config) by extensions ['ros']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_moveit/tm5x-900_moveit_config) by extension 'ros'
+[0.269s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/tm_moveit/tm5x-900_moveit_config' with type 'ros.ament_cmake' and name 'tm5x-900_moveit_config'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_msgs) by extension 'ignore'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_msgs) by extension 'ignore_ament_install'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_msgs) by extensions ['colcon_pkg']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_msgs) by extension 'colcon_pkg'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_msgs) by extensions ['colcon_meta']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_msgs) by extension 'colcon_meta'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_msgs) by extensions ['ros']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/tm_msgs) by extension 'ros'
+[0.270s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/tm_msgs' with type 'ros.ament_cmake' and name 'tm_msgs'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/ui_for_debug_and_demo) by extensions ['ignore', 'ignore_ament_install']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/ui_for_debug_and_demo) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/ui_for_debug_and_demo) by extension 'ignore_ament_install'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/ui_for_debug_and_demo) by extensions ['colcon_pkg']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/ui_for_debug_and_demo) by extension 'colcon_pkg'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/ui_for_debug_and_demo) by extensions ['colcon_meta']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/ui_for_debug_and_demo) by extension 'colcon_meta'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/ui_for_debug_and_demo) by extensions ['ros']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/tmr_ros2/ui_for_debug_and_demo) by extension 'ros'
+[0.270s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tmr_ros2/ui_for_debug_and_demo' with type 'ros.ament_cmake' and name 'ui_for_debug_and_demo'
+[0.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.271s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'armada_bringup' in 'src/armada_ros2/armada_bringup'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'armada_description' in 'src/armada_ros2/armada_description'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'armada_gazebo' in 'src/armada_ros2/armada_gazebo'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'compare_flexbe_utilities' in 'src/compare_flexbe_utilities'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'flexbe_msgs' in 'src/flexbe_behavior_engine/flexbe_msgs'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'panda_description' in 'src/panda_ros2/panda_description'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'panda_moveit_config' in 'src/panda_ros2/panda_moveit_config'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'techman_robot_msgs' in 'src/tmr_ros2/techman_robot_msgs'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'tm_description' in 'src/tmr_ros2/tm_description'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'tm_get_status' in 'src/tmr_ros2/techman_robot_get_status'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'tm_mod_urdf' in 'src/tmr_ros2/tm_mod_urdf'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'tm_msgs' in 'src/tmr_ros2/tm_msgs'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'custom_package' in 'src/tmr_ros2/custom_package'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'demo' in 'src/tmr_ros2/demo'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'flexbe_core' in 'src/flexbe_behavior_engine/flexbe_core'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'panda_gazebo' in 'src/panda_ros2/panda_gazebo'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'tm12_moveit_config' in 'src/tmr_ros2/tm_moveit/tm12_moveit_config'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'tm12x_moveit_config' in 'src/tmr_ros2/tm_moveit/tm12x_moveit_config'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'tm14_moveit_config' in 'src/tmr_ros2/tm_moveit/tm14_moveit_config'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'tm14x_moveit_config' in 'src/tmr_ros2/tm_moveit/tm14x_moveit_config'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'tm5-700_moveit_config' in 'src/tmr_ros2/tm_moveit/tm5-700_moveit_config'
+[0.295s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'tm5-900_moveit_config' in 'src/tmr_ros2/tm_moveit/tm5-900_moveit_config'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'tm5x-700_moveit_config' in 'src/tmr_ros2/tm_moveit/tm5x-700_moveit_config'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'tm5x-900_moveit_config' in 'src/tmr_ros2/tm_moveit/tm5x-900_moveit_config'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'tm_driver' in 'src/tmr_ros2/tm_driver'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'ui_for_debug_and_demo' in 'src/tmr_ros2/ui_for_debug_and_demo'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'compare_flexbe_behaviors' in 'src/compare_flexbe/compare_flexbe_behaviors'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'compare_flexbe_states' in 'src/compare_flexbe/compare_flexbe_states'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'example_flexbe_states' in 'src/compare_flexbe/example_flexbe_states'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'flexbe_input' in 'src/flexbe_behavior_engine/flexbe_input'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'flexbe_mirror' in 'src/flexbe_behavior_engine/flexbe_mirror'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'flexbe_testing' in 'src/flexbe_behavior_engine/flexbe_testing'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'compare_flexbe' in 'src/compare_flexbe/compare_flexbe'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'flexbe_states' in 'src/flexbe_behavior_engine/flexbe_states'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'flexbe_onboard' in 'src/flexbe_behavior_engine/flexbe_onboard'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'flexbe_widget' in 'src/flexbe_behavior_engine/flexbe_widget'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'flexbe_behavior_engine' in 'src/flexbe_behavior_engine/flexbe_behavior_engine'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'flexbe_turtlesim_demo_flexbe_states' in 'src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_states'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'flexbe_turtlesim_demo_flexbe_behaviors' in 'src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_behaviors'
+[0.296s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'flexbe_turtlesim_demo' in 'src/flexbe_turtlesim_demo/flexbe_turtlesim_demo'
+[0.296s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.296s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.301s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 41 installed packages in /home/csrobot/flexbe_ws/install
+[0.302s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 399 installed packages in /opt/ros/jazzy
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.359s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'flexbe_webui' is in: /home/csrobot/flexbe_ws/install/flexbe_webui
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding flexbe_webui
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'flexbe_webui' build argument 'cmake_args' from command line to 'None'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'flexbe_webui' build argument 'cmake_target' from command line to 'None'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'flexbe_webui' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'flexbe_webui' build argument 'cmake_clean_cache' from command line to 'False'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'flexbe_webui' build argument 'cmake_clean_first' from command line to 'False'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'flexbe_webui' build argument 'cmake_force_configure' from command line to 'False'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'flexbe_webui' build argument 'ament_cmake_args' from command line to 'None'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'flexbe_webui' build argument 'catkin_cmake_args' from command line to 'None'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'flexbe_webui' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.360s] DEBUG:colcon.colcon_core.verb:Building package 'flexbe_webui' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/csrobot/flexbe_ws/build/flexbe_webui', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/csrobot/flexbe_ws/install/flexbe_webui', 'merge_install': False, 'path': '/home/csrobot/flexbe_ws/src/flexbe_webui', 'symlink_install': False, 'test_result_base': None}
+[0.360s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.362s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.362s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/csrobot/flexbe_ws/src/flexbe_webui' with build type 'ament_python'
+[0.362s] Level 1:colcon.colcon_core.shell:create_environment_hook('flexbe_webui', 'ament_prefix_path')
+[0.367s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.367s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/csrobot/flexbe_ws/install/flexbe_webui/share/flexbe_webui/hook/ament_prefix_path.ps1'
+[0.367s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/csrobot/flexbe_ws/install/flexbe_webui/share/flexbe_webui/hook/ament_prefix_path.dsv'
+[0.368s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/csrobot/flexbe_ws/install/flexbe_webui/share/flexbe_webui/hook/ament_prefix_path.sh'
+[0.368s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.368s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.584s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/csrobot/flexbe_ws/src/flexbe_webui'
+[0.585s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.585s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.208s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/csrobot/flexbe_ws/build/flexbe_webui': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/ui_for_debug_and_demo:/home/csrobot/flexbe_ws/install/tm_driver:/home/csrobot/flexbe_ws/install/demo:/home/csrobot/flexbe_ws/install/tm_msgs:/home/csrobot/flexbe_ws/install/tm_mod_urdf:/home/csrobot/flexbe_ws/install/tm_get_status:/home/csrobot/flexbe_ws/install/tm5x-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5x-700_moveit_config:/home/csrobot/flexbe_ws/install/tm5-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5-700_moveit_config:/home/csrobot/flexbe_ws/install/tm14x_moveit_config:/home/csrobot/flexbe_ws/install/tm14_moveit_config:/home/csrobot/flexbe_ws/install/tm12x_moveit_config:/home/csrobot/flexbe_ws/install/tm12_moveit_config:/home/csrobot/flexbe_ws/install/tm_description:/home/csrobot/flexbe_ws/install/custom_package:/home/csrobot/flexbe_ws/install/techman_robot_msgs:/home/csrobot/flexbe_ws/install/panda_moveit_config:/home/csrobot/flexbe_ws/install/panda_gazebo:/home/csrobot/flexbe_ws/install/panda_description:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_behaviors:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_behavior_engine:/home/csrobot/flexbe_ws/install/flexbe_widget:/home/csrobot/flexbe_ws/install/flexbe_webui:/home/csrobot/flexbe_ws/install/flexbe_onboard:/home/csrobot/flexbe_ws/install/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/flexbe_mirror:/home/csrobot/flexbe_ws/install/flexbe_input:/home/csrobot/flexbe_ws/install/example_flexbe_states:/home/csrobot/flexbe_ws/install/compare_flexbe:/home/csrobot/flexbe_ws/install/compare_flexbe_states:/home/csrobot/flexbe_ws/install/compare_flexbe_behaviors:/home/csrobot/flexbe_ws/install/flexbe_msgs:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities:/home/csrobot/flexbe_ws/install/armada_gazebo:/home/csrobot/flexbe_ws/install/armada_description:/home/csrobot/flexbe_ws/install/armada_bringup:/opt/ros/jazzy CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/home/csrobot/flexbe_ws/install/ui_for_debug_and_demo:/home/csrobot/flexbe_ws/install/tm_driver:/home/csrobot/flexbe_ws/install/demo:/home/csrobot/flexbe_ws/install/tm_msgs:/home/csrobot/flexbe_ws/install/tm5x-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5x-700_moveit_config:/home/csrobot/flexbe_ws/install/tm5-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5-700_moveit_config:/home/csrobot/flexbe_ws/install/tm14x_moveit_config:/home/csrobot/flexbe_ws/install/tm14_moveit_config:/home/csrobot/flexbe_ws/install/tm12x_moveit_config:/home/csrobot/flexbe_ws/install/tm12_moveit_config:/home/csrobot/flexbe_ws/install/tm_description:/home/csrobot/flexbe_ws/install/custom_package:/home/csrobot/flexbe_ws/install/techman_robot_msgs:/home/csrobot/flexbe_ws/install/panda_moveit_config:/home/csrobot/flexbe_ws/install/panda_gazebo:/home/csrobot/flexbe_ws/install/panda_description:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_behaviors:/home/csrobot/flexbe_ws/install/flexbe_behavior_engine:/home/csrobot/flexbe_ws/install/flexbe_widget:/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/compare_flexbe:/home/csrobot/flexbe_ws/install/compare_flexbe_behaviors:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities:/home/csrobot/flexbe_ws/install/armada_gazebo:/home/csrobot/flexbe_ws/install/armada_description:/home/csrobot/flexbe_ws/install/armada_bringup:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/home/csrobot/flexbe_ws/install/tm_msgs/lib:/home/csrobot/flexbe_ws/install/techman_robot_msgs/lib:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib:/usr/local/cuda/lib64:/usr/local/cuda/lib64:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_webui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/flexbe_webui/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/tm_msgs/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/tm_mod_urdf:/home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/tm_get_status:/home/csrobot/flexbe_ws/install/tm_get_status/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/techman_robot_msgs/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_behaviors/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_widget/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_webui:/home/csrobot/flexbe_ws/install/flexbe_webui/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_onboard:/home/csrobot/flexbe_ws/install/flexbe_onboard/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_mirror:/home/csrobot/flexbe_ws/install/flexbe_mirror/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_input:/home/csrobot/flexbe_ws/install/flexbe_input/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/example_flexbe_states:/home/csrobot/flexbe_ws/install/example_flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/compare_flexbe_states:/home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/csrobot/flexbe_ws/build/flexbe_webui/build
+[1.771s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/csrobot/flexbe_ws/build/flexbe_webui' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/ui_for_debug_and_demo:/home/csrobot/flexbe_ws/install/tm_driver:/home/csrobot/flexbe_ws/install/demo:/home/csrobot/flexbe_ws/install/tm_msgs:/home/csrobot/flexbe_ws/install/tm_mod_urdf:/home/csrobot/flexbe_ws/install/tm_get_status:/home/csrobot/flexbe_ws/install/tm5x-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5x-700_moveit_config:/home/csrobot/flexbe_ws/install/tm5-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5-700_moveit_config:/home/csrobot/flexbe_ws/install/tm14x_moveit_config:/home/csrobot/flexbe_ws/install/tm14_moveit_config:/home/csrobot/flexbe_ws/install/tm12x_moveit_config:/home/csrobot/flexbe_ws/install/tm12_moveit_config:/home/csrobot/flexbe_ws/install/tm_description:/home/csrobot/flexbe_ws/install/custom_package:/home/csrobot/flexbe_ws/install/techman_robot_msgs:/home/csrobot/flexbe_ws/install/panda_moveit_config:/home/csrobot/flexbe_ws/install/panda_gazebo:/home/csrobot/flexbe_ws/install/panda_description:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_behaviors:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_behavior_engine:/home/csrobot/flexbe_ws/install/flexbe_widget:/home/csrobot/flexbe_ws/install/flexbe_webui:/home/csrobot/flexbe_ws/install/flexbe_onboard:/home/csrobot/flexbe_ws/install/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/flexbe_mirror:/home/csrobot/flexbe_ws/install/flexbe_input:/home/csrobot/flexbe_ws/install/example_flexbe_states:/home/csrobot/flexbe_ws/install/compare_flexbe:/home/csrobot/flexbe_ws/install/compare_flexbe_states:/home/csrobot/flexbe_ws/install/compare_flexbe_behaviors:/home/csrobot/flexbe_ws/install/flexbe_msgs:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities:/home/csrobot/flexbe_ws/install/armada_gazebo:/home/csrobot/flexbe_ws/install/armada_description:/home/csrobot/flexbe_ws/install/armada_bringup:/opt/ros/jazzy CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/home/csrobot/flexbe_ws/install/ui_for_debug_and_demo:/home/csrobot/flexbe_ws/install/tm_driver:/home/csrobot/flexbe_ws/install/demo:/home/csrobot/flexbe_ws/install/tm_msgs:/home/csrobot/flexbe_ws/install/tm5x-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5x-700_moveit_config:/home/csrobot/flexbe_ws/install/tm5-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5-700_moveit_config:/home/csrobot/flexbe_ws/install/tm14x_moveit_config:/home/csrobot/flexbe_ws/install/tm14_moveit_config:/home/csrobot/flexbe_ws/install/tm12x_moveit_config:/home/csrobot/flexbe_ws/install/tm12_moveit_config:/home/csrobot/flexbe_ws/install/tm_description:/home/csrobot/flexbe_ws/install/custom_package:/home/csrobot/flexbe_ws/install/techman_robot_msgs:/home/csrobot/flexbe_ws/install/panda_moveit_config:/home/csrobot/flexbe_ws/install/panda_gazebo:/home/csrobot/flexbe_ws/install/panda_description:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_behaviors:/home/csrobot/flexbe_ws/install/flexbe_behavior_engine:/home/csrobot/flexbe_ws/install/flexbe_widget:/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/compare_flexbe:/home/csrobot/flexbe_ws/install/compare_flexbe_behaviors:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities:/home/csrobot/flexbe_ws/install/armada_gazebo:/home/csrobot/flexbe_ws/install/armada_description:/home/csrobot/flexbe_ws/install/armada_bringup:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/home/csrobot/flexbe_ws/install/tm_msgs/lib:/home/csrobot/flexbe_ws/install/techman_robot_msgs/lib:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib:/usr/local/cuda/lib64:/usr/local/cuda/lib64:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_webui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/flexbe_webui/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/tm_msgs/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/tm_mod_urdf:/home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/tm_get_status:/home/csrobot/flexbe_ws/install/tm_get_status/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/techman_robot_msgs/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_behaviors/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_widget/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_webui:/home/csrobot/flexbe_ws/install/flexbe_webui/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_onboard:/home/csrobot/flexbe_ws/install/flexbe_onboard/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_mirror:/home/csrobot/flexbe_ws/install/flexbe_mirror/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_input:/home/csrobot/flexbe_ws/install/flexbe_input/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/example_flexbe_states:/home/csrobot/flexbe_ws/install/example_flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/compare_flexbe_states:/home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/csrobot/flexbe_ws/build/flexbe_webui/build
+[1.772s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/csrobot/flexbe_ws/src/flexbe_webui': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/ui_for_debug_and_demo:/home/csrobot/flexbe_ws/install/tm_driver:/home/csrobot/flexbe_ws/install/demo:/home/csrobot/flexbe_ws/install/tm_msgs:/home/csrobot/flexbe_ws/install/tm_mod_urdf:/home/csrobot/flexbe_ws/install/tm_get_status:/home/csrobot/flexbe_ws/install/tm5x-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5x-700_moveit_config:/home/csrobot/flexbe_ws/install/tm5-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5-700_moveit_config:/home/csrobot/flexbe_ws/install/tm14x_moveit_config:/home/csrobot/flexbe_ws/install/tm14_moveit_config:/home/csrobot/flexbe_ws/install/tm12x_moveit_config:/home/csrobot/flexbe_ws/install/tm12_moveit_config:/home/csrobot/flexbe_ws/install/tm_description:/home/csrobot/flexbe_ws/install/custom_package:/home/csrobot/flexbe_ws/install/techman_robot_msgs:/home/csrobot/flexbe_ws/install/panda_moveit_config:/home/csrobot/flexbe_ws/install/panda_gazebo:/home/csrobot/flexbe_ws/install/panda_description:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_behaviors:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_behavior_engine:/home/csrobot/flexbe_ws/install/flexbe_widget:/home/csrobot/flexbe_ws/install/flexbe_webui:/home/csrobot/flexbe_ws/install/flexbe_onboard:/home/csrobot/flexbe_ws/install/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/flexbe_mirror:/home/csrobot/flexbe_ws/install/flexbe_input:/home/csrobot/flexbe_ws/install/example_flexbe_states:/home/csrobot/flexbe_ws/install/compare_flexbe:/home/csrobot/flexbe_ws/install/compare_flexbe_states:/home/csrobot/flexbe_ws/install/compare_flexbe_behaviors:/home/csrobot/flexbe_ws/install/flexbe_msgs:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities:/home/csrobot/flexbe_ws/install/armada_gazebo:/home/csrobot/flexbe_ws/install/armada_description:/home/csrobot/flexbe_ws/install/armada_bringup:/opt/ros/jazzy CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/home/csrobot/flexbe_ws/install/ui_for_debug_and_demo:/home/csrobot/flexbe_ws/install/tm_driver:/home/csrobot/flexbe_ws/install/demo:/home/csrobot/flexbe_ws/install/tm_msgs:/home/csrobot/flexbe_ws/install/tm5x-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5x-700_moveit_config:/home/csrobot/flexbe_ws/install/tm5-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5-700_moveit_config:/home/csrobot/flexbe_ws/install/tm14x_moveit_config:/home/csrobot/flexbe_ws/install/tm14_moveit_config:/home/csrobot/flexbe_ws/install/tm12x_moveit_config:/home/csrobot/flexbe_ws/install/tm12_moveit_config:/home/csrobot/flexbe_ws/install/tm_description:/home/csrobot/flexbe_ws/install/custom_package:/home/csrobot/flexbe_ws/install/techman_robot_msgs:/home/csrobot/flexbe_ws/install/panda_moveit_config:/home/csrobot/flexbe_ws/install/panda_gazebo:/home/csrobot/flexbe_ws/install/panda_description:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_behaviors:/home/csrobot/flexbe_ws/install/flexbe_behavior_engine:/home/csrobot/flexbe_ws/install/flexbe_widget:/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/compare_flexbe:/home/csrobot/flexbe_ws/install/compare_flexbe_behaviors:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities:/home/csrobot/flexbe_ws/install/armada_gazebo:/home/csrobot/flexbe_ws/install/armada_description:/home/csrobot/flexbe_ws/install/armada_bringup:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/home/csrobot/flexbe_ws/install/tm_msgs/lib:/home/csrobot/flexbe_ws/install/techman_robot_msgs/lib:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib:/usr/local/cuda/lib64:/usr/local/cuda/lib64:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_webui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/flexbe_webui/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/tm_msgs/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/tm_mod_urdf:/home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/tm_get_status:/home/csrobot/flexbe_ws/install/tm_get_status/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/techman_robot_msgs/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_behaviors/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_widget/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_webui:/home/csrobot/flexbe_ws/install/flexbe_webui/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_onboard:/home/csrobot/flexbe_ws/install/flexbe_onboard/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_mirror:/home/csrobot/flexbe_ws/install/flexbe_mirror/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_input:/home/csrobot/flexbe_ws/install/flexbe_input/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/example_flexbe_states:/home/csrobot/flexbe_ws/install/example_flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/compare_flexbe_states:/home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/flexbe_webui build --build-base /home/csrobot/flexbe_ws/build/flexbe_webui/build install --record /home/csrobot/flexbe_ws/build/flexbe_webui/install.log --single-version-externally-managed install_data --force
+[2.396s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/csrobot/flexbe_ws/src/flexbe_webui' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/ui_for_debug_and_demo:/home/csrobot/flexbe_ws/install/tm_driver:/home/csrobot/flexbe_ws/install/demo:/home/csrobot/flexbe_ws/install/tm_msgs:/home/csrobot/flexbe_ws/install/tm_mod_urdf:/home/csrobot/flexbe_ws/install/tm_get_status:/home/csrobot/flexbe_ws/install/tm5x-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5x-700_moveit_config:/home/csrobot/flexbe_ws/install/tm5-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5-700_moveit_config:/home/csrobot/flexbe_ws/install/tm14x_moveit_config:/home/csrobot/flexbe_ws/install/tm14_moveit_config:/home/csrobot/flexbe_ws/install/tm12x_moveit_config:/home/csrobot/flexbe_ws/install/tm12_moveit_config:/home/csrobot/flexbe_ws/install/tm_description:/home/csrobot/flexbe_ws/install/custom_package:/home/csrobot/flexbe_ws/install/techman_robot_msgs:/home/csrobot/flexbe_ws/install/panda_moveit_config:/home/csrobot/flexbe_ws/install/panda_gazebo:/home/csrobot/flexbe_ws/install/panda_description:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_behaviors:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_behavior_engine:/home/csrobot/flexbe_ws/install/flexbe_widget:/home/csrobot/flexbe_ws/install/flexbe_webui:/home/csrobot/flexbe_ws/install/flexbe_onboard:/home/csrobot/flexbe_ws/install/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/flexbe_mirror:/home/csrobot/flexbe_ws/install/flexbe_input:/home/csrobot/flexbe_ws/install/example_flexbe_states:/home/csrobot/flexbe_ws/install/compare_flexbe:/home/csrobot/flexbe_ws/install/compare_flexbe_states:/home/csrobot/flexbe_ws/install/compare_flexbe_behaviors:/home/csrobot/flexbe_ws/install/flexbe_msgs:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities:/home/csrobot/flexbe_ws/install/armada_gazebo:/home/csrobot/flexbe_ws/install/armada_description:/home/csrobot/flexbe_ws/install/armada_bringup:/opt/ros/jazzy CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/home/csrobot/flexbe_ws/install/ui_for_debug_and_demo:/home/csrobot/flexbe_ws/install/tm_driver:/home/csrobot/flexbe_ws/install/demo:/home/csrobot/flexbe_ws/install/tm_msgs:/home/csrobot/flexbe_ws/install/tm5x-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5x-700_moveit_config:/home/csrobot/flexbe_ws/install/tm5-900_moveit_config:/home/csrobot/flexbe_ws/install/tm5-700_moveit_config:/home/csrobot/flexbe_ws/install/tm14x_moveit_config:/home/csrobot/flexbe_ws/install/tm14_moveit_config:/home/csrobot/flexbe_ws/install/tm12x_moveit_config:/home/csrobot/flexbe_ws/install/tm12_moveit_config:/home/csrobot/flexbe_ws/install/tm_description:/home/csrobot/flexbe_ws/install/custom_package:/home/csrobot/flexbe_ws/install/techman_robot_msgs:/home/csrobot/flexbe_ws/install/panda_moveit_config:/home/csrobot/flexbe_ws/install/panda_gazebo:/home/csrobot/flexbe_ws/install/panda_description:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_behaviors:/home/csrobot/flexbe_ws/install/flexbe_behavior_engine:/home/csrobot/flexbe_ws/install/flexbe_widget:/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/compare_flexbe:/home/csrobot/flexbe_ws/install/compare_flexbe_behaviors:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities:/home/csrobot/flexbe_ws/install/armada_gazebo:/home/csrobot/flexbe_ws/install/armada_description:/home/csrobot/flexbe_ws/install/armada_bringup:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/home/csrobot/flexbe_ws/install/tm_msgs/lib:/home/csrobot/flexbe_ws/install/techman_robot_msgs/lib:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib:/usr/local/cuda/lib64:/usr/local/cuda/lib64:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_webui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/flexbe_webui/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/tm_msgs/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/tm_mod_urdf:/home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/tm_get_status:/home/csrobot/flexbe_ws/install/tm_get_status/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/techman_robot_msgs/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_behaviors/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_widget/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_webui:/home/csrobot/flexbe_ws/install/flexbe_webui/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_onboard:/home/csrobot/flexbe_ws/install/flexbe_onboard/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_mirror:/home/csrobot/flexbe_ws/install/flexbe_mirror/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_input:/home/csrobot/flexbe_ws/install/flexbe_input/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/example_flexbe_states:/home/csrobot/flexbe_ws/install/example_flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/compare_flexbe_states:/home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/flexbe_webui build --build-base /home/csrobot/flexbe_ws/build/flexbe_webui/build install --record /home/csrobot/flexbe_ws/build/flexbe_webui/install.log --single-version-externally-managed install_data --force
+[2.400s] Level 1:colcon.colcon_core.environment:checking '/home/csrobot/flexbe_ws/install/flexbe_webui' for CMake module files
+[2.400s] Level 1:colcon.colcon_core.environment:checking '/home/csrobot/flexbe_ws/install/flexbe_webui' for CMake config files
+[2.401s] Level 1:colcon.colcon_core.environment:checking '/home/csrobot/flexbe_ws/install/flexbe_webui/lib'
+[2.401s] Level 1:colcon.colcon_core.environment:checking '/home/csrobot/flexbe_ws/install/flexbe_webui/bin'
+[2.401s] Level 1:colcon.colcon_core.environment:checking '/home/csrobot/flexbe_ws/install/flexbe_webui/lib/pkgconfig/flexbe_webui.pc'
+[2.401s] Level 1:colcon.colcon_core.environment:checking '/home/csrobot/flexbe_ws/install/flexbe_webui/lib/python3.12/site-packages'
+[2.401s] Level 1:colcon.colcon_core.shell:create_environment_hook('flexbe_webui', 'pythonpath')
+[2.401s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/csrobot/flexbe_ws/install/flexbe_webui/share/flexbe_webui/hook/pythonpath.ps1'
+[2.402s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/csrobot/flexbe_ws/install/flexbe_webui/share/flexbe_webui/hook/pythonpath.dsv'
+[2.402s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/csrobot/flexbe_ws/install/flexbe_webui/share/flexbe_webui/hook/pythonpath.sh'
+[2.402s] Level 1:colcon.colcon_core.environment:checking '/home/csrobot/flexbe_ws/install/flexbe_webui/bin'
+[2.402s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(flexbe_webui)
+[2.403s] INFO:colcon.colcon_core.shell:Creating package script '/home/csrobot/flexbe_ws/install/flexbe_webui/share/flexbe_webui/package.ps1'
+[2.403s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/csrobot/flexbe_ws/install/flexbe_webui/share/flexbe_webui/package.dsv'
+[2.404s] INFO:colcon.colcon_core.shell:Creating package script '/home/csrobot/flexbe_ws/install/flexbe_webui/share/flexbe_webui/package.sh'
+[2.404s] INFO:colcon.colcon_core.shell:Creating package script '/home/csrobot/flexbe_ws/install/flexbe_webui/share/flexbe_webui/package.bash'
+[2.405s] INFO:colcon.colcon_core.shell:Creating package script '/home/csrobot/flexbe_ws/install/flexbe_webui/share/flexbe_webui/package.zsh'
+[2.405s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/csrobot/flexbe_ws/install/flexbe_webui/share/colcon-core/packages/flexbe_webui)
+[2.405s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.406s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.406s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.406s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.412s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.412s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.412s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.435s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.435s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/csrobot/flexbe_ws/install/local_setup.ps1'
+[2.436s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/csrobot/flexbe_ws/install/_local_setup_util_ps1.py'
+[2.437s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/csrobot/flexbe_ws/install/setup.ps1'
+[2.439s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/csrobot/flexbe_ws/install/local_setup.sh'
+[2.439s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/csrobot/flexbe_ws/install/_local_setup_util_sh.py'
+[2.439s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/csrobot/flexbe_ws/install/setup.sh'
+[2.441s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/csrobot/flexbe_ws/install/local_setup.bash'
+[2.442s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/csrobot/flexbe_ws/install/setup.bash'
+[2.443s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/csrobot/flexbe_ws/install/local_setup.zsh'
+[2.444s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/csrobot/flexbe_ws/install/setup.zsh'

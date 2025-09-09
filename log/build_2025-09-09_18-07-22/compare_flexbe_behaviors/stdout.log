@@ -1,0 +1,42 @@
+Built target ament_cmake_python_symlink_compare_flexbe_behaviors
+Built target ament_cmake_python_symlink_compare_flexbe_behaviors_setup
+running egg_info
+writing compare_flexbe_behaviors.egg-info/PKG-INFO
+writing dependency_links to compare_flexbe_behaviors.egg-info/dependency_links.txt
+writing top-level names to compare_flexbe_behaviors.egg-info/top_level.txt
+reading manifest file 'compare_flexbe_behaviors.egg-info/SOURCES.txt'
+writing manifest file 'compare_flexbe_behaviors.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_compare_flexbe_behaviors_egg
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/compare_flexbe_behaviors/manifest/euclideanclusterextractionpipeine.xml
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/compare_flexbe_behaviors/manifest/example_action_state_behavior.xml
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/compare_flexbe_behaviors/manifest/example_behavior.xml
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/compare_flexbe_behaviors/config/example.yaml
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/compare_flexbe_behaviors/copy_behavior
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/environment/pythonpath.sh
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/environment/pythonpath.dsv
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors-0.0.1-py3.12.egg-info/PKG-INFO
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors-0.0.1-py3.12.egg-info/SOURCES.txt
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors-0.0.1-py3.12.egg-info/dependency_links.txt
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors-0.0.1-py3.12.egg-info/top_level.txt
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors/__init__.py
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors/euclideanclusterextractionpipeine_sm.py
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors/example_action_state_behavior_sm.py
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors/example_behavior_sm.py
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/ament_index/resource_index/package_run_dependencies/compare_flexbe_behaviors
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/ament_index/resource_index/parent_prefix_path/compare_flexbe_behaviors
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/environment/path.sh
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/environment/path.dsv
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/local_setup.bash
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/local_setup.sh
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/local_setup.zsh
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/local_setup.dsv
+-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/package.dsv
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/ament_index/resource_index/packages/compare_flexbe_behaviors
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/cmake/compare_flexbe_behaviorsConfig.cmake
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/cmake/compare_flexbe_behaviorsConfig-version.cmake
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/package.xml
+Listing '/home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors'...

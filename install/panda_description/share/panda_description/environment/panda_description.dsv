@@ -1,1 +1,1 @@
-prepend-non-duplicate;GZ_SIM_RESOURCE_PATH;share;/home/csrobot/flexbe_ws/install/panda_description/share;share/panda_description
+/home/csrobot/flexbe_ws/build/panda_description/ament_cmake_environment_hooks/panda_description.dsv

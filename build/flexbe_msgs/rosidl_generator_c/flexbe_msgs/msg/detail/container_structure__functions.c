@@ -80,7 +80,7 @@ flexbe_msgs__msg__ContainerStructure__copy(
 }
 
 flexbe_msgs__msg__ContainerStructure *
-flexbe_msgs__msg__ContainerStructure__create()
+flexbe_msgs__msg__ContainerStructure__create(void)
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   flexbe_msgs__msg__ContainerStructure * msg = (flexbe_msgs__msg__ContainerStructure *)allocator.allocate(sizeof(flexbe_msgs__msg__ContainerStructure), allocator.state);

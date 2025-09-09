@@ -4,6 +4,9 @@ source;share/flexbe_msgs/hook/cmake_prefix_path.sh
 source;share/flexbe_msgs/hook/ld_library_path_lib.ps1
 source;share/flexbe_msgs/hook/ld_library_path_lib.dsv
 source;share/flexbe_msgs/hook/ld_library_path_lib.sh
+source;share/flexbe_msgs/hook/pythonpath.ps1
+source;share/flexbe_msgs/hook/pythonpath.dsv
+source;share/flexbe_msgs/hook/pythonpath.sh
 source;share/flexbe_msgs/local_setup.bash
 source;share/flexbe_msgs/local_setup.dsv
 source;share/flexbe_msgs/local_setup.ps1

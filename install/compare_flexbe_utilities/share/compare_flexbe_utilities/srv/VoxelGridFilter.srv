@@ -1,3 +1,1 @@
-sensor_msgs/PointCloud2 input
----
-sensor_msgs/PointCloud2 filtered
+/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/srv/VoxelGridFilter.srv

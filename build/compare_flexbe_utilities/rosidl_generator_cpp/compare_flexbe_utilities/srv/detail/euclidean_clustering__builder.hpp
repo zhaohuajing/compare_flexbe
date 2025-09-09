@@ -2,6 +2,9 @@
 // with input from compare_flexbe_utilities:srv/EuclideanClustering.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "compare_flexbe_utilities/srv/euclidean_clustering.hpp"
+
+
 #ifndef COMPARE_FLEXBE_UTILITIES__SRV__DETAIL__EUCLIDEAN_CLUSTERING__BUILDER_HPP_
 #define COMPARE_FLEXBE_UTILITIES__SRV__DETAIL__EUCLIDEAN_CLUSTERING__BUILDER_HPP_
 
@@ -171,6 +174,80 @@ inline
 auto build<::compare_flexbe_utilities::srv::EuclideanClustering_Response>()
 {
   return compare_flexbe_utilities::srv::builder::Init_EuclideanClustering_Response_target_cluster_indices();
+}
+
+}  // namespace compare_flexbe_utilities
+
+
+namespace compare_flexbe_utilities
+{
+
+namespace srv
+{
+
+namespace builder
+{
+
+class Init_EuclideanClustering_Event_response
+{
+public:
+  explicit Init_EuclideanClustering_Event_response(::compare_flexbe_utilities::srv::EuclideanClustering_Event & msg)
+  : msg_(msg)
+  {}
+  ::compare_flexbe_utilities::srv::EuclideanClustering_Event response(::compare_flexbe_utilities::srv::EuclideanClustering_Event::_response_type arg)
+  {
+    msg_.response = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::compare_flexbe_utilities::srv::EuclideanClustering_Event msg_;
+};
+
+class Init_EuclideanClustering_Event_request
+{
+public:
+  explicit Init_EuclideanClustering_Event_request(::compare_flexbe_utilities::srv::EuclideanClustering_Event & msg)
+  : msg_(msg)
+  {}
+  Init_EuclideanClustering_Event_response request(::compare_flexbe_utilities::srv::EuclideanClustering_Event::_request_type arg)
+  {
+    msg_.request = std::move(arg);
+    return Init_EuclideanClustering_Event_response(msg_);
+  }
+
+private:
+  ::compare_flexbe_utilities::srv::EuclideanClustering_Event msg_;
+};
+
+class Init_EuclideanClustering_Event_info
+{
+public:
+  Init_EuclideanClustering_Event_info()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_EuclideanClustering_Event_request info(::compare_flexbe_utilities::srv::EuclideanClustering_Event::_info_type arg)
+  {
+    msg_.info = std::move(arg);
+    return Init_EuclideanClustering_Event_request(msg_);
+  }
+
+private:
+  ::compare_flexbe_utilities::srv::EuclideanClustering_Event msg_;
+};
+
+}  // namespace builder
+
+}  // namespace srv
+
+template<typename MessageType>
+auto build();
+
+template<>
+inline
+auto build<::compare_flexbe_utilities::srv::EuclideanClustering_Event>()
+{
+  return compare_flexbe_utilities::srv::builder::Init_EuclideanClustering_Event_info();
 }
 
 }  // namespace compare_flexbe_utilities

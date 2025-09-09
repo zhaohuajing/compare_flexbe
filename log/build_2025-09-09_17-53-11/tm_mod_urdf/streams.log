@@ -1,0 +1,26 @@
+[1.210s] Invoking command in '/home/csrobot/flexbe_ws/build/tm_mod_urdf': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/csrobot/flexbe_ws/build/tm_mod_urdf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/tm_mod_urdf/build --no-deps symlink_data
+[2.044s] running develop
+[2.094s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[2.094s]   self.local_index = Environment(self.shadow_path + sys.path)
+[2.144s] running egg_info
+[2.144s] creating tm_mod_urdf.egg-info
+[2.162s] writing tm_mod_urdf.egg-info/PKG-INFO
+[2.162s] writing dependency_links to tm_mod_urdf.egg-info/dependency_links.txt
+[2.162s] writing entry points to tm_mod_urdf.egg-info/entry_points.txt
+[2.163s] writing requirements to tm_mod_urdf.egg-info/requires.txt
+[2.163s] writing top-level names to tm_mod_urdf.egg-info/top_level.txt
+[2.163s] writing manifest file 'tm_mod_urdf.egg-info/SOURCES.txt'
+[2.210s] reading manifest file 'tm_mod_urdf.egg-info/SOURCES.txt'
+[2.211s] writing manifest file 'tm_mod_urdf.egg-info/SOURCES.txt'
+[2.233s] running build_ext
+[2.234s] Creating /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.12/site-packages/tm-mod-urdf.egg-link (link to .)
+[2.234s] Installing modify_urdf script to /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/tm_mod_urdf
+[2.235s] Installing modify_xacro script to /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/tm_mod_urdf
+[2.235s] 
+[2.235s] Installed /home/csrobot/flexbe_ws/build/tm_mod_urdf
+[2.235s] running symlink_data
+[2.238s] creating /home/csrobot/flexbe_ws/install/tm_mod_urdf/share/ament_index
+[2.238s] creating /home/csrobot/flexbe_ws/install/tm_mod_urdf/share/ament_index/resource_index
+[2.238s] creating /home/csrobot/flexbe_ws/install/tm_mod_urdf/share/ament_index/resource_index/packages
+[2.238s] symbolically linking /home/csrobot/flexbe_ws/build/tm_mod_urdf/resource/tm_mod_urdf -> /home/csrobot/flexbe_ws/install/tm_mod_urdf/share/ament_index/resource_index/packages
+[2.238s] symbolically linking /home/csrobot/flexbe_ws/build/tm_mod_urdf/package.xml -> /home/csrobot/flexbe_ws/install/tm_mod_urdf/share/tm_mod_urdf

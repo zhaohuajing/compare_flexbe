@@ -1,0 +1,30 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+  self.local_index = Environment(self.shadow_path + sys.path)
+running egg_info
+creating compare_flexbe_states.egg-info
+writing compare_flexbe_states.egg-info/PKG-INFO
+writing dependency_links to compare_flexbe_states.egg-info/dependency_links.txt
+writing entry points to compare_flexbe_states.egg-info/entry_points.txt
+writing requirements to compare_flexbe_states.egg-info/requires.txt
+writing top-level names to compare_flexbe_states.egg-info/top_level.txt
+writing manifest file 'compare_flexbe_states.egg-info/SOURCES.txt'
+reading manifest file 'compare_flexbe_states.egg-info/SOURCES.txt'
+writing manifest file 'compare_flexbe_states.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/python3.12/site-packages/compare-flexbe-states.egg-link (link to .)
+Installing example_action_state script to /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/compare_flexbe_states
+Installing example_state script to /home/csrobot/flexbe_ws/install/compare_flexbe_states/lib/compare_flexbe_states
+
+Installed /home/csrobot/flexbe_ws/build/compare_flexbe_states
+running symlink_data
+creating /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/ament_index
+creating /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/ament_index/resource_index
+creating /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/ament_index/resource_index/packages
+symbolically linking /home/csrobot/flexbe_ws/build/compare_flexbe_states/resource/compare_flexbe_states -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/ament_index/resource_index/packages
+symbolically linking /home/csrobot/flexbe_ws/build/compare_flexbe_states/package.xml -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/compare_flexbe_states
+creating /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/compare_flexbe_states/tests
+symbolically linking /home/csrobot/flexbe_ws/build/compare_flexbe_states/tests/example_state.test -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/compare_flexbe_states/tests
+symbolically linking /home/csrobot/flexbe_ws/build/compare_flexbe_states/tests/example_action_state.test -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/compare_flexbe_states/tests
+creating /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/compare_flexbe_states/launch
+symbolically linking /home/csrobot/flexbe_ws/build/compare_flexbe_states/tests/run_tests.launch.py -> /home/csrobot/flexbe_ws/install/compare_flexbe_states/share/compare_flexbe_states/launch

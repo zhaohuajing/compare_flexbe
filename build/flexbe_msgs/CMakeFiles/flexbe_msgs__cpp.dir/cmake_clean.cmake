@@ -94,6 +94,7 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/flexbe_msgs/msg/detail/userdata_info__type_support.hpp"
   "rosidl_generator_cpp/flexbe_msgs/msg/outcome_condition.hpp"
   "rosidl_generator_cpp/flexbe_msgs/msg/outcome_request.hpp"
+  "rosidl_generator_cpp/flexbe_msgs/msg/rosidl_generator_cpp__visibility_control.hpp"
   "rosidl_generator_cpp/flexbe_msgs/msg/state_instantiation.hpp"
   "rosidl_generator_cpp/flexbe_msgs/msg/state_map_msg.hpp"
   "rosidl_generator_cpp/flexbe_msgs/msg/synthesis_error_codes.hpp"

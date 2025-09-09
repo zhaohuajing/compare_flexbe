@@ -1,0 +1,22 @@
+{
+  "package_name": "compare_flexbe_utilities",
+  "output_dir": "/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_generator_type_description/compare_flexbe_utilities",
+  "idl_tuples": [
+    "/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/CartesianMoveToPose.idl",
+    "/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/MoveToNamedPose.idl",
+    "/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/MoveToPose.idl",
+    "/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/VoxelGridFilter.idl",
+    "/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/PlaneSegmentation.idl",
+    "/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/EuclideanClustering.idl",
+    "/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/GetPointCloud.idl",
+    "/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities:srv/FilterByIndices.idl"
+  ],
+  "include_paths": [
+    "sensor_msgs:/opt/ros/jazzy/share/sensor_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs",
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "pcl_msgs:/opt/ros/jazzy/share/pcl_msgs"
+  ]
+}

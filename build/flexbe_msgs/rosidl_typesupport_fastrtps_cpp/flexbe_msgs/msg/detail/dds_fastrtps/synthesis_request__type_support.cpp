@@ -2,8 +2,10 @@
 // with input from flexbe_msgs:msg/SynthesisRequest.idl
 // generated code does not contain a copyright notice
 #include "flexbe_msgs/msg/detail/synthesis_request__rosidl_typesupport_fastrtps_cpp.hpp"
+#include "flexbe_msgs/msg/detail/synthesis_request__functions.h"
 #include "flexbe_msgs/msg/detail/synthesis_request__struct.hpp"
 
+#include <cstddef>
 #include <limits>
 #include <stdexcept>
 #include <string>
@@ -11,6 +13,7 @@
 #include "rosidl_typesupport_fastrtps_cpp/identifier.hpp"
 #include "rosidl_typesupport_fastrtps_cpp/message_type_support.h"
 #include "rosidl_typesupport_fastrtps_cpp/message_type_support_decl.hpp"
+#include "rosidl_typesupport_fastrtps_cpp/serialization_helpers.hpp"
 #include "rosidl_typesupport_fastrtps_cpp/wstring_conversion.hpp"
 #include "fastcdr/Cdr.h"
 
@@ -26,6 +29,7 @@ namespace msg
 namespace typesupport_fastrtps_cpp
 {
 
+
 bool
 ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_flexbe_msgs
 cdr_serialize(
@@ -34,16 +38,21 @@ cdr_serialize(
 {
   // Member: name
   cdr << ros_message.name;
+
   // Member: system
   cdr << ros_message.system;
+
   // Member: goal
   cdr << ros_message.goal;
+
   // Member: initial_condition
   cdr << ros_message.initial_condition;
+
   // Member: sm_outcomes
   {
     cdr << ros_message.sm_outcomes;
   }
+
   return true;
 }
 
@@ -71,7 +80,8 @@ cdr_deserialize(
   }
 
   return true;
-}
+}  // NOLINT(readability/fn_size)
+
 
 size_t
 ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_flexbe_msgs
@@ -90,22 +100,25 @@ get_serialized_size(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.name.size() + 1);
+
   // Member: system
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.system.size() + 1);
+
   // Member: goal
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.goal.size() + 1);
+
   // Member: initial_condition
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.initial_condition.size() + 1);
+
   // Member: sm_outcomes
   {
     size_t array_size = ros_message.sm_outcomes.size();
-
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
     for (size_t index = 0; index < array_size; ++index) {
@@ -117,6 +130,7 @@ get_serialized_size(
 
   return current_alignment - initial_alignment;
 }
+
 
 size_t
 ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_flexbe_msgs
@@ -137,11 +151,9 @@ max_serialized_size_SynthesisRequest(
   full_bounded = true;
   is_plain = true;
 
-
   // Member: name
   {
     size_t array_size = 1;
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -150,11 +162,9 @@ max_serialized_size_SynthesisRequest(
         1;
     }
   }
-
   // Member: system
   {
     size_t array_size = 1;
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -163,11 +173,9 @@ max_serialized_size_SynthesisRequest(
         1;
     }
   }
-
   // Member: goal
   {
     size_t array_size = 1;
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -176,11 +184,9 @@ max_serialized_size_SynthesisRequest(
         1;
     }
   }
-
   // Member: initial_condition
   {
     size_t array_size = 1;
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -189,7 +195,6 @@ max_serialized_size_SynthesisRequest(
         1;
     }
   }
-
   // Member: sm_outcomes
   {
     size_t array_size = 0;
@@ -197,7 +202,6 @@ max_serialized_size_SynthesisRequest(
     is_plain = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -222,6 +226,180 @@ max_serialized_size_SynthesisRequest(
 
   return ret_val;
 }
+
+bool
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_flexbe_msgs
+cdr_serialize_key(
+  const flexbe_msgs::msg::SynthesisRequest & ros_message,
+  eprosima::fastcdr::Cdr & cdr)
+{
+  // Member: name
+  cdr << ros_message.name;
+
+  // Member: system
+  cdr << ros_message.system;
+
+  // Member: goal
+  cdr << ros_message.goal;
+
+  // Member: initial_condition
+  cdr << ros_message.initial_condition;
+
+  // Member: sm_outcomes
+  {
+    cdr << ros_message.sm_outcomes;
+  }
+
+  return true;
+}
+
+size_t
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_flexbe_msgs
+get_serialized_size_key(
+  const flexbe_msgs::msg::SynthesisRequest & ros_message,
+  size_t current_alignment)
+{
+  size_t initial_alignment = current_alignment;
+
+  const size_t padding = 4;
+  const size_t wchar_size = 4;
+  (void)padding;
+  (void)wchar_size;
+
+  // Member: name
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.name.size() + 1);
+
+  // Member: system
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.system.size() + 1);
+
+  // Member: goal
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.goal.size() + 1);
+
+  // Member: initial_condition
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.initial_condition.size() + 1);
+
+  // Member: sm_outcomes
+  {
+    size_t array_size = ros_message.sm_outcomes.size();
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        (ros_message.sm_outcomes[index].size() + 1);
+    }
+  }
+
+  return current_alignment - initial_alignment;
+}
+
+size_t
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_flexbe_msgs
+max_serialized_size_key_SynthesisRequest(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment)
+{
+  size_t initial_alignment = current_alignment;
+
+  const size_t padding = 4;
+  const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
+  (void)padding;
+  (void)wchar_size;
+
+  full_bounded = true;
+  is_plain = true;
+
+  // Member: name
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Member: system
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Member: goal
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Member: initial_condition
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Member: sm_outcomes
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = flexbe_msgs::msg::SynthesisRequest;
+    is_plain =
+      (
+      offsetof(DataType, sm_outcomes) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
+}
+
 
 static bool _SynthesisRequest__cdr_serialize(
   const void * untyped_ros_message,
@@ -272,13 +450,17 @@ static message_type_support_callbacks_t _SynthesisRequest__callbacks = {
   _SynthesisRequest__cdr_serialize,
   _SynthesisRequest__cdr_deserialize,
   _SynthesisRequest__get_serialized_size,
-  _SynthesisRequest__max_serialized_size
+  _SynthesisRequest__max_serialized_size,
+  nullptr
 };
 
 static rosidl_message_type_support_t _SynthesisRequest__handle = {
   rosidl_typesupport_fastrtps_cpp::typesupport_identifier,
   &_SynthesisRequest__callbacks,
   get_message_typesupport_handle_function,
+  &flexbe_msgs__msg__SynthesisRequest__get_type_hash,
+  &flexbe_msgs__msg__SynthesisRequest__get_type_description,
+  &flexbe_msgs__msg__SynthesisRequest__get_type_description_sources,
 };
 
 }  // namespace typesupport_fastrtps_cpp

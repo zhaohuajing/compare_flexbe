@@ -9,11 +9,23 @@
 #include "rosidl_runtime_c/message_type_support_struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "tm_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+#include "tm_msgs/srv/detail/set_event__struct.h"
+#include "fastcdr/Cdr.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+bool cdr_serialize_tm_msgs__srv__SetEvent_Request(
+  const tm_msgs__srv__SetEvent_Request * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+bool cdr_deserialize_tm_msgs__srv__SetEvent_Request(
+  eprosima::fastcdr::Cdr &,
+  tm_msgs__srv__SetEvent_Request * ros_message);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
 size_t get_serialized_size_tm_msgs__srv__SetEvent_Request(
@@ -22,6 +34,22 @@ size_t get_serialized_size_tm_msgs__srv__SetEvent_Request(
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
 size_t max_serialized_size_tm_msgs__srv__SetEvent_Request(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+bool cdr_serialize_key_tm_msgs__srv__SetEvent_Request(
+  const tm_msgs__srv__SetEvent_Request * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+size_t get_serialized_size_key_tm_msgs__srv__SetEvent_Request(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+size_t max_serialized_size_key_tm_msgs__srv__SetEvent_Request(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
@@ -42,11 +70,25 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c,
 // #include "rosidl_typesupport_interface/macros.h"
 // already included above
 // #include "tm_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+// already included above
+// #include "tm_msgs/srv/detail/set_event__struct.h"
+// already included above
+// #include "fastcdr/Cdr.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+bool cdr_serialize_tm_msgs__srv__SetEvent_Response(
+  const tm_msgs__srv__SetEvent_Response * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+bool cdr_deserialize_tm_msgs__srv__SetEvent_Response(
+  eprosima::fastcdr::Cdr &,
+  tm_msgs__srv__SetEvent_Response * ros_message);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
 size_t get_serialized_size_tm_msgs__srv__SetEvent_Response(
@@ -60,8 +102,87 @@ size_t max_serialized_size_tm_msgs__srv__SetEvent_Response(
   size_t current_alignment);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+bool cdr_serialize_key_tm_msgs__srv__SetEvent_Response(
+  const tm_msgs__srv__SetEvent_Response * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+size_t get_serialized_size_key_tm_msgs__srv__SetEvent_Response(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+size_t max_serialized_size_key_tm_msgs__srv__SetEvent_Response(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, tm_msgs, srv, SetEvent_Response)();
+
+#ifdef __cplusplus
+}
+#endif
+
+// already included above
+// #include <stddef.h>
+// already included above
+// #include "rosidl_runtime_c/message_type_support_struct.h"
+// already included above
+// #include "rosidl_typesupport_interface/macros.h"
+// already included above
+// #include "tm_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+// already included above
+// #include "tm_msgs/srv/detail/set_event__struct.h"
+// already included above
+// #include "fastcdr/Cdr.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+bool cdr_serialize_tm_msgs__srv__SetEvent_Event(
+  const tm_msgs__srv__SetEvent_Event * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+bool cdr_deserialize_tm_msgs__srv__SetEvent_Event(
+  eprosima::fastcdr::Cdr &,
+  tm_msgs__srv__SetEvent_Event * ros_message);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+size_t get_serialized_size_tm_msgs__srv__SetEvent_Event(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+size_t max_serialized_size_tm_msgs__srv__SetEvent_Event(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+bool cdr_serialize_key_tm_msgs__srv__SetEvent_Event(
+  const tm_msgs__srv__SetEvent_Event * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+size_t get_serialized_size_key_tm_msgs__srv__SetEvent_Event(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+size_t max_serialized_size_key_tm_msgs__srv__SetEvent_Event(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, tm_msgs, srv, SetEvent_Event)();
 
 #ifdef __cplusplus
 }

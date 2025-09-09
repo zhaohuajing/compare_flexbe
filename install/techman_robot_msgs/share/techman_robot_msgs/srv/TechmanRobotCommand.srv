@@ -1,4 +1,1 @@
-string command
-string command_parameter_string
----
-bool is_success
+/home/csrobot/flexbe_ws/src/tmr_ros2/techman_robot_msgs/srv/TechmanRobotCommand.srv

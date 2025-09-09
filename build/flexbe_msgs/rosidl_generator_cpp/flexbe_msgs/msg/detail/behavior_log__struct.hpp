@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/BehaviorLog.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/behavior_log.hpp"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__BEHAVIOR_LOG__STRUCT_HPP_
 #define FLEXBE_MSGS__MSG__DETAIL__BEHAVIOR_LOG__STRUCT_HPP_
 

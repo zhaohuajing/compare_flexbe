@@ -1,0 +1,11 @@
+{
+  "package_name": "techman_robot_msgs",
+  "output_dir": "/home/csrobot/flexbe_ws/build/techman_robot_msgs/rosidl_generator_type_description/techman_robot_msgs",
+  "idl_tuples": [
+    "/home/csrobot/flexbe_ws/build/techman_robot_msgs/rosidl_adapter/techman_robot_msgs:srv/TechmanRobotCommand.idl"
+  ],
+  "include_paths": [
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces"
+  ]
+}

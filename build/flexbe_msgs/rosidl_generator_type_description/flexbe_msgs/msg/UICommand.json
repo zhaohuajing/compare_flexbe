@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "flexbe_msgs/msg/UICommand",
+      "fields": [
+        {
+          "name": "command",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "key",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "flexbe_msgs/msg/UICommand",
+      "hash_string": "RIHS01_836543a28cf75553fbb68e2590c6b4f949b44cf07e4f094792e36f79e6f64b7e"
+    }
+  ]
+}

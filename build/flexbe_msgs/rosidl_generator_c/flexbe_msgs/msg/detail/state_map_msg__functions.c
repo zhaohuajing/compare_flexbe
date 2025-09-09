@@ -101,7 +101,7 @@ flexbe_msgs__msg__StateMapMsg__copy(
 }
 
 flexbe_msgs__msg__StateMapMsg *
-flexbe_msgs__msg__StateMapMsg__create()
+flexbe_msgs__msg__StateMapMsg__create(void)
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   flexbe_msgs__msg__StateMapMsg * msg = (flexbe_msgs__msg__StateMapMsg *)allocator.allocate(sizeof(flexbe_msgs__msg__StateMapMsg), allocator.state);

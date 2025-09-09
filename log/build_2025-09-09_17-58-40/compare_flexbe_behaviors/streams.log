@@ -1,0 +1,46 @@
+[0.596s] Invoking command in '/home/csrobot/flexbe_ws/build/compare_flexbe_behaviors': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/compare_flexbe_behaviors -- -j8 -l8
+[0.793s] Built target ament_cmake_python_symlink_compare_flexbe_behaviors
+[0.793s] Built target ament_cmake_python_symlink_compare_flexbe_behaviors_setup
+[0.840s] running egg_info
+[0.861s] writing compare_flexbe_behaviors.egg-info/PKG-INFO
+[0.861s] writing dependency_links to compare_flexbe_behaviors.egg-info/dependency_links.txt
+[0.861s] writing top-level names to compare_flexbe_behaviors.egg-info/top_level.txt
+[0.923s] reading manifest file 'compare_flexbe_behaviors.egg-info/SOURCES.txt'
+[0.923s] writing manifest file 'compare_flexbe_behaviors.egg-info/SOURCES.txt'
+[0.947s] Built target ament_cmake_python_build_compare_flexbe_behaviors_egg
+[0.994s] Invoked command in '/home/csrobot/flexbe_ws/build/compare_flexbe_behaviors' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/compare_flexbe_behaviors -- -j8 -l8
+[0.995s] Invoking command in '/home/csrobot/flexbe_ws/build/compare_flexbe_behaviors': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/csrobot/flexbe_ws/build/compare_flexbe_behaviors
+[1.010s] -- Install configuration: ""
+[1.010s] -- Execute custom install script
+[1.011s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/compare_flexbe_behaviors/manifest/euclideanclusterextractionpipeine.xml
+[1.011s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/compare_flexbe_behaviors/manifest/example_action_state_behavior.xml
+[1.011s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/compare_flexbe_behaviors/manifest/example_behavior.xml
+[1.011s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/compare_flexbe_behaviors/config/example.yaml
+[1.011s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/compare_flexbe_behaviors/copy_behavior
+[1.011s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/environment/pythonpath.sh
+[1.011s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/environment/pythonpath.dsv
+[1.011s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors-0.0.1-py3.12.egg-info/PKG-INFO
+[1.012s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors-0.0.1-py3.12.egg-info/SOURCES.txt
+[1.012s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors-0.0.1-py3.12.egg-info/dependency_links.txt
+[1.012s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors-0.0.1-py3.12.egg-info/top_level.txt
+[1.012s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors/__init__.py
+[1.012s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors/euclideanclusterextractionpipeine_sm.py
+[1.014s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors/example_action_state_behavior_sm.py
+[1.014s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors/example_behavior_sm.py
+[1.014s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/ament_index/resource_index/package_run_dependencies/compare_flexbe_behaviors
+[1.015s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/ament_index/resource_index/parent_prefix_path/compare_flexbe_behaviors
+[1.015s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/environment/ament_prefix_path.sh
+[1.015s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/environment/ament_prefix_path.dsv
+[1.015s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/environment/path.sh
+[1.015s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/environment/path.dsv
+[1.015s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/local_setup.bash
+[1.015s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/local_setup.sh
+[1.015s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/local_setup.zsh
+[1.015s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/local_setup.dsv
+[1.015s] -- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/package.dsv
+[1.015s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/ament_index/resource_index/packages/compare_flexbe_behaviors
+[1.015s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/cmake/compare_flexbe_behaviorsConfig.cmake
+[1.015s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/cmake/compare_flexbe_behaviorsConfig-version.cmake
+[1.015s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/share/compare_flexbe_behaviors/package.xml
+[1.043s] Listing '/home/csrobot/flexbe_ws/install/compare_flexbe_behaviors/lib/python3.12/site-packages/compare_flexbe_behaviors'...
+[1.251s] Invoked command in '/home/csrobot/flexbe_ws/build/compare_flexbe_behaviors' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/csrobot/flexbe_ws/build/compare_flexbe_behaviors

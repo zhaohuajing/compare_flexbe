@@ -1,0 +1,86 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_Goal",
+      "fields": [
+        {
+          "name": "request",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "flexbe_msgs/msg/SynthesisRequest"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "flexbe_msgs/msg/SynthesisRequest",
+        "fields": [
+          {
+            "name": "name",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "system",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "goal",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "initial_condition",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sm_outcomes",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_Goal",
+      "hash_string": "RIHS01_18d105144ef57c635ee011a57d7907f2560fd8bca06ddd4f923ec589e3231131"
+    },
+    {
+      "type_name": "flexbe_msgs/msg/SynthesisRequest",
+      "hash_string": "RIHS01_68707412094a236ea34aee9bb49f2eb142f2c4648f3bd2cead98f17bc4663adb"
+    }
+  ]
+}

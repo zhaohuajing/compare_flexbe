@@ -17,6 +17,7 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/tm_msgs/msg/detail/svr_response__traits.hpp"
   "rosidl_generator_cpp/tm_msgs/msg/detail/svr_response__type_support.hpp"
   "rosidl_generator_cpp/tm_msgs/msg/feedback_state.hpp"
+  "rosidl_generator_cpp/tm_msgs/msg/rosidl_generator_cpp__visibility_control.hpp"
   "rosidl_generator_cpp/tm_msgs/msg/sct_response.hpp"
   "rosidl_generator_cpp/tm_msgs/msg/sta_response.hpp"
   "rosidl_generator_cpp/tm_msgs/msg/svr_response.hpp"

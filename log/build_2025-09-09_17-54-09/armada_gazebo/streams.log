@@ -1,0 +1,31 @@
+[0.021s] Invoking command in '/home/csrobot/flexbe_ws/build/armada_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/armada_gazebo -- -j8 -l8
+[0.064s] Invoked command in '/home/csrobot/flexbe_ws/build/armada_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/armada_gazebo -- -j8 -l8
+[0.071s] Invoking command in '/home/csrobot/flexbe_ws/build/armada_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/csrobot/flexbe_ws/build/armada_gazebo
+[0.137s] -- Install configuration: ""
+[0.137s] -- Execute custom install script
+[0.137s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/panda/config/panda_bridge.yaml
+[0.137s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/panda/worlds/panda.sdf
+[0.137s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/panda/xacro/macro.gazebo.xacro
+[0.137s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/panda/xacro/macro.gazebo_sensor.xacro
+[0.137s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/tm5-700/config/tm5-700_bridge.yaml
+[0.137s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/tm5-700/worlds/tm5-700.sdf
+[0.137s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/tm5-700/xacro/macro.gazebo.xacro
+[0.137s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/tm5-700/xacro/macro.gazebo_sensor.xacro
+[0.137s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/rgbd_camera/detachable_joint/detachable_joint.sdf
+[0.138s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/rgbd_camera/model/rgbd_camera_model.sdf
+[0.138s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/ament_index/resource_index/package_run_dependencies/armada_gazebo
+[0.138s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/ament_index/resource_index/parent_prefix_path/armada_gazebo
+[0.143s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/environment/ament_prefix_path.sh
+[0.143s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/environment/ament_prefix_path.dsv
+[0.143s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/environment/path.sh
+[0.143s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/environment/path.dsv
+[0.143s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/local_setup.bash
+[0.143s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/local_setup.sh
+[0.143s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/local_setup.zsh
+[0.144s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/local_setup.dsv
+[0.144s] -- Symlinking: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/package.dsv
+[0.144s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/ament_index/resource_index/packages/armada_gazebo
+[0.144s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/cmake/armada_gazeboConfig.cmake
+[0.144s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/cmake/armada_gazeboConfig-version.cmake
+[0.144s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/package.xml
+[0.206s] Invoked command in '/home/csrobot/flexbe_ws/build/armada_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/csrobot/flexbe_ws/build/armada_gazebo

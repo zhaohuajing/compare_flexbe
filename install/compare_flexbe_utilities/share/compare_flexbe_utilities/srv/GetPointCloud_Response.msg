@@ -1,7 +1,0 @@
-
-# Response
-sensor_msgs/PointCloud2 cloud_out
-geometry_msgs/PoseStamped camera_pose   # pose of camera_frame in target_frame
-string cloud_frame                      # original message frame_id
-bool success
-string message

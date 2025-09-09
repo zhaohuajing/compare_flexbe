@@ -132,7 +132,7 @@ flexbe_msgs__msg__UserdataInfo__copy(
 }
 
 flexbe_msgs__msg__UserdataInfo *
-flexbe_msgs__msg__UserdataInfo__create()
+flexbe_msgs__msg__UserdataInfo__create(void)
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   flexbe_msgs__msg__UserdataInfo * msg = (flexbe_msgs__msg__UserdataInfo *)allocator.allocate(sizeof(flexbe_msgs__msg__UserdataInfo), allocator.state);

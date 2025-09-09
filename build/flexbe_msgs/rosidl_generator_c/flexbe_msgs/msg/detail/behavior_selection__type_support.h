@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/BehaviorSelection.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/behavior_selection.h"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__BEHAVIOR_SELECTION__TYPE_SUPPORT_H_
 #define FLEXBE_MSGS__MSG__DETAIL__BEHAVIOR_SELECTION__TYPE_SUPPORT_H_
 
@@ -24,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   flexbe_msgs,
   msg,
   BehaviorSelection
-)();
+)(void);
 
 #ifdef __cplusplus
 }

@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/BEStatus.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/be_status.hpp"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__BE_STATUS__BUILDER_HPP_
 #define FLEXBE_MSGS__MSG__DETAIL__BE_STATUS__BUILDER_HPP_
 

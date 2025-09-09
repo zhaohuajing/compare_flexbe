@@ -129,7 +129,7 @@ tm_msgs__msg__SvrResponse__copy(
 }
 
 tm_msgs__msg__SvrResponse *
-tm_msgs__msg__SvrResponse__create()
+tm_msgs__msg__SvrResponse__create(void)
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   tm_msgs__msg__SvrResponse * msg = (tm_msgs__msg__SvrResponse *)allocator.allocate(sizeof(tm_msgs__msg__SvrResponse), allocator.state);

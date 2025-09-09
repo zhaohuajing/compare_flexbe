@@ -2,6 +2,9 @@
 // with input from compare_flexbe_utilities:srv/MoveToNamedPose.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "compare_flexbe_utilities/srv/move_to_named_pose.hpp"
+
+
 #ifndef COMPARE_FLEXBE_UTILITIES__SRV__DETAIL__MOVE_TO_NAMED_POSE__STRUCT_HPP_
 #define COMPARE_FLEXBE_UTILITIES__SRV__DETAIL__MOVE_TO_NAMED_POSE__STRUCT_HPP_
 
@@ -242,6 +245,141 @@ using MoveToNamedPose_Response =
 
 }  // namespace compare_flexbe_utilities
 
+
+// Include directives for member types
+// Member 'info'
+#include "service_msgs/msg/detail/service_event_info__struct.hpp"
+
+#ifndef _WIN32
+# define DEPRECATED__compare_flexbe_utilities__srv__MoveToNamedPose_Event __attribute__((deprecated))
+#else
+# define DEPRECATED__compare_flexbe_utilities__srv__MoveToNamedPose_Event __declspec(deprecated)
+#endif
+
+namespace compare_flexbe_utilities
+{
+
+namespace srv
+{
+
+// message struct
+template<class ContainerAllocator>
+struct MoveToNamedPose_Event_
+{
+  using Type = MoveToNamedPose_Event_<ContainerAllocator>;
+
+  explicit MoveToNamedPose_Event_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : info(_init)
+  {
+    (void)_init;
+  }
+
+  explicit MoveToNamedPose_Event_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : info(_alloc, _init)
+  {
+    (void)_init;
+  }
+
+  // field types and members
+  using _info_type =
+    service_msgs::msg::ServiceEventInfo_<ContainerAllocator>;
+  _info_type info;
+  using _request_type =
+    rosidl_runtime_cpp::BoundedVector<compare_flexbe_utilities::srv::MoveToNamedPose_Request_<ContainerAllocator>, 1, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<compare_flexbe_utilities::srv::MoveToNamedPose_Request_<ContainerAllocator>>>;
+  _request_type request;
+  using _response_type =
+    rosidl_runtime_cpp::BoundedVector<compare_flexbe_utilities::srv::MoveToNamedPose_Response_<ContainerAllocator>, 1, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<compare_flexbe_utilities::srv::MoveToNamedPose_Response_<ContainerAllocator>>>;
+  _response_type response;
+
+  // setters for named parameter idiom
+  Type & set__info(
+    const service_msgs::msg::ServiceEventInfo_<ContainerAllocator> & _arg)
+  {
+    this->info = _arg;
+    return *this;
+  }
+  Type & set__request(
+    const rosidl_runtime_cpp::BoundedVector<compare_flexbe_utilities::srv::MoveToNamedPose_Request_<ContainerAllocator>, 1, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<compare_flexbe_utilities::srv::MoveToNamedPose_Request_<ContainerAllocator>>> & _arg)
+  {
+    this->request = _arg;
+    return *this;
+  }
+  Type & set__response(
+    const rosidl_runtime_cpp::BoundedVector<compare_flexbe_utilities::srv::MoveToNamedPose_Response_<ContainerAllocator>, 1, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<compare_flexbe_utilities::srv::MoveToNamedPose_Response_<ContainerAllocator>>> & _arg)
+  {
+    this->response = _arg;
+    return *this;
+  }
+
+  // constant declarations
+
+  // pointer types
+  using RawPtr =
+    compare_flexbe_utilities::srv::MoveToNamedPose_Event_<ContainerAllocator> *;
+  using ConstRawPtr =
+    const compare_flexbe_utilities::srv::MoveToNamedPose_Event_<ContainerAllocator> *;
+  using SharedPtr =
+    std::shared_ptr<compare_flexbe_utilities::srv::MoveToNamedPose_Event_<ContainerAllocator>>;
+  using ConstSharedPtr =
+    std::shared_ptr<compare_flexbe_utilities::srv::MoveToNamedPose_Event_<ContainerAllocator> const>;
+
+  template<typename Deleter = std::default_delete<
+      compare_flexbe_utilities::srv::MoveToNamedPose_Event_<ContainerAllocator>>>
+  using UniquePtrWithDeleter =
+    std::unique_ptr<compare_flexbe_utilities::srv::MoveToNamedPose_Event_<ContainerAllocator>, Deleter>;
+
+  using UniquePtr = UniquePtrWithDeleter<>;
+
+  template<typename Deleter = std::default_delete<
+      compare_flexbe_utilities::srv::MoveToNamedPose_Event_<ContainerAllocator>>>
+  using ConstUniquePtrWithDeleter =
+    std::unique_ptr<compare_flexbe_utilities::srv::MoveToNamedPose_Event_<ContainerAllocator> const, Deleter>;
+  using ConstUniquePtr = ConstUniquePtrWithDeleter<>;
+
+  using WeakPtr =
+    std::weak_ptr<compare_flexbe_utilities::srv::MoveToNamedPose_Event_<ContainerAllocator>>;
+  using ConstWeakPtr =
+    std::weak_ptr<compare_flexbe_utilities::srv::MoveToNamedPose_Event_<ContainerAllocator> const>;
+
+  // pointer types similar to ROS 1, use SharedPtr / ConstSharedPtr instead
+  // NOTE: Can't use 'using' here because GNU C++ can't parse attributes properly
+  typedef DEPRECATED__compare_flexbe_utilities__srv__MoveToNamedPose_Event
+    std::shared_ptr<compare_flexbe_utilities::srv::MoveToNamedPose_Event_<ContainerAllocator>>
+    Ptr;
+  typedef DEPRECATED__compare_flexbe_utilities__srv__MoveToNamedPose_Event
+    std::shared_ptr<compare_flexbe_utilities::srv::MoveToNamedPose_Event_<ContainerAllocator> const>
+    ConstPtr;
+
+  // comparison operators
+  bool operator==(const MoveToNamedPose_Event_ & other) const
+  {
+    if (this->info != other.info) {
+      return false;
+    }
+    if (this->request != other.request) {
+      return false;
+    }
+    if (this->response != other.response) {
+      return false;
+    }
+    return true;
+  }
+  bool operator!=(const MoveToNamedPose_Event_ & other) const
+  {
+    return !this->operator==(other);
+  }
+};  // struct MoveToNamedPose_Event_
+
+// alias to use template instance with default allocator
+using MoveToNamedPose_Event =
+  compare_flexbe_utilities::srv::MoveToNamedPose_Event_<std::allocator<void>>;
+
+// constant definitions
+
+}  // namespace srv
+
+}  // namespace compare_flexbe_utilities
+
 namespace compare_flexbe_utilities
 {
 
@@ -252,6 +390,7 @@ struct MoveToNamedPose
 {
   using Request = compare_flexbe_utilities::srv::MoveToNamedPose_Request;
   using Response = compare_flexbe_utilities::srv::MoveToNamedPose_Response;
+  using Event = compare_flexbe_utilities::srv::MoveToNamedPose_Event;
 };
 
 }  // namespace srv

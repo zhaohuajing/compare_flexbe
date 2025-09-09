@@ -1,13 +1,6 @@
 package.xml
 setup.cfg
 setup.py
-../../../build/compare_flexbe_states/compare_flexbe_states.egg-info/PKG-INFO
-../../../build/compare_flexbe_states/compare_flexbe_states.egg-info/SOURCES.txt
-../../../build/compare_flexbe_states/compare_flexbe_states.egg-info/dependency_links.txt
-../../../build/compare_flexbe_states/compare_flexbe_states.egg-info/entry_points.txt
-../../../build/compare_flexbe_states/compare_flexbe_states.egg-info/requires.txt
-../../../build/compare_flexbe_states/compare_flexbe_states.egg-info/top_level.txt
-../../../build/compare_flexbe_states/compare_flexbe_states.egg-info/zip-safe
 compare_flexbe_states/__init__.py
 compare_flexbe_states/cartesian_move_to_pose_service_state.py
 compare_flexbe_states/detect_grasps_service_state.py
@@ -20,6 +13,13 @@ compare_flexbe_states/move_to_pose_service_state.py
 compare_flexbe_states/plane_segmentation_service_state.py
 compare_flexbe_states/publish_point_cloud_state.py
 compare_flexbe_states/voxel_grid_filter_state.py
+compare_flexbe_states.egg-info/PKG-INFO
+compare_flexbe_states.egg-info/SOURCES.txt
+compare_flexbe_states.egg-info/dependency_links.txt
+compare_flexbe_states.egg-info/entry_points.txt
+compare_flexbe_states.egg-info/requires.txt
+compare_flexbe_states.egg-info/top_level.txt
+compare_flexbe_states.egg-info/zip-safe
 resource/compare_flexbe_states
 tests/example_action_state.test
 tests/example_state.test

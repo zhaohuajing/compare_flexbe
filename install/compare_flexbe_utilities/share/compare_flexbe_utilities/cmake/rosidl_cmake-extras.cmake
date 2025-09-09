@@ -1,4 +1,1 @@
-# generated from rosidl_cmake/cmake/rosidl_cmake-extras.cmake.in
-
-set(compare_flexbe_utilities_IDL_FILES "srv/CartesianMoveToPose.idl;srv/MoveToNamedPose.idl;srv/MoveToPose.idl;srv/VoxelGridFilter.idl;srv/PlaneSegmentation.idl;srv/EuclideanClustering.idl;srv/GetPointCloud.idl;srv/FilterByIndices.idl")
-set(compare_flexbe_utilities_INTERFACE_FILES "srv/CartesianMoveToPose.srv;srv/CartesianMoveToPose_Request.msg;srv/CartesianMoveToPose_Response.msg;srv/MoveToNamedPose.srv;srv/MoveToNamedPose_Request.msg;srv/MoveToNamedPose_Response.msg;srv/MoveToPose.srv;srv/MoveToPose_Request.msg;srv/MoveToPose_Response.msg;srv/VoxelGridFilter.srv;srv/VoxelGridFilter_Request.msg;srv/VoxelGridFilter_Response.msg;srv/PlaneSegmentation.srv;srv/PlaneSegmentation_Request.msg;srv/PlaneSegmentation_Response.msg;srv/EuclideanClustering.srv;srv/EuclideanClustering_Request.msg;srv/EuclideanClustering_Response.msg;srv/GetPointCloud.srv;srv/GetPointCloud_Request.msg;srv/GetPointCloud_Response.msg;srv/FilterByIndices.srv;srv/FilterByIndices_Request.msg;srv/FilterByIndices_Response.msg")
+/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_cmake/rosidl_cmake-extras.cmake

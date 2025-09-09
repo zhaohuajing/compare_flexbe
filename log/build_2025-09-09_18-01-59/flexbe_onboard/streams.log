@@ -1,0 +1,20 @@
+[0.747s] Invoking command in '/home/csrobot/flexbe_ws/build/flexbe_onboard': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/flexbe_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_onboard/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/flexbe_onboard/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/flexbe_onboard/build --no-deps symlink_data
+[1.036s] running develop
+[1.197s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[1.197s]   self.local_index = Environment(self.shadow_path + sys.path)
+[1.233s] running egg_info
+[1.252s] writing flexbe_onboard.egg-info/PKG-INFO
+[1.252s] writing dependency_links to flexbe_onboard.egg-info/dependency_links.txt
+[1.253s] writing entry points to flexbe_onboard.egg-info/entry_points.txt
+[1.253s] writing requirements to flexbe_onboard.egg-info/requires.txt
+[1.253s] writing top-level names to flexbe_onboard.egg-info/top_level.txt
+[1.291s] reading manifest file 'flexbe_onboard.egg-info/SOURCES.txt'
+[1.292s] writing manifest file 'flexbe_onboard.egg-info/SOURCES.txt'
+[1.312s] running build_ext
+[1.312s] Creating /home/csrobot/flexbe_ws/install/flexbe_onboard/lib/python3.12/site-packages/flexbe-onboard.egg-link (link to .)
+[1.313s] Installing flexbe_onboard script to /home/csrobot/flexbe_ws/install/flexbe_onboard/lib/flexbe_onboard
+[1.313s] Installing start_behavior script to /home/csrobot/flexbe_ws/install/flexbe_onboard/lib/flexbe_onboard
+[1.313s] 
+[1.313s] Installed /home/csrobot/flexbe_ws/build/flexbe_onboard
+[1.314s] running symlink_data
+[1.339s] Invoked command in '/home/csrobot/flexbe_ws/build/flexbe_onboard' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/flexbe_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_onboard/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/flexbe_onboard/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/flexbe_onboard/build --no-deps symlink_data

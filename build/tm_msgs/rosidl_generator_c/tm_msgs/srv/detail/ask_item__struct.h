@@ -2,6 +2,9 @@
 // with input from tm_msgs:srv/AskItem.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "tm_msgs/srv/ask_item.h"
+
+
 #ifndef TM_MSGS__SRV__DETAIL__ASK_ITEM__STRUCT_H_
 #define TM_MSGS__SRV__DETAIL__ASK_ITEM__STRUCT_H_
 
@@ -40,7 +43,6 @@ typedef struct tm_msgs__srv__AskItem_Request__Sequence
   size_t capacity;
 } tm_msgs__srv__AskItem_Request__Sequence;
 
-
 // Constants defined in the message
 
 // Include directives for member types
@@ -68,6 +70,42 @@ typedef struct tm_msgs__srv__AskItem_Response__Sequence
   /// The number of allocated items in data
   size_t capacity;
 } tm_msgs__srv__AskItem_Response__Sequence;
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'info'
+#include "service_msgs/msg/detail/service_event_info__struct.h"
+
+// constants for array fields with an upper bound
+// request
+enum
+{
+  tm_msgs__srv__AskItem_Event__request__MAX_SIZE = 1
+};
+// response
+enum
+{
+  tm_msgs__srv__AskItem_Event__response__MAX_SIZE = 1
+};
+
+/// Struct defined in srv/AskItem in the package tm_msgs.
+typedef struct tm_msgs__srv__AskItem_Event
+{
+  service_msgs__msg__ServiceEventInfo info;
+  tm_msgs__srv__AskItem_Request__Sequence request;
+  tm_msgs__srv__AskItem_Response__Sequence response;
+} tm_msgs__srv__AskItem_Event;
+
+// Struct for a sequence of tm_msgs__srv__AskItem_Event.
+typedef struct tm_msgs__srv__AskItem_Event__Sequence
+{
+  tm_msgs__srv__AskItem_Event * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} tm_msgs__srv__AskItem_Event__Sequence;
 
 #ifdef __cplusplus
 }

@@ -1,14 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from flexbe_msgs/msg/CommandFeedback.msg
-// generated code does not contain a copyright notice
-
-
-module flexbe_msgs {
-  module msg {
-    struct CommandFeedback {
-      string command;
-
-      sequence<string> args;
-    };
-  };
-};
+/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs/msg/CommandFeedback.idl

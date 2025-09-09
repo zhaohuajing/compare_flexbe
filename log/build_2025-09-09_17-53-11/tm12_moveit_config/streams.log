@@ -1,0 +1,69 @@
+[0.013s] Invoking command in '/home/csrobot/flexbe_ws/build/tm12_moveit_config': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/csrobot/flexbe_ws/src/tmr_ros2/tm_moveit/tm12_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/install/tm12_moveit_config
+[0.124s] -- The C compiler identification is GNU 13.3.0
+[0.211s] -- The CXX compiler identification is GNU 13.3.0
+[0.236s] -- Detecting C compiler ABI info
+[0.402s] -- Detecting C compiler ABI info - done
+[0.422s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.422s] -- Detecting C compile features
+[0.422s] -- Detecting C compile features - done
+[0.436s] -- Detecting CXX compiler ABI info
+[0.615s] -- Detecting CXX compiler ABI info - done
+[0.630s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.630s] -- Detecting CXX compile features
+[0.634s] -- Detecting CXX compile features - done
+[0.635s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.874s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.013s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.186s] -- Configuring done (1.2s)
+[1.194s] -- Generating done (0.0s)
+[1.198s] -- Build files have been written to: /home/csrobot/flexbe_ws/build/tm12_moveit_config
+[1.204s] Invoked command in '/home/csrobot/flexbe_ws/build/tm12_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/csrobot/flexbe_ws/src/tmr_ros2/tm_moveit/tm12_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/install/tm12_moveit_config
+[1.205s] Invoking command in '/home/csrobot/flexbe_ws/build/tm12_moveit_config': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/tm12_moveit_config -- -j8 -l8
+[1.313s] Invoked command in '/home/csrobot/flexbe_ws/build/tm12_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/tm12_moveit_config -- -j8 -l8
+[1.314s] Invoking command in '/home/csrobot/flexbe_ws/build/tm12_moveit_config': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/csrobot/flexbe_ws/build/tm12_moveit_config
+[1.318s] -- Install configuration: ""
+[1.318s] -- Execute custom install script
+[1.321s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/ament_index/resource_index/package_run_dependencies/tm12_moveit_config
+[1.333s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/ament_index/resource_index/parent_prefix_path/tm12_moveit_config
+[1.345s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/environment/ament_prefix_path.sh
+[1.359s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/environment/ament_prefix_path.dsv
+[1.367s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/environment/path.sh
+[1.374s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/environment/path.dsv
+[1.381s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/local_setup.bash
+[1.388s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/local_setup.sh
+[1.394s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/local_setup.zsh
+[1.401s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/local_setup.dsv
+[1.409s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/package.dsv
+[1.418s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/ament_index/resource_index/packages/tm12_moveit_config
+[1.425s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/cmake/tm12_moveit_configConfig.cmake
+[1.432s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/cmake/tm12_moveit_configConfig-version.cmake
+[1.438s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/package.xml
+[1.445s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/launch/demo.launch.py
+[1.452s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/launch/move_group.launch.py
+[1.458s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/launch/moveit_rviz.launch.py
+[1.465s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/launch/rsp.launch.py
+[1.471s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/launch/run_move_group.rviz
+[1.477s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/launch/setup_assistant.launch.py
+[1.484s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/launch/spawn_controllers.launch.py
+[1.489s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/launch/static_virtual_joint_tfs.launch.py
+[1.496s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/launch/tm12_moveit.launch.py
+[1.504s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/launch/tm12_run_move_group.launch.py
+[1.511s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/launch/warehouse_db.launch.py
+[1.517s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/chomp_planning.yaml
+[1.524s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/controllers.yaml
+[1.532s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/initial_positions.yaml
+[1.538s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/joint_limits.yaml
+[1.544s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/kinematics.yaml
+[1.550s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/moveit.rviz
+[1.557s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/moveit2_controllers.yaml
+[1.566s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/moveit_controllers.yaml
+[1.576s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/ompl_planning.yaml
+[1.586s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/pilz_cartesian_limits.yaml
+[1.593s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/pilz_industrial_motion_planner_planning.yaml
+[1.603s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/ros2_controllers.yaml
+[1.606s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/sensors_3d.yaml
+[1.613s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/tm12.ros2_control.xacro
+[1.619s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/tm12.srdf
+[1.626s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/config/tm12.urdf.xacro
+[1.633s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/rviz/moveit.rviz
+[1.640s] -- Symlinking: /home/csrobot/flexbe_ws/install/tm12_moveit_config/share/tm12_moveit_config/.setup_assistant

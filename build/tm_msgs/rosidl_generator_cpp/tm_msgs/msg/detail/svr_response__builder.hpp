@@ -2,6 +2,9 @@
 // with input from tm_msgs:msg/SvrResponse.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "tm_msgs/msg/svr_response.hpp"
+
+
 #ifndef TM_MSGS__MSG__DETAIL__SVR_RESPONSE__BUILDER_HPP_
 #define TM_MSGS__MSG__DETAIL__SVR_RESPONSE__BUILDER_HPP_
 

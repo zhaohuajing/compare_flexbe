@@ -1,2 +1,1 @@
-source;share/compare_flexbe/environment/ament_prefix_path.sh
-source;share/compare_flexbe/environment/path.sh
+/home/csrobot/flexbe_ws/build/compare_flexbe/ament_cmake_environment_hooks/local_setup.dsv

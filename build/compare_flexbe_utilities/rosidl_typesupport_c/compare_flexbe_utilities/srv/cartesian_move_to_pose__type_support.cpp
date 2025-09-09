@@ -6,6 +6,7 @@
 #include "rosidl_runtime_c/message_type_support_struct.h"
 #include "compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__struct.h"
 #include "compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__type_support.h"
+#include "compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__functions.h"
 #include "rosidl_typesupport_c/identifier.h"
 #include "rosidl_typesupport_c/message_type_support_dispatch.h"
 #include "rosidl_typesupport_c/type_support_map.h"
@@ -72,6 +73,9 @@ static const rosidl_message_type_support_t CartesianMoveToPose_Request_message_t
   rosidl_typesupport_c__typesupport_identifier,
   reinterpret_cast<const type_support_map_t *>(&_CartesianMoveToPose_Request_message_typesupport_map),
   rosidl_typesupport_c__get_message_typesupport_handle_function,
+  &compare_flexbe_utilities__srv__CartesianMoveToPose_Request__get_type_hash,
+  &compare_flexbe_utilities__srv__CartesianMoveToPose_Request__get_type_description,
+  &compare_flexbe_utilities__srv__CartesianMoveToPose_Request__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_c
@@ -102,6 +106,8 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_c, compare_
 // #include "compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__struct.h"
 // already included above
 // #include "compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__type_support.h"
+// already included above
+// #include "compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__functions.h"
 // already included above
 // #include "rosidl_typesupport_c/identifier.h"
 // already included above
@@ -173,6 +179,9 @@ static const rosidl_message_type_support_t CartesianMoveToPose_Response_message_
   rosidl_typesupport_c__typesupport_identifier,
   reinterpret_cast<const type_support_map_t *>(&_CartesianMoveToPose_Response_message_typesupport_map),
   rosidl_typesupport_c__get_message_typesupport_handle_function,
+  &compare_flexbe_utilities__srv__CartesianMoveToPose_Response__get_type_hash,
+  &compare_flexbe_utilities__srv__CartesianMoveToPose_Response__get_type_description,
+  &compare_flexbe_utilities__srv__CartesianMoveToPose_Response__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_c
@@ -197,14 +206,22 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_c, compare_
 
 // already included above
 // #include "cstddef"
-#include "rosidl_runtime_c/service_type_support_struct.h"
+// already included above
+// #include "rosidl_runtime_c/message_type_support_struct.h"
+// already included above
+// #include "compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__struct.h"
 // already included above
 // #include "compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__type_support.h"
 // already included above
+// #include "compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__functions.h"
+// already included above
 // #include "rosidl_typesupport_c/identifier.h"
-#include "rosidl_typesupport_c/service_type_support_dispatch.h"
+// already included above
+// #include "rosidl_typesupport_c/message_type_support_dispatch.h"
 // already included above
 // #include "rosidl_typesupport_c/type_support_map.h"
+// already included above
+// #include "rosidl_typesupport_c/visibility_control.h"
 // already included above
 // #include "rosidl_typesupport_interface/macros.h"
 
@@ -217,6 +234,105 @@ namespace srv
 namespace rosidl_typesupport_c
 {
 
+typedef struct _CartesianMoveToPose_Event_type_support_ids_t
+{
+  const char * typesupport_identifier[2];
+} _CartesianMoveToPose_Event_type_support_ids_t;
+
+static const _CartesianMoveToPose_Event_type_support_ids_t _CartesianMoveToPose_Event_message_typesupport_ids = {
+  {
+    "rosidl_typesupport_fastrtps_c",  // ::rosidl_typesupport_fastrtps_c::typesupport_identifier,
+    "rosidl_typesupport_introspection_c",  // ::rosidl_typesupport_introspection_c::typesupport_identifier,
+  }
+};
+
+typedef struct _CartesianMoveToPose_Event_type_support_symbol_names_t
+{
+  const char * symbol_name[2];
+} _CartesianMoveToPose_Event_type_support_symbol_names_t;
+
+#define STRINGIFY_(s) #s
+#define STRINGIFY(s) STRINGIFY_(s)
+
+static const _CartesianMoveToPose_Event_type_support_symbol_names_t _CartesianMoveToPose_Event_message_typesupport_symbol_names = {
+  {
+    STRINGIFY(ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, compare_flexbe_utilities, srv, CartesianMoveToPose_Event)),
+    STRINGIFY(ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, compare_flexbe_utilities, srv, CartesianMoveToPose_Event)),
+  }
+};
+
+typedef struct _CartesianMoveToPose_Event_type_support_data_t
+{
+  void * data[2];
+} _CartesianMoveToPose_Event_type_support_data_t;
+
+static _CartesianMoveToPose_Event_type_support_data_t _CartesianMoveToPose_Event_message_typesupport_data = {
+  {
+    0,  // will store the shared library later
+    0,  // will store the shared library later
+  }
+};
+
+static const type_support_map_t _CartesianMoveToPose_Event_message_typesupport_map = {
+  2,
+  "compare_flexbe_utilities",
+  &_CartesianMoveToPose_Event_message_typesupport_ids.typesupport_identifier[0],
+  &_CartesianMoveToPose_Event_message_typesupport_symbol_names.symbol_name[0],
+  &_CartesianMoveToPose_Event_message_typesupport_data.data[0],
+};
+
+static const rosidl_message_type_support_t CartesianMoveToPose_Event_message_type_support_handle = {
+  rosidl_typesupport_c__typesupport_identifier,
+  reinterpret_cast<const type_support_map_t *>(&_CartesianMoveToPose_Event_message_typesupport_map),
+  rosidl_typesupport_c__get_message_typesupport_handle_function,
+  &compare_flexbe_utilities__srv__CartesianMoveToPose_Event__get_type_hash,
+  &compare_flexbe_utilities__srv__CartesianMoveToPose_Event__get_type_description,
+  &compare_flexbe_utilities__srv__CartesianMoveToPose_Event__get_type_description_sources,
+};
+
+}  // namespace rosidl_typesupport_c
+
+}  // namespace srv
+
+}  // namespace compare_flexbe_utilities
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_c, compare_flexbe_utilities, srv, CartesianMoveToPose_Event)() {
+  return &::compare_flexbe_utilities::srv::rosidl_typesupport_c::CartesianMoveToPose_Event_message_type_support_handle;
+}
+
+#ifdef __cplusplus
+}
+#endif
+
+// already included above
+// #include "cstddef"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+// already included above
+// #include "compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__type_support.h"
+// already included above
+// #include "rosidl_typesupport_c/identifier.h"
+#include "rosidl_typesupport_c/service_type_support_dispatch.h"
+// already included above
+// #include "rosidl_typesupport_c/type_support_map.h"
+// already included above
+// #include "rosidl_typesupport_interface/macros.h"
+#include "service_msgs/msg/service_event_info.h"
+#include "builtin_interfaces/msg/time.h"
+
+namespace compare_flexbe_utilities
+{
+
+namespace srv
+{
+
+namespace rosidl_typesupport_c
+{
 typedef struct _CartesianMoveToPose_type_support_ids_t
 {
   const char * typesupport_identifier[2];
@@ -268,6 +384,24 @@ static const rosidl_service_type_support_t CartesianMoveToPose_service_type_supp
   rosidl_typesupport_c__typesupport_identifier,
   reinterpret_cast<const type_support_map_t *>(&_CartesianMoveToPose_service_typesupport_map),
   rosidl_typesupport_c__get_service_typesupport_handle_function,
+  &CartesianMoveToPose_Request_message_type_support_handle,
+  &CartesianMoveToPose_Response_message_type_support_handle,
+  &CartesianMoveToPose_Event_message_type_support_handle,
+  ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_CREATE_EVENT_MESSAGE_SYMBOL_NAME(
+    rosidl_typesupport_c,
+    compare_flexbe_utilities,
+    srv,
+    CartesianMoveToPose
+  ),
+  ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_DESTROY_EVENT_MESSAGE_SYMBOL_NAME(
+    rosidl_typesupport_c,
+    compare_flexbe_utilities,
+    srv,
+    CartesianMoveToPose
+  ),
+  &compare_flexbe_utilities__srv__CartesianMoveToPose__get_type_hash,
+  &compare_flexbe_utilities__srv__CartesianMoveToPose__get_type_description,
+  &compare_flexbe_utilities__srv__CartesianMoveToPose__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_c

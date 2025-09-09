@@ -1,0 +1,20 @@
+[1.220s] Invoking command in '/home/csrobot/flexbe_ws/build/tm_get_status': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/csrobot/flexbe_ws/build/tm_get_status/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/tm_get_status/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/tm_get_status/build --no-deps symlink_data
+[1.562s] running develop
+[1.749s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[1.749s]   self.local_index = Environment(self.shadow_path + sys.path)
+[1.789s] running egg_info
+[1.812s] writing tm_get_status.egg-info/PKG-INFO
+[1.812s] writing dependency_links to tm_get_status.egg-info/dependency_links.txt
+[1.812s] writing entry points to tm_get_status.egg-info/entry_points.txt
+[1.813s] writing requirements to tm_get_status.egg-info/requires.txt
+[1.813s] writing top-level names to tm_get_status.egg-info/top_level.txt
+[1.857s] reading manifest file 'tm_get_status.egg-info/SOURCES.txt'
+[1.857s] writing manifest file 'tm_get_status.egg-info/SOURCES.txt'
+[1.881s] running build_ext
+[1.881s] Creating /home/csrobot/flexbe_ws/install/tm_get_status/lib/python3.12/site-packages/tm-get-status.egg-link (link to .)
+[1.881s] Installing image_talker script to /home/csrobot/flexbe_ws/install/tm_get_status/lib/tm_get_status
+[1.882s] Installing status_talker script to /home/csrobot/flexbe_ws/install/tm_get_status/lib/tm_get_status
+[1.882s] 
+[1.882s] Installed /home/csrobot/flexbe_ws/build/tm_get_status
+[1.882s] running symlink_data
+[1.918s] Invoked command in '/home/csrobot/flexbe_ws/build/tm_get_status' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/csrobot/flexbe_ws/build/tm_get_status/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/tm_get_status/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/tm_get_status/build --no-deps symlink_data

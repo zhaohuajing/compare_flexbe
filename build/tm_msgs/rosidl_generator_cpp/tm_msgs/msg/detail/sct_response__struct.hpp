@@ -2,6 +2,9 @@
 // with input from tm_msgs:msg/SctResponse.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "tm_msgs/msg/sct_response.hpp"
+
+
 #ifndef TM_MSGS__MSG__DETAIL__SCT_RESPONSE__STRUCT_HPP_
 #define TM_MSGS__MSG__DETAIL__SCT_RESPONSE__STRUCT_HPP_
 

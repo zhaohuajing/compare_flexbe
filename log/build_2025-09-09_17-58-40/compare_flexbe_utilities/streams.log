@@ -1,0 +1,36 @@
+[0.090s] Invoking command in '/home/csrobot/flexbe_ws/build/compare_flexbe_utilities': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/compare_flexbe_utilities -- -j8 -l8
+[0.168s] [  1%] Built target compare_flexbe_utilities__rosidl_generator_type_description
+[0.175s] [  1%] Built target ament_cmake_python_symlink_compare_flexbe_utilities
+[0.184s] [  2%] Built target compare_flexbe_utilities__cpp
+[0.196s] [ 24%] Built target compare_flexbe_utilities__rosidl_generator_c
+[0.225s] [ 33%] Built target compare_flexbe_utilities__rosidl_typesupport_introspection_c
+[0.232s] [ 41%] Built target compare_flexbe_utilities__rosidl_typesupport_c
+[0.234s] [ 49%] Built target compare_flexbe_utilities__rosidl_typesupport_fastrtps_c
+[0.236s] [ 58%] Built target compare_flexbe_utilities__rosidl_typesupport_cpp
+[0.238s] [ 66%] Built target compare_flexbe_utilities__rosidl_typesupport_fastrtps_cpp
+[0.258s] [ 74%] Built target compare_flexbe_utilities__rosidl_typesupport_introspection_cpp
+[0.299s] [ 76%] Built target move_to_named_pose_service
+[0.305s] [ 76%] [32mBuilding CXX object CMakeFiles/cartesian_move_to_pose_service.dir/src/cartesian_move_to_pose_service.cpp.o[0m
+[0.317s] [ 76%] [32mBuilding CXX object CMakeFiles/move_to_pose_service.dir/src/move_to_pose_service.cpp.o[0m
+[0.317s] [ 78%] Built target plane_segmentation_service
+[0.322s] [01m[Kcc1plus:[m[K [01;31m[Kfatal error: [m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/move_to_pose_service.cpp: No such file or directory
+[0.322s] [ 80%] Built target get_point_cloud_service
+[0.325s] compilation terminated.
+[0.326s] gmake[2]: *** [CMakeFiles/move_to_pose_service.dir/build.make:76: CMakeFiles/move_to_pose_service.dir/src/move_to_pose_service.cpp.o] Error 1
+[0.326s] gmake[1]: *** [CMakeFiles/Makefile2:695: CMakeFiles/move_to_pose_service.dir/all] Error 2
+[0.327s] gmake[1]: *** Waiting for unfinished jobs....
+[0.329s] [ 82%] Built target euclidean_clustering_service
+[0.337s] [ 84%] Built target voxel_grid_filter_service
+[0.341s] [ 84%] Built target compare_flexbe_utilities
+[0.344s] [ 85%] Built target filter_by_indices_service
+[0.398s] running egg_info
+[0.419s] writing compare_flexbe_utilities.egg-info/PKG-INFO
+[0.420s] writing dependency_links to compare_flexbe_utilities.egg-info/dependency_links.txt
+[0.420s] writing top-level names to compare_flexbe_utilities.egg-info/top_level.txt
+[0.480s] reading manifest file 'compare_flexbe_utilities.egg-info/SOURCES.txt'
+[0.481s] writing manifest file 'compare_flexbe_utilities.egg-info/SOURCES.txt'
+[0.501s] [ 85%] Built target ament_cmake_python_build_compare_flexbe_utilities_egg
+[7.114s] [ 86%] [32m[1mLinking CXX executable cartesian_move_to_pose_service[0m
+[7.420s] [ 86%] Built target cartesian_move_to_pose_service
+[7.421s] gmake: *** [Makefile:146: all] Error 2
+[7.423s] Invoked command in '/home/csrobot/flexbe_ws/build/compare_flexbe_utilities' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/compare_flexbe_utilities -- -j8 -l8

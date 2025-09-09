@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/ContainerStructure.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/container_structure.h"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__CONTAINER_STRUCTURE__STRUCT_H_
 #define FLEXBE_MSGS__MSG__DETAIL__CONTAINER_STRUCTURE__STRUCT_H_
 
@@ -13,7 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
 
 // Constants defined in the message
 

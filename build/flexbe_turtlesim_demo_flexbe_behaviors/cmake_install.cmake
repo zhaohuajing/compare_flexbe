@@ -42,95 +42,16 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/flexbe_turtlesim_demo_flexbe_behaviors" TYPE DIRECTORY FILES "/home/csrobot/flexbe_ws/src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_behaviors/manifest")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/flexbe_turtlesim_demo_flexbe_behaviors" TYPE DIRECTORY FILES "/home/csrobot/flexbe_ws/src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_behaviors/config")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flexbe_turtlesim_demo_flexbe_behaviors/environment" TYPE FILE FILES "/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_environment_hooks/pythonpath.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flexbe_turtlesim_demo_flexbe_behaviors/environment" TYPE FILE FILES "/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_environment_hooks/pythonpath.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/flexbe_turtlesim_demo_flexbe_behaviors-1.0.0-py3.10.egg-info" TYPE DIRECTORY FILES "/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_python/flexbe_turtlesim_demo_flexbe_behaviors/flexbe_turtlesim_demo_flexbe_behaviors.egg-info/")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/flexbe_turtlesim_demo_flexbe_behaviors" TYPE DIRECTORY FILES "/home/csrobot/flexbe_ws/src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_behaviors/flexbe_turtlesim_demo_flexbe_behaviors/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
         "/usr/bin/python3" "-m" "compileall"
-        "/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_behaviors/local/lib/python3.10/dist-packages/flexbe_turtlesim_demo_flexbe_behaviors"
+        "/home/csrobot/flexbe_ws/install/flexbe_turtlesim_demo_flexbe_behaviors/lib/python3.12/site-packages/flexbe_turtlesim_demo_flexbe_behaviors"
       )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/flexbe_turtlesim_demo_flexbe_behaviors")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/flexbe_turtlesim_demo_flexbe_behaviors")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flexbe_turtlesim_demo_flexbe_behaviors/environment" TYPE FILE FILES "/home/csrobot/ros2_humble/install/ament_cmake_core/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flexbe_turtlesim_demo_flexbe_behaviors/environment" TYPE FILE FILES "/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_environment_hooks/ament_prefix_path.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flexbe_turtlesim_demo_flexbe_behaviors/environment" TYPE FILE FILES "/home/csrobot/ros2_humble/install/ament_cmake_core/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flexbe_turtlesim_demo_flexbe_behaviors/environment" TYPE FILE FILES "/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_environment_hooks/path.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flexbe_turtlesim_demo_flexbe_behaviors" TYPE FILE FILES "/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_environment_hooks/local_setup.bash")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flexbe_turtlesim_demo_flexbe_behaviors" TYPE FILE FILES "/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_environment_hooks/local_setup.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flexbe_turtlesim_demo_flexbe_behaviors" TYPE FILE FILES "/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_environment_hooks/local_setup.zsh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flexbe_turtlesim_demo_flexbe_behaviors" TYPE FILE FILES "/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_environment_hooks/local_setup.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flexbe_turtlesim_demo_flexbe_behaviors" TYPE FILE FILES "/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_environment_hooks/package.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_index/share/ament_index/resource_index/packages/flexbe_turtlesim_demo_flexbe_behaviors")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flexbe_turtlesim_demo_flexbe_behaviors/cmake" TYPE FILE FILES
-    "/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_core/flexbe_turtlesim_demo_flexbe_behaviorsConfig.cmake"
-    "/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo_flexbe_behaviors/ament_cmake_core/flexbe_turtlesim_demo_flexbe_behaviorsConfig-version.cmake"
-    )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flexbe_turtlesim_demo_flexbe_behaviors" TYPE FILE FILES "/home/csrobot/flexbe_ws/src/flexbe_turtlesim_demo/flexbe_turtlesim_demo_flexbe_behaviors/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

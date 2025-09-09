@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "tm_msgs/srv/SetEvent_Response",
+      "fields": [
+        {
+          "name": "ok",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "tm_msgs/srv/SetEvent_Response",
+      "hash_string": "RIHS01_63a442e293e4a31ae30ae3f9bf96fa36e2d60670b470ae11ab7aa77feeb78865"
+    }
+  ]
+}

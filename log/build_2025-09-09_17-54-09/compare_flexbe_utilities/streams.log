@@ -1,0 +1,281 @@
+[0.089s] Invoking command in '/home/csrobot/flexbe_ws/build/compare_flexbe_utilities': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/csrobot/flexbe_ws/src/compare_flexbe_utilities -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/install/compare_flexbe_utilities
+[0.122s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.301s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.308s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.330s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.338s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.348s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.361s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.427s] -- Found moveit_ros_planning_interface: 2.12.3 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[0.437s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[0.645s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[0.677s] -- Found parameter_traits: 0.5.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[0.714s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.715s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.781s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.845s] -- Found rclcpp_lifecycle: 28.1.11 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[0.879s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[0.920s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.048s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[1.096s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[1.123s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[1.161s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.168s] -- Found rosidl_adapter: 4.6.6 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.170s] -- Found tf2_sensor_msgs: 0.36.14 (/opt/ros/jazzy/share/tf2_sensor_msgs/cmake)
+[1.175s] -- Found pcl_msgs: 1.0.0 (/opt/ros/jazzy/share/pcl_msgs/cmake)
+[1.198s] -- Found pcl_ros: 2.6.2 (/opt/ros/jazzy/share/pcl_ros/cmake)
+[1.223s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+[1.223s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[1.223s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[1.223s]   cmake_policy command to set the policy and suppress this warning.
+[1.223s] 
+[1.224s]   CMake variable FLANN_ROOT is set to:
+[1.224s] 
+[1.224s]     /usr
+[1.224s] 
+[1.224s]   For compatibility, find_package is ignoring the variable, but code in a
+[1.224s]   .cmake module might still use it.
+[1.224s] Call Stack (most recent call first):
+[1.224s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+[1.224s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+[1.224s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+[1.224s]   /opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.224s]   /opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[1.224s]   /opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.224s]   /opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)
+[1.224s]   CMakeLists.txt:26 (find_package)
+[1.224s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.224s] [0m
+[1.225s] -- Found flann version 1.9.2
+[1.521s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[1.522s] -- Found OpenMP: TRUE (found version "4.5") found components: CXX 
+[2.702s] -- Checking for module 'libusb-1.0'
+[2.731s] --   Found libusb-1.0, version 1.0.27
+[2.790s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[2.793s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.863s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.866s] -- Could NOT find Pcap (missing: PCAP_LIBRARIES PCAP_INCLUDE_DIRS) 
+[2.879s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")  
+[2.897s] -- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.43") 
+[3.338s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[3.343s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[3.727s] -- Found Qhull version 8.0.2
+[4.334s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[5.113s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[5.113s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[5.127s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[5.130s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[5.139s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[5.140s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[5.147s] -- Found PCL_2D: /usr/include/pcl-1.14  
+[5.157s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.14  
+[5.157s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[5.157s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[5.170s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[5.170s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[5.180s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[5.182s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[5.183s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[5.197s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[5.197s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[5.199s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[5.207s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[5.209s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[5.221s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.14  
+[5.221s] -- Found PCL_MODELER: /usr/include/pcl-1.14  
+[5.221s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.14  
+[5.223s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[5.237s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[5.357s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: serialization filesystem system 
+[5.372s] -- Found ompl: /opt/ros/jazzy/include/ompl-1.7;/usr/include;/usr/include/eigen3  
+[6.851s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[9.208s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[10.083s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[10.086s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[10.540s] -- Found PythonExtra: /usr/bin/python3  
+[11.602s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[12.060s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[12.142s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[12.197s] -- Configured cppcheck include dirs: 
+[12.197s] -- Configured cppcheck exclude dirs and/or files: 
+[12.197s] -- Added test 'lint_cmake' to check CMake code style
+[12.197s] -- Added test 'uncrustify' to check C / C++ code style
+[12.198s] -- Configured uncrustify additional arguments: 
+[12.203s] -- Added test 'xmllint' to check XML markup files
+[12.220s] -- Configuring done (12.1s)
+[13.106s] -- Generating done (0.6s)
+[13.270s] -- Build files have been written to: /home/csrobot/flexbe_ws/build/compare_flexbe_utilities
+[13.369s] Invoked command in '/home/csrobot/flexbe_ws/build/compare_flexbe_utilities' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/csrobot/flexbe_ws/src/compare_flexbe_utilities -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/install/compare_flexbe_utilities
+[13.369s] Invoking command in '/home/csrobot/flexbe_ws/build/compare_flexbe_utilities': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/compare_flexbe_utilities -- -j8 -l8
+[14.914s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[14.914s] [  1%] Built target ament_cmake_python_symlink_compare_flexbe_utilities
+[14.914s] running egg_info
+[14.914s] creating compare_flexbe_utilities.egg-info
+[14.914s] writing compare_flexbe_utilities.egg-info/PKG-INFO
+[14.914s] writing dependency_links to compare_flexbe_utilities.egg-info/dependency_links.txt
+[14.914s] writing top-level names to compare_flexbe_utilities.egg-info/top_level.txt
+[14.914s] writing manifest file 'compare_flexbe_utilities.egg-info/SOURCES.txt'
+[14.914s] reading manifest file 'compare_flexbe_utilities.egg-info/SOURCES.txt'
+[14.914s] writing manifest file 'compare_flexbe_utilities.egg-info/SOURCES.txt'
+[14.914s] [  1%] Built target ament_cmake_python_build_compare_flexbe_utilities_egg
+[15.014s] [  1%] Built target compare_flexbe_utilities__rosidl_generator_type_description
+[15.050s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[15.097s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[18.107s] [  3%] Built target compare_flexbe_utilities__cpp
+[18.581s] [  4%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__type_support.c.o[0m
+[18.585s] [  5%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__description.c.o[0m
+[18.596s] [  5%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__functions.c.o[0m
+[18.596s] [  6%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/move_to_named_pose__description.c.o[0m
+[18.615s] [  7%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/move_to_named_pose__functions.c.o[0m
+[18.711s] [  8%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/move_to_pose__description.c.o[0m
+[18.734s] [  8%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/move_to_pose__functions.c.o[0m
+[18.734s] [  9%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/move_to_named_pose__type_support.c.o[0m
+[18.734s] [ 10%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/move_to_pose__type_support.c.o[0m
+[18.794s] [ 11%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/voxel_grid_filter__description.c.o[0m
+[18.835s] [ 12%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/voxel_grid_filter__functions.c.o[0m
+[18.900s] [ 13%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/voxel_grid_filter__type_support.c.o[0m
+[18.937s] [ 14%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/plane_segmentation__description.c.o[0m
+[18.949s] [ 14%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/plane_segmentation__functions.c.o[0m
+[18.960s] [ 15%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/plane_segmentation__type_support.c.o[0m
+[18.983s] [ 16%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/euclidean_clustering__description.c.o[0m
+[19.015s] [ 17%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/euclidean_clustering__functions.c.o[0m
+[19.029s] [ 18%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/euclidean_clustering__type_support.c.o[0m
+[19.035s] [ 19%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/get_point_cloud__description.c.o[0m
+[19.278s] [ 20%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/filter_by_indices__type_support.c.o[0m
+[19.371s] [ 21%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/filter_by_indices__functions.c.o[0m
+[19.579s] [ 22%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/filter_by_indices__description.c.o[0m
+[19.724s] [ 23%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/get_point_cloud__type_support.c.o[0m
+[19.861s] [ 23%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_c.dir/rosidl_generator_c/compare_flexbe_utilities/srv/detail/get_point_cloud__functions.c.o[0m
+[20.043s] [ 24%] [32m[1mLinking C shared library libcompare_flexbe_utilities__rosidl_generator_c.so[0m
+[20.140s] [ 24%] Built target compare_flexbe_utilities__rosidl_generator_c
+[20.163s] [ 25%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[21.507s] [ 26%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/compare_flexbe_utilities/srv/cartesian_move_to_pose__type_support.cpp.o[0m
+[22.521s] [ 27%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/compare_flexbe_utilities/srv/move_to_pose__type_support.cpp.o[0m
+[23.686s] [ 27%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/compare_flexbe_utilities/srv/voxel_grid_filter__type_support.cpp.o[0m
+[24.777s] [ 28%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/compare_flexbe_utilities/srv/plane_segmentation__type_support.cpp.o[0m
+[25.898s] [ 29%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/compare_flexbe_utilities/srv/euclidean_clustering__type_support.cpp.o[0m
+[26.567s] [ 30%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/compare_flexbe_utilities/srv/get_point_cloud__type_support.cpp.o[0m
+[27.231s] [ 31%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/compare_flexbe_utilities/srv/filter_by_indices__type_support.cpp.o[0m
+[28.010s] [ 32%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/compare_flexbe_utilities/srv/move_to_named_pose__type_support.cpp.o[0m
+[28.623s] [ 33%] [32m[1mLinking CXX shared library libcompare_flexbe_utilities__rosidl_typesupport_cpp.so[0m
+[28.827s] [ 33%] Built target compare_flexbe_utilities__rosidl_typesupport_cpp
+[28.848s] [ 33%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[30.232s] [ 34%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__type_support.cpp.o[0m
+[30.924s] [ 35%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/compare_flexbe_utilities/srv/detail/move_to_named_pose__type_support.cpp.o[0m
+[31.388s] [ 36%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/compare_flexbe_utilities/srv/detail/move_to_pose__type_support.cpp.o[0m
+[31.759s] [ 37%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/compare_flexbe_utilities/srv/detail/voxel_grid_filter__type_support.cpp.o[0m
+[32.197s] [ 38%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/compare_flexbe_utilities/srv/detail/plane_segmentation__type_support.cpp.o[0m
+[32.678s] [ 38%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/compare_flexbe_utilities/srv/detail/euclidean_clustering__type_support.cpp.o[0m
+[33.236s] [ 39%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/compare_flexbe_utilities/srv/detail/get_point_cloud__type_support.cpp.o[0m
+[33.692s] [ 40%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/compare_flexbe_utilities/srv/detail/filter_by_indices__type_support.cpp.o[0m
+[34.171s] [ 41%] [32m[1mLinking CXX shared library libcompare_flexbe_utilities__rosidl_typesupport_introspection_cpp.so[0m
+[34.255s] [ 41%] Built target compare_flexbe_utilities__rosidl_typesupport_introspection_cpp
+[34.269s] [ 41%] [32mBuilding CXX object CMakeFiles/move_to_pose_service.dir/src/move_to_pose_service.cpp.o[0m
+[36.357s] In file included from [01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/move_to_pose_service.cpp:3[m[K:
+[36.357s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[36.357s]    51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[36.357s]       |                                                                             [01;36m[K^[m[K
+[37.984s] In file included from [01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/move_to_pose_service.cpp:4[m[K:
+[37.984s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[37.984s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[37.984s]       |                                                                             [01;36m[K^[m[K
+[40.276s] [ 42%] [32m[1mLinking CXX executable move_to_pose_service[0m
+[40.572s] [ 42%] Built target move_to_pose_service
+[40.586s] [ 43%] [32mBuilding CXX object CMakeFiles/voxel_grid_filter_service.dir/src/voxel_grid_filter_service.cpp.o[0m
+[44.598s] [ 44%] [32mBuilding CXX object CMakeFiles/plane_segmentation_service.dir/src/plane_segmentation_service.cpp.o[0m
+[45.607s] [ 45%] [32mBuilding CXX object CMakeFiles/move_to_named_pose_service.dir/src/move_to_named_pose_service.cpp.o[0m
+[46.290s] [ 46%] [32m[1mLinking CXX executable voxel_grid_filter_service[0m
+[46.617s] [ 46%] [32mBuilding CXX object CMakeFiles/cartesian_move_to_pose_service.dir/src/cartesian_move_to_pose_service.cpp.o[0m
+[46.842s] [ 46%] Built target voxel_grid_filter_service
+[46.843s] [ 47%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[46.850s] [ 48%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[47.386s] [ 49%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_c.dir/rosidl_typesupport_c/compare_flexbe_utilities/srv/cartesian_move_to_pose__type_support.cpp.o[0m
+[47.430s] [ 49%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_c.dir/rosidl_typesupport_c/compare_flexbe_utilities/srv/move_to_named_pose__type_support.cpp.o[0m
+[47.470s] [ 50%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_c.dir/rosidl_typesupport_c/compare_flexbe_utilities/srv/move_to_pose__type_support.cpp.o[0m
+[47.511s] [ 51%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_c.dir/rosidl_typesupport_c/compare_flexbe_utilities/srv/voxel_grid_filter__type_support.cpp.o[0m
+[47.556s] [ 52%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_c.dir/rosidl_typesupport_c/compare_flexbe_utilities/srv/plane_segmentation__type_support.cpp.o[0m
+[47.597s] [ 53%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_c.dir/rosidl_typesupport_c/compare_flexbe_utilities/srv/euclidean_clustering__type_support.cpp.o[0m
+[47.612s] [ 54%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__type_support.c.o[0m
+[47.639s] [ 55%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_c.dir/rosidl_typesupport_c/compare_flexbe_utilities/srv/get_point_cloud__type_support.cpp.o[0m
+[47.661s] [ 56%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/compare_flexbe_utilities/srv/detail/move_to_named_pose__type_support.c.o[0m
+[47.681s] [ 56%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_c.dir/rosidl_typesupport_c/compare_flexbe_utilities/srv/filter_by_indices__type_support.cpp.o[0m
+[47.702s] [ 57%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/compare_flexbe_utilities/srv/detail/move_to_pose__type_support.c.o[0m
+[47.723s] [ 58%] [32m[1mLinking CXX shared library libcompare_flexbe_utilities__rosidl_typesupport_c.so[0m
+[47.745s] [ 58%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/compare_flexbe_utilities/srv/detail/voxel_grid_filter__type_support.c.o[0m
+[47.761s] [ 58%] Built target compare_flexbe_utilities__rosidl_typesupport_c
+[47.771s] [ 59%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/compare_flexbe_utilities/srv/detail/plane_segmentation__type_support.c.o[0m
+[47.771s] [ 60%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[47.773s] [ 61%] [32mBuilding CXX object CMakeFiles/euclidean_clustering_service.dir/src/euclidean_clustering_service.cpp.o[0m
+[47.773s] In file included from [01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/move_to_named_pose_service.cpp:2[m[K:
+[47.773s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[47.773s]    51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[47.773s]       |                                                                             [01;36m[K^[m[K
+[47.790s] [ 62%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/compare_flexbe_utilities/srv/detail/euclidean_clustering__type_support.c.o[0m
+[47.816s] [ 63%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/compare_flexbe_utilities/srv/detail/get_point_cloud__type_support.c.o[0m
+[47.849s] [ 64%] [32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/compare_flexbe_utilities/srv/detail/filter_by_indices__type_support.c.o[0m
+[47.892s] [ 65%] [32m[1mLinking C shared library libcompare_flexbe_utilities__rosidl_typesupport_introspection_c.so[0m
+[47.919s] [ 65%] Built target compare_flexbe_utilities__rosidl_typesupport_introspection_c
+[47.936s] [ 66%] [32mBuilding CXX object CMakeFiles/get_point_cloud_service.dir/src/get_point_cloud_service.cpp.o[0m
+[48.793s] In file included from [01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/cartesian_move_to_pose_service.cpp:5[m[K:
+[48.793s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[48.793s]    51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[48.793s]       |                                                                             [01;36m[K^[m[K
+[48.793s] [ 67%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/compare_flexbe_utilities/srv/detail/dds_fastrtps/cartesian_move_to_pose__type_support.cpp.o[0m
+[49.352s] [ 67%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/compare_flexbe_utilities/srv/detail/dds_fastrtps/move_to_named_pose__type_support.cpp.o[0m
+[49.547s] In file included from [01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/move_to_named_pose_service.cpp:3[m[K:
+[49.547s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[49.547s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[49.547s]       |                                                                             [01;36m[K^[m[K
+[49.878s] [ 68%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/compare_flexbe_utilities/srv/detail/dds_fastrtps/move_to_pose__type_support.cpp.o[0m
+[50.399s] [ 69%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/compare_flexbe_utilities/srv/detail/dds_fastrtps/voxel_grid_filter__type_support.cpp.o[0m
+[50.545s] In file included from [01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/cartesian_move_to_pose_service.cpp:6[m[K:
+[50.545s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[50.545s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[50.545s]       |                                                                             [01;36m[K^[m[K
+[50.610s] [01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/cartesian_move_to_pose_service.cpp:[m[K In member function ‘[01m[Kvoid CartesianMoveToPoseService::[01;32m[Khandle_request[m[K(std::shared_ptr<compare_flexbe_utilities::srv::CartesianMoveToPose_Request_<std::allocator<void> > >, std::shared_ptr<compare_flexbe_utilities::srv::CartesianMoveToPose_Response_<std::allocator<void> > >)[m[K’:
+[50.610s] [01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/cartesian_move_to_pose_service.cpp:59:66:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble moveit::planning_interface::MoveGroupInterface::[01;32m[KcomputeCartesianPath[m[K(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> >, std::allocator<geometry_msgs::msg::Pose_<std::allocator<void> > > >&, double, double, moveit_msgs::msg::RobotTrajectory&, bool, moveit_msgs::msg::MoveItErrorCodes*)[m[K’ is deprecated: Drop jump_threshold [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[50.610s]    59 |     double fraction = [01;35m[Kmove_group_interface_->computeCartesianPath([m[K
+[50.610s]       |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[50.610s]    60 | [01;35m[K      waypoints, eef_step, jump_threshold, trajectory)[m[K;
+[50.610s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K            
+[50.610s] In file included from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[50.610s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:765:3:[m[K [01;36m[Knote: [m[Kdeclared here
+[50.611s]   765 |   [01;36m[KcomputeCartesianPath[m[K(const std::vector<geometry_msgs::msg::Pose>& waypoints, double eef_step,
+[50.611s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[50.611s] [01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/cartesian_move_to_pose_service.cpp:64:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct moveit::planning_interface::MoveGroupInterface::Plan[m[K’ has no member named ‘[01m[Ktrajectory_[m[K’; did you mean ‘[01m[Ktrajectory[m[K’?
+[50.611s]    64 |       plan.[01;31m[Ktrajectory_[m[K = trajectory;
+[50.611s]       |            [01;31m[K^~~~~~~~~~~[m[K
+[50.611s]       |            [32m[Ktrajectory[m[K
+[50.981s] [ 70%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/compare_flexbe_utilities/srv/detail/dds_fastrtps/plane_segmentation__type_support.cpp.o[0m
+[51.261s] [ 71%] [32m[1mLinking CXX executable plane_segmentation_service[0m
+[51.645s] [ 72%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/compare_flexbe_utilities/srv/detail/dds_fastrtps/euclidean_clustering__type_support.cpp.o[0m
+[52.268s] [ 72%] Built target plane_segmentation_service
+[52.273s] [ 73%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/compare_flexbe_utilities/srv/detail/dds_fastrtps/get_point_cloud__type_support.cpp.o[0m
+[52.275s] [ 73%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[52.305s] [ 73%] [32mBuilding CXX object CMakeFiles/filter_by_indices_service.dir/src/filter_by_indices_service.cpp.o[0m
+[52.436s] [ 73%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/compare_flexbe_utilities/srv/detail/dds_fastrtps/filter_by_indices__type_support.cpp.o[0m
+[52.452s] [ 74%] [32m[1mLinking CXX executable move_to_named_pose_service[0m
+[52.921s] [ 74%] Built target move_to_named_pose_service
+[52.936s] gmake[2]: *** [CMakeFiles/cartesian_move_to_pose_service.dir/build.make:76: CMakeFiles/cartesian_move_to_pose_service.dir/src/cartesian_move_to_pose_service.cpp.o] Error 1
+[52.936s] gmake[1]: *** [CMakeFiles/Makefile2:639: CMakeFiles/cartesian_move_to_pose_service.dir/all] Error 2
+[52.936s] gmake[1]: *** Waiting for unfinished jobs....
+[53.175s] [ 75%] [32m[1mLinking CXX shared library libcompare_flexbe_utilities__rosidl_typesupport_fastrtps_cpp.so[0m
+[53.266s] [ 75%] Built target compare_flexbe_utilities__rosidl_typesupport_fastrtps_cpp
+[53.542s] [ 76%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/compare_flexbe_utilities/srv/detail/move_to_pose__type_support_c.cpp.o[0m
+[53.542s] [ 78%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/compare_flexbe_utilities/srv/detail/move_to_named_pose__type_support_c.cpp.o[0m
+[53.542s] [ 78%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__type_support_c.cpp.o[0m
+[54.025s] [ 79%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/compare_flexbe_utilities/srv/detail/plane_segmentation__type_support_c.cpp.o[0m
+[54.027s] [ 79%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/compare_flexbe_utilities/srv/detail/euclidean_clustering__type_support_c.cpp.o[0m
+[54.028s] [ 80%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/compare_flexbe_utilities/srv/detail/get_point_cloud__type_support_c.cpp.o[0m
+[54.525s] [ 82%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/compare_flexbe_utilities/srv/detail/filter_by_indices__type_support_c.cpp.o[0m
+[54.525s] [ 82%] [32mBuilding CXX object CMakeFiles/compare_flexbe_utilities__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/compare_flexbe_utilities/srv/detail/voxel_grid_filter__type_support_c.cpp.o[0m
+[54.597s] [ 83%] [32m[1mLinking CXX executable euclidean_clustering_service[0m
+[54.996s] [ 84%] [32m[1mLinking CXX shared library libcompare_flexbe_utilities__rosidl_typesupport_fastrtps_c.so[0m
+[55.081s] [ 84%] Built target compare_flexbe_utilities__rosidl_typesupport_fastrtps_c
+[55.372s] [ 84%] Built target euclidean_clustering_service
+[58.313s] [ 85%] [32m[1mLinking CXX executable filter_by_indices_service[0m
+[59.092s] [ 85%] Built target filter_by_indices_service
+[60.765s] [ 86%] [32m[1mLinking CXX executable get_point_cloud_service[0m
+[61.578s] [ 86%] Built target get_point_cloud_service
+[61.579s] gmake: *** [Makefile:146: all] Error 2
+[61.580s] Invoked command in '/home/csrobot/flexbe_ws/build/compare_flexbe_utilities' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/compare_flexbe_utilities -- -j8 -l8

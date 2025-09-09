@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/SynthesisErrorCodes.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/synthesis_error_codes.hpp"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__SYNTHESIS_ERROR_CODES__TRAITS_HPP_
 #define FLEXBE_MSGS__MSG__DETAIL__SYNTHESIS_ERROR_CODES__TRAITS_HPP_
 

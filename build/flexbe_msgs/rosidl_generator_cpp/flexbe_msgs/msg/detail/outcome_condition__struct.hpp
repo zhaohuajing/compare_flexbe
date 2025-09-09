@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/OutcomeCondition.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/outcome_condition.hpp"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__OUTCOME_CONDITION__STRUCT_HPP_
 #define FLEXBE_MSGS__MSG__DETAIL__OUTCOME_CONDITION__STRUCT_HPP_
 

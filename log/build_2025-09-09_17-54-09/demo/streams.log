@@ -1,0 +1,121 @@
+[0.007s] Invoking command in '/home/csrobot/flexbe_ws/build/demo': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/csrobot/flexbe_ws/src/tmr_ros2/demo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/install/demo
+[0.272s] -- The C compiler identification is GNU 13.3.0
+[0.272s] -- The CXX compiler identification is GNU 13.3.0
+[0.273s] -- Detecting C compiler ABI info
+[0.273s] -- Detecting C compiler ABI info - done
+[0.273s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.273s] -- Detecting C compile features
+[0.274s] -- Detecting C compile features - done
+[0.280s] -- Detecting CXX compiler ABI info
+[0.375s] -- Detecting CXX compiler ABI info - done
+[0.386s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.386s] -- Detecting CXX compile features
+[0.386s] -- Detecting CXX compile features - done
+[0.391s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.528s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.617s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.640s] -- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.675s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.690s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.700s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.717s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.785s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.787s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.849s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.869s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.895s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.965s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.979s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.016s] -- Found tm_msgs: 1.1.2 (/home/csrobot/flexbe_ws/install/tm_msgs/share/tm_msgs/cmake)
+[1.039s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.174s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.176s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.177s] -- Configured cppcheck include dirs: /home/csrobot/flexbe_ws/src/tmr_ros2/demo/include
+[1.177s] -- Configured cppcheck exclude dirs and/or files: 
+[1.177s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.178s] -- Configured cpplint exclude dirs and/or files: 
+[1.178s] -- Added test 'lint_cmake' to check CMake code style
+[1.180s] -- Added test 'uncrustify' to check C / C++ code style
+[1.180s] -- Configured uncrustify additional arguments: 
+[1.180s] -- Added test 'xmllint' to check XML markup files
+[1.182s] -- Configuring done (1.2s)
+[1.246s] -- Generating done (0.0s)
+[1.262s] -- Build files have been written to: /home/csrobot/flexbe_ws/build/demo
+[1.283s] Invoked command in '/home/csrobot/flexbe_ws/build/demo' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/csrobot/flexbe_ws/src/tmr_ros2/demo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/install/demo
+[1.284s] Invoking command in '/home/csrobot/flexbe_ws/build/demo': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/demo -- -j8 -l8
+[1.654s] [  3%] [32mBuilding CXX object CMakeFiles/demo_send_script.dir/src/demo_send_script.cpp.o[0m
+[1.654s] [ 10%] [32mBuilding CXX object CMakeFiles/demo_connect_tm.dir/src/demo_connect_tm.cpp.o[0m
+[1.654s] [  7%] [32mBuilding CXX object CMakeFiles/demo_ask_sta.dir/src/demo_ask_sta.cpp.o[0m
+[1.654s] [ 14%] [32mBuilding CXX object CMakeFiles/demo_set_io.dir/src/demo_set_io.cpp.o[0m
+[1.654s] [ 17%] [32mBuilding CXX object CMakeFiles/demo_set_event.dir/src/demo_set_event.cpp.o[0m
+[1.654s] [ 21%] [32mBuilding CXX object CMakeFiles/demo_set_positions.dir/src/demo_set_positions.cpp.o[0m
+[1.654s] [ 25%] [32mBuilding CXX object CMakeFiles/demo_write_item.dir/src/demo_write_item.cpp.o[0m
+[1.654s] [ 28%] [32mBuilding CXX object CMakeFiles/demo_ask_item.dir/src/demo_ask_item.cpp.o[0m
+[10.995s] [ 32%] [32m[1mLinking CXX executable demo_set_positions[0m
+[11.087s] [ 35%] [32m[1mLinking CXX executable demo_set_event[0m
+[11.328s] [ 39%] [32m[1mLinking CXX executable demo_connect_tm[0m
+[11.487s] [ 42%] [32m[1mLinking CXX executable demo_send_script[0m
+[11.519s] [ 46%] [32m[1mLinking CXX executable demo_write_item[0m
+[11.528s] [ 46%] Built target demo_set_event
+[11.570s] [ 50%] [32mBuilding CXX object CMakeFiles/demo_get_feedback.dir/get_status_demo_src/demo_get_feedback.cpp.o[0m
+[11.622s] [ 50%] Built target demo_set_positions
+[11.668s] [ 53%] [32m[1mLinking CXX executable demo_ask_item[0m
+[11.682s] [ 57%] [32mBuilding CXX object CMakeFiles/demo_get_torque_feedback.dir/get_status_demo_src/demo_get_torque_feedback.cpp.o[0m
+[11.853s] [ 60%] [32m[1mLinking CXX executable demo_set_io[0m
+[11.861s] [ 60%] Built target demo_send_script
+[11.915s] [ 64%] [32mBuilding CXX object CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.o[0m
+[11.944s] [ 64%] Built target demo_write_item
+[11.981s] [ 67%] [32mBuilding CXX object CMakeFiles/demo_get_sta_response.dir/get_status_demo_src/demo_get_sta_response.cpp.o[0m
+[12.018s] [ 67%] Built target demo_connect_tm
+[12.080s] [ 71%] [32mBuilding CXX object CMakeFiles/demo_get_svr_response.dir/get_status_demo_src/demo_get_svr_response.cpp.o[0m
+[12.344s] [ 71%] Built target demo_ask_item
+[12.410s] [ 75%] [32mBuilding CXX object CMakeFiles/demo_leave_listen_node.dir/src/demo_leave_listen_node.cpp.o[0m
+[12.537s] [ 75%] Built target demo_set_io
+[12.589s] [ 78%] [32m[1mLinking CXX executable demo_ask_sta[0m
+[13.070s] [ 78%] Built target demo_ask_sta
+[22.565s] [ 82%] [32m[1mLinking CXX executable demo_leave_listen_node[0m
+[23.087s] [ 82%] Built target demo_leave_listen_node
+[27.714s] [ 89%] [32m[1mLinking CXX executable demo_get_svr_response[0m
+[27.714s] [ 89%] [32m[1mLinking CXX executable demo_get_sct_response[0m
+[27.762s] [ 92%] [32m[1mLinking CXX executable demo_get_feedback[0m
+[28.275s] [ 92%] Built target demo_get_sct_response
+[28.282s] [ 92%] Built target demo_get_svr_response
+[28.318s] [ 96%] [32m[1mLinking CXX executable demo_get_sta_response[0m
+[28.349s] [100%] [32m[1mLinking CXX executable demo_get_torque_feedback[0m
+[28.521s] [100%] Built target demo_get_feedback
+[28.718s] [100%] Built target demo_get_sta_response
+[28.734s] [100%] Built target demo_get_torque_feedback
+[28.921s] Invoked command in '/home/csrobot/flexbe_ws/build/demo' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/demo -- -j8 -l8
+[28.922s] Invoking command in '/home/csrobot/flexbe_ws/build/demo': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/csrobot/flexbe_ws/build/demo
+[28.927s] -- Install configuration: ""
+[28.928s] -- Execute custom install script
+[28.928s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_send_script
+[28.934s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_ask_sta
+[28.941s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_connect_tm
+[28.948s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_set_event
+[28.964s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_set_io
+[28.967s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_set_positions
+[28.974s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_write_item
+[28.981s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_ask_item
+[28.988s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_get_feedback
+[28.996s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_get_torque_feedback
+[29.003s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_get_sct_response
+[29.010s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_get_sta_response
+[29.017s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_get_svr_response
+[29.024s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_leave_listen_node
+[29.031s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/ament_index/resource_index/package_run_dependencies/demo
+[29.038s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/ament_index/resource_index/parent_prefix_path/demo
+[29.046s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/demo/environment/ament_prefix_path.sh
+[29.052s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/demo/environment/ament_prefix_path.dsv
+[29.060s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/demo/environment/path.sh
+[29.067s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/demo/environment/path.dsv
+[29.077s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/demo/local_setup.bash
+[29.084s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/demo/local_setup.sh
+[29.091s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/demo/local_setup.zsh
+[29.098s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/demo/local_setup.dsv
+[29.105s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/demo/package.dsv
+[29.111s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/ament_index/resource_index/packages/demo
+[29.118s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/demo/cmake/demoConfig.cmake
+[29.125s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/demo/cmake/demoConfig-version.cmake
+[29.132s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/demo/package.xml
+[29.140s] Invoked command in '/home/csrobot/flexbe_ws/build/demo' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/csrobot/flexbe_ws/build/demo

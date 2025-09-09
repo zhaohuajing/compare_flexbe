@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/BehaviorModification.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/behavior_modification.h"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__BEHAVIOR_MODIFICATION__FUNCTIONS_H_
 #define FLEXBE_MSGS__MSG__DETAIL__BEHAVIOR_MODIFICATION__FUNCTIONS_H_
 
@@ -13,6 +16,12 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "flexbe_msgs/msg/rosidl_generator_c__visibility_control.h"
 
@@ -53,7 +62,7 @@ flexbe_msgs__msg__BehaviorModification__fini(flexbe_msgs__msg__BehaviorModificat
  */
 ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
 flexbe_msgs__msg__BehaviorModification *
-flexbe_msgs__msg__BehaviorModification__create();
+flexbe_msgs__msg__BehaviorModification__create(void);
 
 /// Destroy msg/BehaviorModification message.
 /**
@@ -92,6 +101,30 @@ bool
 flexbe_msgs__msg__BehaviorModification__copy(
   const flexbe_msgs__msg__BehaviorModification * input,
   flexbe_msgs__msg__BehaviorModification * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_type_hash_t *
+flexbe_msgs__msg__BehaviorModification__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+flexbe_msgs__msg__BehaviorModification__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+flexbe_msgs__msg__BehaviorModification__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+flexbe_msgs__msg__BehaviorModification__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of msg/BehaviorModification messages.
 /**

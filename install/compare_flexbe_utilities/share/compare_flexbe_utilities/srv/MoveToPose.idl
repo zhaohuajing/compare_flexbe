@@ -1,16 +1,1 @@
-// generated from rosidl_adapter/resource/srv.idl.em
-// with input from compare_flexbe_utilities/srv/MoveToPose.srv
-// generated code does not contain a copyright notice
-
-#include "geometry_msgs/msg/Pose.idl"
-
-module compare_flexbe_utilities {
-  module srv {
-    struct MoveToPose_Request {
-      geometry_msgs::msg::Pose target_pose;
-    };
-    struct MoveToPose_Response {
-      boolean success;
-    };
-  };
-};
+/home/csrobot/flexbe_ws/build/compare_flexbe_utilities/rosidl_adapter/compare_flexbe_utilities/srv/MoveToPose.idl

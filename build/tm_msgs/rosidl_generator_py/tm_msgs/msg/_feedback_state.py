@@ -2,6 +2,13 @@
 # with input from tm_msgs:msg/FeedbackState.idl
 # generated code does not contain a copyright notice
 
+# This is being done at the module level and not on the instance level to avoid looking
+# for the same variable multiple times on each instance. This variable is not supposed to
+# change during runtime so it makes sense to only look for it once.
+from os import getenv
+
+ros_python_check_fields = getenv('ROS_PYTHON_CHECK_FIELDS', default='')
+
 
 # Import statements for member types
 
@@ -121,6 +128,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
         '_ee_analog_output',
         '_ee_analog_input',
         '_error_content',
+        '_check_fields',
     ]
 
     _fields_and_field_types = {
@@ -166,6 +174,8 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
         'error_content': 'string',
     }
 
+    # This attribute is used to store an rosidl_parser.definition variable
+    # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.NamespacedType(['std_msgs', 'msg'], 'Header'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
@@ -210,9 +220,14 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
     )
 
     def __init__(self, **kwargs):
-        assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
-            'Invalid arguments passed to constructor: %s' % \
-            ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        if 'check_fields' in kwargs:
+            self._check_fields = kwargs['check_fields']
+        else:
+            self._check_fields = ros_python_check_fields == '1'
+        if self._check_fields:
+            assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
+                'Invalid arguments passed to constructor: %s' % \
+                ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         from std_msgs.msg import Header
         self.header = kwargs.get('header', Header())
         self.is_svr_connected = kwargs.get('is_svr_connected', bool())
@@ -260,7 +275,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
         typename.pop()
         typename.append(self.__class__.__name__)
         args = []
-        for s, t in zip(self.__slots__, self.SLOT_TYPES):
+        for s, t in zip(self.get_fields_and_field_types().keys(), self.SLOT_TYPES):
             field = getattr(self, s)
             fieldstr = repr(field)
             # We use Python array type for fields that can be directly stored
@@ -274,11 +289,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
                 if len(field) == 0:
                     fieldstr = '[]'
                 else:
-                    assert fieldstr.startswith('array(')
+                    if self._check_fields:
+                        assert fieldstr.startswith('array(')
                     prefix = "array('X', "
                     suffix = ')'
                     fieldstr = fieldstr[len(prefix):-len(suffix)]
-            args.append(s[1:] + '=' + fieldstr)
+            args.append(s + '=' + fieldstr)
         return '%s(%s)' % ('.'.join(typename), ', '.join(args))
 
     def __eq__(self, other):
@@ -378,7 +394,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @header.setter
     def header(self, value):
-        if __debug__:
+        if self._check_fields:
             from std_msgs.msg import Header
             assert \
                 isinstance(value, Header), \
@@ -392,7 +408,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @is_svr_connected.setter
     def is_svr_connected(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, bool), \
                 "The 'is_svr_connected' field must be of type 'bool'"
@@ -405,7 +421,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @is_sct_connected.setter
     def is_sct_connected(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, bool), \
                 "The 'is_sct_connected' field must be of type 'bool'"
@@ -418,7 +434,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @tmsrv_cperr.setter
     def tmsrv_cperr(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, int), \
                 "The 'tmsrv_cperr' field must be of type 'int'"
@@ -433,7 +449,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @tmscript_cperr.setter
     def tmscript_cperr(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, int), \
                 "The 'tmscript_cperr' field must be of type 'int'"
@@ -448,7 +464,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @tmsrv_dataerr.setter
     def tmsrv_dataerr(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, int), \
                 "The 'tmsrv_dataerr' field must be of type 'int'"
@@ -463,7 +479,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @tmscript_dataerr.setter
     def tmscript_dataerr(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, int), \
                 "The 'tmscript_dataerr' field must be of type 'int'"
@@ -478,7 +494,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @max_not_connect_in_s.setter
     def max_not_connect_in_s(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, int), \
                 "The 'max_not_connect_in_s' field must be of type 'int'"
@@ -493,7 +509,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @disconnection_times.setter
     def disconnection_times(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, int), \
                 "The 'disconnection_times' field must be of type 'int'"
@@ -508,12 +524,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @joint_pos.setter
     def joint_pos(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'joint_pos' array.array() must have the type code of 'd'"
-            self._joint_pos = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'd', \
+                    "The 'joint_pos' array.array() must have the type code of 'd'"
+                self._joint_pos = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -536,12 +552,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @joint_vel.setter
     def joint_vel(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'joint_vel' array.array() must have the type code of 'd'"
-            self._joint_vel = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'd', \
+                    "The 'joint_vel' array.array() must have the type code of 'd'"
+                self._joint_vel = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -564,12 +580,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @joint_tor.setter
     def joint_tor(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'joint_tor' array.array() must have the type code of 'd'"
-            self._joint_tor = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'd', \
+                    "The 'joint_tor' array.array() must have the type code of 'd'"
+                self._joint_tor = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -592,12 +608,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @tool0_pose.setter
     def tool0_pose(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'tool0_pose' array.array() must have the type code of 'd'"
-            self._tool0_pose = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'd', \
+                    "The 'tool0_pose' array.array() must have the type code of 'd'"
+                self._tool0_pose = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -620,12 +636,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @tool_pose.setter
     def tool_pose(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'tool_pose' array.array() must have the type code of 'd'"
-            self._tool_pose = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'd', \
+                    "The 'tool_pose' array.array() must have the type code of 'd'"
+                self._tool_pose = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -648,12 +664,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @tcp_speed.setter
     def tcp_speed(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'tcp_speed' array.array() must have the type code of 'd'"
-            self._tcp_speed = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'd', \
+                    "The 'tcp_speed' array.array() must have the type code of 'd'"
+                self._tcp_speed = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -676,12 +692,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @tcp_force.setter
     def tcp_force(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'tcp_force' array.array() must have the type code of 'd'"
-            self._tcp_force = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'd', \
+                    "The 'tcp_force' array.array() must have the type code of 'd'"
+                self._tcp_force = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -704,12 +720,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @joint_tor_average.setter
     def joint_tor_average(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'joint_tor_average' array.array() must have the type code of 'd'"
-            self._joint_tor_average = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'd', \
+                    "The 'joint_tor_average' array.array() must have the type code of 'd'"
+                self._joint_tor_average = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -732,12 +748,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @joint_tor_min.setter
     def joint_tor_min(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'joint_tor_min' array.array() must have the type code of 'd'"
-            self._joint_tor_min = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'd', \
+                    "The 'joint_tor_min' array.array() must have the type code of 'd'"
+                self._joint_tor_min = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -760,12 +776,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @joint_tor_max.setter
     def joint_tor_max(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'joint_tor_max' array.array() must have the type code of 'd'"
-            self._joint_tor_max = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'd', \
+                    "The 'joint_tor_max' array.array() must have the type code of 'd'"
+                self._joint_tor_max = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -788,7 +804,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @robot_link.setter
     def robot_link(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, bool), \
                 "The 'robot_link' field must be of type 'bool'"
@@ -801,7 +817,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @is_data_table_correct.setter
     def is_data_table_correct(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, bool), \
                 "The 'is_data_table_correct' field must be of type 'bool'"
@@ -814,7 +830,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @robot_error.setter
     def robot_error(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, bool), \
                 "The 'robot_error' field must be of type 'bool'"
@@ -827,7 +843,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @project_run.setter
     def project_run(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, bool), \
                 "The 'project_run' field must be of type 'bool'"
@@ -840,7 +856,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @project_pause.setter
     def project_pause(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, bool), \
                 "The 'project_pause' field must be of type 'bool'"
@@ -853,7 +869,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @safetyguard_a.setter
     def safetyguard_a(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, bool), \
                 "The 'safetyguard_a' field must be of type 'bool'"
@@ -866,7 +882,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @e_stop.setter
     def e_stop(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, bool), \
                 "The 'e_stop' field must be of type 'bool'"
@@ -879,7 +895,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @camera_light.setter
     def camera_light(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, int), \
                 "The 'camera_light' field must be of type 'int'"
@@ -894,7 +910,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @error_code.setter
     def error_code(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, int), \
                 "The 'error_code' field must be of type 'int'"
@@ -909,7 +925,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @project_speed.setter
     def project_speed(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, int), \
                 "The 'project_speed' field must be of type 'int'"
@@ -924,7 +940,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @ma_mode.setter
     def ma_mode(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, int), \
                 "The 'ma_mode' field must be of type 'int'"
@@ -939,7 +955,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @robot_light.setter
     def robot_light(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, int), \
                 "The 'robot_light' field must be of type 'int'"
@@ -954,12 +970,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @cb_digital_output.setter
     def cb_digital_output(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'B', \
-                "The 'cb_digital_output' array.array() must have the type code of 'B'"
-            self._cb_digital_output = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'B', \
+                    "The 'cb_digital_output' array.array() must have the type code of 'B'"
+                self._cb_digital_output = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -982,12 +998,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @cb_digital_input.setter
     def cb_digital_input(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'B', \
-                "The 'cb_digital_input' array.array() must have the type code of 'B'"
-            self._cb_digital_input = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'B', \
+                    "The 'cb_digital_input' array.array() must have the type code of 'B'"
+                self._cb_digital_input = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -1010,12 +1026,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @cb_analog_output.setter
     def cb_analog_output(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'f', \
-                "The 'cb_analog_output' array.array() must have the type code of 'f'"
-            self._cb_analog_output = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'f', \
+                    "The 'cb_analog_output' array.array() must have the type code of 'f'"
+                self._cb_analog_output = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -1038,12 +1054,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @cb_analog_input.setter
     def cb_analog_input(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'f', \
-                "The 'cb_analog_input' array.array() must have the type code of 'f'"
-            self._cb_analog_input = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'f', \
+                    "The 'cb_analog_input' array.array() must have the type code of 'f'"
+                self._cb_analog_input = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -1066,12 +1082,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @ee_digital_output.setter
     def ee_digital_output(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'B', \
-                "The 'ee_digital_output' array.array() must have the type code of 'B'"
-            self._ee_digital_output = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'B', \
+                    "The 'ee_digital_output' array.array() must have the type code of 'B'"
+                self._ee_digital_output = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -1094,12 +1110,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @ee_digital_input.setter
     def ee_digital_input(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'B', \
-                "The 'ee_digital_input' array.array() must have the type code of 'B'"
-            self._ee_digital_input = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'B', \
+                    "The 'ee_digital_input' array.array() must have the type code of 'B'"
+                self._ee_digital_input = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -1122,12 +1138,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @ee_analog_output.setter
     def ee_analog_output(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'f', \
-                "The 'ee_analog_output' array.array() must have the type code of 'f'"
-            self._ee_analog_output = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'f', \
+                    "The 'ee_analog_output' array.array() must have the type code of 'f'"
+                self._ee_analog_output = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -1150,12 +1166,12 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @ee_analog_input.setter
     def ee_analog_input(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'f', \
-                "The 'ee_analog_input' array.array() must have the type code of 'f'"
-            self._ee_analog_input = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'f', \
+                    "The 'ee_analog_input' array.array() must have the type code of 'f'"
+                self._ee_analog_input = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -1178,7 +1194,7 @@ class FeedbackState(metaclass=Metaclass_FeedbackState):
 
     @error_content.setter
     def error_content(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, str), \
                 "The 'error_content' field must be of type 'str'"

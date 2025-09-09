@@ -1,0 +1,49 @@
+[0.223s] Invoking command in '/home/csrobot/flexbe_ws/build/demo': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/demo -- -j8 -l8
+[0.284s] [  7%] Built target demo_send_script
+[0.293s] [ 14%] Built target demo_ask_sta
+[0.300s] [ 21%] Built target demo_connect_tm
+[0.312s] [ 28%] Built target demo_set_positions
+[0.326s] [ 35%] Built target demo_write_item
+[0.326s] [ 42%] Built target demo_set_io
+[0.337s] [ 50%] Built target demo_get_feedback
+[0.337s] [ 57%] Built target demo_set_event
+[0.339s] [ 64%] Built target demo_ask_item
+[0.344s] [ 71%] Built target demo_get_torque_feedback
+[0.348s] [ 78%] Built target demo_get_sct_response
+[0.359s] [ 85%] Built target demo_get_svr_response
+[0.361s] [ 92%] Built target demo_leave_listen_node
+[0.362s] [100%] Built target demo_get_sta_response
+[0.382s] Invoked command in '/home/csrobot/flexbe_ws/build/demo' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/demo -- -j8 -l8
+[0.383s] Invoking command in '/home/csrobot/flexbe_ws/build/demo': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/csrobot/flexbe_ws/build/demo
+[0.392s] -- Install configuration: ""
+[0.393s] -- Execute custom install script
+[0.394s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_send_script
+[0.394s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_ask_sta
+[0.394s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_connect_tm
+[0.395s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_set_event
+[0.396s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_set_io
+[0.396s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_set_positions
+[0.396s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_write_item
+[0.396s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_ask_item
+[0.396s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_get_feedback
+[0.396s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_get_torque_feedback
+[0.397s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_get_sct_response
+[0.397s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_get_sta_response
+[0.397s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_get_svr_response
+[0.397s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/lib/demo/demo_leave_listen_node
+[0.397s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/share/ament_index/resource_index/package_run_dependencies/demo
+[0.397s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/share/ament_index/resource_index/parent_prefix_path/demo
+[0.397s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/share/demo/environment/ament_prefix_path.sh
+[0.397s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/share/demo/environment/ament_prefix_path.dsv
+[0.397s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/share/demo/environment/path.sh
+[0.397s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/share/demo/environment/path.dsv
+[0.397s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/share/demo/local_setup.bash
+[0.397s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/share/demo/local_setup.sh
+[0.397s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/share/demo/local_setup.zsh
+[0.397s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/share/demo/local_setup.dsv
+[0.397s] -- Symlinking: /home/csrobot/flexbe_ws/install/demo/share/demo/package.dsv
+[0.409s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/share/ament_index/resource_index/packages/demo
+[0.412s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/share/demo/cmake/demoConfig.cmake
+[0.412s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/share/demo/cmake/demoConfig-version.cmake
+[0.412s] -- Up-to-date symlink: /home/csrobot/flexbe_ws/install/demo/share/demo/package.xml
+[0.415s] Invoked command in '/home/csrobot/flexbe_ws/build/demo' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/install/tm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/csrobot/flexbe_ws/build/demo

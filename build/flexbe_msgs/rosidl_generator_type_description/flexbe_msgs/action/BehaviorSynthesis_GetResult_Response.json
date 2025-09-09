@@ -1,0 +1,283 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult_Response",
+      "fields": [
+        {
+          "name": "status",
+          "type": {
+            "type_id": 2,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "result",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_Result"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "flexbe_msgs/action/BehaviorSynthesis_Result",
+        "fields": [
+          {
+            "name": "error_code",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/msg/SynthesisErrorCodes"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "states",
+            "type": {
+              "type_id": 145,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/msg/StateInstantiation"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/msg/OutcomeCondition",
+        "fields": [
+          {
+            "name": "state_name",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "state_outcome",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/msg/StateInstantiation",
+        "fields": [
+          {
+            "name": "state_path",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "state_class",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "initial_state_name",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "input_keys",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "output_keys",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "cond_outcome",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "cond_transition",
+            "type": {
+              "type_id": 145,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/msg/OutcomeCondition"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "behavior_class",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "parameter_names",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "parameter_values",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "position",
+            "type": {
+              "type_id": 58,
+              "capacity": 2,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "outcomes",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "transitions",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "autonomy",
+            "type": {
+              "type_id": 146,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "userdata_keys",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "userdata_remapping",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/msg/SynthesisErrorCodes",
+        "fields": [
+          {
+            "name": "value",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult_Response",
+      "hash_string": "RIHS01_28df40cfeeb4cb0d74d8fe4b770a7c8c9c182c82df9f02817286b6ba8cc585d2"
+    },
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_Result",
+      "hash_string": "RIHS01_7ad7555ebbfcc05de072020ed63efeeb90f7bb293bdeabc84e5c056af5602758"
+    },
+    {
+      "type_name": "flexbe_msgs/msg/OutcomeCondition",
+      "hash_string": "RIHS01_657dd9555a7e99deb1cd0e2d12170eda796ee5f47d1875f592570fadf5194058"
+    },
+    {
+      "type_name": "flexbe_msgs/msg/StateInstantiation",
+      "hash_string": "RIHS01_0307e949d22a7d26c1fe4f18dddd99b875a88b8ebf6ee7767d507f5399bd0910"
+    },
+    {
+      "type_name": "flexbe_msgs/msg/SynthesisErrorCodes",
+      "hash_string": "RIHS01_f77ad4c8493f3ae5dd0c9fe79fd8c506f4d0ea5d32595a8004c3919f3596b3fc"
+    }
+  ]
+}

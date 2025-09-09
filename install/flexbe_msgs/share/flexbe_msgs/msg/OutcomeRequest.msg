@@ -1,2 +1,1 @@
-uint8 outcome
-int32 target   # state id
+/home/csrobot/flexbe_ws/src/flexbe_behavior_engine/flexbe_msgs/msg/OutcomeRequest.msg

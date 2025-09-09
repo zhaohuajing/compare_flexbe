@@ -9,6 +9,7 @@
 #include "rosidl_runtime_c/message_type_support_struct.h"
 #include "rosidl_typesupport_cpp/message_type_support.hpp"
 #include "rosidl_typesupport_interface/macros.h"
+#include "flexbe_msgs/msg/detail/be_status__functions.h"
 #include "flexbe_msgs/msg/detail/be_status__struct.hpp"
 #include "rosidl_typesupport_introspection_cpp/field_types.hpp"
 #include "rosidl_typesupport_introspection_cpp/identifier.hpp"
@@ -88,6 +89,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember BEStatus_mess
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<builtin_interfaces::msg::Time>(),  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -105,6 +107,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember BEStatus_mess
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -122,6 +125,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember BEStatus_mess
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -139,6 +143,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember BEStatus_mess
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
+    false,  // is key
     true,  // is array
     0,  // array size
     false,  // is upper bound
@@ -158,6 +163,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMembers BEStatus_mes
   "BEStatus",  // message name
   4,  // number of fields
   sizeof(flexbe_msgs::msg::BEStatus),
+  false,  // has_any_key_member_
   BEStatus_message_member_array,  // message members
   BEStatus_init_function,  // function to initialize message memory (memory has to be allocated)
   BEStatus_fini_function  // function to terminate message instance (will not free memory)
@@ -167,6 +173,9 @@ static const rosidl_message_type_support_t BEStatus_message_type_support_handle 
   ::rosidl_typesupport_introspection_cpp::typesupport_identifier,
   &BEStatus_message_members,
   get_message_typesupport_handle_function,
+  &flexbe_msgs__msg__BEStatus__get_type_hash,
+  &flexbe_msgs__msg__BEStatus__get_type_description,
+  &flexbe_msgs__msg__BEStatus__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_introspection_cpp

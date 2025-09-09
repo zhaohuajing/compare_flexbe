@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/csrobot/flexbe_ws/build/techman_robot_msgs/rosidl_generator_py/techman_robot_msgs/techman_robot_msgs_s__rosidl_typesupport_introspection_c.so" "TARGETS" "techman_robot_msgs_s__rosidl_typesupport_introspection_c" "DESTINATION" "lib/python3.12/site-packages/techman_robot_msgs")

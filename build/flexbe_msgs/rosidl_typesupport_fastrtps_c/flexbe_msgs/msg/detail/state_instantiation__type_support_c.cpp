@@ -5,9 +5,11 @@
 
 
 #include <cassert>
+#include <cstddef>
 #include <limits>
 #include <string>
 #include "rosidl_typesupport_fastrtps_c/identifier.h"
+#include "rosidl_typesupport_fastrtps_c/serialization_helpers.hpp"
 #include "rosidl_typesupport_fastrtps_c/wstring_conversion.hpp"
 #include "rosidl_typesupport_fastrtps_cpp/message_type_support.h"
 #include "flexbe_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
@@ -41,11 +43,33 @@ extern "C"
 #include "rosidl_runtime_c/string_functions.h"  // behavior_class, cond_outcome, initial_state_name, input_keys, outcomes, output_keys, parameter_names, parameter_values, state_class, state_path, transitions, userdata_keys, userdata_remapping
 
 // forward declare type support functions
+
+bool cdr_serialize_flexbe_msgs__msg__OutcomeCondition(
+  const flexbe_msgs__msg__OutcomeCondition * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+bool cdr_deserialize_flexbe_msgs__msg__OutcomeCondition(
+  eprosima::fastcdr::Cdr & cdr,
+  flexbe_msgs__msg__OutcomeCondition * ros_message);
+
 size_t get_serialized_size_flexbe_msgs__msg__OutcomeCondition(
   const void * untyped_ros_message,
   size_t current_alignment);
 
 size_t max_serialized_size_flexbe_msgs__msg__OutcomeCondition(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+bool cdr_serialize_key_flexbe_msgs__msg__OutcomeCondition(
+  const flexbe_msgs__msg__OutcomeCondition * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+size_t get_serialized_size_key_flexbe_msgs__msg__OutcomeCondition(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+size_t max_serialized_size_key_flexbe_msgs__msg__OutcomeCondition(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
@@ -56,15 +80,12 @@ const rosidl_message_type_support_t *
 
 using _StateInstantiation__ros_msg_type = flexbe_msgs__msg__StateInstantiation;
 
-static bool _StateInstantiation__cdr_serialize(
-  const void * untyped_ros_message,
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_flexbe_msgs__msg__StateInstantiation(
+  const flexbe_msgs__msg__StateInstantiation * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  if (!untyped_ros_message) {
-    fprintf(stderr, "ros message handle is null\n");
-    return false;
-  }
-  const _StateInstantiation__ros_msg_type * ros_message = static_cast<const _StateInstantiation__ros_msg_type *>(untyped_ros_message);
   // Field name: state_path
   {
     const rosidl_runtime_c__String * str = &ros_message->state_path;
@@ -166,20 +187,12 @@ static bool _StateInstantiation__cdr_serialize(
 
   // Field name: cond_transition
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, flexbe_msgs, msg, OutcomeCondition
-      )()->data);
     size_t size = ros_message->cond_transition.size;
     auto array_ptr = ros_message->cond_transition.data;
     cdr << static_cast<uint32_t>(size);
     for (size_t i = 0; i < size; ++i) {
-      if (!callbacks->cdr_serialize(
-          &array_ptr[i], cdr))
-      {
-        return false;
-      }
+      cdr_serialize_flexbe_msgs__msg__OutcomeCondition(
+        &array_ptr[i], cdr);
     }
   }
 
@@ -239,7 +252,7 @@ static bool _StateInstantiation__cdr_serialize(
   {
     size_t size = 2;
     auto array_ptr = ros_message->position;
-    cdr.serializeArray(array_ptr, size);
+    cdr.serialize_array(array_ptr, size);
   }
 
   // Field name: outcomes
@@ -285,7 +298,7 @@ static bool _StateInstantiation__cdr_serialize(
     size_t size = ros_message->autonomy.size;
     auto array_ptr = ros_message->autonomy.data;
     cdr << static_cast<uint32_t>(size);
-    cdr.serializeArray(array_ptr, size);
+    cdr.serialize_array(array_ptr, size);
   }
 
   // Field name: userdata_keys
@@ -329,15 +342,11 @@ static bool _StateInstantiation__cdr_serialize(
   return true;
 }
 
-static bool _StateInstantiation__cdr_deserialize(
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_deserialize_flexbe_msgs__msg__StateInstantiation(
   eprosima::fastcdr::Cdr & cdr,
-  void * untyped_ros_message)
+  flexbe_msgs__msg__StateInstantiation * ros_message)
 {
-  if (!untyped_ros_message) {
-    fprintf(stderr, "ros message handle is null\n");
-    return false;
-  }
-  _StateInstantiation__ros_msg_type * ros_message = static_cast<_StateInstantiation__ros_msg_type *>(untyped_ros_message);
   // Field name: state_path
   {
     std::string tmp;
@@ -391,6 +400,16 @@ static bool _StateInstantiation__cdr_deserialize(
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
+
+    // Check there are at least 'size' remaining bytes in the CDR stream before resizing
+    auto old_state = cdr.get_state();
+    bool correct_size = cdr.jump(size);
+    cdr.set_state(old_state);
+    if (!correct_size) {
+      fprintf(stderr, "sequence size exceeds remaining buffer\n");
+      return false;
+    }
+
     if (ros_message->input_keys.data) {
       rosidl_runtime_c__String__Sequence__fini(&ros_message->input_keys);
     }
@@ -421,6 +440,16 @@ static bool _StateInstantiation__cdr_deserialize(
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
+
+    // Check there are at least 'size' remaining bytes in the CDR stream before resizing
+    auto old_state = cdr.get_state();
+    bool correct_size = cdr.jump(size);
+    cdr.set_state(old_state);
+    if (!correct_size) {
+      fprintf(stderr, "sequence size exceeds remaining buffer\n");
+      return false;
+    }
+
     if (ros_message->output_keys.data) {
       rosidl_runtime_c__String__Sequence__fini(&ros_message->output_keys);
     }
@@ -451,6 +480,16 @@ static bool _StateInstantiation__cdr_deserialize(
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
+
+    // Check there are at least 'size' remaining bytes in the CDR stream before resizing
+    auto old_state = cdr.get_state();
+    bool correct_size = cdr.jump(size);
+    cdr.set_state(old_state);
+    if (!correct_size) {
+      fprintf(stderr, "sequence size exceeds remaining buffer\n");
+      return false;
+    }
+
     if (ros_message->cond_outcome.data) {
       rosidl_runtime_c__String__Sequence__fini(&ros_message->cond_outcome);
     }
@@ -478,14 +517,19 @@ static bool _StateInstantiation__cdr_deserialize(
 
   // Field name: cond_transition
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, flexbe_msgs, msg, OutcomeCondition
-      )()->data);
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
+
+    // Check there are at least 'size' remaining bytes in the CDR stream before resizing
+    auto old_state = cdr.get_state();
+    bool correct_size = cdr.jump(size);
+    cdr.set_state(old_state);
+    if (!correct_size) {
+      fprintf(stderr, "sequence size exceeds remaining buffer\n");
+      return false;
+    }
+
     if (ros_message->cond_transition.data) {
       flexbe_msgs__msg__OutcomeCondition__Sequence__fini(&ros_message->cond_transition);
     }
@@ -495,11 +539,7 @@ static bool _StateInstantiation__cdr_deserialize(
     }
     auto array_ptr = ros_message->cond_transition.data;
     for (size_t i = 0; i < size; ++i) {
-      if (!callbacks->cdr_deserialize(
-          cdr, &array_ptr[i]))
-      {
-        return false;
-      }
+      cdr_deserialize_flexbe_msgs__msg__OutcomeCondition(cdr, &array_ptr[i]);
     }
   }
 
@@ -524,6 +564,16 @@ static bool _StateInstantiation__cdr_deserialize(
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
+
+    // Check there are at least 'size' remaining bytes in the CDR stream before resizing
+    auto old_state = cdr.get_state();
+    bool correct_size = cdr.jump(size);
+    cdr.set_state(old_state);
+    if (!correct_size) {
+      fprintf(stderr, "sequence size exceeds remaining buffer\n");
+      return false;
+    }
+
     if (ros_message->parameter_names.data) {
       rosidl_runtime_c__String__Sequence__fini(&ros_message->parameter_names);
     }
@@ -554,6 +604,16 @@ static bool _StateInstantiation__cdr_deserialize(
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
+
+    // Check there are at least 'size' remaining bytes in the CDR stream before resizing
+    auto old_state = cdr.get_state();
+    bool correct_size = cdr.jump(size);
+    cdr.set_state(old_state);
+    if (!correct_size) {
+      fprintf(stderr, "sequence size exceeds remaining buffer\n");
+      return false;
+    }
+
     if (ros_message->parameter_values.data) {
       rosidl_runtime_c__String__Sequence__fini(&ros_message->parameter_values);
     }
@@ -583,7 +643,7 @@ static bool _StateInstantiation__cdr_deserialize(
   {
     size_t size = 2;
     auto array_ptr = ros_message->position;
-    cdr.deserializeArray(array_ptr, size);
+    cdr.deserialize_array(array_ptr, size);
   }
 
   // Field name: outcomes
@@ -591,6 +651,16 @@ static bool _StateInstantiation__cdr_deserialize(
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
+
+    // Check there are at least 'size' remaining bytes in the CDR stream before resizing
+    auto old_state = cdr.get_state();
+    bool correct_size = cdr.jump(size);
+    cdr.set_state(old_state);
+    if (!correct_size) {
+      fprintf(stderr, "sequence size exceeds remaining buffer\n");
+      return false;
+    }
+
     if (ros_message->outcomes.data) {
       rosidl_runtime_c__String__Sequence__fini(&ros_message->outcomes);
     }
@@ -621,6 +691,16 @@ static bool _StateInstantiation__cdr_deserialize(
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
+
+    // Check there are at least 'size' remaining bytes in the CDR stream before resizing
+    auto old_state = cdr.get_state();
+    bool correct_size = cdr.jump(size);
+    cdr.set_state(old_state);
+    if (!correct_size) {
+      fprintf(stderr, "sequence size exceeds remaining buffer\n");
+      return false;
+    }
+
     if (ros_message->transitions.data) {
       rosidl_runtime_c__String__Sequence__fini(&ros_message->transitions);
     }
@@ -651,6 +731,16 @@ static bool _StateInstantiation__cdr_deserialize(
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
+
+    // Check there are at least 'size' remaining bytes in the CDR stream before resizing
+    auto old_state = cdr.get_state();
+    bool correct_size = cdr.jump(size);
+    cdr.set_state(old_state);
+    if (!correct_size) {
+      fprintf(stderr, "sequence size exceeds remaining buffer\n");
+      return false;
+    }
+
     if (ros_message->autonomy.data) {
       rosidl_runtime_c__int8__Sequence__fini(&ros_message->autonomy);
     }
@@ -659,7 +749,7 @@ static bool _StateInstantiation__cdr_deserialize(
       return false;
     }
     auto array_ptr = ros_message->autonomy.data;
-    cdr.deserializeArray(array_ptr, size);
+    cdr.deserialize_array(array_ptr, size);
   }
 
   // Field name: userdata_keys
@@ -667,6 +757,16 @@ static bool _StateInstantiation__cdr_deserialize(
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
+
+    // Check there are at least 'size' remaining bytes in the CDR stream before resizing
+    auto old_state = cdr.get_state();
+    bool correct_size = cdr.jump(size);
+    cdr.set_state(old_state);
+    if (!correct_size) {
+      fprintf(stderr, "sequence size exceeds remaining buffer\n");
+      return false;
+    }
+
     if (ros_message->userdata_keys.data) {
       rosidl_runtime_c__String__Sequence__fini(&ros_message->userdata_keys);
     }
@@ -697,6 +797,16 @@ static bool _StateInstantiation__cdr_deserialize(
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
+
+    // Check there are at least 'size' remaining bytes in the CDR stream before resizing
+    auto old_state = cdr.get_state();
+    bool correct_size = cdr.jump(size);
+    cdr.set_state(old_state);
+    if (!correct_size) {
+      fprintf(stderr, "sequence size exceeds remaining buffer\n");
+      return false;
+    }
+
     if (ros_message->userdata_remapping.data) {
       rosidl_runtime_c__String__Sequence__fini(&ros_message->userdata_remapping);
     }
@@ -725,6 +835,7 @@ static bool _StateInstantiation__cdr_deserialize(
   return true;
 }  // NOLINT(readability/fn_size)
 
+
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t get_serialized_size_flexbe_msgs__msg__StateInstantiation(
   const void * untyped_ros_message,
@@ -739,19 +850,22 @@ size_t get_serialized_size_flexbe_msgs__msg__StateInstantiation(
   (void)padding;
   (void)wchar_size;
 
-  // field.name state_path
+  // Field name: state_path
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->state_path.size + 1);
-  // field.name state_class
+
+  // Field name: state_class
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->state_class.size + 1);
-  // field.name initial_state_name
+
+  // Field name: initial_state_name
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->initial_state_name.size + 1);
-  // field.name input_keys
+
+  // Field name: input_keys
   {
     size_t array_size = ros_message->input_keys.size;
     auto array_ptr = ros_message->input_keys.data;
@@ -763,7 +877,8 @@ size_t get_serialized_size_flexbe_msgs__msg__StateInstantiation(
         (array_ptr[index].size + 1);
     }
   }
-  // field.name output_keys
+
+  // Field name: output_keys
   {
     size_t array_size = ros_message->output_keys.size;
     auto array_ptr = ros_message->output_keys.data;
@@ -775,7 +890,8 @@ size_t get_serialized_size_flexbe_msgs__msg__StateInstantiation(
         (array_ptr[index].size + 1);
     }
   }
-  // field.name cond_outcome
+
+  // Field name: cond_outcome
   {
     size_t array_size = ros_message->cond_outcome.size;
     auto array_ptr = ros_message->cond_outcome.data;
@@ -787,23 +903,25 @@ size_t get_serialized_size_flexbe_msgs__msg__StateInstantiation(
         (array_ptr[index].size + 1);
     }
   }
-  // field.name cond_transition
+
+  // Field name: cond_transition
   {
     size_t array_size = ros_message->cond_transition.size;
     auto array_ptr = ros_message->cond_transition.data;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
     for (size_t index = 0; index < array_size; ++index) {
       current_alignment += get_serialized_size_flexbe_msgs__msg__OutcomeCondition(
         &array_ptr[index], current_alignment);
     }
   }
-  // field.name behavior_class
+
+  // Field name: behavior_class
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->behavior_class.size + 1);
-  // field.name parameter_names
+
+  // Field name: parameter_names
   {
     size_t array_size = ros_message->parameter_names.size;
     auto array_ptr = ros_message->parameter_names.data;
@@ -815,7 +933,8 @@ size_t get_serialized_size_flexbe_msgs__msg__StateInstantiation(
         (array_ptr[index].size + 1);
     }
   }
-  // field.name parameter_values
+
+  // Field name: parameter_values
   {
     size_t array_size = ros_message->parameter_values.size;
     auto array_ptr = ros_message->parameter_values.data;
@@ -827,7 +946,8 @@ size_t get_serialized_size_flexbe_msgs__msg__StateInstantiation(
         (array_ptr[index].size + 1);
     }
   }
-  // field.name position
+
+  // Field name: position
   {
     size_t array_size = 2;
     auto array_ptr = ros_message->position;
@@ -836,7 +956,8 @@ size_t get_serialized_size_flexbe_msgs__msg__StateInstantiation(
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name outcomes
+
+  // Field name: outcomes
   {
     size_t array_size = ros_message->outcomes.size;
     auto array_ptr = ros_message->outcomes.data;
@@ -848,7 +969,8 @@ size_t get_serialized_size_flexbe_msgs__msg__StateInstantiation(
         (array_ptr[index].size + 1);
     }
   }
-  // field.name transitions
+
+  // Field name: transitions
   {
     size_t array_size = ros_message->transitions.size;
     auto array_ptr = ros_message->transitions.data;
@@ -860,7 +982,8 @@ size_t get_serialized_size_flexbe_msgs__msg__StateInstantiation(
         (array_ptr[index].size + 1);
     }
   }
-  // field.name autonomy
+
+  // Field name: autonomy
   {
     size_t array_size = ros_message->autonomy.size;
     auto array_ptr = ros_message->autonomy.data;
@@ -871,7 +994,8 @@ size_t get_serialized_size_flexbe_msgs__msg__StateInstantiation(
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name userdata_keys
+
+  // Field name: userdata_keys
   {
     size_t array_size = ros_message->userdata_keys.size;
     auto array_ptr = ros_message->userdata_keys.data;
@@ -883,7 +1007,8 @@ size_t get_serialized_size_flexbe_msgs__msg__StateInstantiation(
         (array_ptr[index].size + 1);
     }
   }
-  // field.name userdata_remapping
+
+  // Field name: userdata_remapping
   {
     size_t array_size = ros_message->userdata_remapping.size;
     auto array_ptr = ros_message->userdata_remapping.data;
@@ -899,12 +1024,6 @@ size_t get_serialized_size_flexbe_msgs__msg__StateInstantiation(
   return current_alignment - initial_alignment;
 }
 
-static uint32_t _StateInstantiation__get_serialized_size(const void * untyped_ros_message)
-{
-  return static_cast<uint32_t>(
-    get_serialized_size_flexbe_msgs__msg__StateInstantiation(
-      untyped_ros_message, 0));
-}
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
@@ -924,10 +1043,9 @@ size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
   full_bounded = true;
   is_plain = true;
 
-  // member: state_path
+  // Field name: state_path
   {
     size_t array_size = 1;
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -936,10 +1054,10 @@ size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
         1;
     }
   }
-  // member: state_class
+
+  // Field name: state_class
   {
     size_t array_size = 1;
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -948,10 +1066,10 @@ size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
         1;
     }
   }
-  // member: initial_state_name
+
+  // Field name: initial_state_name
   {
     size_t array_size = 1;
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -960,14 +1078,14 @@ size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
         1;
     }
   }
-  // member: input_keys
+
+  // Field name: input_keys
   {
     size_t array_size = 0;
     full_bounded = false;
     is_plain = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -976,14 +1094,14 @@ size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
         1;
     }
   }
-  // member: output_keys
+
+  // Field name: output_keys
   {
     size_t array_size = 0;
     full_bounded = false;
     is_plain = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -992,14 +1110,14 @@ size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
         1;
     }
   }
-  // member: cond_outcome
+
+  // Field name: cond_outcome
   {
     size_t array_size = 0;
     full_bounded = false;
     is_plain = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -1008,15 +1126,14 @@ size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
         1;
     }
   }
-  // member: cond_transition
+
+  // Field name: cond_transition
   {
     size_t array_size = 0;
     full_bounded = false;
     is_plain = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-
     last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
@@ -1031,10 +1148,10 @@ size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
       is_plain &= inner_is_plain;
     }
   }
-  // member: behavior_class
+
+  // Field name: behavior_class
   {
     size_t array_size = 1;
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -1043,14 +1160,14 @@ size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
         1;
     }
   }
-  // member: parameter_names
+
+  // Field name: parameter_names
   {
     size_t array_size = 0;
     full_bounded = false;
     is_plain = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -1059,14 +1176,14 @@ size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
         1;
     }
   }
-  // member: parameter_values
+
+  // Field name: parameter_values
   {
     size_t array_size = 0;
     full_bounded = false;
     is_plain = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -1075,22 +1192,22 @@ size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
         1;
     }
   }
-  // member: position
+
+  // Field name: position
   {
     size_t array_size = 2;
-
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
-  // member: outcomes
+
+  // Field name: outcomes
   {
     size_t array_size = 0;
     full_bounded = false;
     is_plain = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -1099,14 +1216,14 @@ size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
         1;
     }
   }
-  // member: transitions
+
+  // Field name: transitions
   {
     size_t array_size = 0;
     full_bounded = false;
     is_plain = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -1115,25 +1232,25 @@ size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
         1;
     }
   }
-  // member: autonomy
+
+  // Field name: autonomy
   {
     size_t array_size = 0;
     full_bounded = false;
     is_plain = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
-  // member: userdata_keys
+
+  // Field name: userdata_keys
   {
     size_t array_size = 0;
     full_bounded = false;
     is_plain = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -1142,14 +1259,730 @@ size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
         1;
     }
   }
-  // member: userdata_remapping
+
+  // Field name: userdata_remapping
   {
     size_t array_size = 0;
     full_bounded = false;
     is_plain = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
 
+
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = flexbe_msgs__msg__StateInstantiation;
+    is_plain =
+      (
+      offsetof(DataType, userdata_remapping) +
+      last_member_size
+      ) == ret_val;
+  }
+  return ret_val;
+}
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_key_flexbe_msgs__msg__StateInstantiation(
+  const flexbe_msgs__msg__StateInstantiation * ros_message,
+  eprosima::fastcdr::Cdr & cdr)
+{
+  // Field name: state_path
+  {
+    const rosidl_runtime_c__String * str = &ros_message->state_path;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
+  // Field name: state_class
+  {
+    const rosidl_runtime_c__String * str = &ros_message->state_class;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
+  // Field name: initial_state_name
+  {
+    const rosidl_runtime_c__String * str = &ros_message->initial_state_name;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
+  // Field name: input_keys
+  {
+    size_t size = ros_message->input_keys.size;
+    auto array_ptr = ros_message->input_keys.data;
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; ++i) {
+      const rosidl_runtime_c__String * str = &array_ptr[i];
+      if (str->capacity == 0 || str->capacity <= str->size) {
+        fprintf(stderr, "string capacity not greater than size\n");
+        return false;
+      }
+      if (str->data[str->size] != '\0') {
+        fprintf(stderr, "string not null-terminated\n");
+        return false;
+      }
+      cdr << str->data;
+    }
+  }
+
+  // Field name: output_keys
+  {
+    size_t size = ros_message->output_keys.size;
+    auto array_ptr = ros_message->output_keys.data;
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; ++i) {
+      const rosidl_runtime_c__String * str = &array_ptr[i];
+      if (str->capacity == 0 || str->capacity <= str->size) {
+        fprintf(stderr, "string capacity not greater than size\n");
+        return false;
+      }
+      if (str->data[str->size] != '\0') {
+        fprintf(stderr, "string not null-terminated\n");
+        return false;
+      }
+      cdr << str->data;
+    }
+  }
+
+  // Field name: cond_outcome
+  {
+    size_t size = ros_message->cond_outcome.size;
+    auto array_ptr = ros_message->cond_outcome.data;
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; ++i) {
+      const rosidl_runtime_c__String * str = &array_ptr[i];
+      if (str->capacity == 0 || str->capacity <= str->size) {
+        fprintf(stderr, "string capacity not greater than size\n");
+        return false;
+      }
+      if (str->data[str->size] != '\0') {
+        fprintf(stderr, "string not null-terminated\n");
+        return false;
+      }
+      cdr << str->data;
+    }
+  }
+
+  // Field name: cond_transition
+  {
+    size_t size = ros_message->cond_transition.size;
+    auto array_ptr = ros_message->cond_transition.data;
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; ++i) {
+      cdr_serialize_key_flexbe_msgs__msg__OutcomeCondition(
+        &array_ptr[i], cdr);
+    }
+  }
+
+  // Field name: behavior_class
+  {
+    const rosidl_runtime_c__String * str = &ros_message->behavior_class;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
+  // Field name: parameter_names
+  {
+    size_t size = ros_message->parameter_names.size;
+    auto array_ptr = ros_message->parameter_names.data;
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; ++i) {
+      const rosidl_runtime_c__String * str = &array_ptr[i];
+      if (str->capacity == 0 || str->capacity <= str->size) {
+        fprintf(stderr, "string capacity not greater than size\n");
+        return false;
+      }
+      if (str->data[str->size] != '\0') {
+        fprintf(stderr, "string not null-terminated\n");
+        return false;
+      }
+      cdr << str->data;
+    }
+  }
+
+  // Field name: parameter_values
+  {
+    size_t size = ros_message->parameter_values.size;
+    auto array_ptr = ros_message->parameter_values.data;
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; ++i) {
+      const rosidl_runtime_c__String * str = &array_ptr[i];
+      if (str->capacity == 0 || str->capacity <= str->size) {
+        fprintf(stderr, "string capacity not greater than size\n");
+        return false;
+      }
+      if (str->data[str->size] != '\0') {
+        fprintf(stderr, "string not null-terminated\n");
+        return false;
+      }
+      cdr << str->data;
+    }
+  }
+
+  // Field name: position
+  {
+    size_t size = 2;
+    auto array_ptr = ros_message->position;
+    cdr.serialize_array(array_ptr, size);
+  }
+
+  // Field name: outcomes
+  {
+    size_t size = ros_message->outcomes.size;
+    auto array_ptr = ros_message->outcomes.data;
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; ++i) {
+      const rosidl_runtime_c__String * str = &array_ptr[i];
+      if (str->capacity == 0 || str->capacity <= str->size) {
+        fprintf(stderr, "string capacity not greater than size\n");
+        return false;
+      }
+      if (str->data[str->size] != '\0') {
+        fprintf(stderr, "string not null-terminated\n");
+        return false;
+      }
+      cdr << str->data;
+    }
+  }
+
+  // Field name: transitions
+  {
+    size_t size = ros_message->transitions.size;
+    auto array_ptr = ros_message->transitions.data;
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; ++i) {
+      const rosidl_runtime_c__String * str = &array_ptr[i];
+      if (str->capacity == 0 || str->capacity <= str->size) {
+        fprintf(stderr, "string capacity not greater than size\n");
+        return false;
+      }
+      if (str->data[str->size] != '\0') {
+        fprintf(stderr, "string not null-terminated\n");
+        return false;
+      }
+      cdr << str->data;
+    }
+  }
+
+  // Field name: autonomy
+  {
+    size_t size = ros_message->autonomy.size;
+    auto array_ptr = ros_message->autonomy.data;
+    cdr << static_cast<uint32_t>(size);
+    cdr.serialize_array(array_ptr, size);
+  }
+
+  // Field name: userdata_keys
+  {
+    size_t size = ros_message->userdata_keys.size;
+    auto array_ptr = ros_message->userdata_keys.data;
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; ++i) {
+      const rosidl_runtime_c__String * str = &array_ptr[i];
+      if (str->capacity == 0 || str->capacity <= str->size) {
+        fprintf(stderr, "string capacity not greater than size\n");
+        return false;
+      }
+      if (str->data[str->size] != '\0') {
+        fprintf(stderr, "string not null-terminated\n");
+        return false;
+      }
+      cdr << str->data;
+    }
+  }
+
+  // Field name: userdata_remapping
+  {
+    size_t size = ros_message->userdata_remapping.size;
+    auto array_ptr = ros_message->userdata_remapping.data;
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; ++i) {
+      const rosidl_runtime_c__String * str = &array_ptr[i];
+      if (str->capacity == 0 || str->capacity <= str->size) {
+        fprintf(stderr, "string capacity not greater than size\n");
+        return false;
+      }
+      if (str->data[str->size] != '\0') {
+        fprintf(stderr, "string not null-terminated\n");
+        return false;
+      }
+      cdr << str->data;
+    }
+  }
+
+  return true;
+}
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t get_serialized_size_key_flexbe_msgs__msg__StateInstantiation(
+  const void * untyped_ros_message,
+  size_t current_alignment)
+{
+  const _StateInstantiation__ros_msg_type * ros_message = static_cast<const _StateInstantiation__ros_msg_type *>(untyped_ros_message);
+  (void)ros_message;
+
+  size_t initial_alignment = current_alignment;
+
+  const size_t padding = 4;
+  const size_t wchar_size = 4;
+  (void)padding;
+  (void)wchar_size;
+
+  // Field name: state_path
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->state_path.size + 1);
+
+  // Field name: state_class
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->state_class.size + 1);
+
+  // Field name: initial_state_name
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->initial_state_name.size + 1);
+
+  // Field name: input_keys
+  {
+    size_t array_size = ros_message->input_keys.size;
+    auto array_ptr = ros_message->input_keys.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        (array_ptr[index].size + 1);
+    }
+  }
+
+  // Field name: output_keys
+  {
+    size_t array_size = ros_message->output_keys.size;
+    auto array_ptr = ros_message->output_keys.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        (array_ptr[index].size + 1);
+    }
+  }
+
+  // Field name: cond_outcome
+  {
+    size_t array_size = ros_message->cond_outcome.size;
+    auto array_ptr = ros_message->cond_outcome.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        (array_ptr[index].size + 1);
+    }
+  }
+
+  // Field name: cond_transition
+  {
+    size_t array_size = ros_message->cond_transition.size;
+    auto array_ptr = ros_message->cond_transition.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += get_serialized_size_key_flexbe_msgs__msg__OutcomeCondition(
+        &array_ptr[index], current_alignment);
+    }
+  }
+
+  // Field name: behavior_class
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->behavior_class.size + 1);
+
+  // Field name: parameter_names
+  {
+    size_t array_size = ros_message->parameter_names.size;
+    auto array_ptr = ros_message->parameter_names.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        (array_ptr[index].size + 1);
+    }
+  }
+
+  // Field name: parameter_values
+  {
+    size_t array_size = ros_message->parameter_values.size;
+    auto array_ptr = ros_message->parameter_values.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        (array_ptr[index].size + 1);
+    }
+  }
+
+  // Field name: position
+  {
+    size_t array_size = 2;
+    auto array_ptr = ros_message->position;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: outcomes
+  {
+    size_t array_size = ros_message->outcomes.size;
+    auto array_ptr = ros_message->outcomes.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        (array_ptr[index].size + 1);
+    }
+  }
+
+  // Field name: transitions
+  {
+    size_t array_size = ros_message->transitions.size;
+    auto array_ptr = ros_message->transitions.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        (array_ptr[index].size + 1);
+    }
+  }
+
+  // Field name: autonomy
+  {
+    size_t array_size = ros_message->autonomy.size;
+    auto array_ptr = ros_message->autonomy.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: userdata_keys
+  {
+    size_t array_size = ros_message->userdata_keys.size;
+    auto array_ptr = ros_message->userdata_keys.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        (array_ptr[index].size + 1);
+    }
+  }
+
+  // Field name: userdata_remapping
+  {
+    size_t array_size = ros_message->userdata_remapping.size;
+    auto array_ptr = ros_message->userdata_remapping.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        (array_ptr[index].size + 1);
+    }
+  }
+
+  return current_alignment - initial_alignment;
+}
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t max_serialized_size_key_flexbe_msgs__msg__StateInstantiation(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment)
+{
+  size_t initial_alignment = current_alignment;
+
+  const size_t padding = 4;
+  const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
+  (void)padding;
+  (void)wchar_size;
+
+  full_bounded = true;
+  is_plain = true;
+  // Field name: state_path
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: state_class
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: initial_state_name
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: input_keys
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: output_keys
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: cond_outcome
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: cond_transition
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_key_flexbe_msgs__msg__OutcomeCondition(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Field name: behavior_class
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: parameter_names
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: parameter_values
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: position
+  {
+    size_t array_size = 2;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: outcomes
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: transitions
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: autonomy
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: userdata_keys
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: userdata_remapping
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -1171,8 +2004,41 @@ size_t max_serialized_size_flexbe_msgs__msg__StateInstantiation(
       last_member_size
       ) == ret_val;
   }
-
   return ret_val;
+}
+
+
+static bool _StateInstantiation__cdr_serialize(
+  const void * untyped_ros_message,
+  eprosima::fastcdr::Cdr & cdr)
+{
+  if (!untyped_ros_message) {
+    fprintf(stderr, "ros message handle is null\n");
+    return false;
+  }
+  const flexbe_msgs__msg__StateInstantiation * ros_message = static_cast<const flexbe_msgs__msg__StateInstantiation *>(untyped_ros_message);
+  (void)ros_message;
+  return cdr_serialize_flexbe_msgs__msg__StateInstantiation(ros_message, cdr);
+}
+
+static bool _StateInstantiation__cdr_deserialize(
+  eprosima::fastcdr::Cdr & cdr,
+  void * untyped_ros_message)
+{
+  if (!untyped_ros_message) {
+    fprintf(stderr, "ros message handle is null\n");
+    return false;
+  }
+  flexbe_msgs__msg__StateInstantiation * ros_message = static_cast<flexbe_msgs__msg__StateInstantiation *>(untyped_ros_message);
+  (void)ros_message;
+  return cdr_deserialize_flexbe_msgs__msg__StateInstantiation(cdr, ros_message);
+}
+
+static uint32_t _StateInstantiation__get_serialized_size(const void * untyped_ros_message)
+{
+  return static_cast<uint32_t>(
+    get_serialized_size_flexbe_msgs__msg__StateInstantiation(
+      untyped_ros_message, 0));
 }
 
 static size_t _StateInstantiation__max_serialized_size(char & bounds_info)
@@ -1197,13 +2063,17 @@ static message_type_support_callbacks_t __callbacks_StateInstantiation = {
   _StateInstantiation__cdr_serialize,
   _StateInstantiation__cdr_deserialize,
   _StateInstantiation__get_serialized_size,
-  _StateInstantiation__max_serialized_size
+  _StateInstantiation__max_serialized_size,
+  nullptr
 };
 
 static rosidl_message_type_support_t _StateInstantiation__type_support = {
   rosidl_typesupport_fastrtps_c__identifier,
   &__callbacks_StateInstantiation,
   get_message_typesupport_handle_function,
+  &flexbe_msgs__msg__StateInstantiation__get_type_hash,
+  &flexbe_msgs__msg__StateInstantiation__get_type_description,
+  &flexbe_msgs__msg__StateInstantiation__get_type_description_sources,
 };
 
 const rosidl_message_type_support_t *

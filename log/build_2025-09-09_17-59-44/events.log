@@ -1,0 +1,425 @@
+[0.000000] (-) TimerEvent: {}
+[0.000335] (-) JobUnselected: {'identifier': 'armada_bringup'}
+[0.000451] (-) JobUnselected: {'identifier': 'armada_description'}
+[0.000471] (-) JobUnselected: {'identifier': 'armada_gazebo'}
+[0.000484] (-) JobUnselected: {'identifier': 'compare_flexbe'}
+[0.000495] (-) JobUnselected: {'identifier': 'compare_flexbe_behaviors'}
+[0.000505] (-) JobUnselected: {'identifier': 'compare_flexbe_states'}
+[0.000514] (-) JobUnselected: {'identifier': 'custom_package'}
+[0.000524] (-) JobUnselected: {'identifier': 'demo'}
+[0.000533] (-) JobUnselected: {'identifier': 'example_flexbe_states'}
+[0.000543] (-) JobUnselected: {'identifier': 'flexbe_behavior_engine'}
+[0.000552] (-) JobUnselected: {'identifier': 'flexbe_core'}
+[0.000562] (-) JobUnselected: {'identifier': 'flexbe_input'}
+[0.000571] (-) JobUnselected: {'identifier': 'flexbe_mirror'}
+[0.000580] (-) JobUnselected: {'identifier': 'flexbe_msgs'}
+[0.000590] (-) JobUnselected: {'identifier': 'flexbe_onboard'}
+[0.000599] (-) JobUnselected: {'identifier': 'flexbe_states'}
+[0.000608] (-) JobUnselected: {'identifier': 'flexbe_testing'}
+[0.000617] (-) JobUnselected: {'identifier': 'flexbe_turtlesim_demo'}
+[0.000626] (-) JobUnselected: {'identifier': 'flexbe_turtlesim_demo_flexbe_behaviors'}
+[0.000642] (-) JobUnselected: {'identifier': 'flexbe_turtlesim_demo_flexbe_states'}
+[0.000652] (-) JobUnselected: {'identifier': 'flexbe_webui'}
+[0.000661] (-) JobUnselected: {'identifier': 'flexbe_widget'}
+[0.000670] (-) JobUnselected: {'identifier': 'panda_description'}
+[0.000679] (-) JobUnselected: {'identifier': 'panda_gazebo'}
+[0.000688] (-) JobUnselected: {'identifier': 'panda_moveit_config'}
+[0.000697] (-) JobUnselected: {'identifier': 'techman_robot_msgs'}
+[0.000707] (-) JobUnselected: {'identifier': 'tm12_moveit_config'}
+[0.000716] (-) JobUnselected: {'identifier': 'tm12x_moveit_config'}
+[0.000725] (-) JobUnselected: {'identifier': 'tm14_moveit_config'}
+[0.000734] (-) JobUnselected: {'identifier': 'tm14x_moveit_config'}
+[0.000744] (-) JobUnselected: {'identifier': 'tm5-700_moveit_config'}
+[0.000753] (-) JobUnselected: {'identifier': 'tm5-900_moveit_config'}
+[0.000762] (-) JobUnselected: {'identifier': 'tm5x-700_moveit_config'}
+[0.000771] (-) JobUnselected: {'identifier': 'tm5x-900_moveit_config'}
+[0.000780] (-) JobUnselected: {'identifier': 'tm_description'}
+[0.000790] (-) JobUnselected: {'identifier': 'tm_driver'}
+[0.000799] (-) JobUnselected: {'identifier': 'tm_get_status'}
+[0.000808] (-) JobUnselected: {'identifier': 'tm_mod_urdf'}
+[0.000817] (-) JobUnselected: {'identifier': 'tm_msgs'}
+[0.000826] (-) JobUnselected: {'identifier': 'ui_for_debug_and_demo'}
+[0.000837] (compare_flexbe_utilities) JobQueued: {'identifier': 'compare_flexbe_utilities', 'dependencies': OrderedDict()}
+[0.000850] (compare_flexbe_utilities) JobStarted: {'identifier': 'compare_flexbe_utilities'}
+[0.008812] (compare_flexbe_utilities) JobProgress: {'identifier': 'compare_flexbe_utilities', 'progress': 'cmake'}
+[0.009689] (compare_flexbe_utilities) JobProgress: {'identifier': 'compare_flexbe_utilities', 'progress': 'build'}
+[0.010615] (compare_flexbe_utilities) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/csrobot/flexbe_ws/build/compare_flexbe_utilities', '--', '-j8', '-l8'], 'cwd': '/home/csrobot/flexbe_ws/build/compare_flexbe_utilities', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/home/csrobot/flexbe_ws/install/panda_gazebo/share/panda_gazebo/models:/home/csrobot/flexbe_ws/install/panda_gazebo/share:/home/csrobot/flexbe_ws/install/panda_description/share/panda_description:/home/csrobot/flexbe_ws/install/panda_description/share:/home/csrobot/gazebo_models', 'USER': 'csrobot', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/local/cuda/lib64:/usr/local/cuda/lib64:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/csrobot', 'OLDPWD': '/home', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2680', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'csrobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'csrobot', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/usr/local/cuda/bin:/usr/local/cuda/bin:/opt/ros/jazzy/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'SESSION_MANAGER': 'local/nerve-desktop-6:@/tmp/.ICE-unix/2616,unix/nerve-desktop-6:/tmp/.ICE-unix/2616', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/084eec8f_90e7_4b15_b27c_0e5ce84bd00c', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.109', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/csrobot/flexbe_ws/build/compare_flexbe_utilities', 'LC_ALL': 'en_US.UTF-8', 'CUDA_HOME': '/usr/local/cuda', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.054399] (compare_flexbe_utilities) StdoutLine: {'line': b'[  1%] Built target compare_flexbe_utilities__rosidl_generator_type_description\n'}
+[0.060214] (compare_flexbe_utilities) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_symlink_compare_flexbe_utilities\n'}
+[0.069135] (compare_flexbe_utilities) StdoutLine: {'line': b'[  2%] Built target compare_flexbe_utilities__cpp\n'}
+[0.075069] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 24%] Built target compare_flexbe_utilities__rosidl_generator_c\n'}
+[0.094523] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 50%] Built target compare_flexbe_utilities__rosidl_typesupport_introspection_c\n'}
+[0.094665] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 50%] Built target compare_flexbe_utilities__rosidl_typesupport_c\n'}
+[0.094729] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 50%] Built target compare_flexbe_utilities__rosidl_typesupport_cpp\n'}
+[0.094977] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 59%] Built target compare_flexbe_utilities__rosidl_typesupport_introspection_cpp\n'}
+[0.095110] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 74%] Built target compare_flexbe_utilities__rosidl_typesupport_fastrtps_cpp\n'}
+[0.095212] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 74%] Built target compare_flexbe_utilities__rosidl_typesupport_fastrtps_c\n'}
+[0.100698] (-) TimerEvent: {}
+[0.120214] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 76%] Built target voxel_grid_filter_service\n'}
+[0.121553] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 78%] Built target plane_segmentation_service\n'}
+[0.121681] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 80%] Built target euclidean_clustering_service\n'}
+[0.121745] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 82%] Built target get_point_cloud_service\n'}
+[0.125853] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/move_to_pose_service.dir/src/move_to_pose_service.cpp.o\x1b[0m\n'}
+[0.125990] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 84%] Built target move_to_named_pose_service\n'}
+[0.132908] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 85%] Built target cartesian_move_to_pose_service\n'}
+[0.134798] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 85%] Built target compare_flexbe_utilities\n'}
+[0.146300] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 86%] Built target filter_by_indices_service\n'}
+[0.150532] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 87%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[0.200805] (-) TimerEvent: {}
+[0.262439] (compare_flexbe_utilities) StdoutLine: {'line': b'running egg_info\n'}
+[0.283540] (compare_flexbe_utilities) StdoutLine: {'line': b'writing compare_flexbe_utilities.egg-info/PKG-INFO\n'}
+[0.283751] (compare_flexbe_utilities) StdoutLine: {'line': b'writing dependency_links to compare_flexbe_utilities.egg-info/dependency_links.txt\n'}
+[0.283908] (compare_flexbe_utilities) StdoutLine: {'line': b'writing top-level names to compare_flexbe_utilities.egg-info/top_level.txt\n'}
+[0.300912] (-) TimerEvent: {}
+[0.344115] (compare_flexbe_utilities) StdoutLine: {'line': b"reading manifest file 'compare_flexbe_utilities.egg-info/SOURCES.txt'\n"}
+[0.344665] (compare_flexbe_utilities) StdoutLine: {'line': b"writing manifest file 'compare_flexbe_utilities.egg-info/SOURCES.txt'\n"}
+[0.364745] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 87%] Built target ament_cmake_python_build_compare_flexbe_utilities_egg\n'}
+[0.401019] (-) TimerEvent: {}
+[0.501245] (-) TimerEvent: {}
+[0.601484] (-) TimerEvent: {}
+[0.701710] (-) TimerEvent: {}
+[0.801937] (-) TimerEvent: {}
+[0.902153] (-) TimerEvent: {}
+[1.002367] (-) TimerEvent: {}
+[1.102573] (-) TimerEvent: {}
+[1.202797] (-) TimerEvent: {}
+[1.303009] (-) TimerEvent: {}
+[1.403225] (-) TimerEvent: {}
+[1.503453] (-) TimerEvent: {}
+[1.574922] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 87%] Built target compare_flexbe_utilities__py\n'}
+[1.590127] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_py.dir/rosidl_generator_py/compare_flexbe_utilities/srv/_voxel_grid_filter_s.c.o\x1b[0m\n'}
+[1.590754] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_py.dir/rosidl_generator_py/compare_flexbe_utilities/srv/_move_to_pose_s.c.o\x1b[0m\n'}
+[1.591624] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_py.dir/rosidl_generator_py/compare_flexbe_utilities/srv/_move_to_named_pose_s.c.o\x1b[0m\n'}
+[1.591757] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_py.dir/rosidl_generator_py/compare_flexbe_utilities/srv/_cartesian_move_to_pose_s.c.o\x1b[0m\n'}
+[1.591831] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_py.dir/rosidl_generator_py/compare_flexbe_utilities/srv/_euclidean_clustering_s.c.o\x1b[0m\n'}
+[1.591895] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_py.dir/rosidl_generator_py/compare_flexbe_utilities/srv/_plane_segmentation_s.c.o\x1b[0m\n'}
+[1.596115] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_py.dir/rosidl_generator_py/compare_flexbe_utilities/srv/_get_point_cloud_s.c.o\x1b[0m\n'}
+[1.603544] (-) TimerEvent: {}
+[1.703767] (-) TimerEvent: {}
+[1.716827] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/compare_flexbe_utilities__rosidl_generator_py.dir/rosidl_generator_py/compare_flexbe_utilities/srv/_filter_by_indices_s.c.o\x1b[0m\n'}
+[1.803901] (-) TimerEvent: {}
+[1.836997] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library libcompare_flexbe_utilities__rosidl_generator_py.so\x1b[0m\n'}
+[1.877496] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 94%] Built target compare_flexbe_utilities__rosidl_generator_py\n'}
+[1.892588] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/compare_flexbe_utilities_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/compare_flexbe_utilities/_compare_flexbe_utilities_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[1.892750] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/compare_flexbe_utilities_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/compare_flexbe_utilities/_compare_flexbe_utilities_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[1.892824] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/compare_flexbe_utilities_s__rosidl_typesupport_c.dir/rosidl_generator_py/compare_flexbe_utilities/_compare_flexbe_utilities_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[1.904019] (-) TimerEvent: {}
+[2.004229] (-) TimerEvent: {}
+[2.043391] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/compare_flexbe_utilities/compare_flexbe_utilities_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[2.043550] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/compare_flexbe_utilities/compare_flexbe_utilities_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[2.044687] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 99%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/compare_flexbe_utilities/compare_flexbe_utilities_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[2.069000] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 99%] Built target compare_flexbe_utilities_s__rosidl_typesupport_c\n'}
+[2.069301] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 99%] Built target compare_flexbe_utilities_s__rosidl_typesupport_introspection_c\n'}
+[2.069923] (compare_flexbe_utilities) StdoutLine: {'line': b'[ 99%] Built target compare_flexbe_utilities_s__rosidl_typesupport_fastrtps_c\n'}
+[2.104355] (-) TimerEvent: {}
+[2.204587] (-) TimerEvent: {}
+[2.304879] (-) TimerEvent: {}
+[2.405133] (-) TimerEvent: {}
+[2.505401] (-) TimerEvent: {}
+[2.605670] (-) TimerEvent: {}
+[2.705947] (-) TimerEvent: {}
+[2.806204] (-) TimerEvent: {}
+[2.906466] (-) TimerEvent: {}
+[3.006727] (-) TimerEvent: {}
+[3.107002] (-) TimerEvent: {}
+[3.207277] (-) TimerEvent: {}
+[3.307537] (-) TimerEvent: {}
+[3.407809] (-) TimerEvent: {}
+[3.508077] (-) TimerEvent: {}
+[3.608332] (-) TimerEvent: {}
+[3.708603] (-) TimerEvent: {}
+[3.808870] (-) TimerEvent: {}
+[3.909125] (-) TimerEvent: {}
+[4.009400] (-) TimerEvent: {}
+[4.109677] (-) TimerEvent: {}
+[4.209964] (-) TimerEvent: {}
+[4.310239] (-) TimerEvent: {}
+[4.410509] (-) TimerEvent: {}
+[4.510780] (-) TimerEvent: {}
+[4.611070] (-) TimerEvent: {}
+[4.711346] (-) TimerEvent: {}
+[4.811606] (-) TimerEvent: {}
+[4.911893] (-) TimerEvent: {}
+[5.012118] (-) TimerEvent: {}
+[5.112387] (-) TimerEvent: {}
+[5.212662] (-) TimerEvent: {}
+[5.312941] (-) TimerEvent: {}
+[5.413203] (-) TimerEvent: {}
+[5.513473] (-) TimerEvent: {}
+[5.613754] (-) TimerEvent: {}
+[5.714034] (-) TimerEvent: {}
+[5.814289] (-) TimerEvent: {}
+[5.914552] (-) TimerEvent: {}
+[6.014826] (-) TimerEvent: {}
+[6.115086] (-) TimerEvent: {}
+[6.215354] (-) TimerEvent: {}
+[6.305498] (compare_flexbe_utilities) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable move_to_pose_service\x1b[0m\n'}
+[6.315461] (-) TimerEvent: {}
+[6.415714] (-) TimerEvent: {}
+[6.515985] (-) TimerEvent: {}
+[6.587657] (compare_flexbe_utilities) StdoutLine: {'line': b'[100%] Built target move_to_pose_service\n'}
+[6.597183] (compare_flexbe_utilities) CommandEnded: {'returncode': 0}
+[6.597808] (compare_flexbe_utilities) JobProgress: {'identifier': 'compare_flexbe_utilities', 'progress': 'install'}
+[6.604531] (compare_flexbe_utilities) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/csrobot/flexbe_ws/build/compare_flexbe_utilities'], 'cwd': '/home/csrobot/flexbe_ws/build/compare_flexbe_utilities', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/home/csrobot/flexbe_ws/install/panda_gazebo/share/panda_gazebo/models:/home/csrobot/flexbe_ws/install/panda_gazebo/share:/home/csrobot/flexbe_ws/install/panda_description/share/panda_description:/home/csrobot/flexbe_ws/install/panda_description/share:/home/csrobot/gazebo_models', 'USER': 'csrobot', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/local/cuda/lib64:/usr/local/cuda/lib64:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/csrobot', 'OLDPWD': '/home', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2680', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'csrobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'csrobot', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/usr/local/cuda/bin:/usr/local/cuda/bin:/opt/ros/jazzy/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'SESSION_MANAGER': 'local/nerve-desktop-6:@/tmp/.ICE-unix/2616,unix/nerve-desktop-6:/tmp/.ICE-unix/2616', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/084eec8f_90e7_4b15_b27c_0e5ce84bd00c', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.109', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/csrobot/flexbe_ws/build/compare_flexbe_utilities', 'LC_ALL': 'en_US.UTF-8', 'CUDA_HOME': '/usr/local/cuda', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[6.610326] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.610810] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[6.610959] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/ament_index/resource_index/rosidl_interfaces/compare_flexbe_utilities\n'}
+[6.616086] (-) TimerEvent: {}
+[6.617126] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/CartesianMoveToPose.json\n'}
+[6.622996] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/MoveToNamedPose.json\n'}
+[6.628589] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/MoveToPose.json\n'}
+[6.634153] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/VoxelGridFilter.json\n'}
+[6.639848] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/PlaneSegmentation.json\n'}
+[6.645383] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/EuclideanClustering.json\n'}
+[6.651107] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/GetPointCloud.json\n'}
+[6.656817] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/FilterByIndices.json\n'}
+[6.663127] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/msg/rosidl_generator_c__visibility_control.h\n'}
+[6.669030] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/cartesian_move_to_pose.h\n'}
+[6.675139] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__functions.h\n'}
+[6.681229] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__struct.h\n'}
+[6.687303] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__type_support.h\n'}
+[6.693344] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/euclidean_clustering__functions.h\n'}
+[6.699498] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/euclidean_clustering__struct.h\n'}
+[6.705688] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/euclidean_clustering__type_support.h\n'}
+[6.711816] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/filter_by_indices__functions.h\n'}
+[6.716156] (-) TimerEvent: {}
+[6.717667] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/filter_by_indices__struct.h\n'}
+[6.723663] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/filter_by_indices__type_support.h\n'}
+[6.729384] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/get_point_cloud__functions.h\n'}
+[6.734911] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/get_point_cloud__struct.h\n'}
+[6.740472] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/get_point_cloud__type_support.h\n'}
+[6.745916] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_named_pose__functions.h\n'}
+[6.751544] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_named_pose__struct.h\n'}
+[6.757157] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_named_pose__type_support.h\n'}
+[6.762873] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_pose__functions.h\n'}
+[6.768575] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_pose__struct.h\n'}
+[6.774698] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_pose__type_support.h\n'}
+[6.780748] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/plane_segmentation__functions.h\n'}
+[6.786831] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/plane_segmentation__struct.h\n'}
+[6.792824] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/plane_segmentation__type_support.h\n'}
+[6.798838] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/voxel_grid_filter__functions.h\n'}
+[6.804965] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/voxel_grid_filter__struct.h\n'}
+[6.810979] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/voxel_grid_filter__type_support.h\n'}
+[6.816228] (-) TimerEvent: {}
+[6.816860] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/euclidean_clustering.h\n'}
+[6.822883] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/filter_by_indices.h\n'}
+[6.828560] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/get_point_cloud.h\n'}
+[6.834293] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/move_to_named_pose.h\n'}
+[6.840173] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/move_to_pose.h\n'}
+[6.845846] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/plane_segmentation.h\n'}
+[6.851423] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/voxel_grid_filter.h\n'}
+[6.857172] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/environment/library_path.sh\n'}
+[6.862915] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/environment/library_path.dsv\n'}
+[6.869064] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[6.875097] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[6.881183] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/euclidean_clustering__rosidl_typesupport_fastrtps_c.h\n'}
+[6.887359] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/filter_by_indices__rosidl_typesupport_fastrtps_c.h\n'}
+[6.893281] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/get_point_cloud__rosidl_typesupport_fastrtps_c.h\n'}
+[6.899372] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_named_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[6.905556] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[6.911545] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/plane_segmentation__rosidl_typesupport_fastrtps_c.h\n'}
+[6.916324] (-) TimerEvent: {}
+[6.917425] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/voxel_grid_filter__rosidl_typesupport_fastrtps_c.h\n'}
+[6.923847] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[6.929599] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/cartesian_move_to_pose.hpp\n'}
+[6.935300] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__builder.hpp\n'}
+[6.940975] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__struct.hpp\n'}
+[6.946630] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__traits.hpp\n'}
+[6.952341] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__type_support.hpp\n'}
+[6.958077] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/euclidean_clustering__builder.hpp\n'}
+[6.963665] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/euclidean_clustering__struct.hpp\n'}
+[6.969341] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/euclidean_clustering__traits.hpp\n'}
+[6.975099] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/euclidean_clustering__type_support.hpp\n'}
+[6.981077] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/filter_by_indices__builder.hpp\n'}
+[6.987255] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/filter_by_indices__struct.hpp\n'}
+[6.993354] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/filter_by_indices__traits.hpp\n'}
+[6.999210] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/filter_by_indices__type_support.hpp\n'}
+[7.005367] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/get_point_cloud__builder.hpp\n'}
+[7.011572] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/get_point_cloud__struct.hpp\n'}
+[7.016429] (-) TimerEvent: {}
+[7.017682] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/get_point_cloud__traits.hpp\n'}
+[7.023809] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/get_point_cloud__type_support.hpp\n'}
+[7.029480] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_named_pose__builder.hpp\n'}
+[7.035233] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_named_pose__struct.hpp\n'}
+[7.040879] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_named_pose__traits.hpp\n'}
+[7.046608] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_named_pose__type_support.hpp\n'}
+[7.052384] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_pose__builder.hpp\n'}
+[7.058036] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_pose__struct.hpp\n'}
+[7.063678] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_pose__traits.hpp\n'}
+[7.069387] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_pose__type_support.hpp\n'}
+[7.074971] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/plane_segmentation__builder.hpp\n'}
+[7.080883] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/plane_segmentation__struct.hpp\n'}
+[7.086887] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/plane_segmentation__traits.hpp\n'}
+[7.092937] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/plane_segmentation__type_support.hpp\n'}
+[7.098903] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/voxel_grid_filter__builder.hpp\n'}
+[7.104942] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/voxel_grid_filter__struct.hpp\n'}
+[7.111222] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/voxel_grid_filter__traits.hpp\n'}
+[7.116534] (-) TimerEvent: {}
+[7.117323] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/voxel_grid_filter__type_support.hpp\n'}
+[7.123427] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/euclidean_clustering.hpp\n'}
+[7.129225] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/filter_by_indices.hpp\n'}
+[7.134845] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/get_point_cloud.hpp\n'}
+[7.140334] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/move_to_named_pose.hpp\n'}
+[7.145868] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/move_to_pose.hpp\n'}
+[7.151464] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/plane_segmentation.hpp\n'}
+[7.157040] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/voxel_grid_filter.hpp\n'}
+[7.163172] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[7.168777] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.174531] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/euclidean_clustering__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.180510] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/filter_by_indices__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.186520] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/get_point_cloud__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.192707] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_named_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.198743] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.204884] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/plane_segmentation__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.211134] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/voxel_grid_filter__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.216640] (-) TimerEvent: {}
+[7.217448] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[7.223540] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__rosidl_typesupport_introspection_c.h\n'}
+[7.229302] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/euclidean_clustering__rosidl_typesupport_introspection_c.h\n'}
+[7.234977] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/filter_by_indices__rosidl_typesupport_introspection_c.h\n'}
+[7.240626] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/get_point_cloud__rosidl_typesupport_introspection_c.h\n'}
+[7.246253] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_named_pose__rosidl_typesupport_introspection_c.h\n'}
+[7.251652] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_pose__rosidl_typesupport_introspection_c.h\n'}
+[7.257376] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/plane_segmentation__rosidl_typesupport_introspection_c.h\n'}
+[7.262925] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/voxel_grid_filter__rosidl_typesupport_introspection_c.h\n'}
+[7.268849] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.274489] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/euclidean_clustering__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.280147] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/filter_by_indices__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.286230] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/get_point_cloud__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.292342] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_named_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.299427] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/move_to_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.305407] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/plane_segmentation__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.311588] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/include/compare_flexbe_utilities/compare_flexbe_utilities/srv/detail/voxel_grid_filter__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.316760] (-) TimerEvent: {}
+[7.317905] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/environment/pythonpath.sh\n'}
+[7.324278] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/environment/pythonpath.dsv\n'}
+[7.330235] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[7.335948] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[7.341543] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[7.347032] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[7.352999] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/__init__.py\n'}
+[7.358704] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/_compare_flexbe_utilities_s.ep.rosidl_typesupport_c.c\n'}
+[7.364180] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/_compare_flexbe_utilities_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[7.369679] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/_compare_flexbe_utilities_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[7.375196] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/compare_flexbe_utilities_s__rosidl_typesupport_c.so\n'}
+[7.380743] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/compare_flexbe_utilities_s__rosidl_typesupport_fastrtps_c.so\n'}
+[7.386727] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/compare_flexbe_utilities_s__rosidl_typesupport_introspection_c.so\n'}
+[7.392778] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/__init__.py\n'}
+[7.398981] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_cartesian_move_to_pose.py\n'}
+[7.404994] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_cartesian_move_to_pose_s.c\n'}
+[7.411185] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_euclidean_clustering.py\n'}
+[7.416883] (-) TimerEvent: {}
+[7.417326] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_euclidean_clustering_s.c\n'}
+[7.423851] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_filter_by_indices.py\n'}
+[7.429785] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_filter_by_indices_s.c\n'}
+[7.435647] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_get_point_cloud.py\n'}
+[7.441649] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_get_point_cloud_s.c\n'}
+[7.447388] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_move_to_named_pose.py\n'}
+[7.453054] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_move_to_named_pose_s.c\n'}
+[7.458578] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_move_to_pose.py\n'}
+[7.463975] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_move_to_pose_s.c\n'}
+[7.469453] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_plane_segmentation.py\n'}
+[7.475046] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_plane_segmentation_s.c\n'}
+[7.480705] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_voxel_grid_filter.py\n'}
+[7.486507] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_voxel_grid_filter_s.c\n'}
+[7.492901] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/compare_flexbe_utilities_s__rosidl_typesupport_fastrtps_c.so\n'}
+[7.493205] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/compare_flexbe_utilities_s__rosidl_typesupport_introspection_c.so\n'}
+[7.493506] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/compare_flexbe_utilities_s__rosidl_typesupport_c.so\n'}
+[7.493689] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/CartesianMoveToPose.idl\n'}
+[7.499577] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/MoveToNamedPose.idl\n'}
+[7.505631] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/MoveToPose.idl\n'}
+[7.511732] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/VoxelGridFilter.idl\n'}
+[7.516992] (-) TimerEvent: {}
+[7.518104] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/PlaneSegmentation.idl\n'}
+[7.524478] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/EuclideanClustering.idl\n'}
+[7.530542] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/GetPointCloud.idl\n'}
+[7.536274] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/FilterByIndices.idl\n'}
+[7.541924] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/CartesianMoveToPose.srv\n'}
+[7.547744] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/MoveToNamedPose.srv\n'}
+[7.553508] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/MoveToPose.srv\n'}
+[7.559411] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/VoxelGridFilter.srv\n'}
+[7.565148] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/PlaneSegmentation.srv\n'}
+[7.570917] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/EuclideanClustering.srv\n'}
+[7.576675] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/GetPointCloud.srv\n'}
+[7.582352] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/srv/FilterByIndices.srv\n'}
+[7.588371] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/compare_flexbe_utilities/cartesian_move_to_pose_service\n'}
+[7.594369] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/compare_flexbe_utilities/move_to_named_pose_service\n'}
+[7.600314] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/compare_flexbe_utilities/move_to_pose_service\n'}
+[7.606348] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/compare_flexbe_utilities/voxel_grid_filter_service\n'}
+[7.612380] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/compare_flexbe_utilities/plane_segmentation_service\n'}
+[7.617109] (-) TimerEvent: {}
+[7.618722] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/compare_flexbe_utilities/euclidean_clustering_service\n'}
+[7.625293] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/compare_flexbe_utilities/get_point_cloud_service\n'}
+[7.631342] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/compare_flexbe_utilities/filter_by_indices_service\n'}
+[7.637381] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/ament_index/resource_index/package_run_dependencies/compare_flexbe_utilities\n'}
+[7.643230] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/ament_index/resource_index/parent_prefix_path/compare_flexbe_utilities\n'}
+[7.649081] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/environment/ament_prefix_path.sh\n'}
+[7.654792] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/environment/ament_prefix_path.dsv\n'}
+[7.660459] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/environment/path.sh\n'}
+[7.666182] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/environment/path.dsv\n'}
+[7.671859] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/local_setup.bash\n'}
+[7.677554] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/local_setup.sh\n'}
+[7.683296] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/local_setup.zsh\n'}
+[7.689199] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/local_setup.dsv\n'}
+[7.695279] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/package.dsv\n'}
+[7.701485] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/ament_index/resource_index/packages/compare_flexbe_utilities\n'}
+[7.707670] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/rosidl_cmake-extras.cmake\n'}
+[7.713776] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[7.717181] (-) TimerEvent: {}
+[7.720197] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[7.726500] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[7.732575] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[7.738525] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[7.744341] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[7.749887] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/compare_flexbe_utilitiesConfig.cmake\n'}
+[7.755352] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/compare_flexbe_utilitiesConfig-version.cmake\n'}
+[7.761032] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Symlinking: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/package.xml\n'}
+[7.766617] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_generator_c.so\n'}
+[7.767079] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_generator_c.so" to ""\n'}
+[7.767284] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_typesupport_fastrtps_c.so\n'}
+[7.767533] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[7.767713] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_typesupport_fastrtps_cpp.so\n'}
+[7.768357] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[7.768501] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_typesupport_introspection_c.so\n'}
+[7.768809] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_typesupport_introspection_c.so" to ""\n'}
+[7.768959] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_typesupport_c.so\n'}
+[7.769095] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_typesupport_c.so" to ""\n'}
+[7.769199] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_typesupport_introspection_cpp.so\n'}
+[7.769904] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[7.770019] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_typesupport_cpp.so\n'}
+[7.770703] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_typesupport_cpp.so" to ""\n'}
+[7.817260] (-) TimerEvent: {}
+[7.820967] (compare_flexbe_utilities) StdoutLine: {'line': b"Listing '/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities'...\n"}
+[7.821135] (compare_flexbe_utilities) StdoutLine: {'line': b"Compiling '/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/__init__.py'...\n"}
+[7.821201] (compare_flexbe_utilities) StdoutLine: {'line': b"Listing '/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv'...\n"}
+[7.821260] (compare_flexbe_utilities) StdoutLine: {'line': b"Compiling '/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/__init__.py'...\n"}
+[7.821317] (compare_flexbe_utilities) StdoutLine: {'line': b"Compiling '/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_cartesian_move_to_pose.py'...\n"}
+[7.821375] (compare_flexbe_utilities) StdoutLine: {'line': b"Compiling '/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_euclidean_clustering.py'...\n"}
+[7.821433] (compare_flexbe_utilities) StdoutLine: {'line': b"Compiling '/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_filter_by_indices.py'...\n"}
+[7.821498] (compare_flexbe_utilities) StdoutLine: {'line': b"Compiling '/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_get_point_cloud.py'...\n"}
+[7.821555] (compare_flexbe_utilities) StdoutLine: {'line': b"Compiling '/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_move_to_named_pose.py'...\n"}
+[7.821612] (compare_flexbe_utilities) StdoutLine: {'line': b"Compiling '/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_move_to_pose.py'...\n"}
+[7.821670] (compare_flexbe_utilities) StdoutLine: {'line': b"Compiling '/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_plane_segmentation.py'...\n"}
+[7.821727] (compare_flexbe_utilities) StdoutLine: {'line': b"Compiling '/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/python3.12/site-packages/compare_flexbe_utilities/srv/_voxel_grid_filter.py'...\n"}
+[7.825667] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_generator_py.so\n'}
+[7.826049] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/csrobot/flexbe_ws/install/compare_flexbe_utilities/lib/libcompare_flexbe_utilities__rosidl_generator_py.so" to ""\n'}
+[7.826201] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/export_compare_flexbe_utilities__rosidl_generator_cExport.cmake\n'}
+[7.826425] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/export_compare_flexbe_utilities__rosidl_generator_cExport-noconfig.cmake\n'}
+[7.826620] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/export_compare_flexbe_utilities__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[7.826873] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/export_compare_flexbe_utilities__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[7.826952] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/export_compare_flexbe_utilities__rosidl_generator_cppExport.cmake\n'}
+[7.827017] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/export_compare_flexbe_utilities__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[7.827205] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/export_compare_flexbe_utilities__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[7.827325] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/compare_flexbe_utilities__rosidl_typesupport_introspection_cExport.cmake\n'}
+[7.827389] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/compare_flexbe_utilities__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[7.827534] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/compare_flexbe_utilities__rosidl_typesupport_cExport.cmake\n'}
+[7.827628] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/compare_flexbe_utilities__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[7.827712] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/compare_flexbe_utilities__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[7.827777] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/compare_flexbe_utilities__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[7.827863] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/compare_flexbe_utilities__rosidl_typesupport_cppExport.cmake\n'}
+[7.827931] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/compare_flexbe_utilities__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[7.827992] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/export_compare_flexbe_utilities__rosidl_generator_pyExport.cmake\n'}
+[7.828073] (compare_flexbe_utilities) StdoutLine: {'line': b'-- Installing: /home/csrobot/flexbe_ws/install/compare_flexbe_utilities/share/compare_flexbe_utilities/cmake/export_compare_flexbe_utilities__rosidl_generator_pyExport-noconfig.cmake\n'}
+[7.829654] (compare_flexbe_utilities) CommandEnded: {'returncode': 0}
+[7.850234] (compare_flexbe_utilities) JobEnded: {'identifier': 'compare_flexbe_utilities', 'rc': 0}
+[7.850808] (-) EventReactorShutdown: {}

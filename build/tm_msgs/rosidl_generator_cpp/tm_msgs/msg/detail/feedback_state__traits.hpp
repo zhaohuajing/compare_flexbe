@@ -2,6 +2,9 @@
 // with input from tm_msgs:msg/FeedbackState.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "tm_msgs/msg/feedback_state.hpp"
+
+
 #ifndef TM_MSGS__MSG__DETAIL__FEEDBACK_STATE__TRAITS_HPP_
 #define TM_MSGS__MSG__DETAIL__FEEDBACK_STATE__TRAITS_HPP_
 

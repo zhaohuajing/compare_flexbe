@@ -614,7 +614,7 @@ tm_msgs__msg__FeedbackState__copy(
 }
 
 tm_msgs__msg__FeedbackState *
-tm_msgs__msg__FeedbackState__create()
+tm_msgs__msg__FeedbackState__create(void)
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   tm_msgs__msg__FeedbackState * msg = (tm_msgs__msg__FeedbackState *)allocator.allocate(sizeof(tm_msgs__msg__FeedbackState), allocator.state);

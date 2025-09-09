@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/StateMapMsg.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/state_map_msg.h"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__STATE_MAP_MSG__STRUCT_H_
 #define FLEXBE_MSGS__MSG__DETAIL__STATE_MAP_MSG__STRUCT_H_
 
@@ -13,7 +16,6 @@ extern "C"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-
 
 // Constants defined in the message
 

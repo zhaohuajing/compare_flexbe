@@ -1,0 +1,6 @@
+[01m[Kcc1plus:[m[K [01;31m[Kfatal error: [m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/move_to_pose_service.cpp: No such file or directory
+compilation terminated.
+gmake[2]: *** [CMakeFiles/move_to_pose_service.dir/build.make:76: CMakeFiles/move_to_pose_service.dir/src/move_to_pose_service.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:695: CMakeFiles/move_to_pose_service.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

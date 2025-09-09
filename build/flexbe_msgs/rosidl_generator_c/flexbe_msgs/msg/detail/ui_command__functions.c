@@ -92,7 +92,7 @@ flexbe_msgs__msg__UICommand__copy(
 }
 
 flexbe_msgs__msg__UICommand *
-flexbe_msgs__msg__UICommand__create()
+flexbe_msgs__msg__UICommand__create(void)
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   flexbe_msgs__msg__UICommand * msg = (flexbe_msgs__msg__UICommand *)allocator.allocate(sizeof(flexbe_msgs__msg__UICommand), allocator.state);

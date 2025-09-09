@@ -2,6 +2,9 @@
 // with input from tm_msgs:msg/SvrResponse.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "tm_msgs/msg/svr_response.h"
+
+
 #ifndef TM_MSGS__MSG__DETAIL__SVR_RESPONSE__TYPE_SUPPORT_H_
 #define TM_MSGS__MSG__DETAIL__SVR_RESPONSE__TYPE_SUPPORT_H_
 
@@ -24,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   tm_msgs,
   msg,
   SvrResponse
-)();
+)(void);
 
 #ifdef __cplusplus
 }

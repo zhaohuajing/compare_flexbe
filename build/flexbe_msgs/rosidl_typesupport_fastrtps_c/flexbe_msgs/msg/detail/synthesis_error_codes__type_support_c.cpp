@@ -5,9 +5,11 @@
 
 
 #include <cassert>
+#include <cstddef>
 #include <limits>
 #include <string>
 #include "rosidl_typesupport_fastrtps_c/identifier.h"
+#include "rosidl_typesupport_fastrtps_c/serialization_helpers.hpp"
 #include "rosidl_typesupport_fastrtps_c/wstring_conversion.hpp"
 #include "rosidl_typesupport_fastrtps_cpp/message_type_support.h"
 #include "flexbe_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
@@ -40,15 +42,12 @@ extern "C"
 
 using _SynthesisErrorCodes__ros_msg_type = flexbe_msgs__msg__SynthesisErrorCodes;
 
-static bool _SynthesisErrorCodes__cdr_serialize(
-  const void * untyped_ros_message,
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_flexbe_msgs__msg__SynthesisErrorCodes(
+  const flexbe_msgs__msg__SynthesisErrorCodes * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  if (!untyped_ros_message) {
-    fprintf(stderr, "ros message handle is null\n");
-    return false;
-  }
-  const _SynthesisErrorCodes__ros_msg_type * ros_message = static_cast<const _SynthesisErrorCodes__ros_msg_type *>(untyped_ros_message);
   // Field name: value
   {
     cdr << ros_message->value;
@@ -57,15 +56,11 @@ static bool _SynthesisErrorCodes__cdr_serialize(
   return true;
 }
 
-static bool _SynthesisErrorCodes__cdr_deserialize(
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_deserialize_flexbe_msgs__msg__SynthesisErrorCodes(
   eprosima::fastcdr::Cdr & cdr,
-  void * untyped_ros_message)
+  flexbe_msgs__msg__SynthesisErrorCodes * ros_message)
 {
-  if (!untyped_ros_message) {
-    fprintf(stderr, "ros message handle is null\n");
-    return false;
-  }
-  _SynthesisErrorCodes__ros_msg_type * ros_message = static_cast<_SynthesisErrorCodes__ros_msg_type *>(untyped_ros_message);
   // Field name: value
   {
     cdr >> ros_message->value;
@@ -73,6 +68,7 @@ static bool _SynthesisErrorCodes__cdr_deserialize(
 
   return true;
 }  // NOLINT(readability/fn_size)
+
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t get_serialized_size_flexbe_msgs__msg__SynthesisErrorCodes(
@@ -88,7 +84,7 @@ size_t get_serialized_size_flexbe_msgs__msg__SynthesisErrorCodes(
   (void)padding;
   (void)wchar_size;
 
-  // field.name value
+  // Field name: value
   {
     size_t item_size = sizeof(ros_message->value);
     current_alignment += item_size +
@@ -98,12 +94,6 @@ size_t get_serialized_size_flexbe_msgs__msg__SynthesisErrorCodes(
   return current_alignment - initial_alignment;
 }
 
-static uint32_t _SynthesisErrorCodes__get_serialized_size(const void * untyped_ros_message)
-{
-  return static_cast<uint32_t>(
-    get_serialized_size_flexbe_msgs__msg__SynthesisErrorCodes(
-      untyped_ros_message, 0));
-}
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t max_serialized_size_flexbe_msgs__msg__SynthesisErrorCodes(
@@ -123,10 +113,88 @@ size_t max_serialized_size_flexbe_msgs__msg__SynthesisErrorCodes(
   full_bounded = true;
   is_plain = true;
 
-  // member: value
+  // Field name: value
   {
     size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
 
+
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = flexbe_msgs__msg__SynthesisErrorCodes;
+    is_plain =
+      (
+      offsetof(DataType, value) +
+      last_member_size
+      ) == ret_val;
+  }
+  return ret_val;
+}
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_key_flexbe_msgs__msg__SynthesisErrorCodes(
+  const flexbe_msgs__msg__SynthesisErrorCodes * ros_message,
+  eprosima::fastcdr::Cdr & cdr)
+{
+  // Field name: value
+  {
+    cdr << ros_message->value;
+  }
+
+  return true;
+}
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t get_serialized_size_key_flexbe_msgs__msg__SynthesisErrorCodes(
+  const void * untyped_ros_message,
+  size_t current_alignment)
+{
+  const _SynthesisErrorCodes__ros_msg_type * ros_message = static_cast<const _SynthesisErrorCodes__ros_msg_type *>(untyped_ros_message);
+  (void)ros_message;
+
+  size_t initial_alignment = current_alignment;
+
+  const size_t padding = 4;
+  const size_t wchar_size = 4;
+  (void)padding;
+  (void)wchar_size;
+
+  // Field name: value
+  {
+    size_t item_size = sizeof(ros_message->value);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  return current_alignment - initial_alignment;
+}
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t max_serialized_size_key_flexbe_msgs__msg__SynthesisErrorCodes(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment)
+{
+  size_t initial_alignment = current_alignment;
+
+  const size_t padding = 4;
+  const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
+  (void)padding;
+  (void)wchar_size;
+
+  full_bounded = true;
+  is_plain = true;
+  // Field name: value
+  {
+    size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
@@ -144,8 +212,41 @@ size_t max_serialized_size_flexbe_msgs__msg__SynthesisErrorCodes(
       last_member_size
       ) == ret_val;
   }
-
   return ret_val;
+}
+
+
+static bool _SynthesisErrorCodes__cdr_serialize(
+  const void * untyped_ros_message,
+  eprosima::fastcdr::Cdr & cdr)
+{
+  if (!untyped_ros_message) {
+    fprintf(stderr, "ros message handle is null\n");
+    return false;
+  }
+  const flexbe_msgs__msg__SynthesisErrorCodes * ros_message = static_cast<const flexbe_msgs__msg__SynthesisErrorCodes *>(untyped_ros_message);
+  (void)ros_message;
+  return cdr_serialize_flexbe_msgs__msg__SynthesisErrorCodes(ros_message, cdr);
+}
+
+static bool _SynthesisErrorCodes__cdr_deserialize(
+  eprosima::fastcdr::Cdr & cdr,
+  void * untyped_ros_message)
+{
+  if (!untyped_ros_message) {
+    fprintf(stderr, "ros message handle is null\n");
+    return false;
+  }
+  flexbe_msgs__msg__SynthesisErrorCodes * ros_message = static_cast<flexbe_msgs__msg__SynthesisErrorCodes *>(untyped_ros_message);
+  (void)ros_message;
+  return cdr_deserialize_flexbe_msgs__msg__SynthesisErrorCodes(cdr, ros_message);
+}
+
+static uint32_t _SynthesisErrorCodes__get_serialized_size(const void * untyped_ros_message)
+{
+  return static_cast<uint32_t>(
+    get_serialized_size_flexbe_msgs__msg__SynthesisErrorCodes(
+      untyped_ros_message, 0));
 }
 
 static size_t _SynthesisErrorCodes__max_serialized_size(char & bounds_info)
@@ -170,13 +271,17 @@ static message_type_support_callbacks_t __callbacks_SynthesisErrorCodes = {
   _SynthesisErrorCodes__cdr_serialize,
   _SynthesisErrorCodes__cdr_deserialize,
   _SynthesisErrorCodes__get_serialized_size,
-  _SynthesisErrorCodes__max_serialized_size
+  _SynthesisErrorCodes__max_serialized_size,
+  nullptr
 };
 
 static rosidl_message_type_support_t _SynthesisErrorCodes__type_support = {
   rosidl_typesupport_fastrtps_c__identifier,
   &__callbacks_SynthesisErrorCodes,
   get_message_typesupport_handle_function,
+  &flexbe_msgs__msg__SynthesisErrorCodes__get_type_hash,
+  &flexbe_msgs__msg__SynthesisErrorCodes__get_type_description,
+  &flexbe_msgs__msg__SynthesisErrorCodes__get_type_description_sources,
 };
 
 const rosidl_message_type_support_t *

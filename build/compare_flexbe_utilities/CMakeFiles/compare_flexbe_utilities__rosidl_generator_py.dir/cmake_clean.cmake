@@ -15,8 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/compare_flexbe_utilities__rosidl_generator_py.dir/rosidl_generator_py/compare_flexbe_utilities/srv/_plane_segmentation_s.c.o.d"
   "CMakeFiles/compare_flexbe_utilities__rosidl_generator_py.dir/rosidl_generator_py/compare_flexbe_utilities/srv/_voxel_grid_filter_s.c.o"
   "CMakeFiles/compare_flexbe_utilities__rosidl_generator_py.dir/rosidl_generator_py/compare_flexbe_utilities/srv/_voxel_grid_filter_s.c.o.d"
-  "rosidl_generator_py/compare_flexbe_utilities/libcompare_flexbe_utilities__rosidl_generator_py.pdb"
-  "rosidl_generator_py/compare_flexbe_utilities/libcompare_flexbe_utilities__rosidl_generator_py.so"
+  "libcompare_flexbe_utilities__rosidl_generator_py.pdb"
+  "libcompare_flexbe_utilities__rosidl_generator_py.so"
 )
 
 # Per-language clean rules from dependency scanning.

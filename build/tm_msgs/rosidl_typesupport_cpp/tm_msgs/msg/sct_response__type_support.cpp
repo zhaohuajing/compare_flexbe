@@ -4,6 +4,7 @@
 
 #include "cstddef"
 #include "rosidl_runtime_c/message_type_support_struct.h"
+#include "tm_msgs/msg/detail/sct_response__functions.h"
 #include "tm_msgs/msg/detail/sct_response__struct.hpp"
 #include "rosidl_typesupport_cpp/identifier.hpp"
 #include "rosidl_typesupport_cpp/message_type_support.hpp"
@@ -72,6 +73,9 @@ static const rosidl_message_type_support_t SctResponse_message_type_support_hand
   ::rosidl_typesupport_cpp::typesupport_identifier,
   reinterpret_cast<const type_support_map_t *>(&_SctResponse_message_typesupport_map),
   ::rosidl_typesupport_cpp::get_message_typesupport_handle_function,
+  &tm_msgs__msg__SctResponse__get_type_hash,
+  &tm_msgs__msg__SctResponse__get_type_description,
+  &tm_msgs__msg__SctResponse__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_cpp

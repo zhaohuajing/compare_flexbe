@@ -1,0 +1,13 @@
+running develop
+running egg_info
+writing flexbe_core.egg-info/PKG-INFO
+writing dependency_links to flexbe_core.egg-info/dependency_links.txt
+writing requirements to flexbe_core.egg-info/requires.txt
+writing top-level names to flexbe_core.egg-info/top_level.txt
+reading manifest file 'flexbe_core.egg-info/SOURCES.txt'
+writing manifest file 'flexbe_core.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages/flexbe-core.egg-link (link to .)
+
+Installed /home/csrobot/flexbe_ws/build/flexbe_core
+running symlink_data

@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/StateMapMsg.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/state_map_msg.hpp"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__STATE_MAP_MSG__TRAITS_HPP_
 #define FLEXBE_MSGS__MSG__DETAIL__STATE_MAP_MSG__TRAITS_HPP_
 

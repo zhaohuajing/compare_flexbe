@@ -6,6 +6,7 @@
 #include "rosidl_runtime_c/message_type_support_struct.h"
 #include "tm_msgs/srv/detail/set_event__struct.h"
 #include "tm_msgs/srv/detail/set_event__type_support.h"
+#include "tm_msgs/srv/detail/set_event__functions.h"
 #include "rosidl_typesupport_c/identifier.h"
 #include "rosidl_typesupport_c/message_type_support_dispatch.h"
 #include "rosidl_typesupport_c/type_support_map.h"
@@ -72,6 +73,9 @@ static const rosidl_message_type_support_t SetEvent_Request_message_type_support
   rosidl_typesupport_c__typesupport_identifier,
   reinterpret_cast<const type_support_map_t *>(&_SetEvent_Request_message_typesupport_map),
   rosidl_typesupport_c__get_message_typesupport_handle_function,
+  &tm_msgs__srv__SetEvent_Request__get_type_hash,
+  &tm_msgs__srv__SetEvent_Request__get_type_description,
+  &tm_msgs__srv__SetEvent_Request__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_c
@@ -102,6 +106,8 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_c, tm_msgs,
 // #include "tm_msgs/srv/detail/set_event__struct.h"
 // already included above
 // #include "tm_msgs/srv/detail/set_event__type_support.h"
+// already included above
+// #include "tm_msgs/srv/detail/set_event__functions.h"
 // already included above
 // #include "rosidl_typesupport_c/identifier.h"
 // already included above
@@ -173,6 +179,9 @@ static const rosidl_message_type_support_t SetEvent_Response_message_type_suppor
   rosidl_typesupport_c__typesupport_identifier,
   reinterpret_cast<const type_support_map_t *>(&_SetEvent_Response_message_typesupport_map),
   rosidl_typesupport_c__get_message_typesupport_handle_function,
+  &tm_msgs__srv__SetEvent_Response__get_type_hash,
+  &tm_msgs__srv__SetEvent_Response__get_type_description,
+  &tm_msgs__srv__SetEvent_Response__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_c
@@ -197,14 +206,22 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_c, tm_msgs,
 
 // already included above
 // #include "cstddef"
-#include "rosidl_runtime_c/service_type_support_struct.h"
+// already included above
+// #include "rosidl_runtime_c/message_type_support_struct.h"
+// already included above
+// #include "tm_msgs/srv/detail/set_event__struct.h"
 // already included above
 // #include "tm_msgs/srv/detail/set_event__type_support.h"
 // already included above
+// #include "tm_msgs/srv/detail/set_event__functions.h"
+// already included above
 // #include "rosidl_typesupport_c/identifier.h"
-#include "rosidl_typesupport_c/service_type_support_dispatch.h"
+// already included above
+// #include "rosidl_typesupport_c/message_type_support_dispatch.h"
 // already included above
 // #include "rosidl_typesupport_c/type_support_map.h"
+// already included above
+// #include "rosidl_typesupport_c/visibility_control.h"
 // already included above
 // #include "rosidl_typesupport_interface/macros.h"
 
@@ -217,6 +234,105 @@ namespace srv
 namespace rosidl_typesupport_c
 {
 
+typedef struct _SetEvent_Event_type_support_ids_t
+{
+  const char * typesupport_identifier[2];
+} _SetEvent_Event_type_support_ids_t;
+
+static const _SetEvent_Event_type_support_ids_t _SetEvent_Event_message_typesupport_ids = {
+  {
+    "rosidl_typesupport_fastrtps_c",  // ::rosidl_typesupport_fastrtps_c::typesupport_identifier,
+    "rosidl_typesupport_introspection_c",  // ::rosidl_typesupport_introspection_c::typesupport_identifier,
+  }
+};
+
+typedef struct _SetEvent_Event_type_support_symbol_names_t
+{
+  const char * symbol_name[2];
+} _SetEvent_Event_type_support_symbol_names_t;
+
+#define STRINGIFY_(s) #s
+#define STRINGIFY(s) STRINGIFY_(s)
+
+static const _SetEvent_Event_type_support_symbol_names_t _SetEvent_Event_message_typesupport_symbol_names = {
+  {
+    STRINGIFY(ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, tm_msgs, srv, SetEvent_Event)),
+    STRINGIFY(ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, tm_msgs, srv, SetEvent_Event)),
+  }
+};
+
+typedef struct _SetEvent_Event_type_support_data_t
+{
+  void * data[2];
+} _SetEvent_Event_type_support_data_t;
+
+static _SetEvent_Event_type_support_data_t _SetEvent_Event_message_typesupport_data = {
+  {
+    0,  // will store the shared library later
+    0,  // will store the shared library later
+  }
+};
+
+static const type_support_map_t _SetEvent_Event_message_typesupport_map = {
+  2,
+  "tm_msgs",
+  &_SetEvent_Event_message_typesupport_ids.typesupport_identifier[0],
+  &_SetEvent_Event_message_typesupport_symbol_names.symbol_name[0],
+  &_SetEvent_Event_message_typesupport_data.data[0],
+};
+
+static const rosidl_message_type_support_t SetEvent_Event_message_type_support_handle = {
+  rosidl_typesupport_c__typesupport_identifier,
+  reinterpret_cast<const type_support_map_t *>(&_SetEvent_Event_message_typesupport_map),
+  rosidl_typesupport_c__get_message_typesupport_handle_function,
+  &tm_msgs__srv__SetEvent_Event__get_type_hash,
+  &tm_msgs__srv__SetEvent_Event__get_type_description,
+  &tm_msgs__srv__SetEvent_Event__get_type_description_sources,
+};
+
+}  // namespace rosidl_typesupport_c
+
+}  // namespace srv
+
+}  // namespace tm_msgs
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_c, tm_msgs, srv, SetEvent_Event)() {
+  return &::tm_msgs::srv::rosidl_typesupport_c::SetEvent_Event_message_type_support_handle;
+}
+
+#ifdef __cplusplus
+}
+#endif
+
+// already included above
+// #include "cstddef"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+// already included above
+// #include "tm_msgs/srv/detail/set_event__type_support.h"
+// already included above
+// #include "rosidl_typesupport_c/identifier.h"
+#include "rosidl_typesupport_c/service_type_support_dispatch.h"
+// already included above
+// #include "rosidl_typesupport_c/type_support_map.h"
+// already included above
+// #include "rosidl_typesupport_interface/macros.h"
+#include "service_msgs/msg/service_event_info.h"
+#include "builtin_interfaces/msg/time.h"
+
+namespace tm_msgs
+{
+
+namespace srv
+{
+
+namespace rosidl_typesupport_c
+{
 typedef struct _SetEvent_type_support_ids_t
 {
   const char * typesupport_identifier[2];
@@ -268,6 +384,24 @@ static const rosidl_service_type_support_t SetEvent_service_type_support_handle 
   rosidl_typesupport_c__typesupport_identifier,
   reinterpret_cast<const type_support_map_t *>(&_SetEvent_service_typesupport_map),
   rosidl_typesupport_c__get_service_typesupport_handle_function,
+  &SetEvent_Request_message_type_support_handle,
+  &SetEvent_Response_message_type_support_handle,
+  &SetEvent_Event_message_type_support_handle,
+  ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_CREATE_EVENT_MESSAGE_SYMBOL_NAME(
+    rosidl_typesupport_c,
+    tm_msgs,
+    srv,
+    SetEvent
+  ),
+  ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_DESTROY_EVENT_MESSAGE_SYMBOL_NAME(
+    rosidl_typesupport_c,
+    tm_msgs,
+    srv,
+    SetEvent
+  ),
+  &tm_msgs__srv__SetEvent__get_type_hash,
+  &tm_msgs__srv__SetEvent__get_type_description,
+  &tm_msgs__srv__SetEvent__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_c

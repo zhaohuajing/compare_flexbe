@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "compare_flexbe_utilities/srv/MoveToNamedPose_Request",
+      "fields": [
+        {
+          "name": "target_name",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "compare_flexbe_utilities/srv/MoveToNamedPose_Request",
+      "hash_string": "RIHS01_8c37a45cd150bc58d9d6dccf447d2afc45532c86b708a02179229ae07b6d70f0"
+    }
+  ]
+}

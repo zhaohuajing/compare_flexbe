@@ -65,7 +65,7 @@ flexbe_msgs__msg__OutcomeRequest__copy(
 }
 
 flexbe_msgs__msg__OutcomeRequest *
-flexbe_msgs__msg__OutcomeRequest__create()
+flexbe_msgs__msg__OutcomeRequest__create(void)
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   flexbe_msgs__msg__OutcomeRequest * msg = (flexbe_msgs__msg__OutcomeRequest *)allocator.allocate(sizeof(flexbe_msgs__msg__OutcomeRequest), allocator.state);

@@ -1,0 +1,27 @@
+[4.047s] Invoking command in '/home/csrobot/flexbe_ws/build/flexbe_input': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_input/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/flexbe_input/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/flexbe_input/build --no-deps symlink_data
+[5.301s] running develop
+[6.036s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[6.036s]   self.local_index = Environment(self.shadow_path + sys.path)
+[6.200s] running egg_info
+[6.200s] creating flexbe_input.egg-info
+[6.278s] writing flexbe_input.egg-info/PKG-INFO
+[6.284s] writing dependency_links to flexbe_input.egg-info/dependency_links.txt
+[6.287s] writing entry points to flexbe_input.egg-info/entry_points.txt
+[6.287s] writing requirements to flexbe_input.egg-info/requires.txt
+[6.287s] writing top-level names to flexbe_input.egg-info/top_level.txt
+[6.287s] writing manifest file 'flexbe_input.egg-info/SOURCES.txt'
+[6.451s] reading manifest file 'flexbe_input.egg-info/SOURCES.txt'
+[6.470s] writing manifest file 'flexbe_input.egg-info/SOURCES.txt'
+[6.540s] running build_ext
+[6.540s] Creating /home/csrobot/flexbe_ws/install/flexbe_input/lib/python3.12/site-packages/flexbe-input.egg-link (link to .)
+[6.564s] Installing flexbe_input script to /home/csrobot/flexbe_ws/install/flexbe_input/lib/flexbe_input
+[6.564s] Installing input_action_server script to /home/csrobot/flexbe_ws/install/flexbe_input/lib/flexbe_input
+[6.564s] 
+[6.564s] Installed /home/csrobot/flexbe_ws/build/flexbe_input
+[6.564s] running symlink_data
+[6.564s] creating /home/csrobot/flexbe_ws/install/flexbe_input/share/ament_index
+[6.565s] creating /home/csrobot/flexbe_ws/install/flexbe_input/share/ament_index/resource_index
+[6.565s] creating /home/csrobot/flexbe_ws/install/flexbe_input/share/ament_index/resource_index/packages
+[6.565s] symbolically linking /home/csrobot/flexbe_ws/build/flexbe_input/resource/flexbe_input -> /home/csrobot/flexbe_ws/install/flexbe_input/share/ament_index/resource_index/packages
+[6.565s] symbolically linking /home/csrobot/flexbe_ws/build/flexbe_input/package.xml -> /home/csrobot/flexbe_ws/install/flexbe_input/share/flexbe_input
+[7.337s] Invoked command in '/home/csrobot/flexbe_ws/build/flexbe_input' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_input/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/flexbe_input/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/flexbe_input/build --no-deps symlink_data

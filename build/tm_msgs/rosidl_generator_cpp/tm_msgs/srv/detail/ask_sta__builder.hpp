@@ -2,6 +2,9 @@
 // with input from tm_msgs:srv/AskSta.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "tm_msgs/srv/ask_sta.hpp"
+
+
 #ifndef TM_MSGS__SRV__DETAIL__ASK_STA__BUILDER_HPP_
 #define TM_MSGS__SRV__DETAIL__ASK_STA__BUILDER_HPP_
 
@@ -155,6 +158,80 @@ inline
 auto build<::tm_msgs::srv::AskSta_Response>()
 {
   return tm_msgs::srv::builder::Init_AskSta_Response_ok();
+}
+
+}  // namespace tm_msgs
+
+
+namespace tm_msgs
+{
+
+namespace srv
+{
+
+namespace builder
+{
+
+class Init_AskSta_Event_response
+{
+public:
+  explicit Init_AskSta_Event_response(::tm_msgs::srv::AskSta_Event & msg)
+  : msg_(msg)
+  {}
+  ::tm_msgs::srv::AskSta_Event response(::tm_msgs::srv::AskSta_Event::_response_type arg)
+  {
+    msg_.response = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::tm_msgs::srv::AskSta_Event msg_;
+};
+
+class Init_AskSta_Event_request
+{
+public:
+  explicit Init_AskSta_Event_request(::tm_msgs::srv::AskSta_Event & msg)
+  : msg_(msg)
+  {}
+  Init_AskSta_Event_response request(::tm_msgs::srv::AskSta_Event::_request_type arg)
+  {
+    msg_.request = std::move(arg);
+    return Init_AskSta_Event_response(msg_);
+  }
+
+private:
+  ::tm_msgs::srv::AskSta_Event msg_;
+};
+
+class Init_AskSta_Event_info
+{
+public:
+  Init_AskSta_Event_info()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_AskSta_Event_request info(::tm_msgs::srv::AskSta_Event::_info_type arg)
+  {
+    msg_.info = std::move(arg);
+    return Init_AskSta_Event_request(msg_);
+  }
+
+private:
+  ::tm_msgs::srv::AskSta_Event msg_;
+};
+
+}  // namespace builder
+
+}  // namespace srv
+
+template<typename MessageType>
+auto build();
+
+template<>
+inline
+auto build<::tm_msgs::srv::AskSta_Event>()
+{
+  return tm_msgs::srv::builder::Init_AskSta_Event_info();
 }
 
 }  // namespace tm_msgs

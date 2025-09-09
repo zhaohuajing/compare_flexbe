@@ -1,10 +1,1 @@
-# 'Write'
-# id        : name
-# item/value: More details please refer to the TM_Robot_Expression.pdf(1.76 rev1.00) Chapter 9.6 TMSVR vs Chapter 9.3 svr_write
-
-string id
-string item
-string value
----
-#ok =   write status
-bool ok
+/home/csrobot/flexbe_ws/src/tmr_ros2/tm_msgs/srv/WriteItem.srv

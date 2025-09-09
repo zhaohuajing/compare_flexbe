@@ -4,3 +4,6 @@ source;share/example_flexbe_states/hook/pythonpath.sh
 source;share/example_flexbe_states/hook/ament_prefix_path.ps1
 source;share/example_flexbe_states/hook/ament_prefix_path.dsv
 source;share/example_flexbe_states/hook/ament_prefix_path.sh
+source;../../build/example_flexbe_states/share/example_flexbe_states/hook/pythonpath_develop.ps1
+source;../../build/example_flexbe_states/share/example_flexbe_states/hook/pythonpath_develop.dsv
+source;../../build/example_flexbe_states/share/example_flexbe_states/hook/pythonpath_develop.sh

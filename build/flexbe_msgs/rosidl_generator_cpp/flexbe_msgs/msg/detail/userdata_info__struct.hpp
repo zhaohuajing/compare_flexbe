@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/UserdataInfo.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/userdata_info.hpp"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__USERDATA_INFO__STRUCT_HPP_
 #define FLEXBE_MSGS__MSG__DETAIL__USERDATA_INFO__STRUCT_HPP_
 

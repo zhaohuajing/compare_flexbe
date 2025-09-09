@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-ad117ef3dd3f3a3c8f98.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ui_for_debug_and_demo",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_ui::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_ui-c5114d78ed22acc0d740.json",
+					"name" : "robot_ui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_ui_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_ui_autogen-ae0c7e5b13334e468d42.json",
+					"name" : "robot_ui_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_ui_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_ui_autogen_timestamp_deps-bcf561c50e87332b450a.json",
+					"name" : "robot_ui_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ui_for_debug_and_demo_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ui_for_debug_and_demo_uninstall-27f44b79ecbe2aabe355.json",
+					"name" : "ui_for_debug_and_demo_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-0b459223247fd6bdf65b.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/csrobot/flexbe_ws/build/ui_for_debug_and_demo",
+		"source" : "/home/csrobot/flexbe_ws/src/tmr_ros2/ui_for_debug_and_demo"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

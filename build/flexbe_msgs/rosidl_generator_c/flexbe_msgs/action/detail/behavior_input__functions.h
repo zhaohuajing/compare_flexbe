@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:action/BehaviorInput.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/action/behavior_input.h"
+
+
 #ifndef FLEXBE_MSGS__ACTION__DETAIL__BEHAVIOR_INPUT__FUNCTIONS_H_
 #define FLEXBE_MSGS__ACTION__DETAIL__BEHAVIOR_INPUT__FUNCTIONS_H_
 
@@ -13,10 +16,40 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "flexbe_msgs/msg/rosidl_generator_c__visibility_control.h"
 
 #include "flexbe_msgs/action/detail/behavior_input__struct.h"
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_type_hash_t *
+flexbe_msgs__action__BehaviorInput__get_type_hash(
+  const rosidl_action_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+flexbe_msgs__action__BehaviorInput__get_type_description(
+  const rosidl_action_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+flexbe_msgs__action__BehaviorInput__get_individual_type_description_source(
+  const rosidl_action_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+flexbe_msgs__action__BehaviorInput__get_type_description_sources(
+  const rosidl_action_type_support_t * type_support);
 
 /// Initialize action/BehaviorInput message.
 /**
@@ -53,7 +86,7 @@ flexbe_msgs__action__BehaviorInput_Goal__fini(flexbe_msgs__action__BehaviorInput
  */
 ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
 flexbe_msgs__action__BehaviorInput_Goal *
-flexbe_msgs__action__BehaviorInput_Goal__create();
+flexbe_msgs__action__BehaviorInput_Goal__create(void);
 
 /// Destroy action/BehaviorInput message.
 /**
@@ -92,6 +125,30 @@ bool
 flexbe_msgs__action__BehaviorInput_Goal__copy(
   const flexbe_msgs__action__BehaviorInput_Goal * input,
   flexbe_msgs__action__BehaviorInput_Goal * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_type_hash_t *
+flexbe_msgs__action__BehaviorInput_Goal__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+flexbe_msgs__action__BehaviorInput_Goal__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+flexbe_msgs__action__BehaviorInput_Goal__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+flexbe_msgs__action__BehaviorInput_Goal__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of action/BehaviorInput messages.
 /**
@@ -205,7 +262,7 @@ flexbe_msgs__action__BehaviorInput_Result__fini(flexbe_msgs__action__BehaviorInp
  */
 ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
 flexbe_msgs__action__BehaviorInput_Result *
-flexbe_msgs__action__BehaviorInput_Result__create();
+flexbe_msgs__action__BehaviorInput_Result__create(void);
 
 /// Destroy action/BehaviorInput message.
 /**
@@ -244,6 +301,30 @@ bool
 flexbe_msgs__action__BehaviorInput_Result__copy(
   const flexbe_msgs__action__BehaviorInput_Result * input,
   flexbe_msgs__action__BehaviorInput_Result * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_type_hash_t *
+flexbe_msgs__action__BehaviorInput_Result__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+flexbe_msgs__action__BehaviorInput_Result__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+flexbe_msgs__action__BehaviorInput_Result__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+flexbe_msgs__action__BehaviorInput_Result__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of action/BehaviorInput messages.
 /**
@@ -357,7 +438,7 @@ flexbe_msgs__action__BehaviorInput_Feedback__fini(flexbe_msgs__action__BehaviorI
  */
 ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
 flexbe_msgs__action__BehaviorInput_Feedback *
-flexbe_msgs__action__BehaviorInput_Feedback__create();
+flexbe_msgs__action__BehaviorInput_Feedback__create(void);
 
 /// Destroy action/BehaviorInput message.
 /**
@@ -396,6 +477,30 @@ bool
 flexbe_msgs__action__BehaviorInput_Feedback__copy(
   const flexbe_msgs__action__BehaviorInput_Feedback * input,
   flexbe_msgs__action__BehaviorInput_Feedback * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_type_hash_t *
+flexbe_msgs__action__BehaviorInput_Feedback__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+flexbe_msgs__action__BehaviorInput_Feedback__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+flexbe_msgs__action__BehaviorInput_Feedback__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+flexbe_msgs__action__BehaviorInput_Feedback__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of action/BehaviorInput messages.
 /**
@@ -474,6 +579,30 @@ flexbe_msgs__action__BehaviorInput_Feedback__Sequence__copy(
   const flexbe_msgs__action__BehaviorInput_Feedback__Sequence * input,
   flexbe_msgs__action__BehaviorInput_Feedback__Sequence * output);
 
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_type_hash_t *
+flexbe_msgs__action__BehaviorInput_SendGoal__get_type_hash(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+flexbe_msgs__action__BehaviorInput_SendGoal__get_type_description(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+flexbe_msgs__action__BehaviorInput_SendGoal__get_individual_type_description_source(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+flexbe_msgs__action__BehaviorInput_SendGoal__get_type_description_sources(
+  const rosidl_service_type_support_t * type_support);
+
 /// Initialize action/BehaviorInput message.
 /**
  * If the init function is called twice for the same message without
@@ -509,7 +638,7 @@ flexbe_msgs__action__BehaviorInput_SendGoal_Request__fini(flexbe_msgs__action__B
  */
 ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
 flexbe_msgs__action__BehaviorInput_SendGoal_Request *
-flexbe_msgs__action__BehaviorInput_SendGoal_Request__create();
+flexbe_msgs__action__BehaviorInput_SendGoal_Request__create(void);
 
 /// Destroy action/BehaviorInput message.
 /**
@@ -548,6 +677,30 @@ bool
 flexbe_msgs__action__BehaviorInput_SendGoal_Request__copy(
   const flexbe_msgs__action__BehaviorInput_SendGoal_Request * input,
   flexbe_msgs__action__BehaviorInput_SendGoal_Request * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_type_hash_t *
+flexbe_msgs__action__BehaviorInput_SendGoal_Request__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+flexbe_msgs__action__BehaviorInput_SendGoal_Request__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+flexbe_msgs__action__BehaviorInput_SendGoal_Request__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+flexbe_msgs__action__BehaviorInput_SendGoal_Request__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of action/BehaviorInput messages.
 /**
@@ -661,7 +814,7 @@ flexbe_msgs__action__BehaviorInput_SendGoal_Response__fini(flexbe_msgs__action__
  */
 ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
 flexbe_msgs__action__BehaviorInput_SendGoal_Response *
-flexbe_msgs__action__BehaviorInput_SendGoal_Response__create();
+flexbe_msgs__action__BehaviorInput_SendGoal_Response__create(void);
 
 /// Destroy action/BehaviorInput message.
 /**
@@ -700,6 +853,30 @@ bool
 flexbe_msgs__action__BehaviorInput_SendGoal_Response__copy(
   const flexbe_msgs__action__BehaviorInput_SendGoal_Response * input,
   flexbe_msgs__action__BehaviorInput_SendGoal_Response * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_type_hash_t *
+flexbe_msgs__action__BehaviorInput_SendGoal_Response__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+flexbe_msgs__action__BehaviorInput_SendGoal_Response__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+flexbe_msgs__action__BehaviorInput_SendGoal_Response__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+flexbe_msgs__action__BehaviorInput_SendGoal_Response__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of action/BehaviorInput messages.
 /**
@@ -785,6 +962,206 @@ flexbe_msgs__action__BehaviorInput_SendGoal_Response__Sequence__copy(
  * \param[in,out] msg The previously allocated message pointer.
  * Fields without a default value will not be initialized by this function.
  * You might want to call memset(msg, 0, sizeof(
+ * flexbe_msgs__action__BehaviorInput_SendGoal_Event
+ * )) before or use
+ * flexbe_msgs__action__BehaviorInput_SendGoal_Event__create()
+ * to allocate and initialize the message.
+ * \return true if initialization was successful, otherwise false
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+bool
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__init(flexbe_msgs__action__BehaviorInput_SendGoal_Event * msg);
+
+/// Finalize action/BehaviorInput message.
+/**
+ * \param[in,out] msg The allocated message pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+void
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__fini(flexbe_msgs__action__BehaviorInput_SendGoal_Event * msg);
+
+/// Create action/BehaviorInput message.
+/**
+ * It allocates the memory for the message, sets the memory to zero, and
+ * calls
+ * flexbe_msgs__action__BehaviorInput_SendGoal_Event__init().
+ * \return The pointer to the initialized message if successful,
+ * otherwise NULL
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+flexbe_msgs__action__BehaviorInput_SendGoal_Event *
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__create(void);
+
+/// Destroy action/BehaviorInput message.
+/**
+ * It calls
+ * flexbe_msgs__action__BehaviorInput_SendGoal_Event__fini()
+ * and frees the memory of the message.
+ * \param[in,out] msg The allocated message pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+void
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__destroy(flexbe_msgs__action__BehaviorInput_SendGoal_Event * msg);
+
+/// Check for action/BehaviorInput message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+bool
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__are_equal(const flexbe_msgs__action__BehaviorInput_SendGoal_Event * lhs, const flexbe_msgs__action__BehaviorInput_SendGoal_Event * rhs);
+
+/// Copy a action/BehaviorInput message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+bool
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__copy(
+  const flexbe_msgs__action__BehaviorInput_SendGoal_Event * input,
+  flexbe_msgs__action__BehaviorInput_SendGoal_Event * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_type_hash_t *
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
+/// Initialize array of action/BehaviorInput messages.
+/**
+ * It allocates the memory for the number of elements and calls
+ * flexbe_msgs__action__BehaviorInput_SendGoal_Event__init()
+ * for each element of the array.
+ * \param[in,out] array The allocated array pointer.
+ * \param[in] size The size / capacity of the array.
+ * \return true if initialization was successful, otherwise false
+ * If the array pointer is valid and the size is zero it is guaranteed
+ # to return true.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+bool
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence__init(flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence * array, size_t size);
+
+/// Finalize array of action/BehaviorInput messages.
+/**
+ * It calls
+ * flexbe_msgs__action__BehaviorInput_SendGoal_Event__fini()
+ * for each element of the array and frees the memory for the number of
+ * elements.
+ * \param[in,out] array The initialized array pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+void
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence__fini(flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence * array);
+
+/// Create array of action/BehaviorInput messages.
+/**
+ * It allocates the memory for the array and calls
+ * flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence__init().
+ * \param[in] size The size / capacity of the array.
+ * \return The pointer to the initialized array if successful, otherwise NULL
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence *
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence__create(size_t size);
+
+/// Destroy array of action/BehaviorInput messages.
+/**
+ * It calls
+ * flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence__fini()
+ * on the array,
+ * and frees the memory of the array.
+ * \param[in,out] array The initialized array pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+void
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence__destroy(flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence * array);
+
+/// Check for action/BehaviorInput message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+bool
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence__are_equal(const flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence * lhs, const flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence * rhs);
+
+/// Copy an array of action/BehaviorInput messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+bool
+flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence__copy(
+  const flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence * input,
+  flexbe_msgs__action__BehaviorInput_SendGoal_Event__Sequence * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_type_hash_t *
+flexbe_msgs__action__BehaviorInput_GetResult__get_type_hash(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+flexbe_msgs__action__BehaviorInput_GetResult__get_type_description(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+flexbe_msgs__action__BehaviorInput_GetResult__get_individual_type_description_source(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+flexbe_msgs__action__BehaviorInput_GetResult__get_type_description_sources(
+  const rosidl_service_type_support_t * type_support);
+
+/// Initialize action/BehaviorInput message.
+/**
+ * If the init function is called twice for the same message without
+ * calling fini inbetween previously allocated memory will be leaked.
+ * \param[in,out] msg The previously allocated message pointer.
+ * Fields without a default value will not be initialized by this function.
+ * You might want to call memset(msg, 0, sizeof(
  * flexbe_msgs__action__BehaviorInput_GetResult_Request
  * )) before or use
  * flexbe_msgs__action__BehaviorInput_GetResult_Request__create()
@@ -813,7 +1190,7 @@ flexbe_msgs__action__BehaviorInput_GetResult_Request__fini(flexbe_msgs__action__
  */
 ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
 flexbe_msgs__action__BehaviorInput_GetResult_Request *
-flexbe_msgs__action__BehaviorInput_GetResult_Request__create();
+flexbe_msgs__action__BehaviorInput_GetResult_Request__create(void);
 
 /// Destroy action/BehaviorInput message.
 /**
@@ -852,6 +1229,30 @@ bool
 flexbe_msgs__action__BehaviorInput_GetResult_Request__copy(
   const flexbe_msgs__action__BehaviorInput_GetResult_Request * input,
   flexbe_msgs__action__BehaviorInput_GetResult_Request * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_type_hash_t *
+flexbe_msgs__action__BehaviorInput_GetResult_Request__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+flexbe_msgs__action__BehaviorInput_GetResult_Request__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+flexbe_msgs__action__BehaviorInput_GetResult_Request__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+flexbe_msgs__action__BehaviorInput_GetResult_Request__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of action/BehaviorInput messages.
 /**
@@ -965,7 +1366,7 @@ flexbe_msgs__action__BehaviorInput_GetResult_Response__fini(flexbe_msgs__action_
  */
 ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
 flexbe_msgs__action__BehaviorInput_GetResult_Response *
-flexbe_msgs__action__BehaviorInput_GetResult_Response__create();
+flexbe_msgs__action__BehaviorInput_GetResult_Response__create(void);
 
 /// Destroy action/BehaviorInput message.
 /**
@@ -1004,6 +1405,30 @@ bool
 flexbe_msgs__action__BehaviorInput_GetResult_Response__copy(
   const flexbe_msgs__action__BehaviorInput_GetResult_Response * input,
   flexbe_msgs__action__BehaviorInput_GetResult_Response * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_type_hash_t *
+flexbe_msgs__action__BehaviorInput_GetResult_Response__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+flexbe_msgs__action__BehaviorInput_GetResult_Response__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+flexbe_msgs__action__BehaviorInput_GetResult_Response__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+flexbe_msgs__action__BehaviorInput_GetResult_Response__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of action/BehaviorInput messages.
 /**
@@ -1089,6 +1514,182 @@ flexbe_msgs__action__BehaviorInput_GetResult_Response__Sequence__copy(
  * \param[in,out] msg The previously allocated message pointer.
  * Fields without a default value will not be initialized by this function.
  * You might want to call memset(msg, 0, sizeof(
+ * flexbe_msgs__action__BehaviorInput_GetResult_Event
+ * )) before or use
+ * flexbe_msgs__action__BehaviorInput_GetResult_Event__create()
+ * to allocate and initialize the message.
+ * \return true if initialization was successful, otherwise false
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+bool
+flexbe_msgs__action__BehaviorInput_GetResult_Event__init(flexbe_msgs__action__BehaviorInput_GetResult_Event * msg);
+
+/// Finalize action/BehaviorInput message.
+/**
+ * \param[in,out] msg The allocated message pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+void
+flexbe_msgs__action__BehaviorInput_GetResult_Event__fini(flexbe_msgs__action__BehaviorInput_GetResult_Event * msg);
+
+/// Create action/BehaviorInput message.
+/**
+ * It allocates the memory for the message, sets the memory to zero, and
+ * calls
+ * flexbe_msgs__action__BehaviorInput_GetResult_Event__init().
+ * \return The pointer to the initialized message if successful,
+ * otherwise NULL
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+flexbe_msgs__action__BehaviorInput_GetResult_Event *
+flexbe_msgs__action__BehaviorInput_GetResult_Event__create(void);
+
+/// Destroy action/BehaviorInput message.
+/**
+ * It calls
+ * flexbe_msgs__action__BehaviorInput_GetResult_Event__fini()
+ * and frees the memory of the message.
+ * \param[in,out] msg The allocated message pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+void
+flexbe_msgs__action__BehaviorInput_GetResult_Event__destroy(flexbe_msgs__action__BehaviorInput_GetResult_Event * msg);
+
+/// Check for action/BehaviorInput message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+bool
+flexbe_msgs__action__BehaviorInput_GetResult_Event__are_equal(const flexbe_msgs__action__BehaviorInput_GetResult_Event * lhs, const flexbe_msgs__action__BehaviorInput_GetResult_Event * rhs);
+
+/// Copy a action/BehaviorInput message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+bool
+flexbe_msgs__action__BehaviorInput_GetResult_Event__copy(
+  const flexbe_msgs__action__BehaviorInput_GetResult_Event * input,
+  flexbe_msgs__action__BehaviorInput_GetResult_Event * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_type_hash_t *
+flexbe_msgs__action__BehaviorInput_GetResult_Event__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+flexbe_msgs__action__BehaviorInput_GetResult_Event__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+flexbe_msgs__action__BehaviorInput_GetResult_Event__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+flexbe_msgs__action__BehaviorInput_GetResult_Event__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
+/// Initialize array of action/BehaviorInput messages.
+/**
+ * It allocates the memory for the number of elements and calls
+ * flexbe_msgs__action__BehaviorInput_GetResult_Event__init()
+ * for each element of the array.
+ * \param[in,out] array The allocated array pointer.
+ * \param[in] size The size / capacity of the array.
+ * \return true if initialization was successful, otherwise false
+ * If the array pointer is valid and the size is zero it is guaranteed
+ # to return true.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+bool
+flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence__init(flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence * array, size_t size);
+
+/// Finalize array of action/BehaviorInput messages.
+/**
+ * It calls
+ * flexbe_msgs__action__BehaviorInput_GetResult_Event__fini()
+ * for each element of the array and frees the memory for the number of
+ * elements.
+ * \param[in,out] array The initialized array pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+void
+flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence__fini(flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence * array);
+
+/// Create array of action/BehaviorInput messages.
+/**
+ * It allocates the memory for the array and calls
+ * flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence__init().
+ * \param[in] size The size / capacity of the array.
+ * \return The pointer to the initialized array if successful, otherwise NULL
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence *
+flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence__create(size_t size);
+
+/// Destroy array of action/BehaviorInput messages.
+/**
+ * It calls
+ * flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence__fini()
+ * on the array,
+ * and frees the memory of the array.
+ * \param[in,out] array The initialized array pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+void
+flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence__destroy(flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence * array);
+
+/// Check for action/BehaviorInput message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+bool
+flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence__are_equal(const flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence * lhs, const flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence * rhs);
+
+/// Copy an array of action/BehaviorInput messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+bool
+flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence__copy(
+  const flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence * input,
+  flexbe_msgs__action__BehaviorInput_GetResult_Event__Sequence * output);
+
+/// Initialize action/BehaviorInput message.
+/**
+ * If the init function is called twice for the same message without
+ * calling fini inbetween previously allocated memory will be leaked.
+ * \param[in,out] msg The previously allocated message pointer.
+ * Fields without a default value will not be initialized by this function.
+ * You might want to call memset(msg, 0, sizeof(
  * flexbe_msgs__action__BehaviorInput_FeedbackMessage
  * )) before or use
  * flexbe_msgs__action__BehaviorInput_FeedbackMessage__create()
@@ -1117,7 +1718,7 @@ flexbe_msgs__action__BehaviorInput_FeedbackMessage__fini(flexbe_msgs__action__Be
  */
 ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
 flexbe_msgs__action__BehaviorInput_FeedbackMessage *
-flexbe_msgs__action__BehaviorInput_FeedbackMessage__create();
+flexbe_msgs__action__BehaviorInput_FeedbackMessage__create(void);
 
 /// Destroy action/BehaviorInput message.
 /**
@@ -1156,6 +1757,30 @@ bool
 flexbe_msgs__action__BehaviorInput_FeedbackMessage__copy(
   const flexbe_msgs__action__BehaviorInput_FeedbackMessage * input,
   flexbe_msgs__action__BehaviorInput_FeedbackMessage * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_type_hash_t *
+flexbe_msgs__action__BehaviorInput_FeedbackMessage__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+flexbe_msgs__action__BehaviorInput_FeedbackMessage__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+flexbe_msgs__action__BehaviorInput_FeedbackMessage__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_flexbe_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+flexbe_msgs__action__BehaviorInput_FeedbackMessage__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of action/BehaviorInput messages.
 /**

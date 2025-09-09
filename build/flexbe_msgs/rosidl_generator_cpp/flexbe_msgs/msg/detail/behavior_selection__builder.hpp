@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/BehaviorSelection.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/behavior_selection.hpp"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__BEHAVIOR_SELECTION__BUILDER_HPP_
 #define FLEXBE_MSGS__MSG__DETAIL__BEHAVIOR_SELECTION__BUILDER_HPP_
 

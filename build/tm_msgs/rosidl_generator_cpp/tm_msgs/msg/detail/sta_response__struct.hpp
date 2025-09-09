@@ -2,6 +2,9 @@
 // with input from tm_msgs:msg/StaResponse.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "tm_msgs/msg/sta_response.hpp"
+
+
 #ifndef TM_MSGS__MSG__DETAIL__STA_RESPONSE__STRUCT_HPP_
 #define TM_MSGS__MSG__DETAIL__STA_RESPONSE__STRUCT_HPP_
 

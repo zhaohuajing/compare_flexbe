@@ -1,13 +1,1 @@
-path: flexbe_states.calculation_state
-class: CalculationState
-
-params:
-    calculation: None
-
-input:
-    input_value: 2
-
-output:
-    output_value: None
-
-outcome: done
+/home/csrobot/flexbe_ws/build/flexbe_states/tests/calculation_state_none.test

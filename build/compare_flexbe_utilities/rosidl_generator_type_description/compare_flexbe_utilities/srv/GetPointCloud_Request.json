@@ -1,0 +1,46 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "compare_flexbe_utilities/srv/GetPointCloud_Request",
+      "fields": [
+        {
+          "name": "camera_topic",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "target_frame",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "timeout_sec",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "compare_flexbe_utilities/srv/GetPointCloud_Request",
+      "hash_string": "RIHS01_ab1e537edb22ba6cc24fbcb022e746fdae0d4f070e5546e20df81d5826eb7a15"
+    }
+  ]
+}

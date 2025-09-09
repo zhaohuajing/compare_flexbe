@@ -2,6 +2,13 @@
 # with input from flexbe_msgs:msg/StateInstantiation.idl
 # generated code does not contain a copyright notice
 
+# This is being done at the module level and not on the instance level to avoid looking
+# for the same variable multiple times on each instance. This variable is not supposed to
+# change during runtime so it makes sense to only look for it once.
+from os import getenv
+
+ros_python_check_fields = getenv('ROS_PYTHON_CHECK_FIELDS', default='')
+
 
 # Import statements for member types
 
@@ -119,6 +126,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
         '_autonomy',
         '_userdata_keys',
         '_userdata_remapping',
+        '_check_fields',
     ]
 
     _fields_and_field_types = {
@@ -140,6 +148,8 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
         'userdata_remapping': 'sequence<string>',
     }
 
+    # This attribute is used to store an rosidl_parser.definition variable
+    # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
@@ -160,9 +170,14 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
     )
 
     def __init__(self, **kwargs):
-        assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
-            'Invalid arguments passed to constructor: %s' % \
-            ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        if 'check_fields' in kwargs:
+            self._check_fields = kwargs['check_fields']
+        else:
+            self._check_fields = ros_python_check_fields == '1'
+        if self._check_fields:
+            assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
+                'Invalid arguments passed to constructor: %s' % \
+                ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.state_path = kwargs.get('state_path', str())
         self.state_class = kwargs.get('state_class', str())
         self.initial_state_name = kwargs.get('initial_state_name', str())
@@ -189,7 +204,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
         typename.pop()
         typename.append(self.__class__.__name__)
         args = []
-        for s, t in zip(self.__slots__, self.SLOT_TYPES):
+        for s, t in zip(self.get_fields_and_field_types().keys(), self.SLOT_TYPES):
             field = getattr(self, s)
             fieldstr = repr(field)
             # We use Python array type for fields that can be directly stored
@@ -203,11 +218,12 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
                 if len(field) == 0:
                     fieldstr = '[]'
                 else:
-                    assert fieldstr.startswith('array(')
+                    if self._check_fields:
+                        assert fieldstr.startswith('array(')
                     prefix = "array('X', "
                     suffix = ')'
                     fieldstr = fieldstr[len(prefix):-len(suffix)]
-            args.append(s[1:] + '=' + fieldstr)
+            args.append(s + '=' + fieldstr)
         return '%s(%s)' % ('.'.join(typename), ', '.join(args))
 
     def __eq__(self, other):
@@ -259,7 +275,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @state_path.setter
     def state_path(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, str), \
                 "The 'state_path' field must be of type 'str'"
@@ -272,7 +288,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @state_class.setter
     def state_class(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, str), \
                 "The 'state_class' field must be of type 'str'"
@@ -285,7 +301,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @initial_state_name.setter
     def initial_state_name(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, str), \
                 "The 'initial_state_name' field must be of type 'str'"
@@ -298,7 +314,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @input_keys.setter
     def input_keys(self, value):
-        if __debug__:
+        if self._check_fields:
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -321,7 +337,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @output_keys.setter
     def output_keys(self, value):
-        if __debug__:
+        if self._check_fields:
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -344,7 +360,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @cond_outcome.setter
     def cond_outcome(self, value):
-        if __debug__:
+        if self._check_fields:
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -367,7 +383,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @cond_transition.setter
     def cond_transition(self, value):
-        if __debug__:
+        if self._check_fields:
             from flexbe_msgs.msg import OutcomeCondition
             from collections.abc import Sequence
             from collections.abc import Set
@@ -391,7 +407,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @behavior_class.setter
     def behavior_class(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, str), \
                 "The 'behavior_class' field must be of type 'str'"
@@ -404,7 +420,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @parameter_names.setter
     def parameter_names(self, value):
-        if __debug__:
+        if self._check_fields:
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -427,7 +443,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @parameter_values.setter
     def parameter_values(self, value):
-        if __debug__:
+        if self._check_fields:
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -450,14 +466,14 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @position.setter
     def position(self, value):
-        if isinstance(value, numpy.ndarray):
-            assert value.dtype == numpy.float32, \
-                "The 'position' numpy.ndarray() must have the dtype of 'numpy.float32'"
-            assert value.size == 2, \
-                "The 'position' numpy.ndarray() must have a size of 2"
-            self._position = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, numpy.ndarray):
+                assert value.dtype == numpy.float32, \
+                    "The 'position' numpy.ndarray() must have the dtype of 'numpy.float32'"
+                assert value.size == 2, \
+                    "The 'position' numpy.ndarray() must have a size of 2"
+                self._position = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -481,7 +497,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @outcomes.setter
     def outcomes(self, value):
-        if __debug__:
+        if self._check_fields:
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -504,7 +520,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @transitions.setter
     def transitions(self, value):
-        if __debug__:
+        if self._check_fields:
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -527,12 +543,12 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @autonomy.setter
     def autonomy(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'b', \
-                "The 'autonomy' array.array() must have the type code of 'b'"
-            self._autonomy = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, array.array):
+                assert value.typecode == 'b', \
+                    "The 'autonomy' array.array() must have the type code of 'b'"
+                self._autonomy = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -555,7 +571,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @userdata_keys.setter
     def userdata_keys(self, value):
-        if __debug__:
+        if self._check_fields:
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -578,7 +594,7 @@ class StateInstantiation(metaclass=Metaclass_StateInstantiation):
 
     @userdata_remapping.setter
     def userdata_remapping(self, value):
-        if __debug__:
+        if self._check_fields:
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList

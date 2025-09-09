@@ -1,0 +1,47 @@
+[0.061s] Invoking command in '/home/csrobot/flexbe_ws/build/compare_flexbe_utilities': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/csrobot/flexbe_ws/src/compare_flexbe_utilities -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/install/compare_flexbe_utilities
+[0.113s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.323s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.329s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.352s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.360s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.371s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.384s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.456s] -- Found moveit_ros_planning_interface: 2.12.3 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[0.557s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[1.015s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.117s] -- Found parameter_traits: 0.5.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[1.181s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.183s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.291s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.326s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.369s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.525s] -- Found rclcpp_lifecycle: 28.1.11 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[1.599s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[1.717s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.717s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.018s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[2.080s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[2.107s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[2.146s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[2.158s] -- Found rosidl_adapter: 4.6.6 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[2.161s] -- Found tf2_sensor_msgs: 0.36.14 (/opt/ros/jazzy/share/tf2_sensor_msgs/cmake)
+[2.167s] -- Found pcl_msgs: 1.0.0 (/opt/ros/jazzy/share/pcl_msgs/cmake)
+[2.197s] [31mCMake Error at CMakeLists.txt:26 (find_package):
+[2.197s]   By not providing "Findpcl_ros.cmake" in CMAKE_MODULE_PATH this project has
+[2.197s]   asked CMake to find a package configuration file provided by "pcl_ros", but
+[2.197s]   CMake did not find one.
+[2.197s] 
+[2.197s]   Could not find a package configuration file provided by "pcl_ros" with any
+[2.197s]   of the following names:
+[2.198s] 
+[2.198s]     pcl_rosConfig.cmake
+[2.198s]     pcl_ros-config.cmake
+[2.198s] 
+[2.198s]   Add the installation prefix of "pcl_ros" to CMAKE_PREFIX_PATH or set
+[2.199s]   "pcl_ros_DIR" to a directory containing one of the above files.  If
+[2.199s]   "pcl_ros" provides a separate development package or SDK, be sure it has
+[2.199s]   been installed.
+[2.199s] 
+[2.200s] [0m
+[2.201s] -- Configuring incomplete, errors occurred!
+[2.211s] Invoked command in '/home/csrobot/flexbe_ws/build/compare_flexbe_utilities' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/csrobot/flexbe_ws/src/compare_flexbe_utilities -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/install/compare_flexbe_utilities

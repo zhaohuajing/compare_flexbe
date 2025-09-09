@@ -92,7 +92,7 @@ flexbe_msgs__msg__OutcomeCondition__copy(
 }
 
 flexbe_msgs__msg__OutcomeCondition *
-flexbe_msgs__msg__OutcomeCondition__create()
+flexbe_msgs__msg__OutcomeCondition__create(void)
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   flexbe_msgs__msg__OutcomeCondition * msg = (flexbe_msgs__msg__OutcomeCondition *)allocator.allocate(sizeof(flexbe_msgs__msg__OutcomeCondition), allocator.state);

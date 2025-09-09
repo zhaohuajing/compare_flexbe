@@ -1,11 +1,1 @@
-path: flexbe_states.decision_state
-class: DecisionState
-
-params:
-    outcomes: ['positive', 'negative']
-    conditions: "lambda x: 'positive' if x > 0 else 'negative'"
-
-input:
-    input_value: -4
-
-outcome: negative
+/home/csrobot/flexbe_ws/build/flexbe_states/tests/decision_state_simple.test

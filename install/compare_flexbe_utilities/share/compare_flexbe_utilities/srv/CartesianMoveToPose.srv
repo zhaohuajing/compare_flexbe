@@ -1,4 +1,1 @@
-geometry_msgs/Pose[] waypoints
----
-bool success
-float32 percentage_planned
+/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/srv/CartesianMoveToPose.srv

@@ -2,8 +2,10 @@
 // with input from flexbe_msgs:msg/BehaviorLog.idl
 // generated code does not contain a copyright notice
 #include "flexbe_msgs/msg/detail/behavior_log__rosidl_typesupport_fastrtps_cpp.hpp"
+#include "flexbe_msgs/msg/detail/behavior_log__functions.h"
 #include "flexbe_msgs/msg/detail/behavior_log__struct.hpp"
 
+#include <cstddef>
 #include <limits>
 #include <stdexcept>
 #include <string>
@@ -11,6 +13,7 @@
 #include "rosidl_typesupport_fastrtps_cpp/identifier.hpp"
 #include "rosidl_typesupport_fastrtps_cpp/message_type_support.h"
 #include "rosidl_typesupport_fastrtps_cpp/message_type_support_decl.hpp"
+#include "rosidl_typesupport_fastrtps_cpp/serialization_helpers.hpp"
 #include "rosidl_typesupport_fastrtps_cpp/wstring_conversion.hpp"
 #include "fastcdr/Cdr.h"
 
@@ -26,6 +29,7 @@ namespace msg
 namespace typesupport_fastrtps_cpp
 {
 
+
 bool
 ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_flexbe_msgs
 cdr_serialize(
@@ -34,8 +38,10 @@ cdr_serialize(
 {
   // Member: text
   cdr << ros_message.text;
+
   // Member: status_code
   cdr << ros_message.status_code;
+
   return true;
 }
 
@@ -52,7 +58,8 @@ cdr_deserialize(
   cdr >> ros_message.status_code;
 
   return true;
-}
+}  // NOLINT(readability/fn_size)
+
 
 size_t
 ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_flexbe_msgs
@@ -71,6 +78,7 @@ get_serialized_size(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.text.size() + 1);
+
   // Member: status_code
   {
     size_t item_size = sizeof(ros_message.status_code);
@@ -80,6 +88,7 @@ get_serialized_size(
 
   return current_alignment - initial_alignment;
 }
+
 
 size_t
 ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_flexbe_msgs
@@ -100,11 +109,9 @@ max_serialized_size_BehaviorLog(
   full_bounded = true;
   is_plain = true;
 
-
   // Member: text
   {
     size_t array_size = 1;
-
     full_bounded = false;
     is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
@@ -113,11 +120,9 @@ max_serialized_size_BehaviorLog(
         1;
     }
   }
-
   // Member: status_code
   {
     size_t array_size = 1;
-
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
@@ -137,6 +142,104 @@ max_serialized_size_BehaviorLog(
 
   return ret_val;
 }
+
+bool
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_flexbe_msgs
+cdr_serialize_key(
+  const flexbe_msgs::msg::BehaviorLog & ros_message,
+  eprosima::fastcdr::Cdr & cdr)
+{
+  // Member: text
+  cdr << ros_message.text;
+
+  // Member: status_code
+  cdr << ros_message.status_code;
+
+  return true;
+}
+
+size_t
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_flexbe_msgs
+get_serialized_size_key(
+  const flexbe_msgs::msg::BehaviorLog & ros_message,
+  size_t current_alignment)
+{
+  size_t initial_alignment = current_alignment;
+
+  const size_t padding = 4;
+  const size_t wchar_size = 4;
+  (void)padding;
+  (void)wchar_size;
+
+  // Member: text
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.text.size() + 1);
+
+  // Member: status_code
+  {
+    size_t item_size = sizeof(ros_message.status_code);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  return current_alignment - initial_alignment;
+}
+
+size_t
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_flexbe_msgs
+max_serialized_size_key_BehaviorLog(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment)
+{
+  size_t initial_alignment = current_alignment;
+
+  const size_t padding = 4;
+  const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
+  (void)padding;
+  (void)wchar_size;
+
+  full_bounded = true;
+  is_plain = true;
+
+  // Member: text
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Member: status_code
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = flexbe_msgs::msg::BehaviorLog;
+    is_plain =
+      (
+      offsetof(DataType, status_code) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
+}
+
 
 static bool _BehaviorLog__cdr_serialize(
   const void * untyped_ros_message,
@@ -187,13 +290,17 @@ static message_type_support_callbacks_t _BehaviorLog__callbacks = {
   _BehaviorLog__cdr_serialize,
   _BehaviorLog__cdr_deserialize,
   _BehaviorLog__get_serialized_size,
-  _BehaviorLog__max_serialized_size
+  _BehaviorLog__max_serialized_size,
+  nullptr
 };
 
 static rosidl_message_type_support_t _BehaviorLog__handle = {
   rosidl_typesupport_fastrtps_cpp::typesupport_identifier,
   &_BehaviorLog__callbacks,
   get_message_typesupport_handle_function,
+  &flexbe_msgs__msg__BehaviorLog__get_type_hash,
+  &flexbe_msgs__msg__BehaviorLog__get_type_description,
+  &flexbe_msgs__msg__BehaviorLog__get_type_description_sources,
 };
 
 }  // namespace typesupport_fastrtps_cpp

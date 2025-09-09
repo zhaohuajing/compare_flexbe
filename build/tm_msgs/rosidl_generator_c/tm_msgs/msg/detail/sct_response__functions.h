@@ -2,6 +2,9 @@
 // with input from tm_msgs:msg/SctResponse.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "tm_msgs/msg/sct_response.h"
+
+
 #ifndef TM_MSGS__MSG__DETAIL__SCT_RESPONSE__FUNCTIONS_H_
 #define TM_MSGS__MSG__DETAIL__SCT_RESPONSE__FUNCTIONS_H_
 
@@ -13,6 +16,12 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "tm_msgs/msg/rosidl_generator_c__visibility_control.h"
 
@@ -53,7 +62,7 @@ tm_msgs__msg__SctResponse__fini(tm_msgs__msg__SctResponse * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
 tm_msgs__msg__SctResponse *
-tm_msgs__msg__SctResponse__create();
+tm_msgs__msg__SctResponse__create(void);
 
 /// Destroy msg/SctResponse message.
 /**
@@ -92,6 +101,30 @@ bool
 tm_msgs__msg__SctResponse__copy(
   const tm_msgs__msg__SctResponse * input,
   tm_msgs__msg__SctResponse * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_type_hash_t *
+tm_msgs__msg__SctResponse__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+tm_msgs__msg__SctResponse__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+tm_msgs__msg__SctResponse__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+tm_msgs__msg__SctResponse__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of msg/SctResponse messages.
 /**

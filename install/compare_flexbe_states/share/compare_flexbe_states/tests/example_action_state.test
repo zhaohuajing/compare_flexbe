@@ -1,14 +1,1 @@
-path: compare_flexbe_states.example_action_state
-class: ExampleActionState
-
-import_only: false
-
-params:
-    action_topic: 'action_is_not_available'
-    timeout: 0.5
-
-input:
-    angle: 2.
-
-outcome:
-    failed
+/home/csrobot/flexbe_ws/build/compare_flexbe_states/tests/example_action_state.test

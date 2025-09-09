@@ -1,0 +1,27 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/panda/config/panda_bridge.yaml
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/panda/worlds/panda.sdf
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/panda/xacro/macro.gazebo.xacro
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/panda/xacro/macro.gazebo_sensor.xacro
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/tm5-700/config/tm5-700_bridge.yaml
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/tm5-700/worlds/tm5-700.sdf
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/tm5-700/xacro/macro.gazebo.xacro
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/tm5-700/xacro/macro.gazebo_sensor.xacro
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/rgbd_camera/detachable_joint/detachable_joint.sdf
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/rgbd_camera/model/rgbd_camera_model.sdf
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/ament_index/resource_index/package_run_dependencies/armada_gazebo
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/ament_index/resource_index/parent_prefix_path/armada_gazebo
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/environment/path.sh
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/environment/path.dsv
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/local_setup.bash
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/local_setup.sh
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/local_setup.zsh
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/local_setup.dsv
+-- Symlinking: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/package.dsv
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/ament_index/resource_index/packages/armada_gazebo
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/cmake/armada_gazeboConfig.cmake
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/cmake/armada_gazeboConfig-version.cmake
+-- Up-to-date symlink: /home/csrobot/flexbe_ws/install/armada_gazebo/share/armada_gazebo/package.xml

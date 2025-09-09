@@ -1,7 +1,1 @@
-path: flexbe_states.wait_state
-class: WaitState
-
-params:
-    wait_time: 0.5
-
-outcome: done
+/home/csrobot/flexbe_ws/build/flexbe_states/tests/wait_state_short.test

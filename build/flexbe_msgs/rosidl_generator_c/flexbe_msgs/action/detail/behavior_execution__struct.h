@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:action/BehaviorExecution.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/action/behavior_execution.h"
+
+
 #ifndef FLEXBE_MSGS__ACTION__DETAIL__BEHAVIOR_EXECUTION__STRUCT_H_
 #define FLEXBE_MSGS__ACTION__DETAIL__BEHAVIOR_EXECUTION__STRUCT_H_
 
@@ -48,7 +51,6 @@ typedef struct flexbe_msgs__action__BehaviorExecution_Goal__Sequence
   size_t capacity;
 } flexbe_msgs__action__BehaviorExecution_Goal__Sequence;
 
-
 // Constants defined in the message
 
 // Include directives for member types
@@ -73,7 +75,6 @@ typedef struct flexbe_msgs__action__BehaviorExecution_Result__Sequence
   size_t capacity;
 } flexbe_msgs__action__BehaviorExecution_Result__Sequence;
 
-
 // Constants defined in the message
 
 /// Struct defined in action/BehaviorExecution in the package flexbe_msgs.
@@ -92,7 +93,6 @@ typedef struct flexbe_msgs__action__BehaviorExecution_Feedback__Sequence
   /// The number of allocated items in data
   size_t capacity;
 } flexbe_msgs__action__BehaviorExecution_Feedback__Sequence;
-
 
 // Constants defined in the message
 
@@ -119,7 +119,6 @@ typedef struct flexbe_msgs__action__BehaviorExecution_SendGoal_Request__Sequence
   size_t capacity;
 } flexbe_msgs__action__BehaviorExecution_SendGoal_Request__Sequence;
 
-
 // Constants defined in the message
 
 // Include directives for member types
@@ -143,6 +142,41 @@ typedef struct flexbe_msgs__action__BehaviorExecution_SendGoal_Response__Sequenc
   size_t capacity;
 } flexbe_msgs__action__BehaviorExecution_SendGoal_Response__Sequence;
 
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'info'
+#include "service_msgs/msg/detail/service_event_info__struct.h"
+
+// constants for array fields with an upper bound
+// request
+enum
+{
+  flexbe_msgs__action__BehaviorExecution_SendGoal_Event__request__MAX_SIZE = 1
+};
+// response
+enum
+{
+  flexbe_msgs__action__BehaviorExecution_SendGoal_Event__response__MAX_SIZE = 1
+};
+
+/// Struct defined in action/BehaviorExecution in the package flexbe_msgs.
+typedef struct flexbe_msgs__action__BehaviorExecution_SendGoal_Event
+{
+  service_msgs__msg__ServiceEventInfo info;
+  flexbe_msgs__action__BehaviorExecution_SendGoal_Request__Sequence request;
+  flexbe_msgs__action__BehaviorExecution_SendGoal_Response__Sequence response;
+} flexbe_msgs__action__BehaviorExecution_SendGoal_Event;
+
+// Struct for a sequence of flexbe_msgs__action__BehaviorExecution_SendGoal_Event.
+typedef struct flexbe_msgs__action__BehaviorExecution_SendGoal_Event__Sequence
+{
+  flexbe_msgs__action__BehaviorExecution_SendGoal_Event * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} flexbe_msgs__action__BehaviorExecution_SendGoal_Event__Sequence;
 
 // Constants defined in the message
 
@@ -166,7 +200,6 @@ typedef struct flexbe_msgs__action__BehaviorExecution_GetResult_Request__Sequenc
   /// The number of allocated items in data
   size_t capacity;
 } flexbe_msgs__action__BehaviorExecution_GetResult_Request__Sequence;
-
 
 // Constants defined in the message
 
@@ -192,6 +225,42 @@ typedef struct flexbe_msgs__action__BehaviorExecution_GetResult_Response__Sequen
   size_t capacity;
 } flexbe_msgs__action__BehaviorExecution_GetResult_Response__Sequence;
 
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'info'
+// already included above
+// #include "service_msgs/msg/detail/service_event_info__struct.h"
+
+// constants for array fields with an upper bound
+// request
+enum
+{
+  flexbe_msgs__action__BehaviorExecution_GetResult_Event__request__MAX_SIZE = 1
+};
+// response
+enum
+{
+  flexbe_msgs__action__BehaviorExecution_GetResult_Event__response__MAX_SIZE = 1
+};
+
+/// Struct defined in action/BehaviorExecution in the package flexbe_msgs.
+typedef struct flexbe_msgs__action__BehaviorExecution_GetResult_Event
+{
+  service_msgs__msg__ServiceEventInfo info;
+  flexbe_msgs__action__BehaviorExecution_GetResult_Request__Sequence request;
+  flexbe_msgs__action__BehaviorExecution_GetResult_Response__Sequence response;
+} flexbe_msgs__action__BehaviorExecution_GetResult_Event;
+
+// Struct for a sequence of flexbe_msgs__action__BehaviorExecution_GetResult_Event.
+typedef struct flexbe_msgs__action__BehaviorExecution_GetResult_Event__Sequence
+{
+  flexbe_msgs__action__BehaviorExecution_GetResult_Event * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} flexbe_msgs__action__BehaviorExecution_GetResult_Event__Sequence;
 
 // Constants defined in the message
 

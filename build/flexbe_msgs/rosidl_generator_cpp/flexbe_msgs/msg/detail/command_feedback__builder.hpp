@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/CommandFeedback.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/command_feedback.hpp"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__COMMAND_FEEDBACK__BUILDER_HPP_
 #define FLEXBE_MSGS__MSG__DETAIL__COMMAND_FEEDBACK__BUILDER_HPP_
 

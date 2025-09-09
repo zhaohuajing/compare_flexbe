@@ -1,3 +1,0 @@
-
-pcl_msgs/PointIndices target_cluster_indices
-pcl_msgs/PointIndices[] obstacle_cluster_indices

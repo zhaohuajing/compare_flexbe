@@ -1,2 +1,1 @@
-int32 behavior_id       # id (checksum) of particular behavior encoding
-Container[] containers
+/home/csrobot/flexbe_ws/src/flexbe_behavior_engine/flexbe_msgs/msg/ContainerStructure.msg

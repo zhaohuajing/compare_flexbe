@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/ContainerStructure.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/container_structure.hpp"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__CONTAINER_STRUCTURE__STRUCT_HPP_
 #define FLEXBE_MSGS__MSG__DETAIL__CONTAINER_STRUCTURE__STRUCT_HPP_
 

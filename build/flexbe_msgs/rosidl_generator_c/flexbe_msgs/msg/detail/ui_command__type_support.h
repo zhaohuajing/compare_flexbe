@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/UICommand.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/ui_command.h"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__UI_COMMAND__TYPE_SUPPORT_H_
 #define FLEXBE_MSGS__MSG__DETAIL__UI_COMMAND__TYPE_SUPPORT_H_
 
@@ -24,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   flexbe_msgs,
   msg,
   UICommand
-)();
+)(void);
 
 #ifdef __cplusplus
 }

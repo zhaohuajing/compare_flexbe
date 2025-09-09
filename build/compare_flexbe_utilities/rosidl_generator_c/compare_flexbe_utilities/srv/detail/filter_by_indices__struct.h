@@ -2,6 +2,9 @@
 // with input from compare_flexbe_utilities:srv/FilterByIndices.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "compare_flexbe_utilities/srv/filter_by_indices.h"
+
+
 #ifndef COMPARE_FLEXBE_UTILITIES__SRV__DETAIL__FILTER_BY_INDICES__STRUCT_H_
 #define COMPARE_FLEXBE_UTILITIES__SRV__DETAIL__FILTER_BY_INDICES__STRUCT_H_
 
@@ -40,7 +43,6 @@ typedef struct compare_flexbe_utilities__srv__FilterByIndices_Request__Sequence
   size_t capacity;
 } compare_flexbe_utilities__srv__FilterByIndices_Request__Sequence;
 
-
 // Constants defined in the message
 
 // Include directives for member types
@@ -63,6 +65,42 @@ typedef struct compare_flexbe_utilities__srv__FilterByIndices_Response__Sequence
   /// The number of allocated items in data
   size_t capacity;
 } compare_flexbe_utilities__srv__FilterByIndices_Response__Sequence;
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'info'
+#include "service_msgs/msg/detail/service_event_info__struct.h"
+
+// constants for array fields with an upper bound
+// request
+enum
+{
+  compare_flexbe_utilities__srv__FilterByIndices_Event__request__MAX_SIZE = 1
+};
+// response
+enum
+{
+  compare_flexbe_utilities__srv__FilterByIndices_Event__response__MAX_SIZE = 1
+};
+
+/// Struct defined in srv/FilterByIndices in the package compare_flexbe_utilities.
+typedef struct compare_flexbe_utilities__srv__FilterByIndices_Event
+{
+  service_msgs__msg__ServiceEventInfo info;
+  compare_flexbe_utilities__srv__FilterByIndices_Request__Sequence request;
+  compare_flexbe_utilities__srv__FilterByIndices_Response__Sequence response;
+} compare_flexbe_utilities__srv__FilterByIndices_Event;
+
+// Struct for a sequence of compare_flexbe_utilities__srv__FilterByIndices_Event.
+typedef struct compare_flexbe_utilities__srv__FilterByIndices_Event__Sequence
+{
+  compare_flexbe_utilities__srv__FilterByIndices_Event * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} compare_flexbe_utilities__srv__FilterByIndices_Event__Sequence;
 
 #ifdef __cplusplus
 }

@@ -1,0 +1,98 @@
+[0.049s] Invoking command in '/home/csrobot/flexbe_ws/build/flexbe_testing': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/csrobot/flexbe_ws/src/flexbe_behavior_engine/flexbe_testing -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/install/flexbe_testing
+[0.231s] -- The C compiler identification is GNU 13.3.0
+[0.417s] -- The CXX compiler identification is GNU 13.3.0
+[0.460s] -- Detecting C compiler ABI info
+[0.718s] -- Detecting C compiler ABI info - done
+[0.737s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.737s] -- Detecting C compile features
+[0.737s] -- Detecting C compile features - done
+[0.763s] -- Detecting CXX compiler ABI info
+[1.048s] -- Detecting CXX compiler ABI info - done
+[1.071s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.071s] -- Detecting CXX compile features
+[1.071s] -- Detecting CXX compile features - done
+[1.079s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.481s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.707s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.806s] -- Found ament_cmake_pytest: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_pytest/cmake)
+[4.047s] -- Configuring done (4.0s)
+[4.063s] -- Generating done (0.0s)
+[4.072s] -- Build files have been written to: /home/csrobot/flexbe_ws/build/flexbe_testing
+[4.080s] Invoked command in '/home/csrobot/flexbe_ws/build/flexbe_testing' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/csrobot/flexbe_ws/src/flexbe_behavior_engine/flexbe_testing -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/install/flexbe_testing
+[4.088s] Invoking command in '/home/csrobot/flexbe_ws/build/flexbe_testing': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/flexbe_testing -- -j8 -l8
+[4.992s] Built target ament_cmake_python_symlink_flexbe_testing_setup
+[4.992s] Built target ament_cmake_python_symlink_flexbe_testing
+[5.023s] running egg_info
+[5.023s] creating flexbe_testing.egg-info
+[5.103s] writing flexbe_testing.egg-info/PKG-INFO
+[5.103s] writing dependency_links to flexbe_testing.egg-info/dependency_links.txt
+[5.103s] writing top-level names to flexbe_testing.egg-info/top_level.txt
+[5.103s] writing manifest file 'flexbe_testing.egg-info/SOURCES.txt'
+[5.318s] reading manifest file 'flexbe_testing.egg-info/SOURCES.txt'
+[5.318s] writing manifest file 'flexbe_testing.egg-info/SOURCES.txt'
+[5.478s] Built target ament_cmake_python_build_flexbe_testing_egg
+[5.511s] Invoked command in '/home/csrobot/flexbe_ws/build/flexbe_testing' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/flexbe_testing -- -j8 -l8
+[5.511s] Invoking command in '/home/csrobot/flexbe_ws/build/flexbe_testing': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/csrobot/flexbe_ws/build/flexbe_testing
+[7.353s] -- Install configuration: ""
+[7.354s] -- Execute custom install script
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/flexbe_testing/testing_node
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/launch/flexbe_testing.launch.py
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/launch/selftest_test.launch.py
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/flexbe_colcon_test.py
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/behavior.test
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/import_only.test
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/sub_received.test
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/sub_unavailable.test
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/test_add.test
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/test_add_bagfile.test
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/tests/res/testdata.bag
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/pythonpath.sh
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/pythonpath.dsv
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing-4.0.1-py3.12.egg-info/PKG-INFO
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing-4.0.1-py3.12.egg-info/SOURCES.txt
+[7.354s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing-4.0.1-py3.12.egg-info/dependency_links.txt
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing-4.0.1-py3.12.egg-info/top_level.txt
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/.gitignore
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/__init__.py
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/data_provider.py
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/logger.py
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/py_tester.py
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test/__init__.py
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test/import_only_state.py
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test/selftest_behavior.xml
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test/selftest_behavior_sm.py
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test/test_add_state.py
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test/test_sub_state.py
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test_context.py
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test_interface.py
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/tester.py
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/ament_index/resource_index/package_run_dependencies/flexbe_testing
+[7.355s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/ament_index/resource_index/parent_prefix_path/flexbe_testing
+[7.356s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/ament_prefix_path.sh
+[7.356s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/ament_prefix_path.dsv
+[7.356s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/path.sh
+[7.356s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/environment/path.dsv
+[7.356s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/local_setup.bash
+[7.356s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/local_setup.sh
+[7.356s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/local_setup.zsh
+[7.356s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/local_setup.dsv
+[7.356s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/package.dsv
+[7.356s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/ament_index/resource_index/packages/flexbe_testing
+[7.356s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/cmake/flexbe_testingConfig.cmake
+[7.356s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/cmake/flexbe_testingConfig-version.cmake
+[7.356s] -- Symlinking: /home/csrobot/flexbe_ws/install/flexbe_testing/share/flexbe_testing/package.xml
+[7.356s] Listing '/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing'...
+[7.356s] Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/__init__.py'...
+[7.361s] Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/data_provider.py'...
+[7.361s] Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/logger.py'...
+[7.362s] Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/py_tester.py'...
+[7.362s] Listing '/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test'...
+[7.362s] Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test/__init__.py'...
+[7.362s] Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test/import_only_state.py'...
+[7.362s] Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test/selftest_behavior_sm.py'...
+[7.362s] Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test/test_add_state.py'...
+[7.362s] Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test/test_sub_state.py'...
+[7.362s] Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test_context.py'...
+[7.362s] Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/test_interface.py'...
+[7.362s] Compiling '/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages/flexbe_testing/tester.py'...
+[7.363s] Invoked command in '/home/csrobot/flexbe_ws/build/flexbe_testing' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/csrobot/flexbe_ws/build/flexbe_testing

@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/StateInstantiation.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/state_instantiation.hpp"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__STATE_INSTANTIATION__STRUCT_HPP_
 #define FLEXBE_MSGS__MSG__DETAIL__STATE_INSTANTIATION__STRUCT_HPP_
 

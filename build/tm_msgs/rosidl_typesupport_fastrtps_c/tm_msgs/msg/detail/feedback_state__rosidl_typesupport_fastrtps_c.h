@@ -9,11 +9,23 @@
 #include "rosidl_runtime_c/message_type_support_struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "tm_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+#include "tm_msgs/msg/detail/feedback_state__struct.h"
+#include "fastcdr/Cdr.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+bool cdr_serialize_tm_msgs__msg__FeedbackState(
+  const tm_msgs__msg__FeedbackState * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+bool cdr_deserialize_tm_msgs__msg__FeedbackState(
+  eprosima::fastcdr::Cdr &,
+  tm_msgs__msg__FeedbackState * ros_message);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
 size_t get_serialized_size_tm_msgs__msg__FeedbackState(
@@ -22,6 +34,22 @@ size_t get_serialized_size_tm_msgs__msg__FeedbackState(
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
 size_t max_serialized_size_tm_msgs__msg__FeedbackState(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+bool cdr_serialize_key_tm_msgs__msg__FeedbackState(
+  const tm_msgs__msg__FeedbackState * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+size_t get_serialized_size_key_tm_msgs__msg__FeedbackState(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_tm_msgs
+size_t max_serialized_size_key_tm_msgs__msg__FeedbackState(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);

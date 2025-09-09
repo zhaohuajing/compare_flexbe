@@ -177,7 +177,7 @@ flexbe_msgs__msg__BehaviorSelection__copy(
 }
 
 flexbe_msgs__msg__BehaviorSelection *
-flexbe_msgs__msg__BehaviorSelection__create()
+flexbe_msgs__msg__BehaviorSelection__create(void)
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   flexbe_msgs__msg__BehaviorSelection * msg = (flexbe_msgs__msg__BehaviorSelection *)allocator.allocate(sizeof(flexbe_msgs__msg__BehaviorSelection), allocator.state);

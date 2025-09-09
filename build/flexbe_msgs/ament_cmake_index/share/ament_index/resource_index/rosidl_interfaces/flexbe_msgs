@@ -40,5 +40,3 @@ msg/UserdataInfo.idl
 msg/UserdataInfo.msg
 srv/GetUserdata.idl
 srv/GetUserdata.srv
-srv/GetUserdata_Request.msg
-srv/GetUserdata_Response.msg

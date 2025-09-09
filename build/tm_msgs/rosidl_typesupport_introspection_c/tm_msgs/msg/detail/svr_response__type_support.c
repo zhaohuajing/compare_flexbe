@@ -46,6 +46,7 @@ static rosidl_typesupport_introspection_c__MessageMember tm_msgs__msg__SvrRespon
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -63,6 +64,7 @@ static rosidl_typesupport_introspection_c__MessageMember tm_msgs__msg__SvrRespon
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -80,6 +82,7 @@ static rosidl_typesupport_introspection_c__MessageMember tm_msgs__msg__SvrRespon
     rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -97,6 +100,7 @@ static rosidl_typesupport_introspection_c__MessageMember tm_msgs__msg__SvrRespon
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -114,6 +118,7 @@ static rosidl_typesupport_introspection_c__MessageMember tm_msgs__msg__SvrRespon
     rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -133,6 +138,7 @@ static const rosidl_typesupport_introspection_c__MessageMembers tm_msgs__msg__Sv
   "SvrResponse",  // message name
   5,  // number of fields
   sizeof(tm_msgs__msg__SvrResponse),
+  false,  // has_any_key_member_
   tm_msgs__msg__SvrResponse__rosidl_typesupport_introspection_c__SvrResponse_message_member_array,  // message members
   tm_msgs__msg__SvrResponse__rosidl_typesupport_introspection_c__SvrResponse_init_function,  // function to initialize message memory (memory has to be allocated)
   tm_msgs__msg__SvrResponse__rosidl_typesupport_introspection_c__SvrResponse_fini_function  // function to terminate message instance (will not free memory)
@@ -144,6 +150,9 @@ static rosidl_message_type_support_t tm_msgs__msg__SvrResponse__rosidl_typesuppo
   0,
   &tm_msgs__msg__SvrResponse__rosidl_typesupport_introspection_c__SvrResponse_message_members,
   get_message_typesupport_handle_function,
+  &tm_msgs__msg__SvrResponse__get_type_hash,
+  &tm_msgs__msg__SvrResponse__get_type_description,
+  &tm_msgs__msg__SvrResponse__get_type_description_sources,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_tm_msgs

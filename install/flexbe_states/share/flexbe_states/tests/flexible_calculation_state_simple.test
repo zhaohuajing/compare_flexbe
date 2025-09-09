@@ -1,15 +1,1 @@
-path: flexbe_states.flexible_calculation_state
-class: FlexibleCalculationState
-
-params:
-    calculation: "lambda b, a: a - b"
-    input_keys: ['a', 'b']
-
-input:
-    a: 3
-    b: 4
-
-output:
-    output_value: -1
-
-outcome: done
+/home/csrobot/flexbe_ws/build/flexbe_states/tests/flexible_calculation_state_simple.test

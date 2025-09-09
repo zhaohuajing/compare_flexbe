@@ -1,13 +1,6 @@
 package.xml
 setup.cfg
 setup.py
-../../../build/flexbe_states/flexbe_states.egg-info/PKG-INFO
-../../../build/flexbe_states/flexbe_states.egg-info/SOURCES.txt
-../../../build/flexbe_states/flexbe_states.egg-info/dependency_links.txt
-../../../build/flexbe_states/flexbe_states.egg-info/entry_points.txt
-../../../build/flexbe_states/flexbe_states.egg-info/requires.txt
-../../../build/flexbe_states/flexbe_states.egg-info/top_level.txt
-../../../build/flexbe_states/flexbe_states.egg-info/zip-safe
 flexbe_states/__init__.py
 flexbe_states/calculation_state.py
 flexbe_states/check_condition_state.py
@@ -25,6 +18,12 @@ flexbe_states/selection_state.py
 flexbe_states/subscriber_state.py
 flexbe_states/user_data_state.py
 flexbe_states/wait_state.py
+flexbe_states.egg-info/PKG-INFO
+flexbe_states.egg-info/SOURCES.txt
+flexbe_states.egg-info/dependency_links.txt
+flexbe_states.egg-info/requires.txt
+flexbe_states.egg-info/top_level.txt
+flexbe_states.egg-info/zip-safe
 resource/flexbe_states
 tests/__init__.py
 tests/calculation_state_none.test

@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_Feedback",
+      "fields": [
+        {
+          "name": "status",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "progress",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_Feedback",
+      "hash_string": "RIHS01_baed555467143866683e323e83df8d3d5739bc1a094c152edf244cce02073f09"
+    }
+  ]
+}

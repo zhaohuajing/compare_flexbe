@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "flexbe_msgs/msg/OutcomeCondition",
+      "fields": [
+        {
+          "name": "state_name",
+          "type": {
+            "type_id": 161,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "state_outcome",
+          "type": {
+            "type_id": 161,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "flexbe_msgs/msg/OutcomeCondition",
+      "hash_string": "RIHS01_657dd9555a7e99deb1cd0e2d12170eda796ee5f47d1875f592570fadf5194058"
+    }
+  ]
+}

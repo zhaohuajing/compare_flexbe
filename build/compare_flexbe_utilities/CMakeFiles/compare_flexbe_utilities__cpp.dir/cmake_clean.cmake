@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/compare_flexbe_utilities__cpp"
+  "rosidl_generator_cpp/compare_flexbe_utilities/msg/rosidl_generator_cpp__visibility_control.hpp"
   "rosidl_generator_cpp/compare_flexbe_utilities/srv/cartesian_move_to_pose.hpp"
   "rosidl_generator_cpp/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__builder.hpp"
   "rosidl_generator_cpp/compare_flexbe_utilities/srv/detail/cartesian_move_to_pose__struct.hpp"

@@ -1,6 +1,9 @@
 source;share/flexbe_turtlesim_demo_flexbe_behaviors/hook/cmake_prefix_path.ps1
 source;share/flexbe_turtlesim_demo_flexbe_behaviors/hook/cmake_prefix_path.dsv
 source;share/flexbe_turtlesim_demo_flexbe_behaviors/hook/cmake_prefix_path.sh
+source;share/flexbe_turtlesim_demo_flexbe_behaviors/hook/pythonpath.ps1
+source;share/flexbe_turtlesim_demo_flexbe_behaviors/hook/pythonpath.dsv
+source;share/flexbe_turtlesim_demo_flexbe_behaviors/hook/pythonpath.sh
 source;share/flexbe_turtlesim_demo_flexbe_behaviors/local_setup.bash
 source;share/flexbe_turtlesim_demo_flexbe_behaviors/local_setup.dsv
 source;share/flexbe_turtlesim_demo_flexbe_behaviors/local_setup.ps1

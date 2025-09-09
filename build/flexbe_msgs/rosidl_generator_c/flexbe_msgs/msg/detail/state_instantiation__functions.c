@@ -366,7 +366,7 @@ flexbe_msgs__msg__StateInstantiation__copy(
 }
 
 flexbe_msgs__msg__StateInstantiation *
-flexbe_msgs__msg__StateInstantiation__create()
+flexbe_msgs__msg__StateInstantiation__create(void)
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   flexbe_msgs__msg__StateInstantiation * msg = (flexbe_msgs__msg__StateInstantiation *)allocator.allocate(sizeof(flexbe_msgs__msg__StateInstantiation), allocator.state);

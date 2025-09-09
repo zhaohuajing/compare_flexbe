@@ -9,11 +9,23 @@
 #include "rosidl_runtime_c/message_type_support_struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "flexbe_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+#include "flexbe_msgs/msg/detail/ui_command__struct.h"
+#include "fastcdr/Cdr.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_flexbe_msgs__msg__UICommand(
+  const flexbe_msgs__msg__UICommand * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_deserialize_flexbe_msgs__msg__UICommand(
+  eprosima::fastcdr::Cdr &,
+  flexbe_msgs__msg__UICommand * ros_message);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t get_serialized_size_flexbe_msgs__msg__UICommand(
@@ -22,6 +34,22 @@ size_t get_serialized_size_flexbe_msgs__msg__UICommand(
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t max_serialized_size_flexbe_msgs__msg__UICommand(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_key_flexbe_msgs__msg__UICommand(
+  const flexbe_msgs__msg__UICommand * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t get_serialized_size_key_flexbe_msgs__msg__UICommand(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t max_serialized_size_key_flexbe_msgs__msg__UICommand(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);

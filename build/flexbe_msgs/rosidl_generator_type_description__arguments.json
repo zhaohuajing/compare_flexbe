@@ -1,0 +1,33 @@
+{
+  "package_name": "flexbe_msgs",
+  "output_dir": "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_generator_type_description/flexbe_msgs",
+  "idl_tuples": [
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/BEStatus.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/BehaviorLog.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/BehaviorModification.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/BehaviorRequest.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/BehaviorSelection.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/BehaviorSync.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/CommandFeedback.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/Container.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/ContainerStructure.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/OutcomeCondition.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/OutcomeRequest.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/StateInstantiation.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/StateMapMsg.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/SynthesisErrorCodes.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/SynthesisRequest.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/UICommand.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:msg/UserdataInfo.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:action/BehaviorInput.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:action/BehaviorExecution.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:action/BehaviorSynthesis.idl",
+    "/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs:srv/GetUserdata.idl"
+  ],
+  "include_paths": [
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "action_msgs:/opt/ros/jazzy/share/action_msgs",
+    "unique_identifier_msgs:/opt/ros/jazzy/share/unique_identifier_msgs"
+  ]
+}

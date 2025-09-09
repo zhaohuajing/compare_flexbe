@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "compare_flexbe_utilities/srv/MoveToNamedPose_Response",
+      "fields": [
+        {
+          "name": "success",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "compare_flexbe_utilities/srv/MoveToNamedPose_Response",
+      "hash_string": "RIHS01_ac8a9570cba0ea921ffe2d02c6910a46c430d0f206bef14e94e5042b1815f370"
+    }
+  ]
+}

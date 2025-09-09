@@ -9,11 +9,23 @@
 #include "rosidl_runtime_c/message_type_support_struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "flexbe_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+#include "flexbe_msgs/action/detail/behavior_execution__struct.h"
+#include "fastcdr/Cdr.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_flexbe_msgs__action__BehaviorExecution_Goal(
+  const flexbe_msgs__action__BehaviorExecution_Goal * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_deserialize_flexbe_msgs__action__BehaviorExecution_Goal(
+  eprosima::fastcdr::Cdr &,
+  flexbe_msgs__action__BehaviorExecution_Goal * ros_message);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_Goal(
@@ -22,6 +34,22 @@ size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_Goal(
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t max_serialized_size_flexbe_msgs__action__BehaviorExecution_Goal(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_key_flexbe_msgs__action__BehaviorExecution_Goal(
+  const flexbe_msgs__action__BehaviorExecution_Goal * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t get_serialized_size_key_flexbe_msgs__action__BehaviorExecution_Goal(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t max_serialized_size_key_flexbe_msgs__action__BehaviorExecution_Goal(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
@@ -42,11 +70,25 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c,
 // #include "rosidl_typesupport_interface/macros.h"
 // already included above
 // #include "flexbe_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_execution__struct.h"
+// already included above
+// #include "fastcdr/Cdr.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_flexbe_msgs__action__BehaviorExecution_Result(
+  const flexbe_msgs__action__BehaviorExecution_Result * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_deserialize_flexbe_msgs__action__BehaviorExecution_Result(
+  eprosima::fastcdr::Cdr &,
+  flexbe_msgs__action__BehaviorExecution_Result * ros_message);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_Result(
@@ -55,6 +97,22 @@ size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_Result(
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t max_serialized_size_flexbe_msgs__action__BehaviorExecution_Result(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_key_flexbe_msgs__action__BehaviorExecution_Result(
+  const flexbe_msgs__action__BehaviorExecution_Result * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t get_serialized_size_key_flexbe_msgs__action__BehaviorExecution_Result(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t max_serialized_size_key_flexbe_msgs__action__BehaviorExecution_Result(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
@@ -75,11 +133,25 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c,
 // #include "rosidl_typesupport_interface/macros.h"
 // already included above
 // #include "flexbe_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_execution__struct.h"
+// already included above
+// #include "fastcdr/Cdr.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_flexbe_msgs__action__BehaviorExecution_Feedback(
+  const flexbe_msgs__action__BehaviorExecution_Feedback * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_deserialize_flexbe_msgs__action__BehaviorExecution_Feedback(
+  eprosima::fastcdr::Cdr &,
+  flexbe_msgs__action__BehaviorExecution_Feedback * ros_message);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_Feedback(
@@ -88,6 +160,22 @@ size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_Feedback(
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t max_serialized_size_flexbe_msgs__action__BehaviorExecution_Feedback(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_key_flexbe_msgs__action__BehaviorExecution_Feedback(
+  const flexbe_msgs__action__BehaviorExecution_Feedback * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t get_serialized_size_key_flexbe_msgs__action__BehaviorExecution_Feedback(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t max_serialized_size_key_flexbe_msgs__action__BehaviorExecution_Feedback(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
@@ -108,11 +196,25 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c,
 // #include "rosidl_typesupport_interface/macros.h"
 // already included above
 // #include "flexbe_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_execution__struct.h"
+// already included above
+// #include "fastcdr/Cdr.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_flexbe_msgs__action__BehaviorExecution_SendGoal_Request(
+  const flexbe_msgs__action__BehaviorExecution_SendGoal_Request * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_deserialize_flexbe_msgs__action__BehaviorExecution_SendGoal_Request(
+  eprosima::fastcdr::Cdr &,
+  flexbe_msgs__action__BehaviorExecution_SendGoal_Request * ros_message);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_SendGoal_Request(
@@ -121,6 +223,22 @@ size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_SendGoal_Reque
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t max_serialized_size_flexbe_msgs__action__BehaviorExecution_SendGoal_Request(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_key_flexbe_msgs__action__BehaviorExecution_SendGoal_Request(
+  const flexbe_msgs__action__BehaviorExecution_SendGoal_Request * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t get_serialized_size_key_flexbe_msgs__action__BehaviorExecution_SendGoal_Request(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t max_serialized_size_key_flexbe_msgs__action__BehaviorExecution_SendGoal_Request(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
@@ -141,11 +259,25 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c,
 // #include "rosidl_typesupport_interface/macros.h"
 // already included above
 // #include "flexbe_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_execution__struct.h"
+// already included above
+// #include "fastcdr/Cdr.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_flexbe_msgs__action__BehaviorExecution_SendGoal_Response(
+  const flexbe_msgs__action__BehaviorExecution_SendGoal_Response * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_deserialize_flexbe_msgs__action__BehaviorExecution_SendGoal_Response(
+  eprosima::fastcdr::Cdr &,
+  flexbe_msgs__action__BehaviorExecution_SendGoal_Response * ros_message);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_SendGoal_Response(
@@ -159,8 +291,87 @@ size_t max_serialized_size_flexbe_msgs__action__BehaviorExecution_SendGoal_Respo
   size_t current_alignment);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_key_flexbe_msgs__action__BehaviorExecution_SendGoal_Response(
+  const flexbe_msgs__action__BehaviorExecution_SendGoal_Response * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t get_serialized_size_key_flexbe_msgs__action__BehaviorExecution_SendGoal_Response(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t max_serialized_size_key_flexbe_msgs__action__BehaviorExecution_SendGoal_Response(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, flexbe_msgs, action, BehaviorExecution_SendGoal_Response)();
+
+#ifdef __cplusplus
+}
+#endif
+
+// already included above
+// #include <stddef.h>
+// already included above
+// #include "rosidl_runtime_c/message_type_support_struct.h"
+// already included above
+// #include "rosidl_typesupport_interface/macros.h"
+// already included above
+// #include "flexbe_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_execution__struct.h"
+// already included above
+// #include "fastcdr/Cdr.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_flexbe_msgs__action__BehaviorExecution_SendGoal_Event(
+  const flexbe_msgs__action__BehaviorExecution_SendGoal_Event * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_deserialize_flexbe_msgs__action__BehaviorExecution_SendGoal_Event(
+  eprosima::fastcdr::Cdr &,
+  flexbe_msgs__action__BehaviorExecution_SendGoal_Event * ros_message);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_SendGoal_Event(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t max_serialized_size_flexbe_msgs__action__BehaviorExecution_SendGoal_Event(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_key_flexbe_msgs__action__BehaviorExecution_SendGoal_Event(
+  const flexbe_msgs__action__BehaviorExecution_SendGoal_Event * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t get_serialized_size_key_flexbe_msgs__action__BehaviorExecution_SendGoal_Event(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t max_serialized_size_key_flexbe_msgs__action__BehaviorExecution_SendGoal_Event(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, flexbe_msgs, action, BehaviorExecution_SendGoal_Event)();
 
 #ifdef __cplusplus
 }
@@ -193,11 +404,25 @@ ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c,
 // #include "rosidl_typesupport_interface/macros.h"
 // already included above
 // #include "flexbe_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_execution__struct.h"
+// already included above
+// #include "fastcdr/Cdr.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_flexbe_msgs__action__BehaviorExecution_GetResult_Request(
+  const flexbe_msgs__action__BehaviorExecution_GetResult_Request * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_deserialize_flexbe_msgs__action__BehaviorExecution_GetResult_Request(
+  eprosima::fastcdr::Cdr &,
+  flexbe_msgs__action__BehaviorExecution_GetResult_Request * ros_message);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_GetResult_Request(
@@ -206,6 +431,22 @@ size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_GetResult_Requ
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t max_serialized_size_flexbe_msgs__action__BehaviorExecution_GetResult_Request(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_key_flexbe_msgs__action__BehaviorExecution_GetResult_Request(
+  const flexbe_msgs__action__BehaviorExecution_GetResult_Request * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t get_serialized_size_key_flexbe_msgs__action__BehaviorExecution_GetResult_Request(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t max_serialized_size_key_flexbe_msgs__action__BehaviorExecution_GetResult_Request(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
@@ -226,11 +467,25 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c,
 // #include "rosidl_typesupport_interface/macros.h"
 // already included above
 // #include "flexbe_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_execution__struct.h"
+// already included above
+// #include "fastcdr/Cdr.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_flexbe_msgs__action__BehaviorExecution_GetResult_Response(
+  const flexbe_msgs__action__BehaviorExecution_GetResult_Response * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_deserialize_flexbe_msgs__action__BehaviorExecution_GetResult_Response(
+  eprosima::fastcdr::Cdr &,
+  flexbe_msgs__action__BehaviorExecution_GetResult_Response * ros_message);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_GetResult_Response(
@@ -244,8 +499,87 @@ size_t max_serialized_size_flexbe_msgs__action__BehaviorExecution_GetResult_Resp
   size_t current_alignment);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_key_flexbe_msgs__action__BehaviorExecution_GetResult_Response(
+  const flexbe_msgs__action__BehaviorExecution_GetResult_Response * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t get_serialized_size_key_flexbe_msgs__action__BehaviorExecution_GetResult_Response(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t max_serialized_size_key_flexbe_msgs__action__BehaviorExecution_GetResult_Response(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, flexbe_msgs, action, BehaviorExecution_GetResult_Response)();
+
+#ifdef __cplusplus
+}
+#endif
+
+// already included above
+// #include <stddef.h>
+// already included above
+// #include "rosidl_runtime_c/message_type_support_struct.h"
+// already included above
+// #include "rosidl_typesupport_interface/macros.h"
+// already included above
+// #include "flexbe_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_execution__struct.h"
+// already included above
+// #include "fastcdr/Cdr.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_flexbe_msgs__action__BehaviorExecution_GetResult_Event(
+  const flexbe_msgs__action__BehaviorExecution_GetResult_Event * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_deserialize_flexbe_msgs__action__BehaviorExecution_GetResult_Event(
+  eprosima::fastcdr::Cdr &,
+  flexbe_msgs__action__BehaviorExecution_GetResult_Event * ros_message);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_GetResult_Event(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t max_serialized_size_flexbe_msgs__action__BehaviorExecution_GetResult_Event(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_key_flexbe_msgs__action__BehaviorExecution_GetResult_Event(
+  const flexbe_msgs__action__BehaviorExecution_GetResult_Event * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t get_serialized_size_key_flexbe_msgs__action__BehaviorExecution_GetResult_Event(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t max_serialized_size_key_flexbe_msgs__action__BehaviorExecution_GetResult_Event(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, flexbe_msgs, action, BehaviorExecution_GetResult_Event)();
 
 #ifdef __cplusplus
 }
@@ -279,11 +613,25 @@ ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c,
 // #include "rosidl_typesupport_interface/macros.h"
 // already included above
 // #include "flexbe_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+// already included above
+// #include "flexbe_msgs/action/detail/behavior_execution__struct.h"
+// already included above
+// #include "fastcdr/Cdr.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_flexbe_msgs__action__BehaviorExecution_FeedbackMessage(
+  const flexbe_msgs__action__BehaviorExecution_FeedbackMessage * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_deserialize_flexbe_msgs__action__BehaviorExecution_FeedbackMessage(
+  eprosima::fastcdr::Cdr &,
+  flexbe_msgs__action__BehaviorExecution_FeedbackMessage * ros_message);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_FeedbackMessage(
@@ -292,6 +640,22 @@ size_t get_serialized_size_flexbe_msgs__action__BehaviorExecution_FeedbackMessag
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
 size_t max_serialized_size_flexbe_msgs__action__BehaviorExecution_FeedbackMessage(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+bool cdr_serialize_key_flexbe_msgs__action__BehaviorExecution_FeedbackMessage(
+  const flexbe_msgs__action__BehaviorExecution_FeedbackMessage * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t get_serialized_size_key_flexbe_msgs__action__BehaviorExecution_FeedbackMessage(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_flexbe_msgs
+size_t max_serialized_size_key_flexbe_msgs__action__BehaviorExecution_FeedbackMessage(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);

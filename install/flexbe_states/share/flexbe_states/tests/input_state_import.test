@@ -1,4 +1,1 @@
-path: flexbe_states.input_state
-class: InputState
-
-import_only: true
+/home/csrobot/flexbe_ws/build/flexbe_states/tests/input_state_import.test

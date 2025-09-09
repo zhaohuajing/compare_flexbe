@@ -1,0 +1,19 @@
+[0.013s] Invoking command in '/home/csrobot/flexbe_ws/build/tm14_moveit_config': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/tm_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/csrobot/flexbe_ws/src/tmr_ros2/tm_moveit/tm14_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/install/tm14_moveit_config
+[0.085s] -- The C compiler identification is GNU 13.3.0
+[0.139s] -- The CXX compiler identification is GNU 13.3.0
+[0.150s] -- Detecting C compiler ABI info
+[0.218s] -- Detecting C compiler ABI info - done
+[0.228s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.228s] -- Detecting C compile features
+[0.229s] -- Detecting C compile features - done
+[0.237s] -- Detecting CXX compiler ABI info
+[0.317s] -- Detecting CXX compiler ABI info - done
+[0.323s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.323s] -- Detecting CXX compile features
+[0.323s] -- Detecting CXX compile features - done
+[0.326s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.438s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.536s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.654s] -- Configuring done (0.6s)
+[0.654s] -- Generating done (0.0s)
+[0.655s] -- Build files have been written to: /home/csrobot/flexbe_ws/build/tm14_moveit_config

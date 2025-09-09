@@ -1,7 +1,1 @@
-path: flexbe_states.log_state
-class: LogState
-
-params:
-    text: 1
-
-outcome: done
+/home/csrobot/flexbe_ws/build/flexbe_states/tests/log_state_int.test

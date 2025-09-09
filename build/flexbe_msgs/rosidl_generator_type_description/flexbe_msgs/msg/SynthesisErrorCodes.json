@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "flexbe_msgs/msg/SynthesisErrorCodes",
+      "fields": [
+        {
+          "name": "value",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "flexbe_msgs/msg/SynthesisErrorCodes",
+      "hash_string": "RIHS01_f77ad4c8493f3ae5dd0c9fe79fd8c506f4d0ea5d32595a8004c3919f3596b3fc"
+    }
+  ]
+}

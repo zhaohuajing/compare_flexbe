@@ -41,8 +41,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/flexbe_msgs__rosidl_generator_py.dir/rosidl_generator_py/flexbe_msgs/msg/_userdata_info_s.c.o.d"
   "CMakeFiles/flexbe_msgs__rosidl_generator_py.dir/rosidl_generator_py/flexbe_msgs/srv/_get_userdata_s.c.o"
   "CMakeFiles/flexbe_msgs__rosidl_generator_py.dir/rosidl_generator_py/flexbe_msgs/srv/_get_userdata_s.c.o.d"
-  "rosidl_generator_py/flexbe_msgs/libflexbe_msgs__rosidl_generator_py.pdb"
-  "rosidl_generator_py/flexbe_msgs/libflexbe_msgs__rosidl_generator_py.so"
+  "libflexbe_msgs__rosidl_generator_py.pdb"
+  "libflexbe_msgs__rosidl_generator_py.so"
 )
 
 # Per-language clean rules from dependency scanning.

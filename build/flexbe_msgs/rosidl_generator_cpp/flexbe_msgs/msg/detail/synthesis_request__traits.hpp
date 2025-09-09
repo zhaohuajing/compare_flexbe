@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/SynthesisRequest.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/synthesis_request.hpp"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__SYNTHESIS_REQUEST__TRAITS_HPP_
 #define FLEXBE_MSGS__MSG__DETAIL__SYNTHESIS_REQUEST__TRAITS_HPP_
 

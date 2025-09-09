@@ -2,6 +2,9 @@
 // with input from tm_msgs:srv/SetEvent.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "tm_msgs/srv/set_event.h"
+
+
 #ifndef TM_MSGS__SRV__DETAIL__SET_EVENT__FUNCTIONS_H_
 #define TM_MSGS__SRV__DETAIL__SET_EVENT__FUNCTIONS_H_
 
@@ -13,10 +16,40 @@ extern "C"
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "rosidl_runtime_c/action_type_support_struct.h"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_runtime_c/service_type_support_struct.h"
+#include "rosidl_runtime_c/type_description/type_description__struct.h"
+#include "rosidl_runtime_c/type_description/type_source__struct.h"
+#include "rosidl_runtime_c/type_hash.h"
 #include "rosidl_runtime_c/visibility_control.h"
 #include "tm_msgs/msg/rosidl_generator_c__visibility_control.h"
 
 #include "tm_msgs/srv/detail/set_event__struct.h"
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_type_hash_t *
+tm_msgs__srv__SetEvent__get_type_hash(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+tm_msgs__srv__SetEvent__get_type_description(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+tm_msgs__srv__SetEvent__get_individual_type_description_source(
+  const rosidl_service_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+tm_msgs__srv__SetEvent__get_type_description_sources(
+  const rosidl_service_type_support_t * type_support);
 
 /// Initialize srv/SetEvent message.
 /**
@@ -53,7 +86,7 @@ tm_msgs__srv__SetEvent_Request__fini(tm_msgs__srv__SetEvent_Request * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
 tm_msgs__srv__SetEvent_Request *
-tm_msgs__srv__SetEvent_Request__create();
+tm_msgs__srv__SetEvent_Request__create(void);
 
 /// Destroy srv/SetEvent message.
 /**
@@ -92,6 +125,30 @@ bool
 tm_msgs__srv__SetEvent_Request__copy(
   const tm_msgs__srv__SetEvent_Request * input,
   tm_msgs__srv__SetEvent_Request * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_type_hash_t *
+tm_msgs__srv__SetEvent_Request__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+tm_msgs__srv__SetEvent_Request__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+tm_msgs__srv__SetEvent_Request__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+tm_msgs__srv__SetEvent_Request__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/SetEvent messages.
 /**
@@ -205,7 +262,7 @@ tm_msgs__srv__SetEvent_Response__fini(tm_msgs__srv__SetEvent_Response * msg);
  */
 ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
 tm_msgs__srv__SetEvent_Response *
-tm_msgs__srv__SetEvent_Response__create();
+tm_msgs__srv__SetEvent_Response__create(void);
 
 /// Destroy srv/SetEvent message.
 /**
@@ -244,6 +301,30 @@ bool
 tm_msgs__srv__SetEvent_Response__copy(
   const tm_msgs__srv__SetEvent_Response * input,
   tm_msgs__srv__SetEvent_Response * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_type_hash_t *
+tm_msgs__srv__SetEvent_Response__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+tm_msgs__srv__SetEvent_Response__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+tm_msgs__srv__SetEvent_Response__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+tm_msgs__srv__SetEvent_Response__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
 
 /// Initialize array of srv/SetEvent messages.
 /**
@@ -322,6 +403,181 @@ tm_msgs__srv__SetEvent_Response__Sequence__copy(
   const tm_msgs__srv__SetEvent_Response__Sequence * input,
   tm_msgs__srv__SetEvent_Response__Sequence * output);
 
+/// Initialize srv/SetEvent message.
+/**
+ * If the init function is called twice for the same message without
+ * calling fini inbetween previously allocated memory will be leaked.
+ * \param[in,out] msg The previously allocated message pointer.
+ * Fields without a default value will not be initialized by this function.
+ * You might want to call memset(msg, 0, sizeof(
+ * tm_msgs__srv__SetEvent_Event
+ * )) before or use
+ * tm_msgs__srv__SetEvent_Event__create()
+ * to allocate and initialize the message.
+ * \return true if initialization was successful, otherwise false
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+bool
+tm_msgs__srv__SetEvent_Event__init(tm_msgs__srv__SetEvent_Event * msg);
+
+/// Finalize srv/SetEvent message.
+/**
+ * \param[in,out] msg The allocated message pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+void
+tm_msgs__srv__SetEvent_Event__fini(tm_msgs__srv__SetEvent_Event * msg);
+
+/// Create srv/SetEvent message.
+/**
+ * It allocates the memory for the message, sets the memory to zero, and
+ * calls
+ * tm_msgs__srv__SetEvent_Event__init().
+ * \return The pointer to the initialized message if successful,
+ * otherwise NULL
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+tm_msgs__srv__SetEvent_Event *
+tm_msgs__srv__SetEvent_Event__create(void);
+
+/// Destroy srv/SetEvent message.
+/**
+ * It calls
+ * tm_msgs__srv__SetEvent_Event__fini()
+ * and frees the memory of the message.
+ * \param[in,out] msg The allocated message pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+void
+tm_msgs__srv__SetEvent_Event__destroy(tm_msgs__srv__SetEvent_Event * msg);
+
+/// Check for srv/SetEvent message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+bool
+tm_msgs__srv__SetEvent_Event__are_equal(const tm_msgs__srv__SetEvent_Event * lhs, const tm_msgs__srv__SetEvent_Event * rhs);
+
+/// Copy a srv/SetEvent message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+bool
+tm_msgs__srv__SetEvent_Event__copy(
+  const tm_msgs__srv__SetEvent_Event * input,
+  tm_msgs__srv__SetEvent_Event * output);
+
+/// Retrieve pointer to the hash of the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_type_hash_t *
+tm_msgs__srv__SetEvent_Event__get_type_hash(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_runtime_c__type_description__TypeDescription *
+tm_msgs__srv__SetEvent_Event__get_type_description(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the single raw source text that defined this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_runtime_c__type_description__TypeSource *
+tm_msgs__srv__SetEvent_Event__get_individual_type_description_source(
+  const rosidl_message_type_support_t * type_support);
+
+/// Retrieve pointer to the recursive raw sources that defined the description of this type.
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+const rosidl_runtime_c__type_description__TypeSource__Sequence *
+tm_msgs__srv__SetEvent_Event__get_type_description_sources(
+  const rosidl_message_type_support_t * type_support);
+
+/// Initialize array of srv/SetEvent messages.
+/**
+ * It allocates the memory for the number of elements and calls
+ * tm_msgs__srv__SetEvent_Event__init()
+ * for each element of the array.
+ * \param[in,out] array The allocated array pointer.
+ * \param[in] size The size / capacity of the array.
+ * \return true if initialization was successful, otherwise false
+ * If the array pointer is valid and the size is zero it is guaranteed
+ # to return true.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+bool
+tm_msgs__srv__SetEvent_Event__Sequence__init(tm_msgs__srv__SetEvent_Event__Sequence * array, size_t size);
+
+/// Finalize array of srv/SetEvent messages.
+/**
+ * It calls
+ * tm_msgs__srv__SetEvent_Event__fini()
+ * for each element of the array and frees the memory for the number of
+ * elements.
+ * \param[in,out] array The initialized array pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+void
+tm_msgs__srv__SetEvent_Event__Sequence__fini(tm_msgs__srv__SetEvent_Event__Sequence * array);
+
+/// Create array of srv/SetEvent messages.
+/**
+ * It allocates the memory for the array and calls
+ * tm_msgs__srv__SetEvent_Event__Sequence__init().
+ * \param[in] size The size / capacity of the array.
+ * \return The pointer to the initialized array if successful, otherwise NULL
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+tm_msgs__srv__SetEvent_Event__Sequence *
+tm_msgs__srv__SetEvent_Event__Sequence__create(size_t size);
+
+/// Destroy array of srv/SetEvent messages.
+/**
+ * It calls
+ * tm_msgs__srv__SetEvent_Event__Sequence__fini()
+ * on the array,
+ * and frees the memory of the array.
+ * \param[in,out] array The initialized array pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+void
+tm_msgs__srv__SetEvent_Event__Sequence__destroy(tm_msgs__srv__SetEvent_Event__Sequence * array);
+
+/// Check for srv/SetEvent message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+bool
+tm_msgs__srv__SetEvent_Event__Sequence__are_equal(const tm_msgs__srv__SetEvent_Event__Sequence * lhs, const tm_msgs__srv__SetEvent_Event__Sequence * rhs);
+
+/// Copy an array of srv/SetEvent messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_tm_msgs
+bool
+tm_msgs__srv__SetEvent_Event__Sequence__copy(
+  const tm_msgs__srv__SetEvent_Event__Sequence * input,
+  tm_msgs__srv__SetEvent_Event__Sequence * output);
 #ifdef __cplusplus
 }
 #endif

@@ -1,0 +1,818 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis",
+      "fields": [
+        {
+          "name": "goal",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_Goal"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "result",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_Result"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "feedback",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_Feedback"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "send_goal_service",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_SendGoal"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "get_result_service",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "feedback_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_FeedbackMessage"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "builtin_interfaces/msg/Time",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/action/BehaviorSynthesis_Feedback",
+        "fields": [
+          {
+            "name": "status",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "progress",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/action/BehaviorSynthesis_FeedbackMessage",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "feedback",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_Feedback"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult",
+        "fields": [
+          {
+            "name": "request_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult_Response"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "event_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult_Event"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult_Request",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult_Response",
+        "fields": [
+          {
+            "name": "status",
+            "type": {
+              "type_id": 2,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "result",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_Result"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/action/BehaviorSynthesis_Goal",
+        "fields": [
+          {
+            "name": "request",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/msg/SynthesisRequest"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/action/BehaviorSynthesis_Result",
+        "fields": [
+          {
+            "name": "error_code",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/msg/SynthesisErrorCodes"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "states",
+            "type": {
+              "type_id": 145,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/msg/StateInstantiation"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/action/BehaviorSynthesis_SendGoal",
+        "fields": [
+          {
+            "name": "request_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_SendGoal_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_SendGoal_Response"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "event_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_SendGoal_Event"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/action/BehaviorSynthesis_SendGoal_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_SendGoal_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_SendGoal_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/action/BehaviorSynthesis_SendGoal_Request",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "goal",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/action/BehaviorSynthesis_Goal"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/action/BehaviorSynthesis_SendGoal_Response",
+        "fields": [
+          {
+            "name": "accepted",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/msg/OutcomeCondition",
+        "fields": [
+          {
+            "name": "state_name",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "state_outcome",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/msg/StateInstantiation",
+        "fields": [
+          {
+            "name": "state_path",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "state_class",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "initial_state_name",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "input_keys",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "output_keys",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "cond_outcome",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "cond_transition",
+            "type": {
+              "type_id": 145,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "flexbe_msgs/msg/OutcomeCondition"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "behavior_class",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "parameter_names",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "parameter_values",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "position",
+            "type": {
+              "type_id": 58,
+              "capacity": 2,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "outcomes",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "transitions",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "autonomy",
+            "type": {
+              "type_id": 146,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "userdata_keys",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "userdata_remapping",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/msg/SynthesisErrorCodes",
+        "fields": [
+          {
+            "name": "value",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "flexbe_msgs/msg/SynthesisRequest",
+        "fields": [
+          {
+            "name": "name",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "system",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "goal",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "initial_condition",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sm_outcomes",
+            "type": {
+              "type_id": 161,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "service_msgs/msg/ServiceEventInfo",
+        "fields": [
+          {
+            "name": "event_type",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "client_gid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sequence_number",
+            "type": {
+              "type_id": 8,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "unique_identifier_msgs/msg/UUID",
+        "fields": [
+          {
+            "name": "uuid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis",
+      "hash_string": "RIHS01_dbedc54cc37f9d2281a5b41946e0fb8c490db0b01a10f4e264c4c73185feea59"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
+    },
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_Feedback",
+      "hash_string": "RIHS01_baed555467143866683e323e83df8d3d5739bc1a094c152edf244cce02073f09"
+    },
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_FeedbackMessage",
+      "hash_string": "RIHS01_9de8b8530b77ca889ff9f9e502c6d89609eb69d0e1698a5a3f95ae1033f1a1c2"
+    },
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult",
+      "hash_string": "RIHS01_fc4072bd54f8d3906b249020ea5746dfe8f57cafd535474ff0f1bfff8ba0f3c0"
+    },
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult_Event",
+      "hash_string": "RIHS01_6fd103518358eb229c43203d1f0e77e88f19ca2163365de118ac6b523506180c"
+    },
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult_Request",
+      "hash_string": "RIHS01_da6177283ee98be9286724f69fbcfd700e8cfb371f738529e3666d7f5767067c"
+    },
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_GetResult_Response",
+      "hash_string": "RIHS01_28df40cfeeb4cb0d74d8fe4b770a7c8c9c182c82df9f02817286b6ba8cc585d2"
+    },
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_Goal",
+      "hash_string": "RIHS01_18d105144ef57c635ee011a57d7907f2560fd8bca06ddd4f923ec589e3231131"
+    },
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_Result",
+      "hash_string": "RIHS01_7ad7555ebbfcc05de072020ed63efeeb90f7bb293bdeabc84e5c056af5602758"
+    },
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_SendGoal",
+      "hash_string": "RIHS01_7a03749d79441a6c289a6c431305a0e2eb61944e433db52a9b6da168c354e87d"
+    },
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_SendGoal_Event",
+      "hash_string": "RIHS01_54e7b88c0dcbefe9963960668e93ae74af3166e4df0b4de4fb2285cc3b70c587"
+    },
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_SendGoal_Request",
+      "hash_string": "RIHS01_f3a98beac2657b7ce8bae45abfd6b40342de8073ef031c06bcc17d7b47fb7355"
+    },
+    {
+      "type_name": "flexbe_msgs/action/BehaviorSynthesis_SendGoal_Response",
+      "hash_string": "RIHS01_361f59a49240350be22b1bab28331a032a3159354d84dcaeea7f37f78bb6760c"
+    },
+    {
+      "type_name": "flexbe_msgs/msg/OutcomeCondition",
+      "hash_string": "RIHS01_657dd9555a7e99deb1cd0e2d12170eda796ee5f47d1875f592570fadf5194058"
+    },
+    {
+      "type_name": "flexbe_msgs/msg/StateInstantiation",
+      "hash_string": "RIHS01_0307e949d22a7d26c1fe4f18dddd99b875a88b8ebf6ee7767d507f5399bd0910"
+    },
+    {
+      "type_name": "flexbe_msgs/msg/SynthesisErrorCodes",
+      "hash_string": "RIHS01_f77ad4c8493f3ae5dd0c9fe79fd8c506f4d0ea5d32595a8004c3919f3596b3fc"
+    },
+    {
+      "type_name": "flexbe_msgs/msg/SynthesisRequest",
+      "hash_string": "RIHS01_68707412094a236ea34aee9bb49f2eb142f2c4648f3bd2cead98f17bc4663adb"
+    },
+    {
+      "type_name": "service_msgs/msg/ServiceEventInfo",
+      "hash_string": "RIHS01_41bcbbe07a75c9b52bc96bfd5c24d7f0fc0a08c0cb7921b3373c5732345a6f45"
+    },
+    {
+      "type_name": "unique_identifier_msgs/msg/UUID",
+      "hash_string": "RIHS01_1b8e8aca958cbea28fe6ef60bf6c19b683c97a9ef60bb34752067d0f2f7ab437"
+    }
+  ]
+}

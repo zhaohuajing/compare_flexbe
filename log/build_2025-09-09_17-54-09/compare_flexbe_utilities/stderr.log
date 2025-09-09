@@ -1,0 +1,64 @@
+[33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  CMake variable FLANN_ROOT is set to:
+
+    /usr
+
+  For compatibility, find_package is ignoring the variable, but code in a
+  .cmake module might still use it.
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+  /opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+  /opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)
+  CMakeLists.txt:26 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+In file included from [01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/move_to_pose_service.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/move_to_pose_service.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/move_to_named_pose_service.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/cartesian_move_to_pose_service.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/move_to_named_pose_service.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/cartesian_move_to_pose_service.cpp:6[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/cartesian_move_to_pose_service.cpp:[m[K In member function ‘[01m[Kvoid CartesianMoveToPoseService::[01;32m[Khandle_request[m[K(std::shared_ptr<compare_flexbe_utilities::srv::CartesianMoveToPose_Request_<std::allocator<void> > >, std::shared_ptr<compare_flexbe_utilities::srv::CartesianMoveToPose_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/cartesian_move_to_pose_service.cpp:59:66:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble moveit::planning_interface::MoveGroupInterface::[01;32m[KcomputeCartesianPath[m[K(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> >, std::allocator<geometry_msgs::msg::Pose_<std::allocator<void> > > >&, double, double, moveit_msgs::msg::RobotTrajectory&, bool, moveit_msgs::msg::MoveItErrorCodes*)[m[K’ is deprecated: Drop jump_threshold [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   59 |     double fraction = [01;35m[Kmove_group_interface_->computeCartesianPath([m[K
+      |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   60 | [01;35m[K      waypoints, eef_step, jump_threshold, trajectory)[m[K;
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K            
+In file included from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:765:3:[m[K [01;36m[Knote: [m[Kdeclared here
+  765 |   [01;36m[KcomputeCartesianPath[m[K(const std::vector<geometry_msgs::msg::Pose>& waypoints, double eef_step,
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/src/cartesian_move_to_pose_service.cpp:64:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct moveit::planning_interface::MoveGroupInterface::Plan[m[K’ has no member named ‘[01m[Ktrajectory_[m[K’; did you mean ‘[01m[Ktrajectory[m[K’?
+   64 |       plan.[01;31m[Ktrajectory_[m[K = trajectory;
+      |            [01;31m[K^~~~~~~~~~~[m[K
+      |            [32m[Ktrajectory[m[K
+gmake[2]: *** [CMakeFiles/cartesian_move_to_pose_service.dir/build.make:76: CMakeFiles/cartesian_move_to_pose_service.dir/src/cartesian_move_to_pose_service.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:639: CMakeFiles/cartesian_move_to_pose_service.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

@@ -1,2 +1,1 @@
-source;share/armada_gazebo/environment/ament_prefix_path.sh
-source;share/armada_gazebo/environment/path.sh
+/home/csrobot/flexbe_ws/build/armada_gazebo/ament_cmake_environment_hooks/local_setup.dsv

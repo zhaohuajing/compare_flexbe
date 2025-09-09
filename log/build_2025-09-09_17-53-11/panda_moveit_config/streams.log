@@ -1,0 +1,42 @@
+[0.051s] Invoking command in '/home/csrobot/flexbe_ws/build/panda_moveit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/panda_moveit_config -- -j8 -l8
+[0.463s] Invoked command in '/home/csrobot/flexbe_ws/build/panda_moveit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/csrobot/flexbe_ws/build/panda_moveit_config -- -j8 -l8
+[0.463s] Invoking command in '/home/csrobot/flexbe_ws/build/panda_moveit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/csrobot/flexbe_ws/build/panda_moveit_config
+[0.472s] -- Install configuration: ""
+[0.473s] -- Execute custom install script
+[0.473s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/ament_index/resource_index/package_run_dependencies/panda_moveit_config
+[0.479s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/ament_index/resource_index/parent_prefix_path/panda_moveit_config
+[0.488s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/environment/ament_prefix_path.sh
+[0.495s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/environment/ament_prefix_path.dsv
+[0.503s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/environment/path.sh
+[0.512s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/environment/path.dsv
+[0.526s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/local_setup.bash
+[0.539s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/local_setup.sh
+[0.553s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/local_setup.zsh
+[0.569s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/local_setup.dsv
+[0.582s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/package.dsv
+[0.599s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/ament_index/resource_index/packages/panda_moveit_config
+[0.615s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/cmake/panda_moveit_configConfig.cmake
+[0.632s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/cmake/panda_moveit_configConfig-version.cmake
+[0.644s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/package.xml
+[0.659s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/launch/demo.launch.py
+[0.675s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/launch/move_group.launch.py
+[0.688s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/launch/moveit_rviz.launch.py
+[0.702s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/launch/rsp.launch.py
+[0.719s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/launch/setup_assistant.launch.py
+[0.731s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/launch/spawn_controllers.launch.py
+[0.748s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/launch/static_virtual_joint_tfs.launch.py
+[0.770s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/launch/warehouse_db.launch.py
+[0.782s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/config/controllers.yaml
+[0.792s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/config/initial_positions.yaml
+[0.805s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/config/joint_limits.yaml
+[0.820s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/config/kinematics.yaml
+[0.834s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/config/moveit.rviz
+[0.850s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/config/moveit_controllers.yaml
+[0.869s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/config/ompl_planning.yaml
+[0.879s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/config/panda.ros2_control.xacro
+[0.890s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/config/panda.srdf
+[0.905s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/config/panda.urdf.xacro
+[0.919s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/config/pilz_cartesian_limits.yaml
+[0.930s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/config/ros2_controllers.yaml
+[0.945s] -- Symlinking: /home/csrobot/flexbe_ws/install/panda_moveit_config/share/panda_moveit_config/.setup_assistant
+[0.992s] Invoked command in '/home/csrobot/flexbe_ws/build/panda_moveit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/csrobot/flexbe_ws/build/panda_moveit_config

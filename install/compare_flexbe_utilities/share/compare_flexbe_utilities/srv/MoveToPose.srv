@@ -1,3 +1,1 @@
-geometry_msgs/Pose target_pose
----
-bool success
+/home/csrobot/flexbe_ws/src/compare_flexbe_utilities/srv/MoveToPose.srv

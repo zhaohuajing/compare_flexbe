@@ -1,0 +1,19 @@
+[1.646s] Invoking command in '/home/csrobot/flexbe_ws/build/flexbe_mirror': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_mirror/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/flexbe_mirror/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/flexbe_mirror/build --no-deps symlink_data
+[1.971s] running develop
+[2.139s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[2.139s]   self.local_index = Environment(self.shadow_path + sys.path)
+[2.176s] running egg_info
+[2.196s] writing flexbe_mirror.egg-info/PKG-INFO
+[2.197s] writing dependency_links to flexbe_mirror.egg-info/dependency_links.txt
+[2.197s] writing entry points to flexbe_mirror.egg-info/entry_points.txt
+[2.197s] writing requirements to flexbe_mirror.egg-info/requires.txt
+[2.197s] writing top-level names to flexbe_mirror.egg-info/top_level.txt
+[2.238s] reading manifest file 'flexbe_mirror.egg-info/SOURCES.txt'
+[2.239s] writing manifest file 'flexbe_mirror.egg-info/SOURCES.txt'
+[2.261s] running build_ext
+[2.261s] Creating /home/csrobot/flexbe_ws/install/flexbe_mirror/lib/python3.12/site-packages/flexbe-mirror.egg-link (link to .)
+[2.261s] Installing behavior_mirror_sm script to /home/csrobot/flexbe_ws/install/flexbe_mirror/lib/flexbe_mirror
+[2.261s] 
+[2.262s] Installed /home/csrobot/flexbe_ws/build/flexbe_mirror
+[2.262s] running symlink_data
+[2.328s] Invoked command in '/home/csrobot/flexbe_ws/build/flexbe_mirror' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_mirror/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/flexbe_mirror/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/flexbe_mirror/build --no-deps symlink_data

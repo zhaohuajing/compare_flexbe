@@ -1,16 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from flexbe_msgs/msg/OutcomeRequest.msg
-// generated code does not contain a copyright notice
-
-
-module flexbe_msgs {
-  module msg {
-    struct OutcomeRequest {
-      uint8 outcome;
-
-      @verbatim (language="comment", text=
-        "state id")
-      int32 target;
-    };
-  };
-};
+/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs/msg/OutcomeRequest.idl

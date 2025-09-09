@@ -1,7 +1,1 @@
-from moveit_configs_utils import MoveItConfigsBuilder
-from moveit_configs_utils.launches import generate_warehouse_db_launch
-
-
-def generate_launch_description():
-    moveit_config = MoveItConfigsBuilder("tm5x-700", package_name="tm5x-700_moveit_config").to_moveit_configs()
-    return generate_warehouse_db_launch(moveit_config)
+/home/csrobot/flexbe_ws/src/tmr_ros2/tm_moveit/tm5x-700_moveit_config/launch/warehouse_db.launch.py

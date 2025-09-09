@@ -1,0 +1,20 @@
+[1.251s] Invoking command in '/home/csrobot/flexbe_ws/build/tm_mod_urdf': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/csrobot/flexbe_ws/build/tm_mod_urdf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/tm_mod_urdf/build --no-deps symlink_data
+[1.595s] running develop
+[1.784s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[1.784s]   self.local_index = Environment(self.shadow_path + sys.path)
+[1.830s] running egg_info
+[1.849s] writing tm_mod_urdf.egg-info/PKG-INFO
+[1.849s] writing dependency_links to tm_mod_urdf.egg-info/dependency_links.txt
+[1.849s] writing entry points to tm_mod_urdf.egg-info/entry_points.txt
+[1.849s] writing requirements to tm_mod_urdf.egg-info/requires.txt
+[1.849s] writing top-level names to tm_mod_urdf.egg-info/top_level.txt
+[1.895s] reading manifest file 'tm_mod_urdf.egg-info/SOURCES.txt'
+[1.896s] writing manifest file 'tm_mod_urdf.egg-info/SOURCES.txt'
+[1.920s] running build_ext
+[1.920s] Creating /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.12/site-packages/tm-mod-urdf.egg-link (link to .)
+[1.921s] Installing modify_urdf script to /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/tm_mod_urdf
+[1.921s] Installing modify_xacro script to /home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/tm_mod_urdf
+[1.921s] 
+[1.921s] Installed /home/csrobot/flexbe_ws/build/tm_mod_urdf
+[1.921s] running symlink_data
+[1.951s] Invoked command in '/home/csrobot/flexbe_ws/build/tm_mod_urdf' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/csrobot/flexbe_ws/build/tm_mod_urdf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/tm_mod_urdf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/tm_mod_urdf/build --no-deps symlink_data

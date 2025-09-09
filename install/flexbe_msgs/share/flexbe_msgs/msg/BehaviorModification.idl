@@ -1,16 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from flexbe_msgs/msg/BehaviorModification.msg
-// generated code does not contain a copyright notice
-
-
-module flexbe_msgs {
-  module msg {
-    struct BehaviorModification {
-      int32 index_begin;
-
-      int32 index_end;
-
-      string new_content;
-    };
-  };
-};
+/home/csrobot/flexbe_ws/build/flexbe_msgs/rosidl_adapter/flexbe_msgs/msg/BehaviorModification.idl

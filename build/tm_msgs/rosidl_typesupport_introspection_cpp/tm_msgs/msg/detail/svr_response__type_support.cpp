@@ -9,6 +9,7 @@
 #include "rosidl_runtime_c/message_type_support_struct.h"
 #include "rosidl_typesupport_cpp/message_type_support.hpp"
 #include "rosidl_typesupport_interface/macros.h"
+#include "tm_msgs/msg/detail/svr_response__functions.h"
 #include "tm_msgs/msg/detail/svr_response__struct.hpp"
 #include "rosidl_typesupport_introspection_cpp/field_types.hpp"
 #include "rosidl_typesupport_introspection_cpp/identifier.hpp"
@@ -43,6 +44,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember SvrResponse_m
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<std_msgs::msg::Header>(),  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -60,6 +62,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember SvrResponse_m
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -77,6 +80,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember SvrResponse_m
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT8,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -94,6 +98,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember SvrResponse_m
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -111,6 +116,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember SvrResponse_m
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT8,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -130,6 +136,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMembers SvrResponse_
   "SvrResponse",  // message name
   5,  // number of fields
   sizeof(tm_msgs::msg::SvrResponse),
+  false,  // has_any_key_member_
   SvrResponse_message_member_array,  // message members
   SvrResponse_init_function,  // function to initialize message memory (memory has to be allocated)
   SvrResponse_fini_function  // function to terminate message instance (will not free memory)
@@ -139,6 +146,9 @@ static const rosidl_message_type_support_t SvrResponse_message_type_support_hand
   ::rosidl_typesupport_introspection_cpp::typesupport_identifier,
   &SvrResponse_message_members,
   get_message_typesupport_handle_function,
+  &tm_msgs__msg__SvrResponse__get_type_hash,
+  &tm_msgs__msg__SvrResponse__get_type_description,
+  &tm_msgs__msg__SvrResponse__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_introspection_cpp

@@ -1,2 +1,1 @@
-# The name of this file shouldn't be changed, or else the Setup Assistant won't detect it
-sensors: []
+/home/csrobot/flexbe_ws/src/tmr_ros2/tm_moveit/tm5x-900_moveit_config/config/sensors_3d.yaml

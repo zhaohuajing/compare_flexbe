@@ -88,7 +88,7 @@ flexbe_msgs__msg__BehaviorModification__copy(
 }
 
 flexbe_msgs__msg__BehaviorModification *
-flexbe_msgs__msg__BehaviorModification__create()
+flexbe_msgs__msg__BehaviorModification__create(void)
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   flexbe_msgs__msg__BehaviorModification * msg = (flexbe_msgs__msg__BehaviorModification *)allocator.allocate(sizeof(flexbe_msgs__msg__BehaviorModification), allocator.state);

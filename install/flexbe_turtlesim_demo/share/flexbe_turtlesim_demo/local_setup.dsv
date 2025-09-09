@@ -1,2 +1,1 @@
-source;share/flexbe_turtlesim_demo/environment/ament_prefix_path.sh
-source;share/flexbe_turtlesim_demo/environment/path.sh
+/home/csrobot/flexbe_ws/build/flexbe_turtlesim_demo/ament_cmake_environment_hooks/local_setup.dsv

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/techman_robot_msgs__cpp"
+  "rosidl_generator_cpp/techman_robot_msgs/msg/rosidl_generator_cpp__visibility_control.hpp"
   "rosidl_generator_cpp/techman_robot_msgs/srv/detail/techman_robot_command__builder.hpp"
   "rosidl_generator_cpp/techman_robot_msgs/srv/detail/techman_robot_command__struct.hpp"
   "rosidl_generator_cpp/techman_robot_msgs/srv/detail/techman_robot_command__traits.hpp"

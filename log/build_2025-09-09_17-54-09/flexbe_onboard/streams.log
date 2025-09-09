@@ -1,0 +1,40 @@
+[3.179s] Invoking command in '/home/csrobot/flexbe_ws/build/flexbe_onboard': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/flexbe_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_onboard/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/flexbe_onboard/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/flexbe_onboard/build --no-deps symlink_data
+[4.162s] running develop
+[4.463s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[4.464s]   self.local_index = Environment(self.shadow_path + sys.path)
+[4.550s] running egg_info
+[4.550s] creating flexbe_onboard.egg-info
+[4.614s] writing flexbe_onboard.egg-info/PKG-INFO
+[4.614s] writing dependency_links to flexbe_onboard.egg-info/dependency_links.txt
+[4.614s] writing entry points to flexbe_onboard.egg-info/entry_points.txt
+[4.614s] writing requirements to flexbe_onboard.egg-info/requires.txt
+[4.615s] writing top-level names to flexbe_onboard.egg-info/top_level.txt
+[4.619s] writing manifest file 'flexbe_onboard.egg-info/SOURCES.txt'
+[4.683s] reading manifest file 'flexbe_onboard.egg-info/SOURCES.txt'
+[4.684s] writing manifest file 'flexbe_onboard.egg-info/SOURCES.txt'
+[4.724s] running build_ext
+[4.725s] Creating /home/csrobot/flexbe_ws/install/flexbe_onboard/lib/python3.12/site-packages/flexbe-onboard.egg-link (link to .)
+[4.726s] Installing flexbe_onboard script to /home/csrobot/flexbe_ws/install/flexbe_onboard/lib/flexbe_onboard
+[4.726s] Installing start_behavior script to /home/csrobot/flexbe_ws/install/flexbe_onboard/lib/flexbe_onboard
+[4.727s] 
+[4.727s] Installed /home/csrobot/flexbe_ws/build/flexbe_onboard
+[4.727s] running symlink_data
+[4.728s] symbolically linking /home/csrobot/flexbe_ws/build/flexbe_onboard/launch/behavior_onboard.launch.py -> /home/csrobot/flexbe_ws/install/flexbe_onboard/share/flexbe_onboard
+[4.728s] creating /home/csrobot/flexbe_ws/install/flexbe_onboard/share/ament_index
+[4.728s] creating /home/csrobot/flexbe_ws/install/flexbe_onboard/share/ament_index/resource_index
+[4.729s] creating /home/csrobot/flexbe_ws/install/flexbe_onboard/share/ament_index/resource_index/packages
+[4.729s] symbolically linking /home/csrobot/flexbe_ws/build/flexbe_onboard/resource/flexbe_onboard -> /home/csrobot/flexbe_ws/install/flexbe_onboard/share/ament_index/resource_index/packages
+[4.730s] symbolically linking /home/csrobot/flexbe_ws/build/flexbe_onboard/package.xml -> /home/csrobot/flexbe_ws/install/flexbe_onboard/share/flexbe_onboard
+[4.730s] symbolically linking /home/csrobot/flexbe_ws/build/flexbe_onboard/tests/flexbe_onboard_test.py -> /home/csrobot/flexbe_ws/install/flexbe_onboard/share/flexbe_onboard
+[4.730s] symbolically linking /home/csrobot/flexbe_ws/build/flexbe_onboard/tests/test_onboard.py -> /home/csrobot/flexbe_ws/install/flexbe_onboard/share/flexbe_onboard
+[4.731s] symbolically linking /home/csrobot/flexbe_ws/build/flexbe_onboard/tests/flexbe_onboard_test_data/log_behavior_test_sm.py -> /home/csrobot/flexbe_ws/install/flexbe_onboard/share/flexbe_onboard
+[4.731s] symbolically linking /home/csrobot/flexbe_ws/build/flexbe_onboard/tests/flexbe_onboard_test_data/__init__.py -> /home/csrobot/flexbe_ws/install/flexbe_onboard/share/flexbe_onboard
+[4.732s] symbolically linking /home/csrobot/flexbe_ws/build/flexbe_onboard/tests/flexbe_onboard_test_data/complex_behavior_test_sm.py -> /home/csrobot/flexbe_ws/install/flexbe_onboard/share/flexbe_onboard
+[4.732s] creating /home/csrobot/flexbe_ws/install/flexbe_onboard/share/flexbe_onboard/tests
+[4.732s] creating /home/csrobot/flexbe_ws/install/flexbe_onboard/share/flexbe_onboard/tests/flexbe_onboard_test_data
+[4.733s] symbolically linking /home/csrobot/flexbe_ws/build/flexbe_onboard/tests/flexbe_onboard_test_data/log_behavior_test_sm.py -> /home/csrobot/flexbe_ws/install/flexbe_onboard/share/flexbe_onboard/tests/flexbe_onboard_test_data
+[4.733s] symbolically linking /home/csrobot/flexbe_ws/build/flexbe_onboard/tests/flexbe_onboard_test_data/__init__.py -> /home/csrobot/flexbe_ws/install/flexbe_onboard/share/flexbe_onboard/tests/flexbe_onboard_test_data
+[4.734s] symbolically linking /home/csrobot/flexbe_ws/build/flexbe_onboard/tests/flexbe_onboard_test_data/complex_behavior_test_sm.py -> /home/csrobot/flexbe_ws/install/flexbe_onboard/share/flexbe_onboard/tests/flexbe_onboard_test_data
+[4.735s] symbolically linking /home/csrobot/flexbe_ws/build/flexbe_onboard/tests/flexbe_onboard_test_data/complex_behavior_test.xml -> /home/csrobot/flexbe_ws/install/flexbe_onboard/share/flexbe_onboard/tests/flexbe_onboard_test_data
+[4.735s] symbolically linking /home/csrobot/flexbe_ws/build/flexbe_onboard/tests/flexbe_onboard_test_data/log_behavior_test.xml -> /home/csrobot/flexbe_ws/install/flexbe_onboard/share/flexbe_onboard/tests/flexbe_onboard_test_data
+[4.796s] Invoked command in '/home/csrobot/flexbe_ws/build/flexbe_onboard' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_testing:/home/csrobot/flexbe_ws/install/flexbe_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_onboard/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/flexbe_onboard/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_states:/home/csrobot/flexbe_ws/install/flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_testing/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/flexbe_onboard/build --no-deps symlink_data

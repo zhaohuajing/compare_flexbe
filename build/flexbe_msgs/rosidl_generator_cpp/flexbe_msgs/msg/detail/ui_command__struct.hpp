@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:msg/UICommand.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/msg/ui_command.hpp"
+
+
 #ifndef FLEXBE_MSGS__MSG__DETAIL__UI_COMMAND__STRUCT_HPP_
 #define FLEXBE_MSGS__MSG__DETAIL__UI_COMMAND__STRUCT_HPP_
 

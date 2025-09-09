@@ -152,7 +152,7 @@ flexbe_msgs__msg__SynthesisRequest__copy(
 }
 
 flexbe_msgs__msg__SynthesisRequest *
-flexbe_msgs__msg__SynthesisRequest__create()
+flexbe_msgs__msg__SynthesisRequest__create(void)
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   flexbe_msgs__msg__SynthesisRequest * msg = (flexbe_msgs__msg__SynthesisRequest *)allocator.allocate(sizeof(flexbe_msgs__msg__SynthesisRequest), allocator.state);

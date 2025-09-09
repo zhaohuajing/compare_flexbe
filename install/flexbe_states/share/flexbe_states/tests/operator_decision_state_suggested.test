@@ -1,9 +1,1 @@
-path: flexbe_states.operator_decision_state
-class: OperatorDecisionState
-
-params:
-    outcomes: ['left', 'right']
-    hint: 'Choose a direction for exploration'
-    suggestion: 'right'
-
-outcome: right
+/home/csrobot/flexbe_ws/build/flexbe_states/tests/operator_decision_state_suggested.test

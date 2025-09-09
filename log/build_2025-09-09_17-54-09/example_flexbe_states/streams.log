@@ -1,0 +1,32 @@
+[2.189s] Invoking command in '/home/csrobot/flexbe_ws/build/example_flexbe_states': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/example_flexbe_states/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/example_flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/example_flexbe_states/build --no-deps symlink_data
+[2.861s] running develop
+[3.138s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[3.138s]   self.local_index = Environment(self.shadow_path + sys.path)
+[3.195s] running egg_info
+[3.196s] creating example_flexbe_states.egg-info
+[3.244s] writing example_flexbe_states.egg-info/PKG-INFO
+[3.244s] writing dependency_links to example_flexbe_states.egg-info/dependency_links.txt
+[3.244s] writing entry points to example_flexbe_states.egg-info/entry_points.txt
+[3.246s] writing requirements to example_flexbe_states.egg-info/requires.txt
+[3.246s] writing top-level names to example_flexbe_states.egg-info/top_level.txt
+[3.246s] writing manifest file 'example_flexbe_states.egg-info/SOURCES.txt'
+[3.306s] reading manifest file 'example_flexbe_states.egg-info/SOURCES.txt'
+[3.307s] writing manifest file 'example_flexbe_states.egg-info/SOURCES.txt'
+[3.343s] running build_ext
+[3.344s] Creating /home/csrobot/flexbe_ws/install/example_flexbe_states/lib/python3.12/site-packages/example-flexbe-states.egg-link (link to .)
+[3.346s] Installing example_action_state script to /home/csrobot/flexbe_ws/install/example_flexbe_states/lib/example_flexbe_states
+[3.347s] Installing example_state script to /home/csrobot/flexbe_ws/install/example_flexbe_states/lib/example_flexbe_states
+[3.347s] 
+[3.348s] Installed /home/csrobot/flexbe_ws/build/example_flexbe_states
+[3.348s] running symlink_data
+[3.348s] creating /home/csrobot/flexbe_ws/install/example_flexbe_states/share/ament_index
+[3.349s] creating /home/csrobot/flexbe_ws/install/example_flexbe_states/share/ament_index/resource_index
+[3.349s] creating /home/csrobot/flexbe_ws/install/example_flexbe_states/share/ament_index/resource_index/packages
+[3.350s] symbolically linking /home/csrobot/flexbe_ws/build/example_flexbe_states/resource/example_flexbe_states -> /home/csrobot/flexbe_ws/install/example_flexbe_states/share/ament_index/resource_index/packages
+[3.350s] symbolically linking /home/csrobot/flexbe_ws/build/example_flexbe_states/package.xml -> /home/csrobot/flexbe_ws/install/example_flexbe_states/share/example_flexbe_states
+[3.351s] creating /home/csrobot/flexbe_ws/install/example_flexbe_states/share/example_flexbe_states/tests
+[3.351s] symbolically linking /home/csrobot/flexbe_ws/build/example_flexbe_states/tests/example_state.test -> /home/csrobot/flexbe_ws/install/example_flexbe_states/share/example_flexbe_states/tests
+[3.353s] symbolically linking /home/csrobot/flexbe_ws/build/example_flexbe_states/tests/example_action_state.test -> /home/csrobot/flexbe_ws/install/example_flexbe_states/share/example_flexbe_states/tests
+[3.353s] creating /home/csrobot/flexbe_ws/install/example_flexbe_states/share/example_flexbe_states/launch
+[3.353s] symbolically linking /home/csrobot/flexbe_ws/build/example_flexbe_states/tests/run_tests.launch.py -> /home/csrobot/flexbe_ws/install/example_flexbe_states/share/example_flexbe_states/launch
+[3.441s] Invoked command in '/home/csrobot/flexbe_ws/build/example_flexbe_states' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/example_flexbe_states/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/example_flexbe_states/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/example_flexbe_states/build --no-deps symlink_data

@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:action/BehaviorSynthesis.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/action/behavior_synthesis.hpp"
+
+
 #ifndef FLEXBE_MSGS__ACTION__DETAIL__BEHAVIOR_SYNTHESIS__BUILDER_HPP_
 #define FLEXBE_MSGS__ACTION__DETAIL__BEHAVIOR_SYNTHESIS__BUILDER_HPP_
 
@@ -295,6 +298,80 @@ namespace action
 namespace builder
 {
 
+class Init_BehaviorSynthesis_SendGoal_Event_response
+{
+public:
+  explicit Init_BehaviorSynthesis_SendGoal_Event_response(::flexbe_msgs::action::BehaviorSynthesis_SendGoal_Event & msg)
+  : msg_(msg)
+  {}
+  ::flexbe_msgs::action::BehaviorSynthesis_SendGoal_Event response(::flexbe_msgs::action::BehaviorSynthesis_SendGoal_Event::_response_type arg)
+  {
+    msg_.response = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::flexbe_msgs::action::BehaviorSynthesis_SendGoal_Event msg_;
+};
+
+class Init_BehaviorSynthesis_SendGoal_Event_request
+{
+public:
+  explicit Init_BehaviorSynthesis_SendGoal_Event_request(::flexbe_msgs::action::BehaviorSynthesis_SendGoal_Event & msg)
+  : msg_(msg)
+  {}
+  Init_BehaviorSynthesis_SendGoal_Event_response request(::flexbe_msgs::action::BehaviorSynthesis_SendGoal_Event::_request_type arg)
+  {
+    msg_.request = std::move(arg);
+    return Init_BehaviorSynthesis_SendGoal_Event_response(msg_);
+  }
+
+private:
+  ::flexbe_msgs::action::BehaviorSynthesis_SendGoal_Event msg_;
+};
+
+class Init_BehaviorSynthesis_SendGoal_Event_info
+{
+public:
+  Init_BehaviorSynthesis_SendGoal_Event_info()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_BehaviorSynthesis_SendGoal_Event_request info(::flexbe_msgs::action::BehaviorSynthesis_SendGoal_Event::_info_type arg)
+  {
+    msg_.info = std::move(arg);
+    return Init_BehaviorSynthesis_SendGoal_Event_request(msg_);
+  }
+
+private:
+  ::flexbe_msgs::action::BehaviorSynthesis_SendGoal_Event msg_;
+};
+
+}  // namespace builder
+
+}  // namespace action
+
+template<typename MessageType>
+auto build();
+
+template<>
+inline
+auto build<::flexbe_msgs::action::BehaviorSynthesis_SendGoal_Event>()
+{
+  return flexbe_msgs::action::builder::Init_BehaviorSynthesis_SendGoal_Event_info();
+}
+
+}  // namespace flexbe_msgs
+
+
+namespace flexbe_msgs
+{
+
+namespace action
+{
+
+namespace builder
+{
+
 class Init_BehaviorSynthesis_GetResult_Request_goal_id
 {
 public:
@@ -381,6 +458,80 @@ inline
 auto build<::flexbe_msgs::action::BehaviorSynthesis_GetResult_Response>()
 {
   return flexbe_msgs::action::builder::Init_BehaviorSynthesis_GetResult_Response_status();
+}
+
+}  // namespace flexbe_msgs
+
+
+namespace flexbe_msgs
+{
+
+namespace action
+{
+
+namespace builder
+{
+
+class Init_BehaviorSynthesis_GetResult_Event_response
+{
+public:
+  explicit Init_BehaviorSynthesis_GetResult_Event_response(::flexbe_msgs::action::BehaviorSynthesis_GetResult_Event & msg)
+  : msg_(msg)
+  {}
+  ::flexbe_msgs::action::BehaviorSynthesis_GetResult_Event response(::flexbe_msgs::action::BehaviorSynthesis_GetResult_Event::_response_type arg)
+  {
+    msg_.response = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::flexbe_msgs::action::BehaviorSynthesis_GetResult_Event msg_;
+};
+
+class Init_BehaviorSynthesis_GetResult_Event_request
+{
+public:
+  explicit Init_BehaviorSynthesis_GetResult_Event_request(::flexbe_msgs::action::BehaviorSynthesis_GetResult_Event & msg)
+  : msg_(msg)
+  {}
+  Init_BehaviorSynthesis_GetResult_Event_response request(::flexbe_msgs::action::BehaviorSynthesis_GetResult_Event::_request_type arg)
+  {
+    msg_.request = std::move(arg);
+    return Init_BehaviorSynthesis_GetResult_Event_response(msg_);
+  }
+
+private:
+  ::flexbe_msgs::action::BehaviorSynthesis_GetResult_Event msg_;
+};
+
+class Init_BehaviorSynthesis_GetResult_Event_info
+{
+public:
+  Init_BehaviorSynthesis_GetResult_Event_info()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_BehaviorSynthesis_GetResult_Event_request info(::flexbe_msgs::action::BehaviorSynthesis_GetResult_Event::_info_type arg)
+  {
+    msg_.info = std::move(arg);
+    return Init_BehaviorSynthesis_GetResult_Event_request(msg_);
+  }
+
+private:
+  ::flexbe_msgs::action::BehaviorSynthesis_GetResult_Event msg_;
+};
+
+}  // namespace builder
+
+}  // namespace action
+
+template<typename MessageType>
+auto build();
+
+template<>
+inline
+auto build<::flexbe_msgs::action::BehaviorSynthesis_GetResult_Event>()
+{
+  return flexbe_msgs::action::builder::Init_BehaviorSynthesis_GetResult_Event_info();
 }
 
 }  // namespace flexbe_msgs

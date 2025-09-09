@@ -1,0 +1,169 @@
+[  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[  1%] Built target ament_cmake_python_symlink_tm_msgs
+running egg_info
+creating tm_msgs.egg-info
+writing tm_msgs.egg-info/PKG-INFO
+writing dependency_links to tm_msgs.egg-info/dependency_links.txt
+writing top-level names to tm_msgs.egg-info/top_level.txt
+writing manifest file 'tm_msgs.egg-info/SOURCES.txt'
+reading manifest file 'tm_msgs.egg-info/SOURCES.txt'
+writing manifest file 'tm_msgs.egg-info/SOURCES.txt'
+[  1%] Built target ament_cmake_python_build_tm_msgs_egg
+[  1%] Built target tm_msgs__rosidl_generator_type_description
+[  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  2%] Built target tm_msgs__cpp
+[  4%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/msg/detail/feedback_state__type_support.c.o[0m
+[  5%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/msg/detail/svr_response__functions.c.o[0m
+[  4%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/msg/detail/feedback_state__functions.c.o[0m
+[  4%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/msg/detail/svr_response__description.c.o[0m
+[  4%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/msg/detail/feedback_state__description.c.o[0m
+[  5%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/msg/detail/sct_response__description.c.o[0m
+[  6%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/msg/detail/sct_response__functions.c.o[0m
+[  7%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/msg/detail/svr_response__type_support.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/msg/detail/sct_response__type_support.c.o[0m
+[  9%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/msg/detail/sta_response__description.c.o[0m
+[  9%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/msg/detail/sta_response__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/msg/detail/sta_response__type_support.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/connect_tm__type_support.c.o[0m
+[ 12%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/connect_tm__description.c.o[0m
+[ 12%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/connect_tm__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/write_item__description.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/write_item__functions.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/write_item__type_support.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/ask_item__functions.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/ask_item__description.c.o[0m
+[ 16%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/ask_item__type_support.c.o[0m
+[ 17%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/send_script__description.c.o[0m
+[ 17%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/send_script__type_support.c.o[0m
+[ 18%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/send_script__functions.c.o[0m
+[ 19%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/set_event__description.c.o[0m
+[ 20%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/set_event__functions.c.o[0m
+[ 20%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/set_event__type_support.c.o[0m
+[ 21%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/set_io__description.c.o[0m
+[ 22%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/set_io__functions.c.o[0m
+[ 22%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/set_io__type_support.c.o[0m
+[ 23%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/set_positions__functions.c.o[0m
+[ 24%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/set_positions__description.c.o[0m
+[ 25%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/set_positions__type_support.c.o[0m
+[ 25%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/ask_sta__description.c.o[0m
+[ 26%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/ask_sta__type_support.c.o[0m
+[ 27%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_c.dir/rosidl_generator_c/tm_msgs/srv/detail/ask_sta__functions.c.o[0m
+[ 27%] [32m[1mLinking C shared library libtm_msgs__rosidl_generator_c.so[0m
+[ 27%] Built target tm_msgs__rosidl_generator_c
+[ 28%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 28%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[ 29%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 30%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 31%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 31%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tm_msgs/msg/feedback_state__type_support.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tm_msgs/msg/svr_response__type_support.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tm_msgs/msg/sct_response__type_support.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tm_msgs/msg/sta_response__type_support.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tm_msgs/srv/connect_tm__type_support.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tm_msgs/srv/write_item__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tm_msgs/srv/ask_item__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tm_msgs/srv/send_script__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tm_msgs/srv/set_event__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tm_msgs/srv/set_io__type_support.cpp.o[0m
+[ 39%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tm_msgs/msg/feedback_state__type_support.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tm_msgs/msg/svr_response__type_support.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tm_msgs/msg/sct_response__type_support.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tm_msgs/srv/set_positions__type_support.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tm_msgs/srv/ask_sta__type_support.cpp.o[0m
+[ 43%] [32m[1mLinking CXX shared library libtm_msgs__rosidl_typesupport_c.so[0m
+[ 43%] Built target tm_msgs__rosidl_typesupport_c
+[ 43%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tm_msgs/msg/sta_response__type_support.cpp.o[0m
+[ 43%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tm_msgs/msg/detail/feedback_state__type_support.c.o[0m
+[ 44%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tm_msgs/msg/detail/svr_response__type_support.c.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tm_msgs/msg/detail/feedback_state__type_support.cpp.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tm_msgs/msg/detail/svr_response__type_support.cpp.o[0m
+[ 47%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tm_msgs/msg/detail/sct_response__type_support.c.o[0m
+[ 48%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tm_msgs/srv/connect_tm__type_support.cpp.o[0m
+[ 49%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tm_msgs/srv/write_item__type_support.cpp.o[0m
+[ 49%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tm_msgs/msg/detail/sta_response__type_support.c.o[0m
+[ 50%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tm_msgs/srv/detail/connect_tm__type_support.c.o[0m
+[ 51%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tm_msgs/srv/detail/write_item__type_support.c.o[0m
+[ 51%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tm_msgs/srv/ask_item__type_support.cpp.o[0m
+[ 51%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tm_msgs/srv/detail/ask_item__type_support.c.o[0m
+[ 52%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tm_msgs/srv/detail/send_script__type_support.c.o[0m
+[ 53%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tm_msgs/msg/detail/sct_response__type_support.cpp.o[0m
+[ 53%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tm_msgs/msg/detail/feedback_state__type_support_c.cpp.o[0m
+[ 54%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tm_msgs/srv/detail/set_event__type_support.c.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tm_msgs/msg/detail/dds_fastrtps/feedback_state__type_support.cpp.o[0m
+[ 56%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tm_msgs/srv/detail/set_io__type_support.c.o[0m
+[ 56%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tm_msgs/srv/detail/set_positions__type_support.c.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tm_msgs/msg/detail/svr_response__type_support_c.cpp.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tm_msgs/msg/detail/sta_response__type_support.cpp.o[0m
+[ 59%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tm_msgs/srv/detail/ask_sta__type_support.c.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tm_msgs/srv/send_script__type_support.cpp.o[0m
+[ 61%] [32m[1mLinking C shared library libtm_msgs__rosidl_typesupport_introspection_c.so[0m
+[ 61%] Built target tm_msgs__rosidl_typesupport_introspection_c
+[ 61%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tm_msgs/msg/detail/dds_fastrtps/svr_response__type_support.cpp.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tm_msgs/msg/detail/sct_response__type_support_c.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tm_msgs/msg/detail/dds_fastrtps/sct_response__type_support.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tm_msgs/srv/set_event__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tm_msgs/srv/detail/connect_tm__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tm_msgs/srv/set_io__type_support.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tm_msgs/msg/detail/dds_fastrtps/sta_response__type_support.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tm_msgs/msg/detail/sta_response__type_support_c.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tm_msgs/srv/detail/connect_tm__type_support_c.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tm_msgs/srv/detail/write_item__type_support_c.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tm_msgs/srv/detail/dds_fastrtps/connect_tm__type_support.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tm_msgs/srv/detail/write_item__type_support.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tm_msgs/srv/detail/ask_item__type_support_c.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tm_msgs/srv/set_positions__type_support.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tm_msgs/srv/detail/ask_item__type_support.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tm_msgs/srv/detail/send_script__type_support_c.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tm_msgs/srv/ask_sta__type_support.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tm_msgs/srv/detail/set_event__type_support_c.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tm_msgs/srv/detail/send_script__type_support.cpp.o[0m
+[ 74%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tm_msgs/srv/detail/dds_fastrtps/write_item__type_support.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tm_msgs/srv/detail/dds_fastrtps/ask_item__type_support.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tm_msgs/srv/detail/set_event__type_support.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tm_msgs/srv/detail/set_io__type_support.cpp.o[0m
+[ 76%] [32m[1mLinking CXX shared library libtm_msgs__rosidl_typesupport_cpp.so[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tm_msgs/srv/detail/set_io__type_support_c.cpp.o[0m
+[ 77%] Built target tm_msgs__rosidl_typesupport_cpp
+[ 77%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tm_msgs/srv/detail/dds_fastrtps/send_script__type_support.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tm_msgs/srv/detail/set_positions__type_support.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tm_msgs/srv/detail/ask_sta__type_support.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tm_msgs/srv/detail/set_positions__type_support_c.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tm_msgs/srv/detail/ask_sta__type_support_c.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tm_msgs/srv/detail/dds_fastrtps/set_event__type_support.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tm_msgs/srv/detail/dds_fastrtps/set_io__type_support.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tm_msgs/srv/detail/dds_fastrtps/set_positions__type_support.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/tm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tm_msgs/srv/detail/dds_fastrtps/ask_sta__type_support.cpp.o[0m
+[ 83%] [32m[1mLinking CXX shared library libtm_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[ 83%] Built target tm_msgs__rosidl_typesupport_introspection_cpp
+[ 84%] [32m[1mLinking CXX shared library libtm_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[ 84%] Built target tm_msgs__rosidl_typesupport_fastrtps_c
+[ 85%] [32m[1mLinking CXX shared library libtm_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 85%] Built target tm_msgs__rosidl_typesupport_fastrtps_cpp
+[ 85%] Built target tm_msgs
+[ 86%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 86%] Built target tm_msgs__py
+[ 87%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_py.dir/rosidl_generator_py/tm_msgs/msg/_feedback_state_s.c.o[0m
+[ 89%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_py.dir/rosidl_generator_py/tm_msgs/msg/_sta_response_s.c.o[0m
+[ 89%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_py.dir/rosidl_generator_py/tm_msgs/msg/_svr_response_s.c.o[0m
+[ 89%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_py.dir/rosidl_generator_py/tm_msgs/msg/_sct_response_s.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_py.dir/rosidl_generator_py/tm_msgs/srv/_connect_tm_s.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_py.dir/rosidl_generator_py/tm_msgs/srv/_write_item_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_py.dir/rosidl_generator_py/tm_msgs/srv/_send_script_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_py.dir/rosidl_generator_py/tm_msgs/srv/_ask_item_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_py.dir/rosidl_generator_py/tm_msgs/srv/_set_event_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_py.dir/rosidl_generator_py/tm_msgs/srv/_set_io_s.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_py.dir/rosidl_generator_py/tm_msgs/srv/_set_positions_s.c.o[0m
+[ 95%] [32mBuilding C object CMakeFiles/tm_msgs__rosidl_generator_py.dir/rosidl_generator_py/tm_msgs/srv/_ask_sta_s.c.o[0m
+[ 95%] [32m[1mLinking C shared library libtm_msgs__rosidl_generator_py.so[0m
+[ 95%] Built target tm_msgs__rosidl_generator_py
+[ 95%] [32mBuilding C object CMakeFiles/tm_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/tm_msgs/_tm_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 96%] [32mBuilding C object CMakeFiles/tm_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/tm_msgs/_tm_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[ 97%] [32mBuilding C object CMakeFiles/tm_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/tm_msgs/_tm_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 98%] [32m[1mLinking C shared module rosidl_generator_py/tm_msgs/tm_msgs_s__rosidl_typesupport_c.so[0m
+[ 98%] Built target tm_msgs_s__rosidl_typesupport_c
+[ 99%] [32m[1mLinking C shared module rosidl_generator_py/tm_msgs/tm_msgs_s__rosidl_typesupport_introspection_c.so[0m
+[100%] [32m[1mLinking C shared module rosidl_generator_py/tm_msgs/tm_msgs_s__rosidl_typesupport_fastrtps_c.so[0m
+[100%] Built target tm_msgs_s__rosidl_typesupport_introspection_c
+[100%] Built target tm_msgs_s__rosidl_typesupport_fastrtps_c

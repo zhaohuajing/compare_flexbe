@@ -1,0 +1,34 @@
+[0.025s] Invoking command in '/home/csrobot/flexbe_ws/build/flexbe_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/csrobot/flexbe_ws/src/flexbe_behavior_engine/flexbe_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/csrobot/flexbe_ws/install/flexbe_msgs
+[0.140s] -- The C compiler identification is GNU 13.3.0
+[0.229s] -- The CXX compiler identification is GNU 13.3.0
+[0.245s] -- Detecting C compiler ABI info
+[0.323s] -- Detecting C compiler ABI info - done
+[0.332s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.332s] -- Detecting C compile features
+[0.332s] -- Detecting C compile features - done
+[0.339s] -- Detecting CXX compiler ABI info
+[0.421s] -- Detecting CXX compiler ABI info - done
+[0.429s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.429s] -- Detecting CXX compile features
+[0.429s] -- Detecting CXX compile features - done
+[0.431s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.555s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.628s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.648s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.652s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.693s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.730s] -- Found rosidl_adapter: 4.6.6 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.425s] -- Found ament_cmake_cppcheck: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_cppcheck/cmake)
+[1.427s] -- Found ament_cmake_cpplint: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_cpplint/cmake)
+[1.429s] -- Found ament_cmake_uncrustify: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_uncrustify/cmake)
+[1.432s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.812s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.282s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.285s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[2.392s] -- Found PythonExtra: /usr/bin/python3  
+[2.747s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[2.779s] -- Found ament_cmake_flake8: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_flake8/cmake)
+[2.780s] -- Found ament_cmake_pep257: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_pep257/cmake)
+[2.793s] -- Configuring done (2.7s)
+[2.858s] -- Generating done (0.1s)
+[2.870s] -- Build files have been written to: /home/csrobot/flexbe_ws/build/flexbe_msgs

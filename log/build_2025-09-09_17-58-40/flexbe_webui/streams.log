@@ -1,0 +1,21 @@
+[1.624s] Invoking command in '/home/csrobot/flexbe_ws/build/flexbe_webui': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_webui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/flexbe_webui/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/flexbe_webui/build --no-deps symlink_data
+[1.944s] running develop
+[2.123s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[2.123s]   self.local_index = Environment(self.shadow_path + sys.path)
+[2.159s] running egg_info
+[2.180s] writing flexbe_webui.egg-info/PKG-INFO
+[2.180s] writing dependency_links to flexbe_webui.egg-info/dependency_links.txt
+[2.180s] writing entry points to flexbe_webui.egg-info/entry_points.txt
+[2.180s] writing requirements to flexbe_webui.egg-info/requires.txt
+[2.180s] writing top-level names to flexbe_webui.egg-info/top_level.txt
+[2.230s] reading manifest file 'flexbe_webui.egg-info/SOURCES.txt'
+[2.232s] writing manifest file 'flexbe_webui.egg-info/SOURCES.txt'
+[2.255s] running build_ext
+[2.257s] Creating /home/csrobot/flexbe_ws/install/flexbe_webui/lib/python3.12/site-packages/flexbe-webui.egg-link (link to .)
+[2.257s] Installing webui_client script to /home/csrobot/flexbe_ws/install/flexbe_webui/lib/flexbe_webui
+[2.257s] Installing webui_node script to /home/csrobot/flexbe_ws/install/flexbe_webui/lib/flexbe_webui
+[2.257s] Installing webui_server script to /home/csrobot/flexbe_ws/install/flexbe_webui/lib/flexbe_webui
+[2.257s] 
+[2.257s] Installed /home/csrobot/flexbe_ws/build/flexbe_webui
+[2.257s] running symlink_data
+[2.328s] Invoked command in '/home/csrobot/flexbe_ws/build/flexbe_webui' returned '0': AMENT_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/csrobot/flexbe_ws/install/flexbe_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/csrobot/flexbe_ws/build/flexbe_webui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csrobot/flexbe_ws/install/flexbe_webui/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/build/flexbe_core:/home/csrobot/flexbe_ws/install/flexbe_core/lib/python3.12/site-packages:/home/csrobot/flexbe_ws/install/flexbe_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/csrobot/flexbe_ws/build/flexbe_webui/build --no-deps symlink_data

@@ -2,6 +2,9 @@
 // with input from flexbe_msgs:srv/GetUserdata.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "flexbe_msgs/srv/get_userdata.hpp"
+
+
 #ifndef FLEXBE_MSGS__SRV__DETAIL__GET_USERDATA__BUILDER_HPP_
 #define FLEXBE_MSGS__SRV__DETAIL__GET_USERDATA__BUILDER_HPP_
 
@@ -123,6 +126,80 @@ inline
 auto build<::flexbe_msgs::srv::GetUserdata_Response>()
 {
   return flexbe_msgs::srv::builder::Init_GetUserdata_Response_success();
+}
+
+}  // namespace flexbe_msgs
+
+
+namespace flexbe_msgs
+{
+
+namespace srv
+{
+
+namespace builder
+{
+
+class Init_GetUserdata_Event_response
+{
+public:
+  explicit Init_GetUserdata_Event_response(::flexbe_msgs::srv::GetUserdata_Event & msg)
+  : msg_(msg)
+  {}
+  ::flexbe_msgs::srv::GetUserdata_Event response(::flexbe_msgs::srv::GetUserdata_Event::_response_type arg)
+  {
+    msg_.response = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::flexbe_msgs::srv::GetUserdata_Event msg_;
+};
+
+class Init_GetUserdata_Event_request
+{
+public:
+  explicit Init_GetUserdata_Event_request(::flexbe_msgs::srv::GetUserdata_Event & msg)
+  : msg_(msg)
+  {}
+  Init_GetUserdata_Event_response request(::flexbe_msgs::srv::GetUserdata_Event::_request_type arg)
+  {
+    msg_.request = std::move(arg);
+    return Init_GetUserdata_Event_response(msg_);
+  }
+
+private:
+  ::flexbe_msgs::srv::GetUserdata_Event msg_;
+};
+
+class Init_GetUserdata_Event_info
+{
+public:
+  Init_GetUserdata_Event_info()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_GetUserdata_Event_request info(::flexbe_msgs::srv::GetUserdata_Event::_info_type arg)
+  {
+    msg_.info = std::move(arg);
+    return Init_GetUserdata_Event_request(msg_);
+  }
+
+private:
+  ::flexbe_msgs::srv::GetUserdata_Event msg_;
+};
+
+}  // namespace builder
+
+}  // namespace srv
+
+template<typename MessageType>
+auto build();
+
+template<>
+inline
+auto build<::flexbe_msgs::srv::GetUserdata_Event>()
+{
+  return flexbe_msgs::srv::builder::Init_GetUserdata_Event_info();
 }
 
 }  // namespace flexbe_msgs
