@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: moveit_resources_panda_description
+    relative_path: urdf/panda.urdf.xacro
+  srdf:
+    relative_path: config/panda.srdf
+  package_settings:
+    author_name: Brian Flynn
+    author_email: brian_flynn@uml.edu
+    generated_timestamp: 1740702265
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
