@@ -3,30 +3,17 @@
 
 # Copyright 2025 Brian Flynn
 #
-# Redistribution and use in source and binary forms, with or without modification,
-# are permitted provided that the following conditions are met:
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
 #
-#  1. Redistributions of source code must retain the above copyright notice,
-#     this list of conditions and the following disclaimer.
-
-#  2. Redistributions in binary form must reproduce the above copyright notice,
-#     this list of conditions and the following disclaimer in the documentation
-#     and/or other materials provided with the distribution.
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
-#  3. Neither the name of the copyright holder nor the names of its
-#     contributors may be used to endorse or promote products derived from
-#     this software without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS”
-# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
-# THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-# ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-# (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-# ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
-# TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-# THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 ###########################################################
 #               WARNING: Generated code!                  #
@@ -44,13 +31,17 @@ scene and choose a target for grasping
 
 Created on Wed Aug 27 2025
 @author: Brian Flynn
+
+Modified on Oct 21 2025 @Huajing Zhao
 """
 
 
-from compare_flexbe_states.cgn_grasp_service_state import CGNGraspServiceState
+from compare_flexbe_states.cartesian_move_to_pose_service_state import CartesianMoveToPoseServiceState
+from compare_flexbe_states.detect_grasps_service_state import DetectGraspsServiceState
 from compare_flexbe_states.euclidean_clustering_service_state import EuclideanClusteringServiceState
 from compare_flexbe_states.filter_by_indices_service_state import FilterByIndicesServiceState
 from compare_flexbe_states.get_point_cloud_service_state import GetPointCloudServiceState
+from compare_flexbe_states.gpd_grasp_poses_service_state import GPDGraspPosesServiceState
 from compare_flexbe_states.move_to_named_pose_service_state import MoveToNamedPoseServiceState
 from compare_flexbe_states.move_to_pose_service_state import MoveToPoseServiceState
 from compare_flexbe_states.publish_point_cloud_state import PublishPointCloudState
@@ -64,7 +55,7 @@ from flexbe_core import initialize_flexbe_core
 
 # Additional imports can be added inside the following tags
 # [MANUAL_IMPORT]
-
+from compare_flexbe_states.cgn_grasp_service_state import CGNGraspServiceState
 
 # [/MANUAL_IMPORT]
 
@@ -91,6 +82,7 @@ class EuclideanClusterExtractionPipeineSM(Behavior):
 
         # Additional initialization code can be added inside the following tags
         # [MANUAL_INIT]
+        self._use_cgn = True # set to True if using Contact-GraspNet path (CGNGraspServiceState)
 
 
         # [/MANUAL_INIT]
@@ -116,11 +108,48 @@ class EuclideanClusterExtractionPipeineSM(Behavior):
         _state_machine.userdata.grasp_target_poses = []
         _state_machine.userdata.grasp_index = 0
         _state_machine.userdata.ready_pose = 'ready'
-        _state_machine.userdata.scene_id = 0
 
         # Additional creation code can be added inside the following tags
         # [MANUAL_CREATE]
 
+        CGN_PUBLISH_VIS = False
+
+         # To keep the original auto-generated coordinates/comments intact, we only modify transitions based on the self._use_cgn flag at runtime.
+         # The “DetectGrasps → ComputePoses” chain is original (GPD). The “CGNDetect → (PublishPointCloud) → MoveReady” chain is the new one.
+
+         # Add the CGN state now; we’ll only route to it when _use_cgn=True
+         OperatableStateMachine.add('CGNDetect',
+                                    CGNGraspServiceState(service_timeout=5.0,
+                                                         service_name='/get_grasps',
+                                                         use_scene_id=True),
+                                    transitions={'done': 'MoveReady' if not CGN_PUBLISH_VIS else 'PublishPointCloud',
+                                                 'failed': 'failed'},
+                                    autonomy={'done': Autonomy.Off, 'failed': Autonomy.Off},
+                                    remapping={'cloud_in': 'point_cloud_visual',   # unused when use_scene_id=True
+                                               'scene_id': 'scene_id',              # put your chosen ID into userdata.scene_id
+                                               'indices': 'test_indices',
+                                               'grasp_target_poses': 'grasp_target_poses',
+                                               'grasp_scores': 'grasp_scores',
+                                               'grasp_samples': 'grasp_samples',
+                                               'grasp_object_ids': 'grasp_object_ids'})
+
+         # After we add states (as the autogenerated file already does), we tweak the
+         # transition from FilterByIndices depending on the flag.
+         if self._use_cgn:
+             # Route to CGN path
+             _state_machine.transitions[('FilterByIndices', 'finished')] = 'CGNDetect'
+         else:
+             # Keep original route to GPD DetectGrasps
+             _state_machine.transitions[('FilterByIndices', 'finished')] = 'DetectGrasps'
+
+         # Optional: If you want to publish the filtered cloud even in CGN mode before MoveReady:
+         if CGN_PUBLISH_VIS:
+             # In CGN path, publish then proceed to MoveReady
+             _state_machine.transitions[('PublishPointCloud', 'done')] = 'MoveReady'
+
+         # Seed some defaults expected by CGN
+         if not hasattr(_state_machine.userdata, 'scene_id'):
+             _state_machine.userdata.scene_id = 0
 
         # [/MANUAL_CREATE]
 
@@ -139,23 +168,32 @@ class EuclideanClusterExtractionPipeineSM(Behavior):
                                                   'cloud_out': 'scene_pointcloud',
                                                   'cloud_frame': 'cloud_frame'})
 
-            # x:831 y:53
-            OperatableStateMachine.add('CgnGrasp',
-                                       CGNGraspServiceState(service_timeout=5.0,
-                                                            service_name='/get_grasps',
-                                                            use_scene_id=False,
-                                                            field_names=None),
-                                       transitions={'done': 'PublishPointCloud',
-                                                    'failed': 'failed'  # 688 269 -1 -1 -1 -1
+            # x:1275 y:55
+            OperatableStateMachine.add('ComputePoses',
+                                       GPDGraspPosesServiceState(service_timeout=5.0,
+                                                                 service_name='/compute_grasp_poses'),
+                                       transitions={'done': 'MoveReady'  # 1444 537 -1 -1 -1 -1
+                                                    , 'failed': 'failed'  # 1351 236 -1 -1 -1 -1
                                                     },
                                        autonomy={'done': Autonomy.Off, 'failed': Autonomy.Off},
-                                       remapping={'cloud_in': 'point_cloud_visual',
-                                                  'scene_id': 'scene_id',
-                                                  'indices': 'test_indices',
+                                       remapping={'grasp_configs': 'grasp_configs',
                                                   'grasp_target_poses': 'grasp_target_poses',
-                                                  'grasp_scores': 'grasp_scores',
-                                                  'grasp_samples': 'grasp_samples',
-                                                  'grasp_object_ids': 'grasp_object_ids'})
+                                                  'grasp_approach_poses': 'grasp_approach_poses',
+                                                  'grasp_waypoints': 'grasp_waypoints'})
+
+            # x:833 y:52
+            OperatableStateMachine.add('DetectGrasps',
+                                       DetectGraspsServiceState(service_timeout=5.0,
+                                                                service_name='/detect_grasps'),
+                                       transitions={'done': 'PublishPointCloud'  # 1017 68 -1 -1 -1 -1
+                                                    , 'failed': 'failed'  # 874 238 -1 -1 -1 -1
+                                                    },
+                                       autonomy={'done': Autonomy.Off, 'failed': Autonomy.Off},
+                                       remapping={'cloud': 'point_cloud_visual',
+                                                  'camera_source': 'camera_source',
+                                                  'view_points': 'camera_pose',
+                                                  'indices': 'test_indices',
+                                                  'grasp_configs': 'grasp_configs'})
 
             # x:344 y:61
             OperatableStateMachine.add('EuclideanClustering',
@@ -177,21 +215,35 @@ class EuclideanClusterExtractionPipeineSM(Behavior):
             OperatableStateMachine.add('FilterByIndices',
                                        FilterByIndicesServiceState(service_timeout=5.0,
                                                                    service_name='/filter_by_indices'),
-                                       transitions={'finished': 'CgnGrasp',
-                                                    'failed': 'failed'  # 648 229 -1 -1 -1 -1
+                                       transitions={'finished': 'DetectGrasps'  # 790 71 -1 -1 -1 -1
+                                                    , 'failed': 'failed'  # 648 229 -1 -1 -1 -1
                                                     },
                                        autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
                                        remapping={'cloud_in': 'scene_pointcloud',
                                                   'target_indices': 'target_cluster_indices',
                                                   'cloud_out': 'point_cloud_visual'})
 
-            # x:1628 y:76
+            # x:1546 y:68
+            OperatableStateMachine.add('MoveCartesian',
+                                       CartesianMoveToPoseServiceState(service_timeout=5.0,
+                                                                       service_name='/plan_cartesian_path'),
+                                       transitions={'done': 'finished'  # 1808 313 -1 -1 -1 -1
+                                                    , 'next': 'MoveCartesian'  # 1661 226 -1 -1 -1 -1
+                                                    , 'failed': 'failed'  # 1374 314 -1 -1 -1 -1
+                                                    },
+                                       autonomy={'done': Autonomy.Off,
+                                                 'next': Autonomy.Off,
+                                                 'failed': Autonomy.Off},
+                                       remapping={'waypoints': 'grasp_waypoints',
+                                                  'waypoint_index': 'waypoint_index'})
+
+            # x:1857 y:63
             OperatableStateMachine.add('MoveOMPL',
                                        MoveToPoseServiceState(timeout_sec=5.0,
                                                               service_name='/move_to_pose'),
-                                       transitions={'done': 'finished'  # 1488 318 -1 -1 -1 -1
-                                                    , 'next': 'MoveOMPL'  # 1628 76 -1 -1 -1 -1
-                                                    , 'failed': 'failed'  # 1589 423 -1 -1 -1 -1
+                                       transitions={'done': 'finished'  # 2011 316 -1 -1 -1 -1
+                                                    , 'next': 'MoveOMPL'  # 1913 215 -1 -1 -1 -1
+                                                    , 'failed': 'failed'  # 2030 424 -1 -1 -1 -1
                                                     },
                                        autonomy={'done': Autonomy.Off,
                                                  'next': Autonomy.Off,
@@ -199,12 +251,12 @@ class EuclideanClusterExtractionPipeineSM(Behavior):
                                        remapping={'grasp_poses': 'grasp_target_poses',
                                                   'grasp_index': 'grasp_index'})
 
-            # x:1298 y:69
+            # x:1599 y:506
             OperatableStateMachine.add('MoveReady',
                                        MoveToNamedPoseServiceState(service_timeout=5.0,
                                                                    service_name='/move_to_named_pose'),
-                                       transitions={'finished': 'MoveOMPL'  # 1580 69 -1 -1 -1 -1
-                                                    , 'failure': 'failed'  # 1199 322 -1 -1 -1 -1
+                                       transitions={'finished': 'MoveOMPL'  # 1903 523 -1 -1 -1 -1
+                                                    , 'failure': 'failed'  # 1699 674 -1 -1 -1 -1
                                                     },
                                        autonomy={'finished': Autonomy.Off, 'failure': Autonomy.Off},
                                        remapping={'target_pose_name': 'ready_pose'})
@@ -212,8 +264,8 @@ class EuclideanClusterExtractionPipeineSM(Behavior):
             # x:1055 y:53
             OperatableStateMachine.add('PublishPointCloud',
                                        PublishPointCloudState(pub_topic='/filtered_cloud/target_object'),
-                                       transitions={'done': 'MoveReady',
-                                                    'failed': 'failed'  # 1099 242 -1 -1 -1 -1
+                                       transitions={'done': 'ComputePoses'  # 1230 69 -1 -1 -1 -1
+                                                    , 'failed': 'failed'  # 1099 242 -1 -1 -1 -1
                                                     },
                                        autonomy={'done': Autonomy.Off, 'failed': Autonomy.Off},
                                        remapping={'cloud_in': 'point_cloud_visual'})
