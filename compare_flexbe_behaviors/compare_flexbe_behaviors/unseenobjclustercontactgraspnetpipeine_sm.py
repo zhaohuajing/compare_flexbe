@@ -47,13 +47,13 @@ Created on Wed Aug 27 2025
 """
 
 
-from compare_flexbe_states.cgn_grasp_service_state import CGNGraspServiceState as compare_flexbe_states__CGNGraspServiceState
-from compare_flexbe_states.euclidean_clustering_service_state import EuclideanClusteringServiceState as compare_flexbe_states__EuclideanClusteringServiceState
-from compare_flexbe_states.filter_by_indices_service_state import FilterByIndicesServiceState as compare_flexbe_states__FilterByIndicesServiceState
-from compare_flexbe_states.get_point_cloud_service_state import GetPointCloudServiceState as compare_flexbe_states__GetPointCloudServiceState
-from compare_flexbe_states.move_to_named_pose_service_state import MoveToNamedPoseServiceState as compare_flexbe_states__MoveToNamedPoseServiceState
-from compare_flexbe_states.move_to_pose_service_state import MoveToPoseServiceState as compare_flexbe_states__MoveToPoseServiceState
-from compare_flexbe_states.publish_point_cloud_state import PublishPointCloudState as compare_flexbe_states__PublishPointCloudState
+from compare_flexbe_states.cgn_grasp_service_state import CGNGraspServiceState
+from compare_flexbe_states.euclidean_clustering_service_state import EuclideanClusteringServiceState
+from compare_flexbe_states.filter_by_indices_service_state import FilterByIndicesServiceState
+from compare_flexbe_states.get_point_cloud_service_state import GetPointCloudServiceState
+from compare_flexbe_states.move_to_named_pose_service_state import MoveToNamedPoseServiceState
+from compare_flexbe_states.move_to_pose_service_state import MoveToPoseServiceState
+from compare_flexbe_states.publish_point_cloud_state import PublishPointCloudState
 from flexbe_core import Autonomy
 from flexbe_core import Behavior
 from flexbe_core import ConcurrencyContainer
@@ -69,7 +69,7 @@ from flexbe_core import initialize_flexbe_core
 # [/MANUAL_IMPORT]
 
 
-class EuclideanClusterExtractionPipeineSM(Behavior):
+class UnseenObjClusterContactGraspnetPipeineSM(Behavior):
     """
     Define EuclideanClusterExtractionPipeine.
 
@@ -80,7 +80,7 @@ class EuclideanClusterExtractionPipeineSM(Behavior):
 
     def __init__(self, node):
         super().__init__()
-        self.name = 'EuclideanClusterExtractionPipeine'
+        self.name = 'UnseenObjClusterContactGraspnetPipeine'
 
         # parameters of this behavior
 
@@ -127,10 +127,10 @@ class EuclideanClusterExtractionPipeineSM(Behavior):
         with _state_machine:
             # x:119 y:63
             OperatableStateMachine.add('GetPointCloud',
-                                       compare_flexbe_states__GetPointCloudServiceState(service_timeout=5.0,
-                                                                                        service_name='/get_point_cloud',
-                                                                                        camera_topic='/rgbd_camera/points',
-                                                                                        target_frame='simple_pedestal'),
+                                       GetPointCloudServiceState(service_timeout=5.0,
+                                                                 service_name='/get_point_cloud',
+                                                                 camera_topic='/rgbd_camera/points',
+                                                                 target_frame='simple_pedestal'),
                                        transitions={'finished': 'EuclideanClustering'  # 306 84 -1 -1 -1 -1
                                                     , 'failed': 'failed'  # 236 225 228 116 -1 -1
                                                     },
@@ -139,14 +139,14 @@ class EuclideanClusterExtractionPipeineSM(Behavior):
                                                   'cloud_out': 'scene_pointcloud',
                                                   'cloud_frame': 'cloud_frame'})
 
-            # x:836 y:61
+            # x:831 y:53
             OperatableStateMachine.add('CgnGrasp',
-                                       compare_flexbe_states__CGNGraspServiceState(service_timeout=5.0,
-                                                                                   service_name='/get_grasps',
-                                                                                   use_scene_id=False,
-                                                                                   field_names=None),
+                                       CGNGraspServiceState(service_timeout=5.0,
+                                                            service_name='/get_grasps',
+                                                            use_scene_id=False,
+                                                            field_names=None),
                                        transitions={'done': 'PublishPointCloud',
-                                                    'failed': 'failed'  # 692 272 -1 -1 -1 -1
+                                                    'failed': 'failed'  # 688 269 -1 -1 -1 -1
                                                     },
                                        autonomy={'done': Autonomy.Off, 'failed': Autonomy.Off},
                                        remapping={'cloud_in': 'point_cloud_visual',
@@ -159,12 +159,12 @@ class EuclideanClusterExtractionPipeineSM(Behavior):
 
             # x:344 y:61
             OperatableStateMachine.add('EuclideanClustering',
-                                       compare_flexbe_states__EuclideanClusteringServiceState(service_timeout=5.0,
-                                                                                              service_name='/euclidean_clustering',
-                                                                                              cluster_tolerance=0.02,
-                                                                                              min_cluster_size=100,
-                                                                                              max_cluster_size=25000),
-                                       transitions={'finished': 'FilterByIndices'  # 553 60 -1 -1 -1 -1
+                                       EuclideanClusteringServiceState(service_timeout=5.0,
+                                                                       service_name='/euclidean_clustering',
+                                                                       cluster_tolerance=0.02,
+                                                                       min_cluster_size=100,
+                                                                       max_cluster_size=25000),
+                                       transitions={'finished': 'FilterByIndices'  # 557 80 -1 -1 -1 -1
                                                     , 'failed': 'failed'  # 400 213 406 114 -1 -1
                                                     },
                                        autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
@@ -173,24 +173,25 @@ class EuclideanClusterExtractionPipeineSM(Behavior):
                                                   'target_cluster_indices': 'target_cluster_indices',
                                                   'obstacle_cluster_indices': 'obstacle_cluster_indices'})
 
-            # x:595 y:57
+            # x:600 y:56
             OperatableStateMachine.add('FilterByIndices',
-                                       compare_flexbe_states__FilterByIndicesServiceState(service_timeout=5.0,
-                                                                                          service_name='/filter_by_indices'),
+                                       FilterByIndicesServiceState(service_timeout=5.0,
+                                                                   service_name='/filter_by_indices'),
                                        transitions={'finished': 'CgnGrasp',
-                                                    'failed': 'failed'  # 642 229 -1 -1 -1 -1
+                                                    'failed': 'failed'  # 648 229 -1 -1 -1 -1
                                                     },
                                        autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
                                        remapping={'cloud_in': 'scene_pointcloud',
                                                   'target_indices': 'target_cluster_indices',
                                                   'cloud_out': 'point_cloud_visual'})
 
-            # x:1589 y:59
+            # x:1628 y:76
             OperatableStateMachine.add('MoveOMPL',
-                                       compare_flexbe_states__MoveToPoseServiceState(timeout_sec=5.0,
-                                                                                     service_name='/move_to_pose'),
-                                       transitions={'done': 'finished'  # 1470 315 -1 -1 -1 -1
-                                                    , 'next': 'MoveOMPL', 'failed': 'failed'  # 1551 413 -1 -1 -1 -1
+                                       MoveToPoseServiceState(timeout_sec=5.0,
+                                                              service_name='/move_to_pose'),
+                                       transitions={'done': 'finished'  # 1488 318 -1 -1 -1 -1
+                                                    , 'next': 'MoveOMPL'  # 1628 76 -1 -1 -1 -1
+                                                    , 'failed': 'failed'  # 1589 423 -1 -1 -1 -1
                                                     },
                                        autonomy={'done': Autonomy.Off,
                                                  'next': Autonomy.Off,
@@ -198,21 +199,21 @@ class EuclideanClusterExtractionPipeineSM(Behavior):
                                        remapping={'grasp_poses': 'grasp_target_poses',
                                                   'grasp_index': 'grasp_index'})
 
-            # x:1301 y:61
+            # x:1298 y:69
             OperatableStateMachine.add('MoveReady',
-                                       compare_flexbe_states__MoveToNamedPoseServiceState(service_timeout=5.0,
-                                                                                          service_name='/move_to_named_pose'),
-                                       transitions={'finished': 'MoveOMPL'  # 1525 80 -1 -1 -1 -1
-                                                    , 'failure': 'failed'  # 1202 320 -1 -1 -1 -1
+                                       MoveToNamedPoseServiceState(service_timeout=5.0,
+                                                                   service_name='/move_to_named_pose'),
+                                       transitions={'finished': 'MoveOMPL'  # 1580 69 -1 -1 -1 -1
+                                                    , 'failure': 'failed'  # 1199 322 -1 -1 -1 -1
                                                     },
                                        autonomy={'finished': Autonomy.Off, 'failure': Autonomy.Off},
                                        remapping={'target_pose_name': 'ready_pose'})
 
-            # x:1055 y:58
+            # x:1055 y:53
             OperatableStateMachine.add('PublishPointCloud',
-                                       compare_flexbe_states__PublishPointCloudState(pub_topic='/filtered_cloud/target_object'),
+                                       PublishPointCloudState(pub_topic='/filtered_cloud/target_object'),
                                        transitions={'done': 'MoveReady',
-                                                    'failed': 'failed'  # 1099 244 -1 -1 -1 -1
+                                                    'failed': 'failed'  # 1099 242 -1 -1 -1 -1
                                                     },
                                        autonomy={'done': Autonomy.Off, 'failed': Autonomy.Off},
                                        remapping={'cloud_in': 'point_cloud_visual'})

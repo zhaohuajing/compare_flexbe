@@ -47,8 +47,8 @@ class CGNGraspServiceState(EventState):
                  field_names: Optional[list] = None):
         super().__init__(
             outcomes=['done', 'failed'],
-            input_keys=['cloud_in', 'scene_id', 'indices'],
-            output_keys=['grasp_target_poses', 'grasp_scores', 'grasp_samples', 'grasp_object_ids']
+            input_keys=['cloud_in', 'indices'], #, 'scene_id'],
+            output_keys=['grasp_target_poses']#, 'grasp_scores', 'grasp_samples', 'grasp_object_ids']
         )
         self._service_timeout = float(service_timeout)
         self._service_name = str(service_name)
@@ -98,9 +98,9 @@ class CGNGraspServiceState(EventState):
         try:
             grasps = self._res.grasps
             userdata.grasp_target_poses = list(grasps.poses)
-            userdata.grasp_scores = list(grasps.scores)
-            userdata.grasp_samples = list(grasps.samples)
-            userdata.grasp_object_ids = list(grasps.object_ids)
+            # userdata.grasp_scores = list(grasps.scores)
+            # userdata.grasp_samples = list(grasps.samples)
+            # userdata.grasp_object_ids = list(grasps.object_ids)
             Logger.loginfo(f"[{type(self).__name__}] Received {len(grasps.poses)} CGN grasp poses.")
         except Exception as e:
             Logger.logerr(f"[{type(self).__name__}] Failed to copy result to userdata: {e}")
@@ -117,41 +117,50 @@ class CGNGraspServiceState(EventState):
 
         # If the server supports loading precomputed NPZ/JSON by scene id,
         # you can skip sending points/mask and just pass scene_id.
-        if self._use_scene_id:
-            try:
-                request.scene_id = int(userdata.scene_id)
-            except Exception:
-                request.scene_id = 0  # default fallback
-        else:
-            # Prepare points from PointCloud2
-            try:
-                cloud = userdata.cloud_in
-                request.points = self._pc2_to_xyz_list(cloud, self._fields)
-                # Optional indices -> boolean-ish mask (uint32). If no indices are given, keep-all.
-                if userdata.indices:
-                    # Make a dense keep-mask of size N; indices mark the ones to keep.
-                    # Since we used skip_nans=True and projected to a *filtered* cloud already,
-                    # we simply mark all as 1 unless a sparse index list is explicitly provided.
-                    # If you want exact alignment with original cloud, pre-filter before this state.
-                    idx = self._ensure_int_list(userdata.indices)
-                    # We'll just pass a trivial same-length mask of ones; the server ignores 0s anyway
-                    # if you pre-filtered the cloud to target object.
-                    # (If you truly need sparse selection, pass a binary mask the same length as points/3.)
-                # Default: "keep all"
-                # (mask length in server is expected to match number of points; 1 = keep)
-                num_pts = len(request.points) // 3
-                request.mask = [1] * num_pts
-            except Exception as e:
-                Logger.logerr(f"[{type(self).__name__}] Failed to prepare request from cloud: {e}")
-                self._had_error = True
-                return
+        # if self._use_scene_id:
+        #     try:
+        #         request.scene_id = int(userdata.scene_id)
+        #     except Exception:
+        #         request.scene_id = 0  # default fallback
+        # else:
+        # Prepare points from PointCloud2
+        try:
+            cloud = userdata.cloud_in
+            request.points = self._pc2_to_xyz_list(cloud, self._fields)
+            # Optional indices -> boolean-ish mask (uint32). If no indices are given, keep-all.
+            if userdata.indices:
+                # Make a dense keep-mask of size N; indices mark the ones to keep.
+                # Since we used skip_nans=True and projected to a *filtered* cloud already,
+                # we simply mark all as 1 unless a sparse index list is explicitly provided.
+                # If you want exact alignment with original cloud, pre-filter before this state.
+                idx = self._ensure_int_list(userdata.indices)
+                # We'll just pass a trivial same-length mask of ones; the server ignores 0s anyway
+                # if you pre-filtered the cloud to target object.
+                # (If you truly need sparse selection, pass a binary mask the same length as points/3.)
+            # Default: "keep all"
+            # (mask length in server is expected to match number of points; 1 = keep)
+            num_pts = len(request.points) // 3
+            request.mask = [1] * num_pts
+        except Exception as e:
+            Logger.logerr(f"[{type(self).__name__}] Failed to prepare request from cloud: {e}")
+            self._had_error = True
+            return
 
-            # Optional scene id (used by your server for bookkeeping)
-            try:
-                request.scene_id = int(userdata.scene_id)
-            except Exception:
-                request.scene_id = 0
+        # # Optional scene id (used by your server for bookkeeping)
+        # try:
+        #     request.scene_id = int(userdata.scene_id)
+        # except Exception:
+        #     request.scene_id = 0
 
+
+        # inside on_enter(), before using self._srv:
+        import time
+        deadline = time.time() + self._service_timeout
+        while time.time() < deadline:
+            if self._srv.is_available(self._service_name):
+                break
+            time.sleep(0.2)
+            
         # Wait for service
         if not self._srv.is_available(self._service_name):
             Logger.logerr(f"[{type(self).__name__}] Service '{self._service_name}' not available after {self._service_timeout}s.")
