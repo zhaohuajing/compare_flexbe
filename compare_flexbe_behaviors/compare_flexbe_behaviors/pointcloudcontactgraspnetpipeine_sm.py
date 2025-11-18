@@ -36,11 +36,10 @@
 ###########################################################
 
 """
-Define EuclideanClusterContactGraspnetPipeine.
+Define PointCloudContactGraspnetPipeine.
 
-A perception-to-action pipeline which employs cluster extraction in order to
-cluster pickable objects from a
-scene and choose a target for grasping, then contact-graspnet for grasp
+A perception-to-action pipeline which employs that directly input point clouds
+to contact-graspnet, which masks objects above the table for grasp
 planning and OMPL for manipulation via MoveIt
 
 Created on Oct 22 2025
@@ -49,11 +48,9 @@ Created on Oct 22 2025
 
 
 from compare_flexbe_states.cgn_grasp_service_state import CGNGraspServiceState
-from compare_flexbe_states.euclidean_clustering_service_state import EuclideanClusteringServiceState
-from compare_flexbe_states.filter_by_indices_service_state import FilterByIndicesServiceState
 from compare_flexbe_states.get_point_cloud_service_state import GetPointCloudServiceState
 from compare_flexbe_states.move_to_pose_service_state import MoveToPoseServiceState
-from compare_flexbe_states.publish_point_cloud_state import PublishPointCloudState
+from compare_flexbe_states.reach_to_grasp_service_state import ReachToGraspServiceState
 from flexbe_core import Autonomy
 from flexbe_core import Behavior
 from flexbe_core import ConcurrencyContainer
@@ -69,19 +66,18 @@ from flexbe_core import initialize_flexbe_core
 # [/MANUAL_IMPORT]
 
 
-class EuclideanClusterContactGraspnetPipeineSM(Behavior):
+class PointCloudContactGraspnetPipeineSM(Behavior):
     """
-    Define EuclideanClusterContactGraspnetPipeine.
+    Define PointCloudContactGraspnetPipeine.
 
-    A perception-to-action pipeline which employs cluster extraction in order to
-    cluster pickable objects from a
-    scene and choose a target for grasping, then contact-graspnet for grasp
+    A perception-to-action pipeline which employs that directly input point clouds
+    to contact-graspnet, which masks objects above the table for grasp
     planning and OMPL for manipulation via MoveIt
     """
 
     def __init__(self, node):
         super().__init__()
-        self.name = 'EuclideanClusterContactGraspnetPipeine'
+        self.name = 'PointCloudContactGraspnetPipeine'
 
         # parameters of this behavior
 
@@ -101,7 +97,7 @@ class EuclideanClusterContactGraspnetPipeineSM(Behavior):
     def create(self):
         """Create state machine."""
         # Root state machine
-        # x:1576 y:418, x:251 y:389
+        # x:841 y:381, x:251 y:389
         _state_machine = OperatableStateMachine(outcomes=['finished', 'failed'], output_keys=['target_cluster_indexed', 'scene_pointcloud'])
         _state_machine.userdata.scene_pointcloud = 0
         _state_machine.userdata.camera_pose = 0
@@ -132,67 +128,36 @@ class EuclideanClusterContactGraspnetPipeineSM(Behavior):
                                                                  service_name='/get_point_cloud',
                                                                  camera_topic='/rgbd_camera/points',
                                                                  target_frame='simple_pedestal'),
-                                       transitions={'finished': 'EuclideanClustering'  # 306 84 -1 -1 -1 -1
-                                                    , 'failed': 'failed'  # 236 225 228 116 -1 -1
+                                       transitions={'finished': 'CgnGrasp',
+                                                    'failed': 'failed'  # 236 225 228 116 -1 -1
                                                     },
                                        autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
                                        remapping={'camera_pose': 'camera_pose',
                                                   'cloud_out': 'scene_pointcloud',
                                                   'cloud_frame': 'cloud_frame'})
 
-            # x:831 y:53
+            # x:419 y:65
             OperatableStateMachine.add('CgnGrasp',
-                                       CGNGraspServiceState(service_name='/get_grasps',
+                                       CGNGraspServiceState(service_timeout=5.0,
+                                                            service_name='/get_grasps',
                                                             use_scene_id=False,
-                                                            service_timeout=5.0,
-                                                            field_names=None),
-                                       transitions={'done': 'PublishPointCloud',
-                                                    'failed': 'failed'  # 688 269 -1 -1 -1 -1
+                                                            field_names=None,
+                                                            z_min=0.28),
+                                       transitions={'done': 'MoveOMPL',
+                                                    'failed': 'failed'  # 378 273 -1 -1 -1 -1
                                                     },
                                        autonomy={'done': Autonomy.Off, 'failed': Autonomy.Off},
-                                       remapping={'cloud_in': 'point_cloud_visual',
+                                       remapping={'cloud_in': 'scene_pointcloud',
                                                   'indices': 'test_indices',
-                                                  'scene_id': 'scene_id',
-                                                  'grasp_target_poses': 'grasp_target_poses',
-                                                  'grasp_scores': 'grasp_scores',
-                                                  'grasp_samples': 'grasp_samples',
-                                                  'grasp_object_ids': 'grasp_object_ids'})
+                                                  'grasp_target_poses': 'grasp_target_poses'})
 
-            # x:344 y:61
-            OperatableStateMachine.add('EuclideanClustering',
-                                       EuclideanClusteringServiceState(service_timeout=5.0,
-                                                                       service_name='/euclidean_clustering',
-                                                                       cluster_tolerance=0.02,
-                                                                       min_cluster_size=100,
-                                                                       max_cluster_size=25000),
-                                       transitions={'finished': 'FilterByIndices'  # 557 80 -1 -1 -1 -1
-                                                    , 'failed': 'failed'  # 400 213 406 114 -1 -1
-                                                    },
-                                       autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
-                                       remapping={'cloud_in': 'scene_pointcloud',
-                                                  'camera_pose': 'camera_pose',
-                                                  'target_cluster_indices': 'target_cluster_indices',
-                                                  'obstacle_cluster_indices': 'obstacle_cluster_indices'})
-
-            # x:600 y:56
-            OperatableStateMachine.add('FilterByIndices',
-                                       FilterByIndicesServiceState(service_timeout=5.0,
-                                                                   service_name='/filter_by_indices'),
-                                       transitions={'finished': 'CgnGrasp',
-                                                    'failed': 'failed'  # 648 229 -1 -1 -1 -1
-                                                    },
-                                       autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
-                                       remapping={'cloud_in': 'scene_pointcloud',
-                                                  'target_indices': 'target_cluster_indices',
-                                                  'cloud_out': 'point_cloud_visual'})
-
-            # x:1316 y:56
+            # x:680 y:61
             OperatableStateMachine.add('MoveOMPL',
                                        MoveToPoseServiceState(timeout_sec=5.0,
                                                               service_name='/move_to_pose'),
-                                       transitions={'done': 'finished'  # 1455 349 -1 -1 -1 -1
-                                                    , 'next': 'MoveOMPL'  # 1376 147 -1 -1 -1 -1
-                                                    , 'failed': 'failed'  # 1142 394 -1 -1 -1 -1
+                                       transitions={'done': 'ReachToGrasp',
+                                                    'next': 'MoveOMPL'  # 747 24 -1 -1 -1 -1
+                                                    , 'failed': 'failed'  # 538 304 -1 -1 -1 -1
                                                     },
                                        autonomy={'done': Autonomy.Off,
                                                  'next': Autonomy.Off,
@@ -200,14 +165,15 @@ class EuclideanClusterContactGraspnetPipeineSM(Behavior):
                                        remapping={'grasp_poses': 'grasp_target_poses',
                                                   'grasp_index': 'grasp_index'})
 
-            # x:1055 y:53
-            OperatableStateMachine.add('PublishPointCloud',
-                                       PublishPointCloudState(pub_topic='/filtered_cloud/target_object'),
-                                       transitions={'done': 'MoveOMPL',
-                                                    'failed': 'failed'  # 1099 242 -1 -1 -1 -1
+            # x:919 y:55
+            OperatableStateMachine.add('ReachToGrasp',
+                                       ReachToGraspServiceState(service_name='/reach_to_grasp'),
+                                       transitions={'done': 'finished',
+                                                    'failed': 'failed'  # 641 334 -1 -1 -1 -1
                                                     },
                                        autonomy={'done': Autonomy.Off, 'failed': Autonomy.Off},
-                                       remapping={'cloud_in': 'point_cloud_visual'})
+                                       remapping={'grasp_poses': 'grasp_target_poses',
+                                                  'grasp_index': 'grasp_index'})
 
         return _state_machine
 

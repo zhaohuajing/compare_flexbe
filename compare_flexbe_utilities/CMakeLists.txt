@@ -72,6 +72,18 @@ ament_target_dependencies(move_to_pose_service
   moveit_msgs
 )
 
+add_executable(reach_to_grasp_service src/reach_to_grasp_service.cpp)
+ament_target_dependencies(reach_to_grasp_service
+  rclcpp
+  geometry_msgs
+  visualization_msgs
+  moveit_ros_planning_interface
+  moveit_msgs
+  tf2
+  tf2_geometry_msgs
+  std_srvs
+)
+
 add_executable(voxel_grid_filter_service src/voxel_grid_filter_service.cpp)
 ament_target_dependencies(voxel_grid_filter_service
   rclcpp
@@ -124,6 +136,8 @@ ament_target_dependencies(filter_by_indices_service
 )
 target_link_libraries(filter_by_indices_service ${PCL_LIBRARIES})
 
+
+
 install(TARGETS 
   cartesian_move_to_pose_service
   move_to_named_pose_service
@@ -133,6 +147,7 @@ install(TARGETS
   euclidean_clustering_service
   get_point_cloud_service
   filter_by_indices_service
+  reach_to_grasp_service
   DESTINATION lib/${PROJECT_NAME})
 
 # Link generated service headers
@@ -145,6 +160,7 @@ target_link_libraries(plane_segmentation_service ${cpp_typesupport_target})
 target_link_libraries(euclidean_clustering_service ${cpp_typesupport_target})
 target_link_libraries(get_point_cloud_service ${cpp_typesupport_target})
 target_link_libraries(filter_by_indices_service ${cpp_typesupport_target})
+target_link_libraries(reach_to_grasp_service ${cpp_typesupport_target})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

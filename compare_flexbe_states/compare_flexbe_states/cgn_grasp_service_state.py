@@ -44,16 +44,18 @@ class CGNGraspServiceState(EventState):
                  service_timeout: float = 5.0,
                  service_name: str = '/get_grasps',
                  use_scene_id: bool = False,
-                 field_names: Optional[list] = None):
+                 field_names: Optional[list] = None,
+                 z_min: float = 0.28):
         super().__init__(
             outcomes=['done', 'failed'],
             input_keys=['cloud_in', 'indices'], #, 'scene_id'],
-            output_keys=['grasp_target_poses']#, 'grasp_scores', 'grasp_samples', 'grasp_object_ids']
+            output_keys=['grasp_target_poses', 'grasp_scores', 'grasp_samples', 'grasp_object_ids']
         )
         self._service_timeout = float(service_timeout)
         self._service_name = str(service_name)
         self._use_scene_id = bool(use_scene_id)
         self._fields = field_names if field_names is not None else ['x', 'y', 'z']
+        self._z_min = float(z_min)
 
         # Proxy service
         self._srv = ProxyServiceCaller({self._service_name: SrvType})
@@ -98,9 +100,9 @@ class CGNGraspServiceState(EventState):
         try:
             grasps = self._res.grasps
             userdata.grasp_target_poses = list(grasps.poses)
-            # userdata.grasp_scores = list(grasps.scores)
-            # userdata.grasp_samples = list(grasps.samples)
-            # userdata.grasp_object_ids = list(grasps.object_ids)
+            userdata.grasp_scores = list(grasps.scores)
+            userdata.grasp_samples = list(grasps.samples)
+            userdata.grasp_object_ids = list(grasps.object_ids)
             Logger.loginfo(f"[{type(self).__name__}] Received {len(grasps.poses)} CGN grasp poses.")
         except Exception as e:
             Logger.logerr(f"[{type(self).__name__}] Failed to copy result to userdata: {e}")
@@ -127,6 +129,7 @@ class CGNGraspServiceState(EventState):
         try:
             cloud = userdata.cloud_in
             request.points = self._pc2_to_xyz_list(cloud, self._fields)
+
             # Optional indices -> boolean-ish mask (uint32). If no indices are given, keep-all.
             if userdata.indices:
                 # Make a dense keep-mask of size N; indices mark the ones to keep.
@@ -138,9 +141,43 @@ class CGNGraspServiceState(EventState):
                 # if you pre-filtered the cloud to target object.
                 # (If you truly need sparse selection, pass a binary mask the same length as points/3.)
             # Default: "keep all"
-            # (mask length in server is expected to match number of points; 1 = keep)
+            # # (mask length in server is expected to match number of points; 1 = keep)
+            # num_pts = len(request.points) // 3
+            # request.mask = [1] * num_pts
+
+            # Build Z > z_min mask (1 = keep)
             num_pts = len(request.points) // 3
-            request.mask = [1] * num_pts
+            if num_pts == 0:
+                raise RuntimeError("Input cloud produced zero points")
+            Logger.loginfo(f"[{type(self).__name__}] num_pts = {num_pts}")
+
+            # z values live at indices 2, 5, 8, ...
+            z_vals = (request.points[2::3])
+            z_mask = [1 if float(z) > self._z_min else 0 for z in z_vals]
+
+            # Optional indices -> combine with z_mask (AND)
+            # If indices is a list of positions to keep, turn into a dense mask.
+            if hasattr(userdata, 'indices') and userdata.indices:
+                idx_list = self._ensure_int_list(userdata.indices)
+                idx_mask = [0] * num_pts
+                for i in idx_list:
+                    if 0 <= i < num_pts:
+                        idx_mask[i] = 1
+                # AND-combine: keep only those above the table AND in indices
+                request.mask = [1 if (z_mask[i] and idx_mask[i]) else 0 for i in range(num_pts)]
+            else:
+                # Only Z-filter
+                request.mask = z_mask
+
+            kept = sum(request.mask)
+            Logger.loginfo(f"[{type(self).__name__}] Z-filter: z_min={self._z_min:.3f}m "
+                           f"→ kept {kept}/{num_pts} points")
+
+            if kept == 0:
+                Logger.logwarn(f"[{type(self).__name__}] No points above z_min={self._z_min:.3f}m; aborting.")
+                self._had_error = True
+                return
+
         except Exception as e:
             Logger.logerr(f"[{type(self).__name__}] Failed to prepare request from cloud: {e}")
             self._had_error = True
@@ -160,7 +197,7 @@ class CGNGraspServiceState(EventState):
             if self._srv.is_available(self._service_name):
                 break
             time.sleep(0.2)
-            
+
         # Wait for service
         if not self._srv.is_available(self._service_name):
             Logger.logerr(f"[{type(self).__name__}] Service '{self._service_name}' not available after {self._service_timeout}s.")
