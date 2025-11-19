@@ -70,7 +70,7 @@ private:
       if (exec_result == moveit::core::MoveItErrorCode::SUCCESS)
       {
         RCLCPP_INFO(this->get_logger(), "Motion to pose succeeded.");
-        // res->success = true; // comment out if adding additional pick and place later in this script
+        res->success = true; // comment out if adding additional pick and place later in this script
       }
       else
       {
@@ -79,20 +79,21 @@ private:
       }
 
       // Additional step test: Lift vertically in base frame (planning frame)
-      bool flg_liftUp = moveInBaseZ(req, 0.05);
-      if (flg_liftUp)
-      {
-        res->success = true;
-        RCLCPP_INFO(this->get_logger(), "Motion to lift object succeeded.");
-        return;
-      }
-      else
-      {
-        res->success = false;
-        RCLCPP_ERROR(this->get_logger(),"Failed to lift object.");
-        return;
-      }
-    }
+    //   bool flg_liftUp = moveInBaseZ(req, 0.05);
+    //   if (flg_liftUp)
+    //   {
+    //     res->success = true;
+    //     RCLCPP_INFO(this->get_logger(), "Motion to lift object succeeded.");
+    //     return;
+    //   }
+    //   else
+    //   {
+    //     res->success = false;
+    //     RCLCPP_ERROR(this->get_logger(),"Failed to lift object.");
+    //     return;
+    //   }
+      
+    }      
     catch (const std::exception &e)
     {
       RCLCPP_ERROR(this->get_logger(), "Exception during planning or execution: %s", e.what());

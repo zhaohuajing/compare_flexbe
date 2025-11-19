@@ -63,8 +63,8 @@ class MoveToPoseServiceState(EventState):
 
         try:
             Logger.loginfo(f"[{type(self).__name__}] Finished plan with result: {self._res.success}.")
-            # if self._res.success == 1:
-            if self._res.success == 1 and userdata.grasp_index >= 1:
+            if self._res.success == 1:
+            # if self._res.success == 1 and userdata.grasp_index >= 5:
                 return 'done'
             if (userdata.grasp_index + 1) < len(userdata.grasp_poses):
                 userdata.grasp_index = userdata.grasp_index + 1

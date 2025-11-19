@@ -9,6 +9,8 @@
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 
 #include "compare_flexbe_utilities/srv/move_to_pose.hpp"
+using MoveToPoseSrv = compare_flexbe_utilities::srv::MoveToPose;
+
 
 #include <std_srvs/srv/trigger.hpp>
 
@@ -92,66 +94,66 @@ public:
     // // Make sure we have the right number of joints
     // const auto& joint_names = gripper_group_->getJointNames();
 
-    // // Typical Panda hand: 2 actuated finger joints
-    // open_gripper_joint_values_.resize(joint_names.size(), 0.0);
-    // close_gripper_joint_values_.resize(joint_names.size(), 0.0);
-
-    // // Example: first two joints are the finger joints
-    // if (joint_names.size() >= 2)
-    // {
-    //   // Fully open
-    //   open_gripper_joint_values_[0] = 0.04;
-    //   open_gripper_joint_values_[1] = 0.04;
-
-    //   // Fully closed
-    //   close_gripper_joint_values_[0] = 0.0;
-    //   close_gripper_joint_values_[1] = 0.0;
-    // }
-    // else
-    // {
-    //   RCLCPP_WARN(this->get_logger(),
-    //               "Gripper MoveGroup has %zu joints, expected at least 2. "
-    //               "Using zero joint positions for open/close targets.",
-    //               joint_names.size());
-    // }
-
     // NOTE: replace with gripper_command action server - 40 for effort, position for 0.04
 
-    service_ = this->create_service<std_srvs::srv::Trigger>(
-      "/reach_to_grasp",
-      std::bind(&ReachToGraspNode::handle_request, this,
-                std::placeholders::_1, std::placeholders::_2));
+    // service_ = this->create_service<std_srvs::srv::Trigger>(
+    //   "/reach_to_grasp",
+    //   std::bind(&ReachToGraspNode::handle_request, this,
+    //             std::placeholders::_1, std::placeholders::_2));
+
+    service_ = this->create_service<MoveToPoseSrv>(
+    "/reach_to_grasp",
+    std::bind(&ReachToGraspNode::handle_request, this,
+              std::placeholders::_1, std::placeholders::_2));
 
     RCLCPP_INFO(this->get_logger(), "ReachToGrasp service '/reach_to_grasp' is ready.");
   }
 
 private:
-  rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr service_;
+  // rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr service_;
+  rclcpp::Service<MoveToPoseSrv>::SharedPtr service_;
   std::shared_ptr<moveit::planning_interface::MoveGroupInterface> arm_group_;
   std::shared_ptr<moveit::planning_interface::MoveGroupInterface> gripper_group_;
 
   std::vector<double> open_gripper_joint_values_;
   std::vector<double> close_gripper_joint_values_;
 
-  void handle_request(const std::shared_ptr<std_srvs::srv::Trigger::Request> /*req*/,
-                      std::shared_ptr<std_srvs::srv::Trigger::Response> res)
+  void handle_request(const std::shared_ptr<MoveToPoseSrv::Request> req,
+                      std::shared_ptr<MoveToPoseSrv::Response> res)
   {
     try
     {
+
+      // Use the requested pose as grasp pose in base frame
+      const geometry_msgs::msg::Pose& grasp_pose = req->target_pose;
+
+      geometry_msgs::msg::PoseStamped grasp_ps;
+      // grasp_ps.header.frame_id = "panda_link0";
+      grasp_ps.header.frame_id = arm_group_->getPlanningFrame();
+      grasp_ps.pose = grasp_pose;
+
       // 1) Open gripper
       if (!setGripper(open_gripper_joint_values_))
       {
         res->success = false;
-        res->message = "Failed to open gripper.";
+        // res->message = "Failed to open gripper.";
         return;
       }
 
-      // 2) Move EEF along its own +Z axis by 0.1m
-      // if (!moveAlongEEZ(0.01))
-      if (!moveInBaseY(0.03))
+      // (Temp) Move down vertically in base frame (planning frame)
+      if (!moveInBaseZ(grasp_ps, -0.05))
       {
         res->success = false;
-        res->message = "Failed to move in base-Y.";
+        // res->message = "Failed to lift object.";
+        return;
+      }
+
+      // 2) Move EEF along its own +Z axis by 0.01m
+      if (!moveAlongEndEffectorZ(grasp_ps, 0.1))
+      // if (!moveInBaseY(grasp_ps, 0.03)) 
+      {
+        res->success = false;
+        // res->message = "Failed to move in base-Y.";
         return;
       }
 
@@ -159,15 +161,15 @@ private:
       if (!setGripper(close_gripper_joint_values_))
       {
         res->success = false;
-        res->message = "Failed to close gripper.";
+        // res->message = "Failed to close gripper.";
         return;
       }
 
       // 4) Lift vertically in base frame (planning frame)
-      if (!moveInBaseZ(0.03))
+      if (!moveInBaseZ(grasp_ps, 0.1))
       {
         res->success = false;
-        res->message = "Failed to lift object.";
+        // res->message = "Failed to lift object.";
         return;
       }
 
@@ -175,18 +177,18 @@ private:
       if (!setGripper(open_gripper_joint_values_))
       {
         res->success = false;
-        res->message = "Failed to reopen gripper.";
+        // res->message = "Failed to reopen gripper.";
         return;
       }
 
       res->success = true;
-      res->message = "Grasp sequence executed successfully.";
+      // res->message = "Grasp sequence executed successfully.";
     }
     catch (const std::exception& e)
     {
       RCLCPP_ERROR(this->get_logger(), "Exception in grasp sequence: %s", e.what());
       res->success = false;
-      res->message = std::string("Exception: ") + e.what();
+      // res->message = std::string("Exception: ") + e.what();
     }
   }
 
@@ -249,54 +251,47 @@ private:
     return true;
   }
 
-  bool moveAlongEEZ(double dz)
+  bool moveAlongEndEffectorZ(
+      const geometry_msgs::msg::PoseStamped& ref_pose,
+      double distance)
   {
-    const std::string ee_link = arm_group_->getEndEffectorLink();
-    geometry_msgs::msg::PoseStamped current = arm_group_->getCurrentPose(ee_link);
+      geometry_msgs::msg::PoseStamped target = ref_pose;
 
-    tf2::Quaternion q;
-    tf2::fromMsg(current.pose.orientation, q);
-    tf2::Matrix3x3 R(q);
+      // Compute world direction of EE Z axis
+      tf2::Quaternion q;
+      tf2::fromMsg(target.pose.orientation, q);
+      tf2::Matrix3x3 R(q);
 
-    // Z axis of end-effector in base frame
-    tf2::Vector3 z_axis = R.getColumn(2);
-    z_axis.normalize();
-    z_axis *= dz;
+      // Move along +Z_EE (or -Z_EE depending on how you set distance sign)
+      tf2::Vector3 dz_ee(0.0, 0.0, distance);
+      tf2::Vector3 dz_world = R * dz_ee;
 
-    geometry_msgs::msg::Pose target = current.pose;
-    target.position.x += z_axis.x();
-    target.position.y += z_axis.y();
-    target.position.z += z_axis.z();
+      target.pose.position.x += dz_world.x();
+      target.pose.position.y += dz_world.y();
+      target.pose.position.z += dz_world.z();
 
-    arm_group_->setPoseTarget(target, ee_link);
+      arm_group_->setPoseTarget(target);
 
-    moveit::planning_interface::MoveGroupInterface::Plan plan;
-    auto result = arm_group_->plan(plan);
-    if (result != moveit::core::MoveItErrorCode::SUCCESS)
-    {
-      RCLCPP_WARN(this->get_logger(), "Planning EE-Z approach failed.");
-      return false;
-    }
+      moveit::planning_interface::MoveGroupInterface::Plan plan;
+      auto code = arm_group_->plan(plan);
+      if (code != moveit::core::MoveItErrorCode::SUCCESS)
+          return false;
 
-    auto exec = arm_group_->execute(plan);
-    if (exec != moveit::core::MoveItErrorCode::SUCCESS)
-    {
-      RCLCPP_ERROR(this->get_logger(), "Execution of EE-Z approach failed.");
-      return false;
-    }
-
-    return true;
+      code = arm_group_->execute(plan);
+      return code == moveit::core::MoveItErrorCode::SUCCESS;
   }
 
-  bool moveInBaseZ( double dz) // const std::shared_ptr<compare_flexbe_utilities::srv::MoveToPose::Request> req, 
+  bool moveInBaseZ(const geometry_msgs::msg::PoseStamped& ref_pose, double dz) // const std::shared_ptr<compare_flexbe_utilities::srv::MoveToPose::Request> req, 
   {
     const std::string ee_link = arm_group_->getEndEffectorLink();
-    geometry_msgs::msg::PoseStamped current = arm_group_->getCurrentPose(ee_link);
+    // geometry_msgs::msg::PoseStamped current = arm_group_->getCurrentPose(ee_link);
 
-    geometry_msgs::msg::Pose target = current.pose; // req->target_pose; // 
-    target.position.z += dz;  // base frame Z
+    // geometry_msgs::msg::Pose target = current.pose; // req->target_pose; // 
 
-    RCLCPP_INFO(this->get_logger(), "target.position.z = %f", target.position.z);
+    geometry_msgs::msg::PoseStamped target = ref_pose;
+    target.pose.position.z += dz;  // base frame Z
+
+    RCLCPP_INFO(this->get_logger(), "target.pose.position.z = %f", target.pose.position.z);
 
     arm_group_->setPoseTarget(target, ee_link);
 
@@ -319,15 +314,16 @@ private:
   }
 
 
-  bool moveInBaseY(double dy) // const std::shared_ptr<compare_flexbe_utilities::srv::MoveToPose::Request> req, 
+  bool moveInBaseY(const geometry_msgs::msg::PoseStamped& ref_pose, double dy) // const std::shared_ptr<compare_flexbe_utilities::srv::MoveToPose::Request> req, 
   {
     const std::string ee_link = arm_group_->getEndEffectorLink();
-    geometry_msgs::msg::PoseStamped current = arm_group_->getCurrentPose(ee_link);
+    // geometry_msgs::msg::PoseStamped current = arm_group_->getCurrentPose(ee_link);
 
-    geometry_msgs::msg::Pose target = current.pose; // req->target_pose; // 
-    target.position.y += dy;  // base frame y
+    // geometry_msgs::msg::Pose target = current.pose; // req->target_pose; // 
+    geometry_msgs::msg::PoseStamped target = ref_pose;
+    target.pose.position.y += dy;  // base frame y
 
-    RCLCPP_INFO(this->get_logger(), "target.position.y = %f", target.position.y);
+    RCLCPP_INFO(this->get_logger(), "target.pose.position.y = %f", target.pose.position.y);
 
     arm_group_->setPoseTarget(target, ee_link);
 
