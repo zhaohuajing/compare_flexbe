@@ -25,11 +25,11 @@ class CGNGraspServiceState(EventState):
 
     -- service_timeout   float     Timeout for service discovery (sec, default: 5.0)
     -- service_name      str       Service name (default: '/get_grasps')
-    -- use_scene_id      bool      If True, only send `scene_id` (server loads NPZ/JSON internally)
+    -- use_scene_name      bool      If True, only send `scene_name` (server loads NPZ/JSON internally)
     -- field_names       list[str] Point fields to read from PointCloud2 (default: ['x','y','z'])
 
     ># cloud_in                    sensor_msgs/PointCloud2   Input (filtered) cloud of the target object
-    ># scene_id                    int                       Optional: server-side dataset id (if using offline results)
+    ># scene_name                    int                       Optional: server-side dataset id (if using offline results)
     ># indices                     list[int] or None         Optional: indices mask (1 = keep) to match CGN 'mask'
     <# grasp_target_poses          geometry_msgs/Pose[]      Target pose list from CGN
     <# grasp_scores                float[]                   Confidence scores
@@ -43,17 +43,17 @@ class CGNGraspServiceState(EventState):
     def __init__(self,
                  service_timeout: float = 5.0,
                  service_name: str = '/get_grasps',
-                 use_scene_id: bool = False,
+                 use_scene_name: bool = False,
                  field_names: Optional[list] = None,
                  z_min: float = 0.28):
         super().__init__(
             outcomes=['done', 'failed'],
-            input_keys=['cloud_in', 'indices'], #, 'scene_id'],
+            input_keys=['cloud_in', 'indices'], #, 'scene_name'],
             output_keys=['grasp_target_poses', 'grasp_scores', 'grasp_samples', 'grasp_object_ids']
         )
         self._service_timeout = float(service_timeout)
         self._service_name = str(service_name)
-        self._use_scene_id = bool(use_scene_id)
+        self._use_scene_name = bool(use_scene_name)
         self._fields = field_names if field_names is not None else ['x', 'y', 'z']
         self._z_min = float(z_min)
 
@@ -118,12 +118,12 @@ class CGNGraspServiceState(EventState):
         request = SrvType.Request()
 
         # If the server supports loading precomputed NPZ/JSON by scene id,
-        # you can skip sending points/mask and just pass scene_id.
-        # if self._use_scene_id:
+        # you can skip sending points/mask and just pass scene_name.
+        # if self._use_scene_name:
         #     try:
-        #         request.scene_id = int(userdata.scene_id)
+        #         request.scene_name = int(userdata.scene_name)
         #     except Exception:
-        #         request.scene_id = 0  # default fallback
+        #         request.scene_name = 0  # default fallback
         # else:
         # Prepare points from PointCloud2
         try:
@@ -185,9 +185,9 @@ class CGNGraspServiceState(EventState):
 
         # # Optional scene id (used by your server for bookkeeping)
         # try:
-        #     request.scene_id = int(userdata.scene_id)
+        #     request.scene_name = int(userdata.scene_name)
         # except Exception:
-        #     request.scene_id = 0
+        #     request.scene_name = 0
 
 
         # inside on_enter(), before using self._srv:

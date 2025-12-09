@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Copyright 2025 Brian Flynn
+# Copyright 2025 Huajing Zhao
 #
 # Redistribution and use in source and binary forms, with or without modification,
 # are permitted provided that the following conditions are met:
@@ -36,24 +36,22 @@
 ###########################################################
 
 """
-Define EuclideanClusterExtractionPipeine.
+Define UnseenObjClusterContactGraspnetPipeine.
 
-A perception pipeline which employs several basic filters such as plane
-segmentation and cluster extraction in order to cluster pickable objects from a
-scene and choose a target for grasping
+A perception-to-action pipeline which employs unseen-object-clustering for
+object segmentation from a
+scene and choose a target for grasping, then contact-graspnet for grasp
+planning and OMPL for manipulation via MoveIt
 
-Created on Wed Aug 27 2025
-@author: Brian Flynn
+Created on Dec 07 2025
+@author: Huajing Zhao
 """
 
 
-from compare_flexbe_states.cgn_grasp_service_state import CGNGraspServiceState
-from compare_flexbe_states.euclidean_clustering_service_state import EuclideanClusteringServiceState
-from compare_flexbe_states.filter_by_indices_service_state import FilterByIndicesServiceState
-from compare_flexbe_states.get_point_cloud_service_state import GetPointCloudServiceState
-from compare_flexbe_states.move_to_named_pose_service_state import MoveToNamedPoseServiceState
+from compare_flexbe_states.cgn_grasp_rgbd_service_state import CGNGraspRGBDServiceState
 from compare_flexbe_states.move_to_pose_service_state import MoveToPoseServiceState
-from compare_flexbe_states.publish_point_cloud_state import PublishPointCloudState
+from compare_flexbe_states.select_instance_to_cgn_indices_state import SelectInstanceToSceneNameState
+from compare_flexbe_states.unseen_obj_seg_rgbd_service_state import UnseenObjSegRGBDServiceState
 from flexbe_core import Autonomy
 from flexbe_core import Behavior
 from flexbe_core import ConcurrencyContainer
@@ -71,11 +69,12 @@ from flexbe_core import initialize_flexbe_core
 
 class UnseenObjClusterContactGraspnetPipeineSM(Behavior):
     """
-    Define EuclideanClusterExtractionPipeine.
+    Define UnseenObjClusterContactGraspnetPipeine.
 
-    A perception pipeline which employs several basic filters such as plane
-    segmentation and cluster extraction in order to cluster pickable objects from a
-    scene and choose a target for grasping
+    A perception-to-action pipeline which employs unseen-object-clustering for
+    object segmentation from a
+    scene and choose a target for grasping, then contact-graspnet for grasp
+    planning and OMPL for manipulation via MoveIt
     """
 
     def __init__(self, node):
@@ -100,23 +99,21 @@ class UnseenObjClusterContactGraspnetPipeineSM(Behavior):
     def create(self):
         """Create state machine."""
         # Root state machine
-        # x:1367 y:375, x:251 y:389
-        _state_machine = OperatableStateMachine(outcomes=['finished', 'failed'], output_keys=['target_cluster_indexed', 'scene_pointcloud'])
-        _state_machine.userdata.scene_pointcloud = 0
-        _state_machine.userdata.camera_pose = 0
-        _state_machine.userdata.target_cluster_indexed = 0
-        _state_machine.userdata.obstacle_clusters_indexed = 0
-        _state_machine.userdata.cluster_count = 0
-        _state_machine.userdata.point_cloud_visual = 0
-        _state_machine.userdata.camera_source = 0
-        _state_machine.userdata.grasp_poses = []
-        _state_machine.userdata.test_indices = []
-        _state_machine.userdata.grasp_waypoints = []
-        _state_machine.userdata.waypoint_index = 0
+        # x:1154 y:332, x:141 y:356
+        _state_machine = OperatableStateMachine(outcomes=['finished', 'failed'], output_keys=['im_name'])
+        _state_machine.userdata.im_name = 'from_rgbd'
+        _state_machine.userdata.seg_json = {}
+        _state_machine.userdata.result_dir = ''
+        _state_machine.userdata.instance_ids_2d = []
+        _state_machine.userdata.instance_id_list = []
+        _state_machine.userdata.target_instance_id = 0
+        _state_machine.userdata.scene_name = 'scene_from_ucn'
+        _state_machine.userdata.message = ''
         _state_machine.userdata.grasp_target_poses = []
+        _state_machine.userdata.grasp_scores = []
+        _state_machine.userdata.grasp_samples = []
+        _state_machine.userdata.grasp_object_ids = []
         _state_machine.userdata.grasp_index = 0
-        _state_machine.userdata.ready_pose = 'ready'
-        _state_machine.userdata.scene_id = 0
 
         # Additional creation code can be added inside the following tags
         # [MANUAL_CREATE]
@@ -125,98 +122,61 @@ class UnseenObjClusterContactGraspnetPipeineSM(Behavior):
         # [/MANUAL_CREATE]
 
         with _state_machine:
-            # x:119 y:63
-            OperatableStateMachine.add('GetPointCloud',
-                                       GetPointCloudServiceState(service_timeout=5.0,
-                                                                 service_name='/get_point_cloud',
-                                                                 camera_topic='/rgbd_camera/points',
-                                                                 target_frame='simple_pedestal'),
-                                       transitions={'finished': 'EuclideanClustering'  # 306 84 -1 -1 -1 -1
-                                                    , 'failed': 'failed'  # 236 225 228 116 -1 -1
-                                                    },
+            # x:30 y:40
+            OperatableStateMachine.add('UnseenObjSegRGBD',
+                                       UnseenObjSegRGBDServiceState(service_name='/segmentation_rgbd',
+                                                                    service_timeout=5.0,
+                                                                    default_im_name='from_rgbd',
+                                                                    background_id=0),
+                                       transitions={'finished': 'SelectInstanceToScene',
+                                                    'failed': 'failed'},
                                        autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
-                                       remapping={'camera_pose': 'camera_pose',
-                                                  'cloud_out': 'scene_pointcloud',
-                                                  'cloud_frame': 'cloud_frame'})
+                                       remapping={'im_name': 'im_name',
+                                                  'seg_json': 'seg_json',
+                                                  'result_dir': 'result_dir',
+                                                  'instance_ids_2d': 'instance_ids_2d',
+                                                  'instance_id_list': 'instance_id_list',
+                                                  'instance_masks': 'instance_masks',
+                                                  'message': 'message'})
 
-            # x:831 y:53
-            OperatableStateMachine.add('CgnGrasp',
-                                       CGNGraspServiceState(service_timeout=5.0,
-                                                            service_name='/get_grasps',
-                                                            use_scene_id=False,
-                                                            field_names=None),
-                                       transitions={'done': 'PublishPointCloud',
-                                                    'failed': 'failed'  # 688 269 -1 -1 -1 -1
-                                                    },
+            # x:762 y:41
+            OperatableStateMachine.add('CgnGraspRGBD',
+                                       CGNGraspRGBDServiceState(service_timeout=10.0,
+                                                                service_name='/get_grasps'),
+                                       transitions={'done': 'MoveOMPL', 'failed': 'failed'},
                                        autonomy={'done': Autonomy.Off, 'failed': Autonomy.Off},
-                                       remapping={'cloud_in': 'point_cloud_visual',
-                                                  'scene_id': 'scene_id',
-                                                  'indices': 'test_indices',
+                                       remapping={'scene_name': 'scene_name',
                                                   'grasp_target_poses': 'grasp_target_poses',
                                                   'grasp_scores': 'grasp_scores',
                                                   'grasp_samples': 'grasp_samples',
                                                   'grasp_object_ids': 'grasp_object_ids'})
 
-            # x:344 y:61
-            OperatableStateMachine.add('EuclideanClustering',
-                                       EuclideanClusteringServiceState(service_timeout=5.0,
-                                                                       service_name='/euclidean_clustering',
-                                                                       cluster_tolerance=0.02,
-                                                                       min_cluster_size=100,
-                                                                       max_cluster_size=25000),
-                                       transitions={'finished': 'FilterByIndices'  # 557 80 -1 -1 -1 -1
-                                                    , 'failed': 'failed'  # 400 213 406 114 -1 -1
-                                                    },
-                                       autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
-                                       remapping={'cloud_in': 'scene_pointcloud',
-                                                  'camera_pose': 'camera_pose',
-                                                  'target_cluster_indices': 'target_cluster_indices',
-                                                  'obstacle_cluster_indices': 'obstacle_cluster_indices'})
-
-            # x:600 y:56
-            OperatableStateMachine.add('FilterByIndices',
-                                       FilterByIndicesServiceState(service_timeout=5.0,
-                                                                   service_name='/filter_by_indices'),
-                                       transitions={'finished': 'CgnGrasp',
-                                                    'failed': 'failed'  # 648 229 -1 -1 -1 -1
-                                                    },
-                                       autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
-                                       remapping={'cloud_in': 'scene_pointcloud',
-                                                  'target_indices': 'target_cluster_indices',
-                                                  'cloud_out': 'point_cloud_visual'})
-
-            # x:1628 y:76
+            # x:1087 y:38
             OperatableStateMachine.add('MoveOMPL',
                                        MoveToPoseServiceState(timeout_sec=5.0,
                                                               service_name='/move_to_pose'),
-                                       transitions={'done': 'finished'  # 1488 318 -1 -1 -1 -1
-                                                    , 'next': 'MoveOMPL'  # 1628 76 -1 -1 -1 -1
-                                                    , 'failed': 'failed'  # 1589 423 -1 -1 -1 -1
-                                                    },
+                                       transitions={'done': 'finished',
+                                                    'next': 'MoveOMPL',
+                                                    'failed': 'failed'},
                                        autonomy={'done': Autonomy.Off,
                                                  'next': Autonomy.Off,
                                                  'failed': Autonomy.Off},
                                        remapping={'grasp_poses': 'grasp_target_poses',
                                                   'grasp_index': 'grasp_index'})
 
-            # x:1298 y:69
-            OperatableStateMachine.add('MoveReady',
-                                       MoveToNamedPoseServiceState(service_timeout=5.0,
-                                                                   service_name='/move_to_named_pose'),
-                                       transitions={'finished': 'MoveOMPL'  # 1580 69 -1 -1 -1 -1
-                                                    , 'failure': 'failed'  # 1199 322 -1 -1 -1 -1
-                                                    },
-                                       autonomy={'finished': Autonomy.Off, 'failure': Autonomy.Off},
-                                       remapping={'target_pose_name': 'ready_pose'})
-
-            # x:1055 y:53
-            OperatableStateMachine.add('PublishPointCloud',
-                                       PublishPointCloudState(pub_topic='/filtered_cloud/target_object'),
-                                       transitions={'done': 'MoveReady',
-                                                    'failed': 'failed'  # 1099 242 -1 -1 -1 -1
-                                                    },
-                                       autonomy={'done': Autonomy.Off, 'failed': Autonomy.Off},
-                                       remapping={'cloud_in': 'point_cloud_visual'})
+            # x:419 y:38
+            OperatableStateMachine.add('SelectInstanceToScene',
+                                       SelectInstanceToSceneNameState(default_scene_name='scene_from_ucn'),
+                                       transitions={'finished': 'CgnGraspRGBD', 'failed': 'failed'},
+                                       autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
+                                       remapping={'seg_json': 'seg_json',
+                                                  'result_dir': 'result_dir',
+                                                  'instance_ids_2d': 'instance_ids_2d',
+                                                  'instance_id_list': 'instance_id_list',
+                                                  'im_name': 'im_name',
+                                                  'target_instance_id': 'target_instance_id',
+                                                  'scene_name': 'scene_name',
+                                                  'message': 'message'})
 
         return _state_machine
 

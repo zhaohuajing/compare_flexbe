@@ -120,27 +120,6 @@ class CGNGraspServiceStateV2(EventState):
     def _finite3(a, b, c):
         return math.isfinite(a) and math.isfinite(b) and math.isfinite(c)
 
-    # def _pc2_to_xyz_flat(self, cloud: PointCloud2) -> List[float]:
-    #     # Use provided field list if given; validate it exists; else auto-detect
-    #     if self._fields is not None:
-    #         available = {f.name for f in cloud.fields}
-    #         if not set(self._fields).issubset(available):
-    #             Logger.logwarn(
-    #                 f"[CGNGraspServiceState] Provided field_names {self._fields} not all present; "
-    #                 f"available={sorted(list(available))}. Falling back to auto-detect.")
-    #             fields = self._pc2_detect_xyz_fields(cloud)
-    #         else:
-    #             fields = self._fields
-    #     else:
-    #         fields = self._pc2_detect_xyz_fields(cloud)
-
-    #     pts_iter = pc2.read_points(cloud, field_names=fields, skip_nans=True)
-    #     flat = []
-    #     for t in pts_iter:
-    #         flat.extend((float(t[0]), float(t[1]), float(t[2])))
-    #     return flat
-
-
     def _pc2_to_xyz_flat(self, cloud: PointCloud2) -> list[float]:
         # Normal path: use declared fields
         if cloud.fields and len(cloud.fields) > 0:
