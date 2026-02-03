@@ -44,6 +44,7 @@ private:
       visualization_msgs::msg::Marker m;
       m.header.stamp = this->now();
       m.header.frame_id = "simple_pedestal";
+      // m.header.frame_id = "panda_link0";
       m.ns = "move_to_pose_goal";
       m.id = 0;
       m.type = visualization_msgs::msg::Marker::SPHERE;

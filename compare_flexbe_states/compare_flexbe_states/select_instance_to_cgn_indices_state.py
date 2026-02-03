@@ -3,7 +3,7 @@
 
 import json
 from flexbe_core import EventState, Logger
-
+import subprocess, os
 
 class SelectInstanceToSceneNameState(EventState):
     """
@@ -97,17 +97,20 @@ class SelectInstanceToSceneNameState(EventState):
 
             # NOTE: If you want this state to also *trigger* the conversion script,
             # you can do it here, e.g.:
-            #
-            #   import subprocess, os
-            #   cmd = [
-            #       "python3",
-            #       "/path/to/ucn_to_cgn_scene.py",
-            #       "--im_name", userdata.im_name,
-            #       "--seg_dir", userdata.result_dir,
-            #       "--scene_name", self._default_scene_name,
-            #       "--target_id", str(self._target_id),
-            #   ]
-            #   subprocess.check_call(cmd)
+            
+            cmd = [
+                "python3",
+                "/home/csrobot/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet/test_data/ucn_to_cgn_scene.py",
+                # "--fx", 615.0,
+                # "--fy", 615.0,
+                # "--cx", 320.0,
+                # "--cy", 240.0,
+                # "--im_name", userdata.im_name,
+                # "--seg_dir", userdata.result_dir,
+                # "--scene_name", self._default_scene_name,
+                # "--target_id", str(self._target_id),
+            ]
+            subprocess.check_call(cmd)
             
         except Exception as e:
             self._msg = f"[SelectInstanceToSceneNameState] Exception: {e}"

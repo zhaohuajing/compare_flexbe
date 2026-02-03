@@ -13,6 +13,9 @@ from flexbe_core.proxy import ProxyServiceCaller
 
 from unseen_obj_clst_ros2.srv import SegImage
 
+import subprocess, os
+
+
 # Note: equivalent to running "ros2 service call /segmentation_rgbd unseen_obj_clst_ros2/srv/SegImage "{im_name: 'from_rgbd'}" in another terminal
 
 
@@ -87,6 +90,16 @@ class UnseenObjSegRGBDServiceState(EventState):
         self._res = None
         self._had_error = False
 
+        # # Check service availability
+        # if not self._srv.is_available(self._service_name, timeout=self._timeout):
+        #     Logger.logerr(
+        #         f"[{type(self).__name__}] Service '{self._service_name}' "
+        #         f"not available after {self._timeout:.1f}s."
+        #     )
+        #     self._had_error = True
+        #     return
+
+
         # Check service availability (manual timeout loop)
         start = time.time()
         while not self._srv.is_available(self._service_name):
@@ -117,6 +130,13 @@ class UnseenObjSegRGBDServiceState(EventState):
                 f"[{type(self).__name__}] Called {self._service_name} "
                 f"with im_name='{im_name}'."
             )
+
+            cmd = [
+                "python3",
+                "/home/csrobot/graspnet_ws/src/unseen_obj_clst_ros2/compare_UnseenObjectClustering/segmentation_rgbd/visualize_segmentation.py",
+            ]
+            subprocess.check_call(cmd)
+            
         except Exception as e:
             Logger.logerr(f"[{type(self).__name__}] Service call failed: {e}")
             self._had_error = True

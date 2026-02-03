@@ -8,6 +8,9 @@ from flexbe_core.proxy import ProxyServiceCaller
 from contact_graspnet_ros2.srv import GetGrasps as SrvType
 from contact_graspnet_ros2.msg import Grasps
 
+import subprocess, os
+
+
 
 class CGNGraspRGBDServiceState(EventState):
     """
@@ -83,6 +86,13 @@ class CGNGraspRGBDServiceState(EventState):
         # Call service
         try:
             self._res = self._srv.call(self._service_name, request)
+
+            cmd = [
+                "python3",
+                "/home/csrobot/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet/result_plotter.py",
+            ]
+            subprocess.check_call(cmd)
+
             Logger.loginfo(f"[CGNGraspRGBDServiceState] Called service '{self._service_name}'.")
         except Exception as e:
             Logger.logerr(f"[CGNGraspRGBDServiceState] Service call failed: {e}")
