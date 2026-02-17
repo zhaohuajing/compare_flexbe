@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 from flexbe_core import EventState, Logger
 from flexbe_core.proxy import ProxyServiceCaller
 
@@ -5,84 +8,131 @@ from graspsam_ros2.srv import RunGraspSAM
 
 
 class GraspSAMServiceState(EventState):
-    def __init__(self, service_name='/run_graspsam',
+    """
+    Calls GraspSAM ROS2 service /run_graspsam and waits for response (synchronous call).
+
+    -- service_name      string   Service name (default: '/run_graspsam')
+    -- timeout           float    Seconds to wait for service availability (default: 2.0)
+    -- seen_set_default  bool     Default if userdata.seen_set is missing/None (default: False)
+
+    ># dataset_root       string
+    ># dataset_name       string
+    ># checkpoint_path    string
+    ># sam_encoder_type   string
+    ># no_grasps          int
+    ># seen_set           bool      (optional; falls back to seen_set_default)
+
+    #> output_dir         string
+    #> grasps             graspsam_ros2/Grasp[]
+    #> message            string
+
+    <= done
+    <= failed
+    """
+
+    def __init__(self,
+                 service_name='/run_graspsam',
                  dataset_root='',
-                 dataset_name='from_rgbd',
-                 checkpoint_path='pretrained_checkpoint/mobile_sam.pt',
+                 dataset_name='',
+                 checkpoint_path='',
                  sam_encoder_type='vit_t',
                  no_grasps=10,
-                 seen_set=False):
-
-        super().__init__(outcomes=['done', 'failed'],
-                         output_keys=['graspsam_output_dir', 'graspsam_message', 'grasps'])
+                 timeout=2.0,
+                 seen_set=False,
+                 seen_set_default = False,
+                 **_ignored_kwargs):
+        super().__init__(
+            outcomes=['done', 'failed'],
+            input_keys=[
+                'dataset_root',
+                'dataset_name',
+                'checkpoint_path',
+                'sam_encoder_type',
+                'no_grasps',
+                'seen_set',
+            ],
+            output_keys=['output_dir', 'grasps', 'message']
+        )
 
         self._service_name = service_name
-        self._caller = ProxyServiceCaller({self._service_name: RunGraspSAM})
+        self._timeout = float(timeout)
+        self._seen_set_default = bool(seen_set_default)
 
-        # store defaults (can be overridden by userdata if you wired it that way)
-        self._dataset_root = dataset_root
-        self._dataset_name = dataset_name
-        self._checkpoint_path = checkpoint_path
-        self._sam_encoder_type = sam_encoder_type
-        self._no_grasps = no_grasps
-        self._seen_set = seen_set
+        self._srv = ProxyServiceCaller({self._service_name: RunGraspSAM})
 
         self._sent = False
-        self._response = None
-        self._failed = False
+        self._success = False
 
     def on_enter(self, userdata):
         self._sent = False
-        self._response = None
-        self._failed = False
+        self._success = False
+        userdata.output_dir = ''
+        userdata.grasps = []
+        userdata.message = ''
 
-        req = RunGraspSAM.Request()
-        req.dataset_root = self._dataset_root
-        req.dataset_name = self._dataset_name
-        req.checkpoint_path = self._checkpoint_path
-        req.sam_encoder_type = self._sam_encoder_type
-        req.no_grasps = int(self._no_grasps)
-        req.seen_set = bool(self._seen_set)
+        # FlexBE/ProxyServiceCaller expects a FLOAT seconds wait_duration
+        if not self._srv.is_available(self._service_name):
+            Logger.loginfo(
+                f"[GraspSAMServiceState] Waiting for service '{self._service_name}' (timeout={self._timeout}s)..."
+            )
+            if not self._srv.wait_for_service(self._service_name, wait_duration=self._timeout):
+                userdata.message = f"Service '{self._service_name}' not available after {self._timeout}s."
+                Logger.logerr(f"[GraspSAMServiceState] {userdata.message}")
+                return
+
+        # Build request
+        request = RunGraspSAM.Request()
+        request.dataset_root = str(userdata.dataset_root)
+        request.dataset_name = str(userdata.dataset_name)
+        request.checkpoint_path = str(userdata.checkpoint_path)
+        request.sam_encoder_type = str(userdata.sam_encoder_type)
+        request.no_grasps = int(userdata.no_grasps)
+
+        # default seen_set=False if missing/None
+        seen = getattr(userdata, 'seen_set', None)
+        request.seen_set = self._seen_set_default if seen is None else bool(seen)
 
         Logger.loginfo(
-            f"[GraspSAMServiceState] Calling {self._service_name} with "
-            f"dataset_root={req.dataset_root}, dataset_name={req.dataset_name}, "
-            f"checkpoint={req.checkpoint_path}, encoder={req.sam_encoder_type}, "
-            f"no_grasps={req.no_grasps}, seen_set={req.seen_set}"
+            "[GraspSAMServiceState] Calling {} with dataset_root={}, dataset_name={}, checkpoint={}, encoder={}, no_grasps={}, seen_set={}".format(
+                self._service_name,
+                request.dataset_root,
+                request.dataset_name,
+                request.checkpoint_path,
+                request.sam_encoder_type,
+                request.no_grasps,
+                request.seen_set
+            )
         )
 
+        # Synchronous call (CGN-style)
         try:
-            # IMPORTANT: positional callback (NOT callback=...)
-            self._caller.call_async(self._service_name, req, self._done_cb)
+            resp = self._srv.call(self._service_name, request)
             self._sent = True
         except Exception as e:
-            Logger.logerr(f"[GraspSAMServiceState] Failed to call service: {e}")
-            self._failed = True
+            userdata.message = f"Service call exception: {e}"
+            Logger.logerr(f"[GraspSAMServiceState] {userdata.message}")
+            return
 
-    def _done_cb(self, future):
-        try:
-            self._response = future.result()
-        except Exception as e:
-            Logger.logerr(f"[GraspSAMServiceState] Service callback exception: {e}")
-            self._failed = True
-            self._response = None
+        if resp is None:
+            userdata.message = "Service call returned None."
+            Logger.logerr(f"[GraspSAMServiceState] {userdata.message}")
+            return
+
+        userdata.message = resp.message
+        userdata.output_dir = resp.output_dir
+        userdata.grasps = list(resp.grasps) if resp.grasps is not None else []
+
+        self._success = bool(resp.success)
+
+        if self._success:
+            Logger.loginfo(
+                f"[GraspSAMServiceState] Success. Parsed grasps: {len(userdata.grasps)}  output_dir: {userdata.output_dir}"
+            )
+        else:
+            Logger.logerr(f"[GraspSAMServiceState] Failure: {userdata.message}")
 
     def execute(self, userdata):
-        if self._failed:
-            return 'failed'
-
+        # If we never even sent successfully, fail
         if not self._sent:
-            return None  # keep waiting (shouldn’t happen normally)
-
-        if self._response is None:
-            return None  # keep waiting
-
-        # got response
-        userdata.graspsam_output_dir = self._response.output_dir
-        userdata.graspsam_message = self._response.message
-
-        # only if your srv Response includes grasps[]
-        if hasattr(self._response, 'grasps'):
-            userdata.grasps = list(self._response.grasps)
-
-        return 'done' if self._response.success else 'failed'
+            return 'failed'
+        return 'done' if self._success else 'failed'
