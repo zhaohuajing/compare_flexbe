@@ -145,7 +145,7 @@ class UnseenObjClusterGraspSamPipeineSM(Behavior):
                                                   'instance_masks': 'instance_masks',
                                                   'message': 'message'})
 
-            # x:821 y:232
+            # x:812 y:38
             OperatableStateMachine.add('GraspSAM',
                                        GraspSAMServiceState(service_name='/run_graspsam',
                                                             dataset_root='./datasets/sample_scene_ucn',
@@ -153,8 +153,10 @@ class UnseenObjClusterGraspSamPipeineSM(Behavior):
                                                             checkpoint_path='pretrained_checkpoint/mobile_sam.pt',
                                                             sam_encoder_type='vit_t',
                                                             no_grasps=10,
-                                                            seen_set=False),
-                                       transitions={'done': 'finished', 'failed': 'failed'},
+                                                            timeout=2.0,
+                                                            seen_set=False,
+                                                            seen_set_default=False),
+                                       transitions={'done': 'MoveOMPL', 'failed': 'failed'},
                                        autonomy={'done': Autonomy.Off, 'failed': Autonomy.Off},
                                        remapping={'dataset_root': 'dataset_root',
                                                   'dataset_name': 'dataset_name',
@@ -162,8 +164,9 @@ class UnseenObjClusterGraspSamPipeineSM(Behavior):
                                                   'sam_encoder_type': 'sam_encoder_type',
                                                   'no_grasps': 'no_grasps',
                                                   'seen_set': 'seen_set',
-                                                  'grasps': 'grasps',
                                                   'output_dir': 'output_dir',
+                                                  'grasps': 'grasps',
+                                                  'grasp_target_poses': 'grasp_target_poses',
                                                   'message': 'message'})
 
             # x:1087 y:38
@@ -172,7 +175,8 @@ class UnseenObjClusterGraspSamPipeineSM(Behavior):
                                                               service_name='/move_to_pose'),
                                        transitions={'done': 'finished',
                                                     'next': 'MoveOMPL',
-                                                    'failed': 'failed'},
+                                                    'failed': 'failed'  # 666 281 -1 -1 -1 -1
+                                                    },
                                        autonomy={'done': Autonomy.Off,
                                                  'next': Autonomy.Off,
                                                  'failed': Autonomy.Off},

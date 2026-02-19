@@ -51,7 +51,7 @@ class GraspSAMServiceState(EventState):
                 'no_grasps',
                 'seen_set',
             ],
-            output_keys=['output_dir', 'grasps', 'message']
+            output_keys=['output_dir', 'grasps', 'grasp_target_poses',  'message']
         )
 
         self._service_name = service_name
@@ -68,6 +68,7 @@ class GraspSAMServiceState(EventState):
         self._success = False
         userdata.output_dir = ''
         userdata.grasps = []
+        userdata.grasp_target_poses = []
         userdata.message = ''
 
         # FlexBE/ProxyServiceCaller expects a FLOAT seconds wait_duration
@@ -121,6 +122,15 @@ class GraspSAMServiceState(EventState):
         userdata.message = resp.message
         userdata.output_dir = resp.output_dir
         userdata.grasps = list(resp.grasps) if resp.grasps is not None else []
+
+        # Extract base-frame target poses (Pose list) from grasps
+        poses = []
+        for g in userdata.grasps:
+            if hasattr(g, 'pose_base'):
+                pb = g.pose_base
+                # defensive: skip uninitialized/default poses if needed
+                poses.append(pb)
+        userdata.grasp_target_poses = poses
 
         self._success = bool(resp.success)
 
