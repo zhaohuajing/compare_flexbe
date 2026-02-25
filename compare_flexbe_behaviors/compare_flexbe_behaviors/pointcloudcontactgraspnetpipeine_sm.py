@@ -47,7 +47,7 @@ Created on Oct 22 2025
 """
 
 
-from compare_flexbe_states.cgn_grasp_cloud_service_state import CGNGraspServiceState
+from compare_flexbe_states.cgn_grasp_cloud_service_state import CGNGraspCloudServiceState
 from compare_flexbe_states.get_point_cloud_service_state import GetPointCloudServiceState
 from compare_flexbe_states.move_to_pose_service_state import MoveToPoseServiceState
 from compare_flexbe_states.reach_to_grasp_service_state import ReachToGraspServiceState
@@ -128,7 +128,7 @@ class PointCloudContactGraspnetPipeineSM(Behavior):
                                                                  service_name='/get_point_cloud',
                                                                  camera_topic='/rgbd_camera/points',
                                                                  target_frame='simple_pedestal'),
-                                       transitions={'finished': 'CgnGrasp',
+                                       transitions={'finished': 'CgnGraspCloud',
                                                     'failed': 'failed'  # 236 225 228 116 -1 -1
                                                     },
                                        autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
@@ -137,10 +137,10 @@ class PointCloudContactGraspnetPipeineSM(Behavior):
                                                   'cloud_frame': 'cloud_frame'})
 
             # x:419 y:65
-            OperatableStateMachine.add('CgnGrasp',
-                                       CGNGraspServiceState(service_timeout=5.0,
+            OperatableStateMachine.add('CgnGraspCloud',
+                                       CGNGraspCloudServiceState(service_timeout=5.0,
                                                             service_name='/get_grasps',
-                                                            use_scene_id=False,
+                                                            use_scene_name=False,
                                                             field_names=None,
                                                             z_min=0.28),
                                        transitions={'done': 'MoveOMPL',
