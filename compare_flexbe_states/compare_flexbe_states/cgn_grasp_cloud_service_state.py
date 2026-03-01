@@ -45,7 +45,8 @@ class CGNGraspCloudServiceState(EventState):
                  service_name: str = '/get_grasps',
                  use_scene_name: bool = False,
                  field_names: Optional[list] = None,
-                 z_min: float = 0.28):
+                 z_min: float = 0.28,
+                 z_max: float = 0.88):
         super().__init__(
             outcomes=['done', 'failed'],
             input_keys=['cloud_in', 'indices'], #, 'scene_name'],
@@ -56,6 +57,7 @@ class CGNGraspCloudServiceState(EventState):
         self._use_scene_name = bool(use_scene_name)
         self._fields = field_names if field_names is not None else ['x', 'y', 'z']
         self._z_min = float(z_min)
+        self._z_max = float(z_max)
 
         # Proxy service
         self._srv = ProxyServiceCaller({self._service_name: SrvType})
@@ -145,7 +147,7 @@ class CGNGraspCloudServiceState(EventState):
             # num_pts = len(request.points) // 3
             # request.mask = [1] * num_pts
 
-            # Build Z > z_min mask (1 = keep)
+            # Build z_max > Z > z_min mask (1 = keep)
             num_pts = len(request.points) // 3
             if num_pts == 0:
                 raise RuntimeError("Input cloud produced zero points")
@@ -153,7 +155,7 @@ class CGNGraspCloudServiceState(EventState):
 
             # z values live at indices 2, 5, 8, ...
             z_vals = (request.points[2::3])
-            z_mask = [1 if float(z) > self._z_min else 0 for z in z_vals]
+            z_mask = [1 if (float(z) > self._z_min and float(z) < self._z_max) else 0 for z in z_vals]
 
             # Optional indices -> combine with z_mask (AND)
             # If indices is a list of positions to keep, turn into a dense mask.
@@ -170,11 +172,11 @@ class CGNGraspCloudServiceState(EventState):
                 request.mask = z_mask
 
             kept = sum(request.mask)
-            Logger.loginfo(f"[{type(self).__name__}] Z-filter: z_min={self._z_min:.3f}m "
+            Logger.loginfo(f"[{type(self).__name__}] Z-filter: z_min={self._z_min:.3f}m, z_max={self._z_max:.3f}m "
                            f"→ kept {kept}/{num_pts} points")
 
             if kept == 0:
-                Logger.logwarn(f"[{type(self).__name__}] No points above z_min={self._z_min:.3f}m; aborting.")
+                Logger.logwarn(f"[{type(self).__name__}] No points between z_min={self._z_min:.3f}m and z_max={self._z_max:.3f}m; aborting.")
                 self._had_error = True
                 return
 

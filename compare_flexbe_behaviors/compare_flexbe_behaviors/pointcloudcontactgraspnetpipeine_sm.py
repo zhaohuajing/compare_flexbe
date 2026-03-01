@@ -142,7 +142,8 @@ class PointCloudContactGraspnetPipeineSM(Behavior):
                                                             service_name='/get_grasps',
                                                             use_scene_name=False,
                                                             field_names=None,
-                                                            z_min=0.28),
+                                                            z_min=0.28,
+                                                            z_max=0.88),
                                        transitions={'done': 'MoveOMPL',
                                                     'failed': 'failed'  # 378 273 -1 -1 -1 -1
                                                     },
