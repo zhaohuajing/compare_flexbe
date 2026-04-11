@@ -9,7 +9,7 @@ import numpy as np
 class SelectInstanceToSceneNameState(EventState):
     def __init__(self,
                  default_scene_name: str = 'scene_from_ucn',
-                 selection_mode: str = 'largest_or_manual',  # 'largest' | 'manual' | 'largest_or_manual'
+                 selection_mode: str = 'manual',  # 'largest' | 'manual' | 'largest_or_manual'
                  allow_background: bool = False,
                  manual_sentinel: int = -1):
         super().__init__(

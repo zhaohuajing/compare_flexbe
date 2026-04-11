@@ -168,7 +168,7 @@ class UnseenObjClusterContactGraspnetPipeineSM(Behavior):
             # x:419 y:38
             OperatableStateMachine.add('SelectInstanceToScene',
                                        SelectInstanceToSceneNameState(default_scene_name='scene_from_ucn',
-                                                                     selection_mode='manual'),
+                                                                     selection_mode='largest_or_manual'),
                                        transitions={'finished': 'CgnGraspRGBD', 'failed': 'failed'},
                                        autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
                                        remapping={'seg_json': 'seg_json',

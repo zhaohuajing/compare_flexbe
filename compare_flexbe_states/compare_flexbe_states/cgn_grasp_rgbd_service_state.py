@@ -9,6 +9,7 @@ from contact_graspnet_ros2.srv import GetGrasps as SrvType
 from contact_graspnet_ros2.msg import Grasps
 
 import subprocess, os
+import numpy as np
 
 
 
