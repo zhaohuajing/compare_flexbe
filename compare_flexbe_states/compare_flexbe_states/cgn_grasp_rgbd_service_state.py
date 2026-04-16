@@ -9,13 +9,20 @@ from contact_graspnet_ros2.srv import GetGrasps as SrvType
 from contact_graspnet_ros2.msg import Grasps
 
 import subprocess, os
+<<<<<<< HEAD
 import numpy as np
+=======
+>>>>>>> legacy-feature-cgn
 
 
 
 class CGNGraspRGBDServiceState(EventState):
     """
+<<<<<<< HEAD
     Calls the Contact-GraspNet `get_grasps_rgbd` service using only a precomputed
+=======
+    Calls the Contact-GraspNet `get_grasps` service using only a precomputed
+>>>>>>> legacy-feature-cgn
     scene name (RGBD pipeline).
 
     Assumes the server:
@@ -39,7 +46,11 @@ class CGNGraspRGBDServiceState(EventState):
 
     def __init__(self,
                  service_timeout: float = 10.0,
+<<<<<<< HEAD
                  service_name: str = '/get_grasps_rgbd'):
+=======
+                 service_name: str = '/get_grasps'):
+>>>>>>> legacy-feature-cgn
         super().__init__(
             outcomes=['done', 'failed'],
             input_keys=['scene_name'],
@@ -88,6 +99,7 @@ class CGNGraspRGBDServiceState(EventState):
         try:
             self._res = self._srv.call(self._service_name, request)
 
+<<<<<<< HEAD
             Logger.loginfo(f"[CGNGraspRGBDServiceState] Called service '{self._service_name}'.")
 
             # cmd = [
@@ -97,6 +109,15 @@ class CGNGraspRGBDServiceState(EventState):
             # subprocess.check_call(cmd)
             # Logger.loginfo(f"[CGNGraspRGBDServiceState] Plotted grasp poses in 3d open view using result_plotter'.")
             
+=======
+            cmd = [
+                "python3",
+                "/home/csrobot/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet/result_plotter.py",
+            ]
+            subprocess.check_call(cmd)
+
+            Logger.loginfo(f"[CGNGraspRGBDServiceState] Called service '{self._service_name}'.")
+>>>>>>> legacy-feature-cgn
         except Exception as e:
             Logger.logerr(f"[CGNGraspRGBDServiceState] Service call failed: {e}")
             self._had_error = True
@@ -107,21 +128,32 @@ class CGNGraspRGBDServiceState(EventState):
             return 'failed'
 
         try:
+<<<<<<< HEAD
             # time.sleep(15)
+=======
+>>>>>>> legacy-feature-cgn
             grasps = self._res.grasps  # type: Grasps
             userdata.grasp_target_poses = list(grasps.poses)
             userdata.grasp_scores = list(grasps.scores)
             userdata.grasp_samples = list(grasps.samples)
             userdata.grasp_object_ids = list(grasps.object_ids)
+<<<<<<< HEAD
             # Logger.loginfo(f"[CGNGraspRGBDServiceState] grasps.object_ids = {grasps.object_ids}, userdata.grasp_object_ids {userdata.grasp_object_ids}.")
 
             Logger.loginfo(f"[CGNGraspRGBDServiceState] Received {len(grasps.poses)} grasp poses for grasp_object_ids: {np.unique(userdata.grasp_object_ids)}.")
+=======
+
+            Logger.loginfo(f"[CGNGraspRGBDServiceState] Received {len(grasps.poses)} grasp poses.")
+>>>>>>> legacy-feature-cgn
         except Exception as e:
             Logger.logerr(f"[CGNGraspRGBDServiceState] Failed to copy result to userdata: {e}")
             return 'failed'
 
         if len(userdata.grasp_target_poses) == 0:
+<<<<<<< HEAD
 
+=======
+>>>>>>> legacy-feature-cgn
             Logger.logwarn("[CGNGraspRGBDServiceState] No grasps in response.")
             return 'failed'
 

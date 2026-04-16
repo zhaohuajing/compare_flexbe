@@ -114,7 +114,10 @@ class UnseenObjClusterContactGraspnetPipeineSM(Behavior):
         _state_machine.userdata.grasp_samples = []
         _state_machine.userdata.grasp_object_ids = []
         _state_machine.userdata.grasp_index = 0
+<<<<<<< HEAD
         _state_machine.userdata.manual_target_instance_id = -1
+=======
+>>>>>>> legacy-feature-cgn
 
         # Additional creation code can be added inside the following tags
         # [MANUAL_CREATE]
@@ -142,8 +145,13 @@ class UnseenObjClusterContactGraspnetPipeineSM(Behavior):
 
             # x:762 y:41
             OperatableStateMachine.add('CgnGraspRGBD',
+<<<<<<< HEAD
                                        CGNGraspRGBDServiceState(service_timeout=20.0,
                                                                 service_name='/get_grasps_rgbd'),
+=======
+                                       CGNGraspRGBDServiceState(service_timeout=10.0,
+                                                                service_name='/get_grasps'),
+>>>>>>> legacy-feature-cgn
                                        transitions={'done': 'MoveOMPL', 'failed': 'failed'},
                                        autonomy={'done': Autonomy.Off, 'failed': Autonomy.Off},
                                        remapping={'scene_name': 'scene_name',
@@ -167,8 +175,12 @@ class UnseenObjClusterContactGraspnetPipeineSM(Behavior):
 
             # x:419 y:38
             OperatableStateMachine.add('SelectInstanceToScene',
+<<<<<<< HEAD
                                        SelectInstanceToSceneNameState(default_scene_name='scene_from_ucn',
                                                                      selection_mode='largest_or_manual'),
+=======
+                                       SelectInstanceToSceneNameState(default_scene_name='scene_from_ucn'),
+>>>>>>> legacy-feature-cgn
                                        transitions={'finished': 'CgnGraspRGBD', 'failed': 'failed'},
                                        autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
                                        remapping={'seg_json': 'seg_json',
@@ -178,7 +190,10 @@ class UnseenObjClusterContactGraspnetPipeineSM(Behavior):
                                                   'im_name': 'im_name',
                                                   'target_instance_id': 'target_instance_id',
                                                   'scene_name': 'scene_name',
+<<<<<<< HEAD
                                                   'manual_target_instance_id': 'manual_target_instance_id',
+=======
+>>>>>>> legacy-feature-cgn
                                                   'message': 'message'})
 
         return _state_machine

@@ -15,51 +15,44 @@
 # limitations under the License.
 
 import rclpy
+from rclpy.task import Future
 from rclpy.duration import Duration
+
+import numpy as np
+from typing import Iterable
 
 from flexbe_core import EventState, Logger
 from flexbe_core.proxy import ProxyServiceCaller
 
-<<<<<<< HEAD
-from robot_common_manip.srv import MoveToNamedPose as SrvType
-=======
-from compare_flexbe_utilities.srv import MoveToNamedPose as SrvType
->>>>>>> legacy-feature-cgn
+from gpd_ros.srv import ComputeGraspPoses as SrvType
+from gpd_ros.msg import GraspConfigList
+from std_msgs.msg import Int64
+from geometry_msgs.msg import Point, Pose, PoseStamped
+from pcl_msgs.msg import PointIndices
 
-class MoveToNamedPoseServiceState(EventState):
+class GPDGraspPosesServiceState(EventState):
     """
-    Calls a service to move the robot to a named pose using the setNamedTarget, plan and execute C++ functions wrapped into a service server.
-<<<<<<< HEAD
-=======
+    Calls the gpd_ros/grasp_pose service with a GraspConfigList input and returns Pose[].
 
->>>>>>> legacy-feature-cgn
-    -- timeout_sec        float         Timeout for waiting for service (default: 5.0)
-    -- service_name       str           Service name (default: '/move_to_named_pose')
+    -- service_timeout          float       Timeout for service call in seconds (default: 5.0)
 
-    ># target_pose_name   str           The name of the target pose to move to
+    ># grasp_configs            gpd_ros/GraspConfigList         The output from the GPD grasp detection service that contains grasp point and orientation data
+    <# grasp_target_poses       geometry_msgs/Pose[] poses      A list of grasp pose candidate target poses computed from GPD outputs
+    <# grasp_approach_poses     geometry_msgs/Pose[] poses      A list of grasp pose candidate approach poses computed from GPD outputs and target poses
 
-    <= finished                         Service call succeeded and robot moved
-    <= failure                          Service call failed or robot did not move
+    <= done               Service call succeeded
+    <= failed             Service call failed or timed out
     """
+    def __init__(self, service_timeout=5.0, service_name='/compute_grasp_poses'):
+        # Declare outcomes, input_keys, and output_keys by calling the super constructor with the corresponding arguments.
 
-<<<<<<< HEAD
-    def __init__(self, timeout_sec=5.0, service_name='/move_to_named_pose'):
-        super().__init__(outcomes=['finished', 'failure'],
-                            input_keys=['target_pose_name']
-        )
-        self._timeout_sec = timeout_sec
-        self._service_name = service_name
-        self._client = None
-        self._future = None
-=======
-    def __init__(self, service_timeout=5.0, service_name='/move_to_named_pose'):
-        super().__init__(outcomes=['finished', 'failure'],
-                            input_keys=['target_pose_name']
+        super().__init__(outcomes=['done', 'failed'],
+                            input_keys=['grasp_configs'],
+                            output_keys=['grasp_target_poses', 'grasp_approach_poses', 'grasp_waypoints']
         )
         self._service_name = service_name
         self._service_timeout = service_timeout
         self._client = None
->>>>>>> legacy-feature-cgn
 
         # Create proxy service caller to handle rclpy node
         self._srv = ProxyServiceCaller({self._service_name: SrvType})
@@ -77,36 +70,31 @@ class MoveToNamedPoseServiceState(EventState):
         if self._had_error or self._res is None:
             return 'failed'
 
-        # No output userdata to write
-        
+        try:
+            # Keep the raw lists if you still want them
+            userdata.grasp_target_poses = self._res.target_poses
+            userdata.grasp_approach_poses = self._res.approach_poses
+
+            # Build list-of-sets: [[approach0, target0], [approach1, target1], ...]
+            # zip() will truncate to the shorter list if lengths differ.
+            userdata.grasp_waypoints = [
+                [a, t] for a, t in zip(self._res.approach_poses, self._res.target_poses)
+            ]
+            Logger.loginfo(f"[{type(self).__name__}] Received grasp poses list with {len(self._res.target_poses)} poses.")
+        except Exception as e:
+            Logger.logerr(f"[{type(self).__name__}] Service call failed: {str(e)}")
+            return 'failed'
+
         # Return outcome finished
-        return 'finished'
-    
+        return 'done'
+
     def on_enter(self, userdata):
         # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.
         # It is primarily used to start actions which are associated with this state.
 
-        # check for correct data
-<<<<<<< HEAD
-        target_names = userdata.target_names
-        if not isinstance(target_names, list) or len(target_names) == 0 or not isinstance(target_names[-1], str):
-            Logger.logerr(f"[{type(self).__name__}] Invalid or missing data type in userdata.")
-            return
-=======
-        # target_names = userdata.target_pose_name
-        # if not isinstance(target_names, list) or len(target_names) == 0 or not isinstance(target_names[-1], str):
-        #     Logger.logerr(f"[{type(self).__name__}] Invalid or missing data type in userdata.")
-        #     return
->>>>>>> legacy-feature-cgn
-        
         # construct request
-        target_name = userdata.target_pose_name
         request = SrvType.Request()
-        request.target_name = target_name
-
-        # reset state
-        self._res = None
-        self._had_error = False
+        request.grasps = userdata.grasp_configs
 
         # wait for availability (once per entry)
         if not self._srv.is_available(self._service_name):
@@ -120,8 +108,6 @@ class MoveToNamedPoseServiceState(EventState):
             Logger.loginfo(f"[{type(self).__name__}] Called service '{self._service_name}'.")
         except Exception as e:
             Logger.logerr(f"[{type(self).__name__}] Service call failed: {e}")
-            self._res = None
-            self._had_error = True
 
     def on_exit(self, userdata):
         # Call this method when an outcome is returned and another state gets active.
@@ -143,8 +129,4 @@ class MoveToNamedPoseServiceState(EventState):
         # Use this event to clean up things like claimed resources.
 
         # No-op: template hook
-<<<<<<< HEAD
         pass
-=======
-        pass
->>>>>>> legacy-feature-cgn

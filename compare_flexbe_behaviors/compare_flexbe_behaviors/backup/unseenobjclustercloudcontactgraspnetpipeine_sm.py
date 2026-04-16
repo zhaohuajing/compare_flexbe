@@ -36,10 +36,11 @@
 ###########################################################
 
 """
-Define PointCloudContactGraspnetPipeine.
+Define UnseenObjClusterContactGraspnetCloudPipeine.
 
-A perception-to-action pipeline which employs that directly input point clouds
-to contact-graspnet, which masks objects above the table for grasp
+A perception-to-action pipeline which employs unseen-object-clustering for
+object segmentation from a
+scene and choose a target for grasping, then contact-graspnet for grasp
 planning and OMPL for manipulation via MoveIt
 
 Created on Oct 22 2025
@@ -47,14 +48,11 @@ Created on Oct 22 2025
 """
 
 
-<<<<<<< HEAD
-from compare_flexbe_states.cgn_grasp_cloud_service_state import CGNGraspCloudServiceState
-=======
-from compare_flexbe_states.cgn_grasp_cloud_service_state import CGNGraspServiceState
->>>>>>> legacy-feature-cgn
+from compare_flexbe_states.cgn_grasp_service_state import CGNGraspServiceState
 from compare_flexbe_states.get_point_cloud_service_state import GetPointCloudServiceState
 from compare_flexbe_states.move_to_pose_service_state import MoveToPoseServiceState
-from compare_flexbe_states.reach_to_grasp_service_state import ReachToGraspServiceState
+from compare_flexbe_states.publish_point_cloud_state import PublishPointCloudState
+from compare_flexbe_states.unseen_obj_seg_cloud_service_state import UnseenObjSegCloudServiceState
 from flexbe_core import Autonomy
 from flexbe_core import Behavior
 from flexbe_core import ConcurrencyContainer
@@ -70,18 +68,19 @@ from flexbe_core import initialize_flexbe_core
 # [/MANUAL_IMPORT]
 
 
-class PointCloudContactGraspnetPipeineSM(Behavior):
+class UnseenObjClusterContactGraspnetCloudPipeineSM(Behavior):
     """
-    Define PointCloudContactGraspnetPipeine.
+    Define UnseenObjClusterContactGraspnetCloudPipeine.
 
-    A perception-to-action pipeline which employs that directly input point clouds
-    to contact-graspnet, which masks objects above the table for grasp
+    A perception-to-action pipeline which employs unseen-object-clustering for
+    object segmentation from a
+    scene and choose a target for grasping, then contact-graspnet for grasp
     planning and OMPL for manipulation via MoveIt
     """
 
     def __init__(self, node):
         super().__init__()
-        self.name = 'PointCloudContactGraspnetPipeine'
+        self.name = 'UnseenObjClusterContactGraspnetCloudPipeine'
 
         # parameters of this behavior
 
@@ -101,7 +100,7 @@ class PointCloudContactGraspnetPipeineSM(Behavior):
     def create(self):
         """Create state machine."""
         # Root state machine
-        # x:841 y:381, x:251 y:389
+        # x:1480 y:388, x:251 y:389
         _state_machine = OperatableStateMachine(outcomes=['finished', 'failed'], output_keys=['target_cluster_indexed', 'scene_pointcloud'])
         _state_machine.userdata.scene_pointcloud = 0
         _state_machine.userdata.camera_pose = 0
@@ -132,11 +131,7 @@ class PointCloudContactGraspnetPipeineSM(Behavior):
                                                                  service_name='/get_point_cloud',
                                                                  camera_topic='/rgbd_camera/points',
                                                                  target_frame='simple_pedestal'),
-<<<<<<< HEAD
-                                       transitions={'finished': 'CgnGraspCloud',
-=======
-                                       transitions={'finished': 'CgnGrasp',
->>>>>>> legacy-feature-cgn
+                                       transitions={'finished': 'UnseenObjSegCloud',
                                                     'failed': 'failed'  # 236 225 228 116 -1 -1
                                                     },
                                        autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
@@ -144,38 +139,31 @@ class PointCloudContactGraspnetPipeineSM(Behavior):
                                                   'cloud_out': 'scene_pointcloud',
                                                   'cloud_frame': 'cloud_frame'})
 
-            # x:419 y:65
-<<<<<<< HEAD
-            OperatableStateMachine.add('CgnGraspCloud',
-                                       CGNGraspCloudServiceState(service_timeout=5.0,
-                                                            service_name='/get_grasps',
-                                                            use_scene_name=False,
-                                                            field_names=None,
-                                                            z_min=0.28,
-                                                            z_max=0.88),
-=======
+            # x:743 y:60
             OperatableStateMachine.add('CgnGrasp',
                                        CGNGraspServiceState(service_timeout=5.0,
                                                             service_name='/get_grasps',
                                                             use_scene_id=False,
                                                             field_names=None,
                                                             z_min=0.28),
->>>>>>> legacy-feature-cgn
-                                       transitions={'done': 'MoveOMPL',
-                                                    'failed': 'failed'  # 378 273 -1 -1 -1 -1
+                                       transitions={'done': 'PublishPointCloud',
+                                                    'failed': 'failed'  # 622 272 -1 -1 -1 -1
                                                     },
                                        autonomy={'done': Autonomy.Off, 'failed': Autonomy.Off},
-                                       remapping={'cloud_in': 'scene_pointcloud',
+                                       remapping={'cloud_in': 'point_cloud_visual',
                                                   'indices': 'test_indices',
-                                                  'grasp_target_poses': 'grasp_target_poses'})
+                                                  'grasp_target_poses': 'grasp_target_poses',
+                                                  'grasp_scores': 'grasp_scores',
+                                                  'grasp_samples': 'grasp_samples',
+                                                  'grasp_object_ids': 'grasp_object_ids'})
 
-            # x:680 y:61
+            # x:1284 y:56
             OperatableStateMachine.add('MoveOMPL',
                                        MoveToPoseServiceState(timeout_sec=5.0,
                                                               service_name='/move_to_pose'),
-                                       transitions={'done': 'ReachToGrasp',
-                                                    'next': 'MoveOMPL'  # 747 24 -1 -1 -1 -1
-                                                    , 'failed': 'failed'  # 538 304 -1 -1 -1 -1
+                                       transitions={'done': 'finished'  # 1389 325 -1 -1 -1 -1
+                                                    , 'next': 'MoveOMPL'  # 1350 31 -1 -1 -1 -1
+                                                    , 'failed': 'failed'  # 1255 421 -1 -1 -1 -1
                                                     },
                                        autonomy={'done': Autonomy.Off,
                                                  'next': Autonomy.Off,
@@ -183,15 +171,29 @@ class PointCloudContactGraspnetPipeineSM(Behavior):
                                        remapping={'grasp_poses': 'grasp_target_poses',
                                                   'grasp_index': 'grasp_index'})
 
-            # x:919 y:55
-            OperatableStateMachine.add('ReachToGrasp',
-                                       ReachToGraspServiceState(service_name='/reach_to_grasp'),
-                                       transitions={'done': 'finished',
-                                                    'failed': 'failed'  # 641 334 -1 -1 -1 -1
+            # x:1001 y:60
+            OperatableStateMachine.add('PublishPointCloud',
+                                       PublishPointCloudState(pub_topic='/filtered_cloud/target_object'),
+                                       transitions={'done': 'MoveOMPL',
+                                                    'failed': 'failed'  # 1042 245 -1 -1 -1 -1
                                                     },
                                        autonomy={'done': Autonomy.Off, 'failed': Autonomy.Off},
-                                       remapping={'grasp_poses': 'grasp_target_poses',
-                                                  'grasp_index': 'grasp_index'})
+                                       remapping={'cloud_in': 'point_cloud_visual'})
+
+            # x:406 y:60
+            OperatableStateMachine.add('UnseenObjSegCloud',
+                                       UnseenObjSegCloudServiceState(cloud_service='run_segmentation_cloud',
+                                                                     service_timeout=5.0,
+                                                                     default_im_name='from_cloud'),
+                                       transitions={'finished': 'CgnGrasp', 'failed': 'failed'},
+                                       autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
+                                       remapping={'cloud_in': 'scene_pointcloud',
+                                                  'camera_info': 'camera_pose',
+                                                  'seg_json': 'seg_json',
+                                                  'result_dir': 'result_dir',
+                                                  'instance_ids': 'instance_ids',
+                                                  'classes': 'classes',
+                                                  'bboxes': 'bboxes'})
 
         return _state_machine
 
