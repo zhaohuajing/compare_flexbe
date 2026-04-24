@@ -15,36 +15,44 @@
 # limitations under the License.
 
 import rclpy
+from rclpy.task import Future
+from rclpy.duration import Duration
+
+import numpy as np
+from typing import Iterable
+
 from flexbe_core import EventState, Logger
 from flexbe_core.proxy import ProxyServiceCaller
 
-from compare_flexbe_utilities.srv import GetPointCloud as SrvType # request: input, camera_pose, cluster_tolerance, min/max size
+from gpd_ros.srv import ComputeGraspPoses as SrvType
+from gpd_ros.msg import GraspConfigList
+from std_msgs.msg import Int64
+from geometry_msgs.msg import Point, Pose, PoseStamped
+from pcl_msgs.msg import PointIndices
 
-class GetPointCloudServiceState(EventState):
+class GPDGraspPosesServiceState(EventState):
     """
-    Calls /get_point_cloud to collect current view point cloud and camera pose.
+    Calls the gpd_ros/grasp_pose service with a GraspConfigList input and returns Pose[].
 
-    -- service_timeout     float    Timeout for service discovery (sec, default: 5.0)
-    -- camera_topic        str      Camera Topic (default: '/rgbd_camera/points')
-    -- target_frame        str      Target Frame (default: '/base_link')
+    -- service_timeout          float       Timeout for service call in seconds (default: 5.0)
 
-    <# camera_pose                geometry_msgs/PoseStamped     pose of camera_frame in target_frame
-    <# cloud_frame                string                       original message frame_id
+    ># grasp_configs            gpd_ros/GraspConfigList         The output from the GPD grasp detection service that contains grasp point and orientation data
+    <# grasp_target_poses       geometry_msgs/Pose[] poses      A list of grasp pose candidate target poses computed from GPD outputs
+    <# grasp_approach_poses     geometry_msgs/Pose[] poses      A list of grasp pose candidate approach poses computed from GPD outputs and target poses
 
-    <= finished
-    <= failed
+    <= done               Service call succeeded
+    <= failed             Service call failed or timed out
     """
-    def __init__(self, service_timeout=5.0, service_name='/get_point_cloud', camera_topic='/rgbd_camera/points', target_frame='/base_link'):
-        super().__init__(outcomes=['finished', 'failed'],
-                            input_keys=['camera_pose'],
-                            output_keys=['cloud_out', 'camera_pose', 'cloud_frame']
+    def __init__(self, service_timeout=5.0, service_name='/compute_grasp_poses'):
+        # Declare outcomes, input_keys, and output_keys by calling the super constructor with the corresponding arguments.
+
+        super().__init__(outcomes=['done', 'failed'],
+                            input_keys=['grasp_configs'],
+                            output_keys=['grasp_target_poses', 'grasp_approach_poses', 'grasp_retreat_poses', 'grasp_waypoints']
         )
-        self._camera_topic = camera_topic
-        self._target_frame = target_frame
-        self._service_timeout = service_timeout
         self._service_name = service_name
+        self._service_timeout = service_timeout
         self._client = None
-        self._future = None
 
         # Create proxy service caller to handle rclpy node
         self._srv = ProxyServiceCaller({self._service_name: SrvType})
@@ -63,27 +71,31 @@ class GetPointCloudServiceState(EventState):
             return 'failed'
 
         try:
-            userdata.cloud_out = self._res.cloud_out
-            # userdata.camera_pose = userdata.camera_pose.append(self._res.camera_pose) # this needs to be fixed, might return None
-            userdata.camera_pose = self._res.camera_pose
-            userdata.cloud_frame = self._res.cloud_frame
-            Logger.loginfo(f"[{type(self).__name__}] Received result with {self._res.success}.")
-            Logger.loginfo(f"[{type(self).__name__}] Received message: {self._res.message}.")
+            # Keep the raw lists if you still want them
+            userdata.grasp_target_poses = self._res.target_poses
+            userdata.grasp_approach_poses = self._res.approach_poses
+            userdata.grasp_retreat_poses = self._res.retreat_poses
+
+            # Build list-of-sets: [[approach0, target0], [approach1, target1], ...]
+            # zip() will truncate to the shorter list if lengths differ.
+            userdata.grasp_waypoints = [
+                [a, t, r] for a, t, r in zip(self._res.approach_poses, self._res.target_poses, self._res.retreat_poses)
+            ]
+            Logger.loginfo(f"[{type(self).__name__}] Received grasp poses list with {len(self._res.target_poses)} poses.")
         except Exception as e:
             Logger.logerr(f"[{type(self).__name__}] Service call failed: {str(e)}")
             return 'failed'
 
-        return 'finished'
-    
+        # Return outcome finished
+        return 'done'
+
     def on_enter(self, userdata):
         # Call this method a single time when the state becomes active, when a transition from another state to this one is taken.
         # It is primarily used to start actions which are associated with this state.
-        
+
         # construct request
         request = SrvType.Request()
-        request.camera_topic = self._camera_topic
-        request.target_frame = self._target_frame
-        request.timeout_sec = self._service_timeout
+        request.grasps = userdata.grasp_configs
 
         # wait for availability (once per entry)
         if not self._srv.is_available(self._service_name):
