@@ -47,11 +47,7 @@ Created on Oct 22 2025
 """
 
 
-<<<<<<< HEAD
 from compare_flexbe_states.cgn_grasp_cloud_service_state import CGNGraspCloudServiceState
-=======
-from compare_flexbe_states.cgn_grasp_cloud_service_state import CGNGraspServiceState
->>>>>>> legacy-feature-cgn
 from compare_flexbe_states.get_point_cloud_service_state import GetPointCloudServiceState
 from compare_flexbe_states.move_to_pose_service_state import MoveToPoseServiceState
 from compare_flexbe_states.reach_to_grasp_service_state import ReachToGraspServiceState
@@ -132,11 +128,7 @@ class PointCloudContactGraspnetPipeineSM(Behavior):
                                                                  service_name='/get_point_cloud',
                                                                  camera_topic='/rgbd_camera/points',
                                                                  target_frame='simple_pedestal'),
-<<<<<<< HEAD
                                        transitions={'finished': 'CgnGraspCloud',
-=======
-                                       transitions={'finished': 'CgnGrasp',
->>>>>>> legacy-feature-cgn
                                                     'failed': 'failed'  # 236 225 228 116 -1 -1
                                                     },
                                        autonomy={'finished': Autonomy.Off, 'failed': Autonomy.Off},
@@ -145,7 +137,6 @@ class PointCloudContactGraspnetPipeineSM(Behavior):
                                                   'cloud_frame': 'cloud_frame'})
 
             # x:419 y:65
-<<<<<<< HEAD
             OperatableStateMachine.add('CgnGraspCloud',
                                        CGNGraspCloudServiceState(service_timeout=5.0,
                                                             service_name='/get_grasps',
@@ -153,14 +144,6 @@ class PointCloudContactGraspnetPipeineSM(Behavior):
                                                             field_names=None,
                                                             z_min=0.28,
                                                             z_max=0.88),
-=======
-            OperatableStateMachine.add('CgnGrasp',
-                                       CGNGraspServiceState(service_timeout=5.0,
-                                                            service_name='/get_grasps',
-                                                            use_scene_id=False,
-                                                            field_names=None,
-                                                            z_min=0.28),
->>>>>>> legacy-feature-cgn
                                        transitions={'done': 'MoveOMPL',
                                                     'failed': 'failed'  # 378 273 -1 -1 -1 -1
                                                     },

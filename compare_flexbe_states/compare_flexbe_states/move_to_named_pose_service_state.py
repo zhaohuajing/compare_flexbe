@@ -20,19 +20,11 @@ from rclpy.duration import Duration
 from flexbe_core import EventState, Logger
 from flexbe_core.proxy import ProxyServiceCaller
 
-<<<<<<< HEAD
 from robot_common_manip.srv import MoveToNamedPose as SrvType
-=======
-from compare_flexbe_utilities.srv import MoveToNamedPose as SrvType
->>>>>>> legacy-feature-cgn
 
 class MoveToNamedPoseServiceState(EventState):
     """
     Calls a service to move the robot to a named pose using the setNamedTarget, plan and execute C++ functions wrapped into a service server.
-<<<<<<< HEAD
-=======
-
->>>>>>> legacy-feature-cgn
     -- timeout_sec        float         Timeout for waiting for service (default: 5.0)
     -- service_name       str           Service name (default: '/move_to_named_pose')
 
@@ -42,7 +34,6 @@ class MoveToNamedPoseServiceState(EventState):
     <= failure                          Service call failed or robot did not move
     """
 
-<<<<<<< HEAD
     def __init__(self, timeout_sec=5.0, service_name='/move_to_named_pose'):
         super().__init__(outcomes=['finished', 'failure'],
                             input_keys=['target_pose_name']
@@ -51,15 +42,6 @@ class MoveToNamedPoseServiceState(EventState):
         self._service_name = service_name
         self._client = None
         self._future = None
-=======
-    def __init__(self, service_timeout=5.0, service_name='/move_to_named_pose'):
-        super().__init__(outcomes=['finished', 'failure'],
-                            input_keys=['target_pose_name']
-        )
-        self._service_name = service_name
-        self._service_timeout = service_timeout
-        self._client = None
->>>>>>> legacy-feature-cgn
 
         # Create proxy service caller to handle rclpy node
         self._srv = ProxyServiceCaller({self._service_name: SrvType})
@@ -87,17 +69,10 @@ class MoveToNamedPoseServiceState(EventState):
         # It is primarily used to start actions which are associated with this state.
 
         # check for correct data
-<<<<<<< HEAD
         target_names = userdata.target_names
         if not isinstance(target_names, list) or len(target_names) == 0 or not isinstance(target_names[-1], str):
             Logger.logerr(f"[{type(self).__name__}] Invalid or missing data type in userdata.")
             return
-=======
-        # target_names = userdata.target_pose_name
-        # if not isinstance(target_names, list) or len(target_names) == 0 or not isinstance(target_names[-1], str):
-        #     Logger.logerr(f"[{type(self).__name__}] Invalid or missing data type in userdata.")
-        #     return
->>>>>>> legacy-feature-cgn
         
         # construct request
         target_name = userdata.target_pose_name
@@ -143,8 +118,4 @@ class MoveToNamedPoseServiceState(EventState):
         # Use this event to clean up things like claimed resources.
 
         # No-op: template hook
-<<<<<<< HEAD
         pass
-=======
-        pass
->>>>>>> legacy-feature-cgn
